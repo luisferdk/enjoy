@@ -42,7 +42,7 @@
             
         </div>
     </div>
-    <form action="" class="col-xs-12 col-sm-8 izquierda" id="formTraslado" method="post">
+    <form action="" class="col-xs-12 col-sm-8 izquierda" id="formTraslado" method="post" ng-submit="agregarVIP($event)">
         <div class="row">
             <h3 class="col-xs-12 text-center titulo">Select the vip services</h3>
             <div class="col-xs-12 text-center">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-xs-6">
                         <div class="checkbox">
-                            <label><input type="checkbox" ng-model="serviceVIP" value="Service VIP">SERVICE VIP</label>
+                            <label><input type="checkbox" ng-model="VIP.serviceVIP" value="Service VIP">SERVICE VIP</label>
                             <small class="col-xs-12 text-center" style="color: #334960;margin-bottom: 1em;">
                                 (VIP Lounge Access)
                             </small>
@@ -164,86 +164,145 @@
                             </select>
                         </div>
                     </div>
-
-                    <h5 class="col-xs-12 titulo" ng-show="de.id==-1">ARRIVAL</h5>
-                    <h5 class="col-xs-12 titulo" ng-show="de.id!=-1">DEPARTURE</h5>
-                    <div class="col-xs-6 col-sm-3">
-                        <div class="form-group">
-                            <label for="">
-                                *Date
-                            </label>
-                            <input class="form-control" id="date1" name="fechaLlegada" type="text" placeholder="Select Date" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <div class="form-group">
-                            <label for="">
-                                *Time
-                            </label>
-                            <input class="form-control hora" name="horaLlegada" type="text" placeholder="Select Time" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <div class="form-group">
-                            <label for="">
-                                *Airline Name
-                            </label>
-                            <input class="form-control" name="aerolineaLlegada" type="text" placeholder="Enter airline name" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3">
-                        <div class="form-group">
-                            <label for="">
-                                *Flight Number
-                            </label>
-                            <input class="form-control" name="vueloLlegada" type="text" placeholder="Enter flight name" ng-required="transfer">
-                        </div>
-                    </div>
-
-                    <h5 class="col-xs-12 titulo" ng-show="de.id==-1 && tipoModel!=1">DEPARTURE</h5>
-                    <h5 class="col-xs-12 titulo" ng-show="de.id!=-1 && tipoModel!=1">ARRIVAL</h5>
-                    <div class="col-xs-6 col-sm-3" ng-show="tipoModel!=1">
-                        <div class="form-group">
-                            <label for="">
-                                *Date
-                            </label>
-                            <input class="form-control" id="date2" name="fechaSalida" type="text" placeholder="Select Date" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3" ng-show="tipoModel!=1">
-                        <div class="form-group">
-                            <label for="">
-                                *Time
-                            </label>
-                            <input class="form-control hora" name="horaSalida" type="text" placeholder="Select Time" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3" ng-show="tipoModel!=1">
-                        <div class="form-group">
-                            <label for="">
-                                *Airline Name
-                            </label>
-                            <input class="form-control" name="aerolineaSalida" type="text" placeholder="Enter airline name" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3" ng-show="tipoModel!=1">
-                        <div class="form-group">
-                            <label for="">
-                                *Flight Number
-                            </label>
-                            <input class="form-control" name="vueloSalida" type="text" placeholder="Enter flight name" ng-required="transfer">
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="checkbox">
-                            <label><input type="checkbox" ng-model="extras" value="extras">Extras</label>
-                        </div> 
-                    </div>
-                    <div class="col-xs-12" ng-show="extras">
+                    <div class="col-xs-12" ng-show="traslado.tipo==1 || traslado.tipo==2">
                         <div class="row">
+                            <h5 class="col-xs-12 titulo" ng-show="traslado.de.id==-1">ARRIVAL</h5>
+                            <h5 class="col-xs-12 titulo" ng-show="traslado.de.id!=-1">DEPARTURE</h5>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Date
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.fechaLlegada"
+                                        class="form-control" 
+                                        id="date1" 
+                                        name="fechaLlegada" 
+                                        type="text" 
+                                        placeholder="Select Date"
+                                        ng-required="traslado.tipo">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Time
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.horaLlegada"
+                                        class="form-control" 
+                                        id="time1" 
+                                        name="horaLlegada" 
+                                        type="text" 
+                                        placeholder="Select Time"
+                                        ng-required="traslado.tipo">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Airline Name
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.aerolineaLlegada"
+                                        class="form-control" 
+                                        name="
+                                        aerolineaLlegada" 
+                                        type="text" 
+                                        placeholder="Enter airline name"
+                                        ng-required="traslado.tipo">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Flight Number
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.vueloLlegada"
+                                        class="form-control" 
+                                        name="vueloLlegada" 
+                                        type="text" 
+                                        placeholder="Enter flight name"
+                                        ng-required="traslado.tipo">
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" ng-show="traslado.tipo==2">
+                        <div class="row">
+                            <h5 class="col-xs-12 titulo" ng-show="traslado.de.id==-1">DEPARTURE</h5>
+                            <h5 class="col-xs-12 titulo" ng-show="traslado.de.id!=-1">ARRIVAL</h5>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Date
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.fechaSalida"
+                                        class="form-control" 
+                                        id="date2" 
+                                        name="fechaSalida" 
+                                        type="text" 
+                                        placeholder="Select Date"
+                                        ng-required="traslado.tipo==2">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Time
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.horaSalida"
+                                        class="form-control" 
+                                        id="time2" 
+                                        name="horaSalida" 
+                                        type="text" 
+                                        placeholder="Select Time"
+                                        ng-required="traslado.tipo==2">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Airline Name
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.aerolineaSalida"
+                                        class="form-control" 
+                                        name="aerolineaSalida" 
+                                        type="text" 
+                                        placeholder="Enter airline name"
+                                        ng-required="traslado.tipo==2">
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-3">
+                                <div class="form-group">
+                                    <label for="">
+                                        *Flight Number
+                                    </label>
+                                    <input 
+                                        ng-model="traslado.vueloSalida"
+                                        class="form-control" 
+                                        name="vueloSalida" 
+                                        type="text" 
+                                        placeholder="Enter flight name"
+                                        ng-required="traslado.tipo==2">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12" ng-show="traslado.tipo==1 || traslado.tipo==2">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="">Extras</label>
+                            </div>
                             <div class="col-xs-6 col-sm-3">
                                 <div class="thumbnail">
-                                    <img src="{{ asset("/") }}img/productos/cerveza.jpg" alt="...">
+                                    <img ng-src="{{ asset("/") }}img/productos/cerveza.jpg" alt="...">
                                     <div class="caption text-center">
                                         <h3>Beer</h3>
                                         <select ng-model="cervezas" name="cervezas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
@@ -266,7 +325,7 @@
 
                             <div class="col-xs-6 col-sm-3">
                                 <div class="thumbnail">
-                                    <img src="{{ asset("/") }}img/productos/cocacola.jpg" alt="...">
+                                    <img ng-src="{{ asset("/") }}img/productos/cocacola.jpg" alt="...">
                                     <div class="caption text-center">
                                         <h3>Sodas</h3>
                                         <select ng-model="sodas" name="sodas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
@@ -289,7 +348,7 @@
 
                             <div class="col-xs-6 col-sm-3">
                                 <div class="thumbnail">
-                                    <img src="{{ asset("/") }}img/productos/vino.jpg" alt="...">
+                                    <img ng-src="{{ asset("/") }}img/productos/vino.jpg" alt="...">
                                     <div class="caption text-center">
                                         <h3>Wine</h3>
                                         <select ng-model="vino" name="vino" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
@@ -311,7 +370,7 @@
 
                             <div class="col-xs-6 col-sm-3">
                                 <div class="thumbnail">
-                                    <img src="{{ asset("/") }}img/productos/champagne.jpg" alt="...">
+                                    <img ng-src="{{ asset("/") }}img/productos/champagne.jpg" alt="...">
                                     <div class="caption text-center">
                                         <h3>Champagne</h3>
                                         <select ng-model="champagne" name="champagne" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
@@ -332,17 +391,27 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
                 </div>
             </div>
-            <div class="col-xs-12" ng-show="serviceVIP">
+
+
+
+            <div class="col-xs-12" ng-show="VIP.serviceVIP">
                 <div class="row">
+                    <div class="col-xs-12">@{{ VIP | json }}</div>
                     <h4 class="col-xs-12 text-center titulo">SERVICE VIP</h4>
                     <div class="col-xs-12">
                         <div class="form-group">
                             <label for="">
                                 *How many persons are you (including children older than 7 years)?
                             </label>
-                            <select class="form-control select2" name="pasajerosVIP" ng-change="calcularPrecioTraslado();" ng-model="pasajerosVIP" ng-required="serviceVIP">
+                            <select class="form-control select2" name="pasajerosVIP" ng-change="calcularPrecioVIP();" ng-model="VIP.pasajerosVIP" ng-required="VIP.serviceVIP">
                                 <option value="">
                                     Choose one
                                 </option>
@@ -352,23 +421,29 @@
                     </div> 
                     <div class="col-xs-6 text-center">
                         <div class="checkbox">
-                            <label><input type="checkbox" ng-model="arrivalVIP" ng-click="calcularPrecioTraslado();" value="arrivalVIP">VIP ARRIVAL SERVICE - $75.00</label>
+                            <label><input type="checkbox" ng-model="VIP.arrivalVIP" ng-click="calcularPrecioVIP();" value="arrivalVIP">VIP ARRIVAL SERVICE - $75.00</label>
                         </div> 
                     </div>
                     <div class="col-xs-6 text-center">
                         <div class="checkbox">
-                            <label><input type="checkbox" ng-model="departureVIP" ng-click="calcularPrecioTraslado();" value="departureVIP">VIP DEPARTURE SERVICE - $125.00</label>
+                            <label><input type="checkbox" ng-model="VIP.departureVIP" ng-click="calcularPrecioVIP();" value="departureVIP">VIP DEPARTURE SERVICE - $125.00</label>
                         </div> 
                     </div>
                     <div class="col-xs-12">
-                        <div class="row" ng-show="arrivalVIP">
+                        <div class="row" ng-show="VIP.arrivalVIP">
                             <h4 class="mt2 col-xs-12 text-center">VIP ARRIVAL SERVICE</h4>
                             <div class="col-xs-6 col-sm-3">
                                 <div class="form-group">
                                     <label for="">
                                         *Arrival Date
                                     </label>
-                                    <input class="form-control" id="date1VIP" name="fechaLlegadaVIP" type="text" placeholder="Select Date" ng-required="arrivalVIP">
+                                    <input 
+                                        class="form-control" id="date1VIP" 
+                                        ng-model="VIP.fechaLlegadaVIP"
+                                        name="fechaLlegadaVIP" 
+                                        type="text" 
+                                        placeholder="Select Date" 
+                                        ng-required="VIP.arrivalVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -376,7 +451,13 @@
                                     <label for="">
                                         *Time
                                     </label>
-                                    <input class="form-control hora" name="horaLlegadaVIP" type="text" placeholder="Select Time" ng-required="arrivalVIP">
+                                    <input 
+                                        class="form-control hora" 
+                                        ng-model="VIP.horaLlegadaVIP"
+                                        name="horaLlegadaVIP" 
+                                        type="text" 
+                                        placeholder="Select Time" 
+                                        ng-required="VIP.arrivalVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -384,7 +465,13 @@
                                     <label for="">
                                         *Airline Name
                                     </label>
-                                    <input class="form-control" name="aerolineaLlegadaVIP" type="text" placeholder="Enter airline name" ng-required="arrivalVIP">
+                                    <input 
+                                        class="form-control" 
+                                        ng-model="VIP.aerolineaLlegadaVIP"
+                                        name="aerolineaLlegadaVIP" 
+                                        type="text" 
+                                        placeholder="Enter airline name" 
+                                        ng-required="VIP.arrivalVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -392,20 +479,32 @@
                                     <label for="">
                                         *Flight Number
                                     </label>
-                                    <input class="form-control" name="vueloLlegadaVIP" type="text" placeholder="Enter flight name" ng-required="arrivalVIP">
+                                    <input 
+                                        class="form-control" 
+                                        ng-model="VIP.vueloLlegadaVIP"
+                                        name="vueloLlegadaVIP" 
+                                        type="text" 
+                                        placeholder="Enter flight name" 
+                                        ng-required="VIP.arrivalVIP">
                                 </div>
                             </div>                            
                         </div>
                     </div>
                     <div class="col-xs-12">
-                        <div class="row" ng-show="departureVIP">
+                        <div class="row" ng-show="VIP.departureVIP">
                             <h4 class="mt2 col-xs-12 text-center">VIP DEPARTURE SERVICE</h4>
                             <div class="col-xs-6 col-sm-3">
-                                <div class="form-group" ng-show="departureVIP">
+                                <div class="form-group" ng-show="VIP.departureVIP">
                                     <label for="">
                                         *Date Departure
                                     </label>
-                                    <input class="form-control" id="date2VIP" name="fechaSalidaVIP" type="text" placeholder="Select Date" ng-required="departureVIP">
+                                    <input 
+                                        class="form-control" id="date2VIP" 
+                                        ng-model="VIP.fechaSalidaVIP"
+                                        name="fechaSalidaVIP" 
+                                        type="text" 
+                                        placeholder="Select Date" 
+                                        ng-required="VIP.departureVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -413,7 +512,13 @@
                                     <label for="">
                                         *Time
                                     </label>
-                                    <input class="form-control hora" name="horaSalidaVIP" type="text" placeholder="Select Time" ng-required="departureVIP">
+                                    <input 
+                                        class="form-control hora" 
+                                        ng-model="VIP.horaSalidaVIP"
+                                        name="horaSalidaVIP" 
+                                        type="text" 
+                                        placeholder="Select Time" 
+                                        ng-required="VIP.departureVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -421,7 +526,13 @@
                                     <label for="">
                                         *Airline Name
                                     </label>
-                                    <input class="form-control" name="aerolineaSalidaVIP" type="text" placeholder="Enter airline name" ng-required="departureVIP">
+                                    <input 
+                                        class="form-control" 
+                                        ng-model="VIP.aerolineaSalidaVIP"
+                                        name="aerolineaSalidaVIP" 
+                                        type="text" 
+                                        placeholder="Enter airline name" 
+                                        ng-required="VIP.departureVIP">
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-3">
@@ -429,7 +540,13 @@
                                     <label for="">
                                         *Flight Number
                                     </label>
-                                    <input class="form-control" name="vueloSalidaVIP" type="text" placeholder="Enter flight name" ng-required="departureVIP">
+                                    <input 
+                                        class="form-control" 
+                                        ng-model="VIP.vueloSalidaVIP"
+                                        name="vueloSalidaVIP" 
+                                        type="text" 
+                                        placeholder="Enter flight name" 
+                                        ng-required="VIP.departureVIP">
                                 </div>
                             </div>                            
                         </div>
@@ -441,19 +558,19 @@
                     <label for="">
                         *Promo Code (discount $ 10.00)
                     </label>
-                    <input class="form-control" ng-model="codePromo" ng-change="cambiarCodigo(codePromo)" name="promoCode" type="text"  placeholder="Enter Promo Code">
+                    <input class="form-control" ng-model="VIP.codePromo" ng-change="cambiarCodigo(codePromo)" name="promoCode" type="text"  placeholder="Enter Promo Code">
                 </div>
             </div> -->
             <div class="col-xs-12">
                 <h3 class="text-center">
-                    $ @{{traslado.precio}}
+                    $ @{{VIP.precio + traslado.precio}}
                 </h3>
             </div>
             <div class="col-xs-12 text-center">
-                <button class="btn btn-primary" id="traslado" name="traslado" type="submit" value="traslado">
+                <button  ng-click="opcion='agregar'" class="btn btn-primary" id="traslado" name="traslado" type="submit" value="traslado">
                     Add to <i style="color: white;" class="fa fa-shopping-cart"></i>
                 </button>
-                <button class="btn btn-success" id="traslado" name="traslado" type="submit" value="traslado">
+                <button ng-click="opcion='reservar'" class="btn btn-success" id="traslado" name="traslado" type="submit" value="traslado">
                     Book now
                 </button>
             </div>

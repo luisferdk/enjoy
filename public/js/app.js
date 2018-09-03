@@ -881,6 +881,31 @@ $scope.vector = function(n){
         $scope.tour.precio = $scope.tour.modalidades[pos].precio;
   }
 
+  $scope.calcularPrecioVIP = function(){
+    if($scope.VIP.serviceVIP && $scope.VIP.pasajerosVIP){
+        if($scope.VIP.arrivalVIP)
+            $scope.VIP.precio = parseFloat($scope.VIP.pasajerosVIP *75);
+        if($scope.VIP.departureVIP)
+            $scope.VIP.precio = $scope.VIP.precio + parseFloat($scope.VIP.pasajerosVIP *125);
+    }
+  }
+
+$scope.VIP = {precio:0};
+  $scope.agregarVIP = function(event){
+    event.preventDefault();
+    if($scope.VIP.serviceVIP && $scope.VIP.pasajerosVIP){
+        $scope.carrito.vip.push($scope.VIP);
+        console.log($scope.carrito);
+        $scope.vip = false;
+        $scope.VIP = {precio:0};
+        $scope.actualizar();
+    }
+    if($scope.transfer){
+      $scope.agregarTraslado(event);
+      $scope.transfer = false;
+    }
+  }
+
 
   $scope.cargar = function(){
     $http.get(window.url+'/session').then(function(response){
@@ -892,6 +917,8 @@ $scope.vector = function(n){
   $scope.actualizar = function(){
     $scope.carrito._token=window._token;
     $http.post(window.url+'/session',$scope.carrito).then(function(response){});
+    if($scope.opcion=='reservar')
+      $window.location.herf =window.url+'/shop';
   }
 
   if(window.pos!=null){

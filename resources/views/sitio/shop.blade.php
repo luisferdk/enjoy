@@ -63,6 +63,31 @@
 				</tbody>
 			</table>
 		</div>
+		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.vip.length>0">
+			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Service VIP</h2>
+			<table class="table table-bordered text-center">
+				<thead>
+					<tr>
+						<th class="text-center">Nº Persons</th>
+						<th class="text-center">Arrival Date</th>
+						<th class="text-center">Departure Date</th>
+						<th class="text-center">Price</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="aux in carrito.vip">
+						<td>@{{ aux.pasajerosVIP }}</td>
+						<td>@{{ aux.fechaLlegadaVIP }}</td>
+						<td>@{{ aux.fechaSalidaVIP }}</td>
+						<td>@{{ aux.precio | currency:"$ " }}</td>
+						<td>
+							<a ng-click="eliminarTour(index)"><i class="fa fa-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.tours.length>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Client Info</h2>
             <div class="col-xs-12 col-sm-6">
