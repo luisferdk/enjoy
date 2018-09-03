@@ -8,6 +8,7 @@ $scope.carrito = {
     tours:[],
     vip:[],
 }
+$scope.opcion = 'agregar';
 $scope.vector = function(n){
   var array = [];
   for (var i = 1; i <= n; i++) {
@@ -321,6 +322,7 @@ $scope.vector = function(n){
   $scope.champagne = "0";
   $scope.traslado = {};
   $scope.traslado.vip = false;
+  $scope.traslado.precio = 0;
   $scope.descuento = false;
 
   $scope.cambiarDe = function(){
@@ -382,21 +384,81 @@ $scope.vector = function(n){
 
   $scope.agregarTraslado = function(event){
         event.preventDefault();
-        $scope.carrito.traslados.push($scope.traslado);
+        console.log($scope.traslado);
+        $scope.carrito.traslados.push({
+            de: $scope.traslado.de.descripcion,
+            para: $scope.traslado.para.descripcion,
+            pasajeros: $scope.traslado.pasajeros,
+            tipo: $scope.traslado.tipo,
+            fechaLlegada: $scope.traslado.fechaLlegada?$scope.traslado.fechaLlegada:null,
+            horaLlegada: $scope.traslado.horaLlegada?$scope.traslado.horaLlegada:null,
+            aerolineaLlegada: $scope.traslado.aerolineaLlegada?$scope.traslado.aerolineaLlegada:null,
+            vueloLlegada: $scope.traslado.vueloLlegada?$scope.traslado.vueloLlegada:null,
+            fechaSalida: $scope.traslado.fechaSalida?$scope.traslado.fechaSalida:null,
+            horaSalida: $scope.traslado.horaSalida?$scope.traslado.horaSalida:null,
+            aerolineaSalida: $scope.traslado.aerolineaSalida?$scope.traslado.aerolineaSalida:null,
+            vueloSalida: $scope.traslado.vueloSalida?$scope.traslado.vueloSalida:null,
+            precio: $scope.traslado.precio?$scope.traslado.precio:null,
+            vip: $scope.traslado.vip,
+          }
+        );
         $scope.traslado = {};
         $scope.traslado.vip = false;
+        $scope.traslado.precio = 0;
         $timeout(function(){
             $('#formTraslado select').select2();
+            $("html, body").animate({ scrollTop: 0 }, 500);
         },500);
+        $scope.actualizar();
+  }
+
+  $scope.eliminarTraslado = function(index){
+    $scope.carrito.traslados.splice(index,1);
+    $scope.actualizar();
   }
 /*------------------------------Tours------------------------------*/
+  $scope.agregarTour = function(event){
+        event.preventDefault();
+        console.log($scope.tour);
+        $scope.carrito.tours.push(
+          {
+            tour:$scope.tour.titulo,
+            modalidad:$scope.tour.modalidad.descripcion,
+            fecha:$scope.tour.fecha,
+            horario:$scope.tour.horario?$scope.tour.horario:null,
+            adultos:$scope.tour.adultos,
+            ninos:$scope.tour.ninos?$scope.tour.ninos:null,
+            precio:$scope.tour.precio
+          }
+        );
+        if(window.pos!=null){
+          $scope.tour.fecha = null;
+          $scope.tour.adultos = null;
+          $scope.tour.ninos = null;
+          $scope.tour.horario = null;
+          $scope.tour.precio = $scope.tour.modalidades[0].precio;
+        }
+        else{
+          $scope.tour = {};
+          $scope.tour.precio = 0;
+        }
+        $timeout(function(){
+            $('#formTour select').select2();
+            $("html, body").animate({ scrollTop: 0 }, 500);
+        },500);
+        $scope.actualizar();
+  }
+  $scope.eliminarTour = function(index){
+    $scope.carrito.tours.splice(index,1);
+    $scope.actualizar();
+  }
   $scope.precioTour = 0;
   var v99 = [];
   for (var i = 1; i <= 99; i++) {
       v99.push(i);
   }
   $scope.v99 = v99;
-  $scope.pos = 0;
+  $scope.tour = {precio:0};
 
   var tours = [
       {
@@ -405,7 +467,7 @@ $scope.vector = function(n){
           partyBoat:true,
           titulo:"Sabina del Mar VIP Party Boat",
           descripcion:'You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.',
-          horario:['9-12 PM','12-3 PM','3-6 PM'],
+          horarios:['9-12 PM','12-3 PM','3-6 PM'],
               modalidades:[
               {id:0,precio:45,nino:25,descripcion:'VIP Hotdog menu'},
               {id:1,precio:53,nino:28,descripcion:'VIP Chicken menu'},
@@ -489,7 +551,7 @@ $scope.vector = function(n){
           mostrar:true,
           titulo:"Hot Air Balloning Rides",
           descripcion:`Floats silently above the trees and into a world where silence is priceless while enjoying the sunrise over Punta Cana.`,
-          horario:['5:30 AM'],
+          horarios:['5:30 AM'],
           modalidades:[
               {id:0,precio:275,nino:225,descripcion:'Básico'}
           ]
@@ -800,32 +862,61 @@ $scope.vector = function(n){
       }
   ];
   $scope.tours = tours;
-  $scope.cambiarTour = function(tour){
-      $scope.tourValue = tour.descripcion;
-      $scope.modalidad;
+  $scope.cambiarTour = function(){
       $('#modalidad').select2();
   }
 
   $scope.calcularPrecioTour = function(){
+    if($scope.tour){
       var pos = 0;
-      if($scope.tour.id.modalidades.length>1)
-          pos = $scope.modalidad.id;
-      $scope.pos = pos;
-      var precioAdultos = $scope.tour.adultos * $scope.tour.id.modalidades[pos].precio;
-      var precioNinos = $scope.tour.ninos * $scope.tour.id.modalidades[pos].nino;
+      if($scope.tour.modalidades.length>1 && $scope.tour.modalidad)
+          pos = $scope.tour.modalidad.id;
+      var precioAdultos = $scope.tour.adultos * $scope.tour.modalidades[pos].precio;
+      var precioNinos = $scope.tour.ninos * $scope.tour.modalidades[pos].nino;
       if(precioNinos)
-          $scope.precioTour = precioAdultos + precioNinos;
+          $scope.tour.precio = precioAdultos + precioNinos;
       else if(precioAdultos)
-          $scope.precioTour = precioAdultos;
+          $scope.tour.precio = precioAdultos;
       else
-          $scope.precioTour = 0;
+        $scope.tour.precio = $scope.tour.modalidades[pos].precio;
+    }
+    else
+        $scope.tour.precio = $scope.tour.modalidades[pos].precio;
   }
 
-if(window.pos){
-  $scope.tours = tours;
-  $scope.pos = window.pos;
-  $scope.paso = 1;
-  $scope.precioTour = tours[pos].modalidades[0].precio;
-  $scope.cambiarTour($scope.tours[$scope.pos]);
-}
+
+  $scope.cargar = function(){
+    $http.get(window.url+'/session').then(function(response){
+      $scope.carrito = response.data;
+    });
+  }
+  $scope.cargar();
+
+  $scope.actualizar = function(){
+    $scope.carrito._token=window._token;
+    $http.post(window.url+'/session',$scope.carrito).then(function(response){});
+  }
+
+  if(window.pos!=null){
+    $scope.tour = $scope.tours[window.pos];
+    $scope.tour.precio = $scope.tours[window.pos].modalidades[0].precio;
+  }
+
+  if(window.tour!=null){
+    $scope.tour = $scope.tours[window.tour];
+    $scope.tour.precio = $scope.tours[window.tour].modalidades[0].precio;
+    $timeout(function(){$('#tourModel').select2();},500);
+  }
+
+
+  $scope.precioTotal = function(){
+    var precio = 0;
+    for (var i = 0; i < $scope.carrito.traslados.length; i++) {
+      precio += $scope.carrito.traslados[i].precio;
+    }
+    for (var i = 0; i < $scope.carrito.tours.length; i++) {
+      precio += $scope.carrito.tours[i].precio;
+    }
+    return precio;
+  }
 });

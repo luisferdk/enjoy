@@ -105,11 +105,11 @@ $(function(){
             dateFormat: "yy-mm-dd",
             minDate: +1,
             onSelect:function(){
-                $('#dateTour').focus();
+                $('#dateTour').trigger("change");
             }
         });
 
-        $("#formTour").validate({
+        /*$("#formTour").validate({
             rules: {
                 "tour":{required:true},
                 "fecha":{required:true},
@@ -134,16 +134,16 @@ $(function(){
                 "comentarios":{},
                 "terminos":{}
             }
-        });    
+        });*/
 
         $('#terminos2').change(function(event) {
             if($(this).is(":checked")){
-                $('#tour').removeClass('disabled');
-                $('#tour').prop('disabled',false);
+                $('.tour').removeClass('disabled');
+                $('.tour').prop('disabled',false);
             }
             else{
-                $('#tour').addClass('disabled');   
-                $('#tour').prop('disabled',true);
+                $('.tour').addClass('disabled');   
+                $('.tour').prop('disabled',true);
             }
         });
 

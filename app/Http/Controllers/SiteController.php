@@ -18,8 +18,8 @@ class SiteController extends Controller
     	return view('sitio.tours');
     }
 
-    public function tour($tour){
-        return view('sitio.tour');
+    public function tour($id){
+        return view('sitio.tour',compact('id'));
     }
 
     public function packages(){
@@ -32,5 +32,9 @@ class SiteController extends Controller
 
     public function puntacana(){
     	return view('sitio.puntacana');
+    }
+
+    public function shop(){
+        return view('sitio.shop');
     }
 }

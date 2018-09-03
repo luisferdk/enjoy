@@ -58,6 +58,7 @@
                             <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                             <a href="https://www.instagram.com/rennytravel/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                             <a href="{{ url('/admin') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
+                            <a href="{{ url('/shop') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -111,7 +112,6 @@
                                 <section class="row principal">
                                     <form action="" class="col-xs-12" id="formTraslado" method="post" ng-submit="agregarTraslado($event)">
                                         <div class="row">
-                                            <div class="col-xs-12">@{{ traslado | json }}</div>
                                             <h3 class="col-xs-12">Private Transfer</h3>
                                             <div class="col-xs-6">
                                                 <div class="form-group">
@@ -217,7 +217,7 @@
                                                                 name="fechaLlegada" 
                                                                 type="text" 
                                                                 placeholder="Select Date"
-                                                                required>
+                                                                ng-required="traslado.tipo">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6 col-sm-3">
@@ -232,7 +232,7 @@
                                                                 name="horaLlegada" 
                                                                 type="text" 
                                                                 placeholder="Select Time"
-                                                                required>
+                                                                ng-required="traslado.tipo">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6 col-sm-3">
@@ -247,7 +247,7 @@
                                                                 aerolineaLlegada" 
                                                                 type="text" 
                                                                 placeholder="Enter airline name"
-                                                                required>
+                                                                ng-required="traslado.tipo">
                                                         </div>
                                                     </div>
                                                     <div class="col-xs-6 col-sm-3">
@@ -261,7 +261,7 @@
                                                                 name="vueloLlegada" 
                                                                 type="text" 
                                                                 placeholder="Enter flight name"
-                                                                required>
+                                                                ng-required="traslado.tipo">
                                                         </div>
                                                     </div>  
                                                 </div>
@@ -427,31 +427,23 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 text-center mt2" style="margin-bottom: 0;">
+                                            <!-- <div class="col-xs-12 text-center mt2" style="margin-bottom: 0;">
                                                 <a  href="{{ url("/?opcion=2") }}" 
                                                     target="_blank" 
                                                     data-toggle="tooltip" 
                                                     title="Press click book excursion" 
                                                     data-placement="bottom">Book your excursion now</a>
-                                            </div>
-                                            <div class="col-xs-4 col-xs-offset-8" ng-show="traslado.precio">
+                                            </div> -->
+                                            <div class="col-xs-12">
                                                 <h3 class="text-center">
-                                                    $ @{{traslado.precio}}
+                                                    @{{traslado.precio | currency:"$ "}}
                                                 </h3>
                                             </div>
-                                            <div class="col-xs-12 col-sm-8 text-center">
-                                                <div class="form-group">
-                                                    <input data-toggle="tooltip" title="Accept terms and conditions" id="terminos" name="terminos" type="checkbox" value="terminos">
-                                                    <a class="" href="#" data-toggle="modal" data-target="#terminosModal">
-                                                        <strong data-toggle="tooltip" title="Read terms and conditions">I have read and accept the terms and conditions</strong>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 text-center">
-                                                <button class="btn btn-success disabled traslado" name="traslado" type="submit" value="traslado">
+                                            <div class="col-xs-12 text-center">
+                                                <button class="btn btn-primary traslado" ng-click="opcion='agregar'" name="traslado" type="submit" value="traslado">
                                                     Add to <i class="fa fa-shopping-cart"></i>
                                                 </button>
-                                                <button class="btn btn-primary disabled traslado" name="traslado" type="submit" value="traslado">Book now</button>
+                                                <button class="btn btn-success traslado" ng-click="opcion='reservar'" name="traslado" type="submit" value="traslado">Book now</button>
                                             </div>
                                         </div>
                                     </form>
@@ -459,7 +451,7 @@
                             </div>
                             <div class="tab-pane fade" id="tours">
                                 <section class="row principal">
-                                    <form action="" class="col-xs-12" id="formTour" method="post">
+                                    <form action="" class="col-xs-12" id="formTour" method="post" ng-submit="agregarTour($event)">
                                         <div class="row">
                                             <h3 class="col-xs-12">Reservation Tour</h3>
                                             <div class="col-xs-12 col-sm-6">
@@ -468,8 +460,8 @@
                                                     <select 
                                                         class="form-control"
                                                         id="tourModel"
-                                                        ng-model="tour.id"
-                                                        ng-change="cambiarTour(tour.id);calcularPrecioTour()"
+                                                        ng-model="tour"
+                                                        ng-change="cambiarTour();calcularPrecioTour()"
                                                         ng-options="aux.titulo for aux in tours"
                                                         required>
                                                         <option value>Choose one</option>
@@ -481,10 +473,17 @@
                                                     <label for="">
                                                         *Date
                                                     </label>
-                                                    <input type="text" class="form-control" id="dateTour" name="fecha" placeholder="Select Date" required>
+                                                    <input 
+                                                        type="text" 
+                                                        class="form-control" 
+                                                        id="dateTour" 
+                                                        name="fecha" 
+                                                        placeholder="Select Date" 
+                                                        ng-model="tour.fecha"
+                                                        required>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6" ng-show="tour.id.modalidades.length>1">
+                                            <div class="col-xs-12 col-sm-6" ng-show="tour.modalidades.length>1">
                                                 <div class="form-group">
                                                     <label for="">
                                                         *Tour Type
@@ -492,15 +491,15 @@
                                                     <select 
                                                         class="form-control"
                                                         id="modalidad"
-                                                        ng-model="modalidad"
+                                                        ng-model="tour.modalidad"
                                                         ng-change="calcularPrecioTour()"
-                                                        ng-options="aux.descripcion for aux in tour.id.modalidades"
+                                                        ng-options="aux.descripcion for aux in tour.modalidades"
                                                         required>
                                                         <option value="">Choose one</option>
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6" ng-show="tour.id.horario.length>1">
+                                            <div class="col-xs-12 col-sm-6" ng-show="tour.horarios.length>1">
                                                 <div class="form-group">
                                                     <label for="">
                                                         *Schedule
@@ -508,10 +507,10 @@
                                                     <select 
                                                         class="form-control" 
                                                         name="horario" 
-                                                        ng-model="horario"
-                                                        required>
+                                                        ng-model="tour.horario"
+                                                        ng-required="tour.horario.length>1">
                                                         <option value="">Choose one</option>
-                                                        <option ng-repeat="aux in tour.id.horario" value="@{{ aux }}">@{{ aux }}</option>
+                                                        <option ng-repeat="aux in tour.horarios" value="@{{ aux }}">@{{ aux }}</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -533,7 +532,7 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6" ng-show="tour.id.modalidades[pos].nino != 0">
+                                            <div class="col-xs-12 col-sm-6" ng-show="tour.modalidades[pos].nino != 0">
                                                 <div class="form-group">
                                                     <label for="">
                                                         Children (0-10)
@@ -550,85 +549,35 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div class="col-xs-12 col-sm-6">
-                                                <div class="form-group">
-                                                    <label for="">
-                                                        *Hotel Pickup
-                                                    </label>
-                                                    <input ng-model="hotelPickup" class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel" required>
-                                                    @include("base.hoteles")
-                                                </div>
-                                            </div>                  
-                                            <div class="col-xs-12" ng-show="hotelPickup">
-                                                <div class="row">
-                                                    <h5 class="col-xs-12 titulo">
-                                                        CLIENT INFO
-                                                    </h5>
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="">
-                                                                *First Name
-                                                            </label>
-                                                            <input class="form-control" name="nombre" type="text" placeholder="Enter name" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="">
-                                                                *Surname
-                                                            </label>
-                                                            <input class="form-control" name="apellido" type="text" placeholder="Enter last name" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="">
-                                                                *Email
-                                                            </label>
-                                                            <input class="form-control" name="correo" type="email" placeholder="Enter email" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="">
-                                                                *Phone number
-                                                            </label>
-                                                            <input class="form-control" name="telefono" type="text" placeholder="Enter phone number" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xs-12 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label for="">
-                                                                Comments
-                                                            </label>
-                                                            <textarea class="form-control" name="comentarios" rows="5" ></textarea>
-                                                        </div>
-                                                    </div>  
-                                                </div>
-                                            </div>
+                                            <!-- <div class="col-xs-12 col-sm-6">
+                                                              <div class="form-group">
+                                                                  <label for="">
+                                                                      *Hotel Pickup
+                                                                  </label>
+                                                                  <input 
+                                                                      ng-model="tour.hotel" 
+                                                                      class="form-control" 
+                                                                      name="hotel" 
+                                                                      type="text" 
+                                                                      list="listHoteles" 
+                                                                      placeholder="Enter Hotel" 
+                                                                      required>
+                                                                  @include("base.hoteles")
+                                                              </div>
+                                                          </div>     -->              
 
-                                            <div class="col-xs-4 col-xs-offset-8">
+                                            <div class="col-xs-12">
                                                 <h3 class="text-center">
-                                                    $ @{{precioTour}}
+                                                    @{{tour.precio | currency:"$ "}}
                                                 </h3>
                                             </div>
-                                            <div class="col-xs-12 col-sm-8 text-center">
-                                                <div class="form-group">
-                                                    <input data-toggle="tooltip" title="Accept terms and conditions" id="terminos2" name="terminos2" type="checkbox" value="terminos2">
-                                                    <a class="" href="#" data-toggle="modal" data-target="#terminosModal">
-                                                        <strong data-toggle="tooltip" title="Read terms and conditions">I have read and accept the terms and conditions</strong>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-xs-12 col-sm-4 text-center">
-                                                <button class="btn btn-primary disabled" id="tour" name="tour" type="submit" value="tour">
-                                                    Book now
+                                            <div class="col-xs-12 text-center">
+                                                <button class="btn btn-primary tour" ng-click="opcion='agregar'" name="tour" type="submit" value="tour">
+                                                    Add to <i class="fa fa-shopping-cart"></i>
                                                 </button>
+                                                <button class="btn btn-success tour" ng-click="opcion='reservar'" name="tour" type="submit" value="tour">Book now</button>
                                             </div>
                                         </div>
-                                        <input type="hidden" name="precio"    value="@{{ precioTour }}">
-                                        <input type="hidden" name="tourValor" value="@{{ tourValue }}">
-                                        <input type="hidden" name="modalidad" value="@{{ modalidad.descripcion }}">
                                     </form>
                                     <!--
                                     <div class="col-xs-12 col-sm-4 hidden-xs derecha">
@@ -941,11 +890,11 @@
     <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
     
     <script src="{{ asset("/") }}js/angular.min.js"></script>
-    <script src="{{ asset("/") }}js/app.js"></script>
-    <script src="{{ asset("/") }}js/main.js"></script>
-    
+
     <script>
         window.opcion="index";
+        window.url = '{{ url("/") }}';
+        window._token = '{{ csrf_token() }}';
         function myFunction(x) {
             if (x.matches) { // If media query matches
                 var video = document.getElementById("myVideo");
@@ -962,7 +911,15 @@
         x.addListener(myFunction); // Attach listener function on state changes  
     </script>
 
+    <?php if (isset($_GET['tour'])): ?>
+        <script>
+            window.tour = {{ $_GET['tour'] }};
+            console.log(window.tour);
+        </script>
+    <?php endif ?>
 
+    <script src="{{ asset("/") }}js/app.js"></script>
+    <script src="{{ asset("/") }}js/main.js"></script>
     <?php if (isset($_GET['opcion'])): ?>
         <?php if ($_GET['opcion']==1): ?>
             <script>$(function(){$('.transfer').trigger('click');});</script>
@@ -972,5 +929,3 @@
     <?php endif ?>
 </body>
 </html>
-
-

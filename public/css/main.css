@@ -24,6 +24,9 @@ body {
   font-family: Oxygen;
   font-size: 1.5em;
 }
+a {
+  cursor: pointer;
+}
 .modalClick {
   cursor: pointer;
 }
@@ -877,6 +880,51 @@ body {
   -o-transition: font-size 1s;
   -ms-transition: font-size 1s;
   transition: font-size 1s;
+}
+.btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-success:active,
+.btn-success.active,
+.open > .dropdown-toggle.btn-success {
+  background: #8dc740;
+  border-color: #8dc740;
+}
+.btn-success:hover,
+.btn-success.disabled:hover:hover,
+.btn-success[disabled]:hover:hover,
+fieldset[disabled] .btn-success:hover:hover,
+.btn-success.disabled:focus:hover,
+.btn-success[disabled]:focus:hover,
+fieldset[disabled] .btn-success:focus:hover,
+.btn-success.disabled.focus:hover,
+.btn-success[disabled].focus:hover,
+fieldset[disabled] .btn-success.focus:hover,
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open > .dropdown-toggle.btn-success:hover,
+.btn-success:focus,
+.btn-success.disabled:hover:focus,
+.btn-success[disabled]:hover:focus,
+fieldset[disabled] .btn-success:hover:focus,
+.btn-success.disabled:focus:focus,
+.btn-success[disabled]:focus:focus,
+fieldset[disabled] .btn-success:focus:focus,
+.btn-success.disabled.focus:focus,
+.btn-success[disabled].focus:focus,
+fieldset[disabled] .btn-success.focus:focus,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open > .dropdown-toggle.btn-success:focus {
+  background: #73a235;
+  border-color: #73a235;
 }
 @-moz-keyframes spin {
   0% {

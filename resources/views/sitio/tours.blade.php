@@ -8,7 +8,7 @@
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 tourParty" ng-repeat="aux in tours" ng-if="aux.mostrar==true">
 				<div class="row tourParty-Item">
 					<div class="col-sm-3 col-xs-12 tourParty-Item-Imagen">
-						<img class="img-responsive" src="{{ asset("/") }}img/tours/@{{aux.id}}.jpg" alt="">
+						<img class="img-responsive" ng-src="{{ asset("/") }}img/tours/@{{aux.id}}.jpg" alt="">
 					</div>
 					<div class="col-sm-6 col-xs-12 tourParty-Item-Texto">
 						<h3><a href="{{ url('/') }}/tour/@{{aux.id}}">@{{ aux.titulo }}</a></h3>
@@ -20,7 +20,6 @@
 							<div class="col-xs-4 col-sm-12 precio"><span class="dolar">$</span>@{{ aux.modalidades[0].precio | currency:"" }}</div>
 							<div class="col-xs-4 col-sm-12">
 								<a href="{{ url('/') }}/?opcion=2&tour=@{{ aux.id }}" class="btn btn-primary right">Book Now</a><br>
-								<a ng-if="aux.partyBoat" href="{{ url('/partyBoats') }}/@{{ aux.id }}" class="btn btn-link right">See Details</a>
 								<a ng-else href="{{ url('/tour') }}/@{{ aux.id }}" class="btn btn-link right">See Details</a>
 							</div>
 						</div>
