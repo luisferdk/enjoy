@@ -1,0 +1,577 @@
+/*
+.container {
+	display: flex; 
+	flex-direction: row | row-reverse | column | column-reverse;
+	justify-content: flex-start | flex-end | center | space-between | space-around;
+	align-items: flex-start | flex-end | center | baseline | stretch;
+	
+	align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+	flex-wrap: nowrap | wrap | wrap-reverse;
+	flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+}
+.item {
+	align-self: auto | flex-start | flex-end | center | baseline | stretch;
+	order: <integer>; //para ordenar los elementos sin importar como esta en el HTML
+	flex-basis: <length> | auto;//le damos un tamaño fijo a un elemento y los demas se ordenan en base a el
+
+	flex-shrink: <number>;
+	flex-grow: <number>;//no tan util para que ocupe el espacio de la suma de los otros elementos
+	flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+box-sizing: border-box //padding no amplia el width
+*/
+
+body
+	font-family Oxygen
+	font-size: 1.5em
+	
+.modalClick
+	cursor pointer
+	
+.border
+	border 1px solid red
+azul = #334960
+amarillo = #ffcd03
+gris = #999999
+verde = #8dc740
+ancho = 90%
+@import "nib"
+
+.amarillo
+	color azul
+.gris
+	color gris
+.azul
+	color azul
+.verde
+	color verde
+.mt1
+	margin-top 1em
+.mt2
+	margin-top 2em
+	margin-bottom 2em
+.mb2
+	margin-bottom 2em
+.mt5
+	margin-top 5em
+.img-responsive
+	margin auto
+	display block
+label.error
+	color red !important
+		
+header
+	color azul
+	.menu-top
+		background rgba(255,255,255,0.6)
+		i
+			padding 0 .5em
+			margin-top .2em
+			font-size 1.5em
+		.iconos
+			display flex
+			flex-direction row
+			justify-content center
+			align-items center
+			.border-right
+				border-left 1px solid azul
+	#menu
+		ul
+			width 100%
+			display flex
+			flex-direction row
+			align-items center
+			justify-content space-between
+			flex-wrap wrap
+			border-top none !important
+			border-bottom none !important
+			li
+				width 13.33333%
+				&:last-child
+					width 20%
+				a
+					text-align center
+					padding 1em 0
+
+	.navbar-default
+		background-color transparent
+		border-color transparent
+		
+.tituloVerde
+	color verde
+	//font-family: 'Ranga', cursive
+	font-family: 'Lobster', cursive
+	
+.whyChoose
+	h2
+		color azul
+		margin-bottom 1em
+	.itemWhy
+		display flex
+		flex-direction row
+		align-items center
+		justify-content flex-start
+		margin-bottom 2em
+		.icon
+			width: 66px
+			height: 66px
+			background: azul
+			border-radius: 100%
+			position: relative
+			color: #fff
+			margin-right 15px
+			&:before
+				content: " "
+				display: block
+				width: 56px
+				height: 56px
+				position: absolute
+				top: 50%
+				left: 50%
+				-moz-transform: translate(-50%,-50%)
+				-ms-transform: translate(-50%,-50%)
+				-webkit-transform: translate(-50%,-50%)
+				-o-transform: translate(-50%,-50%)
+				transform: translate(-50%,-50%)
+				border: 2px dotted rgba(255,255,255,0.5)
+				border-radius: 100%
+			i
+				position: absolute
+				top: 50%
+				left: 50%
+				-moz-transform: translate(-50%,-50%)
+				-ms-transform: translate(-50%,-50%)
+				-webkit-transform: translate(-50%,-50%)
+				-o-transform: translate(-50%,-50%)
+				transform: translate(-50%,-50%)
+				font-size: 1.5em	
+.principal
+	.izquierda
+		margin-top 2rem
+		margin-bottom: 2rem
+		h3
+		i
+			color azul
+		.titulo
+			color azul
+			font-weight: bold
+		label.error
+			color red
+	.derecha
+		margin-top 2rem
+		margin-bottom: 2rem		
+	
+footer
+	background azul
+	padding 1rem
+	color white
+	img
+		max-height 120px
+	
+
+.wifiServices
+	margin-top 2em
+	margin-bottom 2em
+	display flex
+	flex-wrap wrap
+	flex-direction row
+	justify-content space-around
+	align-items center
+	font-size: 1.2em
+	.precio
+		font-size: 1.2em
+.fecha
+	position: relative
+	i
+		position: absolute
+		top: 2em
+		right: 15px
+		font-size: 1.2em
+		color azul
+.precioWifi
+	font-size: 1.2em
+	
+.tourParty
+	margin-top .8em
+	margin-bottom .8em
+	&-container
+		margin-top 5em
+	&-fondo
+		background #f4f2f0
+	&-Item	
+		display flex
+		flex-direction row
+		justify-content space-around
+		align-items stretch
+		flex-wrap wrap
+		//border-right 1px solid azul
+		//border-bottom 1px solid azul
+		//box-shadow 5px 5px 10px azul
+		border-bottom 1px solid rgba(0,0,0,.15)
+		font-size: 1.2em
+		background white
+		&-Imagen
+				padding-left 0
+				padding 1em
+				img
+					border-radius 10px
+		&-Texto
+			//border-right 1px solid azul
+			.textoGris
+				color #9a9a9a
+		&-Precio
+			//background green
+			display flex
+			align-items center
+			justify-content center
+			margin-bottom 1em
+			.precio
+				font-size: 1.5em
+				color verde
+			.fromUSD
+				font-size: .7em
+				margin 0
+			.dolar
+				font-size .5em
+				vertical-align .7em
+			.btn-primary
+				padding-left 1.5em
+				padding-right 1.5em
+				border-radius 100px
+				
+
+.partyBoatsDetails
+	margin-top 5em
+	font-size: 16px
+	.fondoDetails
+		display flex
+		align-items center
+		justify-content center
+		margin-bottom 2em
+		h1
+			color: azul !important
+			//background: rgba(51, 73, 96, 0.6)
+			//padding: .5em
+			//border-radius: 10px
+			
+.bookNow
+	padding .5em 1.5em
+	margin-bottom 1em
+.faqs
+	margin-top 3em
+	p
+		font-size: 1.2em		
+.completed
+	.margin
+		margin 2em 0
+		
+
+
+
+#slider
+	position relative
+	height: auto
+	width: auto
+	overflow: hidden
+
+div#myCarouselWedding
+	height 250px
+	
+.wedding-code
+	background rgba(255,255,255,0.6)
+	position absolute
+	top 5%
+	left 25%
+	padding 1em
+	
+	.border
+		border 1px solid azul
+		padding 2em
+
+
+.wedding-text
+	position absolute
+	top 50%
+	color white
+    text-shadow: 2px 2px 5px #282463
+	font-size: 1.2em
+	font-weight: bold
+.containerBodas
+	margin-top 5em
+
+.containerBodaPaquete
+	.bodaItem
+		margin-top 1em
+		margin-bottom 1em
+		padding-bottom: 1em
+		margin 1em
+		&Border
+			border 1px solid #262262
+			padding 1em
+	.tituloBoda
+		color: #2a3386;
+		text-shadow: -3px 1px 3px #8cc640;
+		.corazones
+			font-size: .4em
+			i:last-child
+				margin-left: -.2em
+	.descripcionBoda
+		font-family: 'Alegreya', serif;
+		font-size: 1.5em;
+		margin-top:1em;
+		margin-bottom: 2em;
+		.verde
+			font-size: 1.5em;
+	.labelBoda
+		color:#8dc740;
+	.itemDescripcion
+		padding: .5em;color: #8ec744;
+			
+.parallax
+	position relative
+	height: 200px
+	background-attachment: fixed
+	background-position: bottom
+	background-repeat: no-repeat
+	background-size: cover
+	display flex
+	flex-direction column
+	align-items center
+	justify-content center
+	
+	.fondo
+		position absolute
+		width 100%
+		height 100%
+		background-color rgba(0,0,0,0.2)
+	&-titulo
+		position relative
+		font-size: 4em
+		color white
+		text-transform: uppercase
+		
+
+.tableWedding
+	margin-top 2em
+	margin-bottom 2em		
+
+
+@media only screen and (max-width : 480px)
+	.principal
+		.izquierda
+			h3
+			h5
+				text-align center
+			.titulo
+				text-align: center
+				
+@media only screen and (max-width : 768px)
+	.submenu .contact .iconos
+			text-align center
+			margin-top .5em
+	.navbar-default .navbar-nav > li > a
+		height 40px
+	#menu
+		margin-top 7em
+		.navbar-nav
+			margin 0 !important
+			
+@media only screen and (min-width : 768px)
+	header
+		.menu
+			*
+				padding 0px
+				
+
+
+
+
+#modalPromocion
+	.texto
+		text-align justify
+
+
+
+
+.g-recaptcha>div
+	margin auto
+	margin-top 2em
+
+
+
+
+
+.hide-bullets 
+	list-style:none
+	margin-left: -40px
+	margin-top:20px
+	
+
+
+.loader
+	border: 16px solid #f3f3f3; /* Light grey */
+	border-top: 16px solid #3498db; /* Blue */
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+	
+ul#select2-tourModel-results li:nth-child(3)
+	display: none
+	
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+
+.btn-white
+	background white !important
+	color azul
+	&:hover
+	&:active
+		background azul !important
+		color white
+.contenedorTour
+	display: flex
+	justify-content: center
+	align-items: stretch
+	flex-wrap: wrap
+	width: 100%
+	
+	.formTour
+		background azul
+		color white
+		
+		.precio
+			display flex
+			align-items center
+			justify-content center
+			height 70px
+			font-size 3em
+			
+			span
+				font-size .6em !important
+				margin-right .2em
+				
+
+fz = 1em
+lfz =  1.4;
+lineas = 3;
+
+.thumbnail-text
+	display: block
+	display: -webkit-box
+	height: fz* lfz * lineas
+	font-size: fz
+	line-height: lfz
+	-webkit-line-clamp: lineas
+	-webkit-box-orient: vertical
+	overflow: hidden
+	text-overflow: ellipsis
+	
+
+.parallax-fondo
+	height 250px
+	background-image: url('../img/rd.jpg')
+	background-attachment: fixed
+	background-position: bottom center
+	background-repeat: no-repeat
+	background-size: cover
+	display flex
+	align-items center
+	justify-content center
+	h3
+		color white
+		font-size 3em
+		font-family 'Lobster', cursive
+
+body
+	font-family: 'Roboto', sans-serif
+	
+
+#terminosModal
+	ul
+		li
+			margin .7em 0
+			ul
+				li
+					margin-top .3em
+					
+
+.stretch
+	display flex
+	flex-direction row
+	flex-wrap wrap
+	align-items stretch
+	
+.center
+	display flex
+	flex-direction column
+	align-items center
+	justify-content center
+.navbar
+	min-height auto	
+.navbar-default .navbar-nav > li > a
+	height auto
+	padding-top 10px
+	padding-bottom 10px
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus
+	background azul
+	color verde !important
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus
+	background azul
+	color verde !important
+@media (max-width: 768px)
+	#menu ul li
+		width 100% !important
+	.navbar-brand
+		padding 0
+
+
+.sectionVideo
+	position relative
+	padding-bottom 6em
+	.videoContainer 
+		position:absolute
+		height:100%
+		width:100%
+		overflow: hidden
+	video 
+		min-width: 100%
+		min-height: 100%
+		position absolute
+		bottom 0
+	#menu
+		background rgba(51, 73, 96,.7)
+		padding 0
+		margin -1px -16px
+		ul
+			li
+				a
+					color white
+					padding 1em 0
+	.imagen
+		background rgba(255,255,255,.7)
+		position:absolute
+		background-repeat no-repeat
+		background-size cover
+		background-position bottom center
+		top: 0
+		height: calc(100% - 32px)
+		width:100%
+	.fondo_blanco
+		background rgba(255,255,255,0.7)
+		padding 1em 2em
+		
+
+.nav-tabs
+	border-bottom none !important
+	a
+		color white
+	.tabTransfer a
+		background #334960 !important
+		transition font-size 1s
+	.tabTour a
+		background #8cc640 !important
+		transition font-size 1s
