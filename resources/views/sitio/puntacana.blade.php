@@ -68,6 +68,9 @@
             <div class="col-xs-12" ng-show="transfer">
                 <div class="row">
                     <h4 class="col-xs-12 text-center titulo">INFO TRANSFER</h4>
+                    <div class="col-xs-12">
+                        @{{ traslado | json }}
+                    </div>
                     <div class="col-xs-6">
                         <div class="form-group">
                             <label for="">
@@ -75,13 +78,12 @@
                             </label>
                             <select 
                                 class="form-control select2"
-                                ng-change="cambiarDe(de);calcularPrecioTraslado();"
-                                ng-model="de"
+                                ng-change="cambiarDe();calcularPrecioTraslado();"
+                                ng-model="traslado.de"
                                 ng-options="aux.descripcion for aux in deOpciones" 
                                 ng-required="transfer">
                                 <option value>Choose one</option>
                             </select>
-                            <input type="hidden" name="de" value="@{{ de.descripcion }}">
                         </div>
                     </div>
                     <div class="col-xs-6">
@@ -89,13 +91,17 @@
                             <label for="">
                                 *To
                             </label>
-                            <select id="hotel" class="form-control select2_para" ng-change="calcularPrecioTraslado(); cambiarPara();" ng-model="para"  ng-options="aux.descripcion for aux in paraOpciones" ng-required="transfer">
+                            <select 
+                                id="hotel" 
+                                class="form-control select2_para" 
+                                ng-change="calcularPrecioTraslado(); cambiarPara();" 
+                                ng-model="traslado.para"  
+                                ng-options="aux.descripcion for aux in paraOpciones" 
+                                ng-required="transfer">
                                 <option value="">
                                     Choose one
                                 </option>
                             </select>
-                            <input name="para" type="hidden" value="@{{para.descripcion}}"/>
-                            <input type="hidden" name="hotel" value="@{{ hotelValue }}">
                         </div>
                     </div>
                     <div class="col-xs-6">
@@ -103,7 +109,12 @@
                             <label for="">
                                 *Passengers
                             </label>
-                            <select class="form-control select2" name="adultos" id="adultos" ng-change="calcularPrecioTraslado();cambiarPasajeros(pasajerosModel)" ng-model="pasajerosModel" ng-required="transfer">
+                            <select 
+                                class="form-control select2" 
+                                name="pasajeros" 
+                                id="pasajeros" 
+                                ng-model="traslado.pasajeros"
+                                ng-change="calcularPrecioTraslado();cambiarPasajeros();" ng-required="transfer">
                                 <option value="">
                                     Choose one
                                 </option>
@@ -116,7 +127,12 @@
                             <label for="">
                                 *Type Transfer
                             </label>
-                            <select class="form-control select2" name="tipo" ng-change="calcularPrecioTraslado()" ng-model="tipoModel" ng-required="transfer">
+                            <select c
+                                lass="form-control select2" 
+                                name="tipo" 
+                                ng-change="calcularPrecioTraslado()" 
+                                ng-model="traslado.tipo"
+                                ng-required="transfer">
                                 <option value="">
                                     Choose one
                                 </option>
@@ -134,7 +150,14 @@
                             <label for="">
                                 *Type VIP Transfer
                             </label>
-                            <select id="vipSelect" class="form-control select2" name="vip" ng-change="calcularPrecioTraslado()" ng-options="aux for aux in vipTipos track by aux" ng-model="vip" ng-required="transfer">
+                            <select 
+                                id="vipSelect" 
+                                class="form-control select2" 
+                                name="vip" 
+                                ng-model="traslado.vip"
+                                ng-change="calcularPrecioTraslado()" 
+                                ng-options="aux for aux in vipTipos track by aux"
+                                ng-required="transfer">
                                 <option value="">
                                     Choose one
                                 </option>
@@ -413,73 +436,24 @@
                     </div>
                 </div>
             </div>
-
-            <h4 class="col-xs-12 titulo text-center">CLIENT INFO</h4>
-            <div class="col-xs-12 col-sm-6">
-                <div class="form-group">
-                    <label for="">
-                        *First Name
-                    </label>
-                    <input class="form-control" name="nombre" type="text"  placeholder="Enter name" ng-required="transfer || serviceVIP">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <div class="form-group">
-                    <label for="">
-                        *Surname
-                    </label>
-                    <input class="form-control" name="apellido" type="text"  placeholder="Enter last name" ng-required="transfer || serviceVIP">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <div class="form-group">
-                    <label for="">
-                        *Email
-                    </label>
-                    <input class="form-control" name="correo" type="email"  placeholder="Enter email" ng-required="transfer || serviceVIP">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6">
-                <div class="form-group">
-                    <label for="">
-                        *Phone number
-                    </label>
-                    <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number" ng-required="transfer || serviceVIP">
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <div class="form-group">
-                    <label for="">
-                        Comments
-                    </label>
-                    <textarea class="form-control" style="overflow-x: hidden;" name="comentarios" rows="5" placeholder="Comments"></textarea>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+            <!-- <div class="col-xs-12 col-sm-4 col-sm-offset-4">
                 <div class="form-group">
                     <label for="">
                         *Promo Code (discount $ 10.00)
                     </label>
                     <input class="form-control" ng-model="codePromo" ng-change="cambiarCodigo(codePromo)" name="promoCode" type="text"  placeholder="Enter Promo Code">
                 </div>
-            </div>
-            <div class="col-xs-4 col-xs-offset-8">
+            </div> -->
+            <div class="col-xs-12">
                 <h3 class="text-center">
-                    $ @{{precio}}
+                    $ @{{traslado.precio}}
                 </h3>
-                <input name="precio" type="hidden" value="@{{precioTraslado}}"/>
-                <input name="precioVIP" type="hidden" value="@{{precioVIP}}"/>
             </div>
-            <div class="col-xs-12 col-sm-8 text-center">
-                <div class="form-group">
-                    <input data-toggle="tooltip" title="Accept terms and conditions" id="terminos" name="terminos" type="checkbox" value="terminos">
-                    <a class="verde" href="#" data-toggle="modal" data-target="#terminosModal">
-                        <strong data-toggle="tooltip" title="Read terms and conditions">I have read and accept the terms and conditions</strong>
-                    </a>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-4 text-center">
-                <button class="btn btn-primary disabled" id="traslado" name="traslado" type="submit" value="traslado">
+            <div class="col-xs-12 text-center">
+                <button class="btn btn-primary" id="traslado" name="traslado" type="submit" value="traslado">
+                    Add to <i style="color: white;" class="fa fa-shopping-cart"></i>
+                </button>
+                <button class="btn btn-success" id="traslado" name="traslado" type="submit" value="traslado">
                     Book now
                 </button>
             </div>
@@ -668,297 +642,6 @@
 	        $('#menu li.PuntaCanaVIP').addClass('active');
 	        $('#time1,#hora1,.hora').timepicker({ 'timeFormat': 'H:i' });    
 	        $('#time2,#hora2,.hora').timepicker({ 'timeFormat': 'H:i' });
-		});
-	</script>
-
-
-	<script>
-	    var app = angular.module("app", []);
-		app.controller("ctrl", function($scope,$http,$timeout) {
-		/*----------------------------Transfers----------------------------*/
-			var pasajeros = [];
-			for (var i = 1; i <= 5; i++) {
-				pasajeros.push(i);
-			}
-			$scope.pasajeros = pasajeros;
-			$scope.paraOpciones = [];
-			$scope.precio = 0;
-	        $scope.precioTraslado = 0;
-	        $scope.precioVIP = 0;
-	        $scope.transfer = false;
-	        $scope.serviceVIP = false;
-	        $scope.arrivalVIP = false;
-	        $scope.departureVIP = false;
-	        $scope.extras = false;
-	        $scope.paraV = [
-	            {id:0,descripcion:'Punta Cana',precio:[35,45,70,100,130]},
-	            {id:1,descripcion:'Bávaro - Cap Cana',precio:[35,45,70,100,130]},
-	            {id:2,descripcion:'Arena Gorda - Macao',precio:[40,50,80,105,130]},
-	            {id:3,descripcion:'Uvero Alto',precio:[65,80,95,120,145]},
-	            {id:4,descripcion:'Four Point by Sheraton Punta Cana',precio:[20,30,60,90,120]},
-	            {id:5,descripcion:'La Romana',precio:[105,135,195,220,245]},
-	            {id:6,descripcion:'Santo Domingo',precio:[150,165,250,275,300]},
-	        ];
-
-	        $scope.deOpciones = [
-	            {id:-1,descripcion:'Aeropuerto Punta Cana (PUJ)'},
-	            {id:5,descripcion:'Aeropuerto La Romana (LRM)'},
-	            {id:6,descripcion:'Aeropuerto Santo Domingo (SDQ)'},
-	            {id:4,descripcion:'Four Point by Sheraton Punta Cana'},
-	            {id:0,descripcion:"Majestic Colonial "},
-	            {id:0,descripcion:"Majestic Elegance "},
-	            {id:0,descripcion:"Majestic Mirage"},
-	            {id:0,descripcion:'Iberostar Punta Cana'},
-	            {id:0,descripcion:'Iberostar Bavaro'},
-	            {id:0,descripcion:'Iberostar Grand'},
-	            {id:0,descripcion:'Iberostar Dominicana'},
-	            {id:1,descripcion:'Royalton Bavaro'},
-	            /*{id:0,descripcion:'Dreams Palm Beach'},*/
-	            {id:0,descripcion:'Ocean Blue & Sand Beach Resort'},
-	            {id:0,descripcion:'Vik Arena Blanca'},
-	            {id:0,descripcion:'Westin Punta Cana'},
-	            {id:0,descripcion:'Alsol Luxury Village'},
-	            {id:0,descripcion:'Alsol del Mar (Soto Grande)'},
-	            {id:0,descripcion:'Sanctuary Cap Cana'},
-	            {id:0,descripcion:'Club Med'},
-	            {id:0,descripcion:'Natura Park Resort (Blau)'},
-	            {id:0,descripcion:'Catalonia Punta Cana'},
-	            {id:0,descripcion:'Be Live Collection Punta Cana'},
-	            {id:0,descripcion:'Alsol Tiara Cap Cana'},
-	            {id:0,descripcion:'The Villas at Cap Cana by Alsol'},
-	            {id:0,descripcion:'Luxury Beach Front Apartment in Punta Palmera'},
-	            {id:0,descripcion:'Eden Roc At Cap Cana'},
-	            {id:0,descripcion:'Fishing Lodge CapCana Diamond Resort'},
-	            {id:0,descripcion:'Grand Bahia Principe Bavaro'},
-	            {id:0,descripcion:'Bavaro Princess All Suites Resort, Spa & Casino'},
-	            /*{id:0,descripcion:'Melia Caribe Tropical'},*/
-	            {id:0,descripcion:'Tropical Princess Beach Resort & Spa'},
-	            {id:0,descripcion:'Barcelo Bavaro Palace'},
-	            {id:0,descripcion:'Barcelo Bavaro Beach'},
-	            {id:0,descripcion:'Blue Beach Punta Cana Luxury Resort'},
-	            {id:0,descripcion:'Catalonia Royal Bavaro - All Inclusive - Adults Only'},
-	            {id:0,descripcion:'Grand Bahia Principe Turquesa'},
-	            {id:0,descripcion:'Caribe Club Princess Beach Resort and Spa'},
-	            {id:0,descripcion:'Vista Sol Punta Cana Beach Resort & Spa'},
-	            {id:0,descripcion:'Punta Cana Princess All Suites Resort and Spa'},
-	            {id:0,descripcion:'Luxury Bahia Principe Esmeralda'},
-	            {id:0,descripcion:'The Level at Melia Caribe Tropical'},
-	            {id:0,descripcion:'Luxury Bahia Principe Ambar Blue - Adults Only'},
-	            {id:0,descripcion:'whala!bávaro'},
-	            {id:0,descripcion:'Sanctuary Cap Cana - All Inclusive by Playa Hotels & Resorts'},
-	            {id:0,descripcion:'Luxury Bahia Principe Ambar Green - Adults Only'},
-	            {id:0,descripcion:'Hotel Cortecito Inn Bavaro'},
-	            {id:0,descripcion:'Punta Palmera Cap Cana by Essenza Retreats'},
-	            {id:0,descripcion:'Residencial Las Buganvillas Bavaro'},
-	            {id:0,descripcion:'Royalton Punta Cana Resort & Casino'},
-	            {id:0,descripcion:'Riu Palace Punta Cana'},
-	            {id:0,descripcion:'Riu Naiboa'},
-	            {id:0,descripcion:'Riu Bavaro'},
-	            {id:0,descripcion:'Riu Palace Macao'},          
-
-	            {id:1,descripcion:"Occidental Caribe"},
-	            {id:1,descripcion:"Occidental Punta Cana"},
-	            {id:1,descripcion:"Secret Cap Cana"},
-	            // {id:1,descripcion:"Secret Royal Beach"},
-	            {id:1,descripcion:"Now Onix"},
-	            {id:1,descripcion:"Riu República"},
-	            {id:1,descripcion:"Bahia Principe Ambar"},
-	            {id:1,descripcion:"Bahia Principe Fantasy"},
-
-	            /*{id:2,descripcion:"Hard Rock Hotel & Casino"},*/
-
-	            {id:3,descripcion:"Zoetry Aqua"},
-	            {id:3,descripcion:"The Palms Punta Cana"},
-	            {id:3,descripcion:"Las Dunas Condo"},
-	            /*{id:3,descripcion:"Breathless Punta  Cana Resort & Spa"},*/
-	            {id:3,descripcion:"CHIC by Royalton Resorts "},
-	            /*{id:3,descripcion:"Dreams Punta Cana Resort & Spa"},*/
-	            {id:3,descripcion:"Excellence Punta Cana"},
-	            {id:3,descripcion:"Excellence El Carmen"},
-	            {id:3,descripcion:"Sensatori Resort Punta Cana"},
-	            {id:3,descripcion:"Sirenis Punta Cana Resort Casino & Aguagames"},
-	            {id:3,descripcion:"Sirenis Cocotal Beach Resort Punta Cana "},
-	            {id:3,descripcion:"Sirenis Tropical Suites Punta Cana "},
-	            {id:3,descripcion:"Sivory Punta Cana Boutique Hotel"},
-	            {id:3,descripcion:"Nickelodeon Hotels & Resorts Punta Cana "},
-	        ];
-
-	        $scope.hoteles = [
-	            {id:4,descripcion:'Four Point by Sheraton Punta Cana'},
-	            {id:0,descripcion:"Majestic Colonial "},
-	            {id:0,descripcion:"Majestic Elegance "},
-	            {id:0,descripcion:"Majestic Mirage"},
-	            {id:0,descripcion:'Iberostar Punta Cana'},
-	            {id:0,descripcion:'Iberostar Bavaro'},
-	            {id:0,descripcion:'Iberostar Grand'},
-	            {id:0,descripcion:'Iberostar Dominicana'},
-	            {id:1,descripcion:'Royalton Bavaro'},
-	            /*{id:0,descripcion:'Dreams Palm Beach'},*/
-	            {id:0,descripcion:'Ocean Blue & Sand Beach Resort'},
-	            {id:0,descripcion:'Vik Arena Blanca'},
-	            {id:0,descripcion:'Westin Punta Cana'},
-	            {id:0,descripcion:'Alsol Luxury Village'},
-	            {id:0,descripcion:'Alsol del Mar (Soto Grande)'},
-	            {id:0,descripcion:'Sanctuary Cap Cana'},
-	            {id:0,descripcion:'Club Med'},
-	            {id:0,descripcion:'Natura Park Resort (Blau)'},
-	            {id:0,descripcion:'Catalonia Punta Cana'},
-	            {id:0,descripcion:'Be Live Collection Punta Cana'},
-	            {id:0,descripcion:'Alsol Tiara Cap Cana'},
-	            {id:0,descripcion:'The Villas at Cap Cana by Alsol'},
-	            {id:0,descripcion:'Luxury Beach Front Apartment in Punta Palmera'},
-	            {id:0,descripcion:'Eden Roc At Cap Cana'},
-	            {id:0,descripcion:'Fishing Lodge CapCana Diamond Resort'},
-	            {id:0,descripcion:'Grand Bahia Principe Bavaro'},
-	            {id:0,descripcion:'Bavaro Princess All Suites Resort, Spa & Casino'},
-	            /*{id:0,descripcion:'Melia Caribe Tropical'},*/
-	            {id:0,descripcion:'Tropical Princess Beach Resort & Spa'},
-	            {id:0,descripcion:'Barcelo Bavaro Palace'},
-	            {id:0,descripcion:'Barcelo Bavaro Beach'},
-	            {id:0,descripcion:'Blue Beach Punta Cana Luxury Resort'},
-	            {id:0,descripcion:'Catalonia Royal Bavaro - All Inclusive - Adults Only'},
-	            {id:0,descripcion:'Grand Bahia Principe Turquesa'},
-	            {id:0,descripcion:'Caribe Club Princess Beach Resort and Spa'},
-	            {id:0,descripcion:'Vista Sol Punta Cana Beach Resort & Spa'},
-	            {id:0,descripcion:'Punta Cana Princess All Suites Resort and Spa'},
-	            {id:0,descripcion:'Luxury Bahia Principe Esmeralda'},
-	            {id:0,descripcion:'The Level at Melia Caribe Tropical'},
-	            {id:0,descripcion:'Luxury Bahia Principe Ambar Blue - Adults Only'},
-	            {id:0,descripcion:'whala!bávaro'},
-	            {id:0,descripcion:'Sanctuary Cap Cana - All Inclusive by Playa Hotels & Resorts'},
-	            {id:0,descripcion:'Luxury Bahia Principe Ambar Green - Adults Only'},
-	            {id:0,descripcion:'Hotel Cortecito Inn Bavaro'},
-	            {id:0,descripcion:'Punta Palmera Cap Cana by Essenza Retreats'},
-	            {id:0,descripcion:'Residencial Las Buganvillas Bavaro'},
-	            {id:0,descripcion:'Royalton Punta Cana Resort & Casino'},
-	            {id:0,descripcion:'Riu Palace Punta Cana'},
-	            {id:0,descripcion:'Riu Naiboa'},
-	            {id:0,descripcion:'Riu Bavaro'},
-	            {id:0,descripcion:'Riu Palace Macao'},          
-
-	            {id:1,descripcion:"Occidental Caribe"},
-	            {id:1,descripcion:"Occidental Punta Cana"},
-	            {id:1,descripcion:"Secret Cap Cana"},
-	            {id:1,descripcion:"Secret Royal Beach"},
-	            {id:1,descripcion:"Now Onix"},
-	            {id:1,descripcion:"Riu República"},
-	            {id:1,descripcion:"Bahia Principe Ambar"},
-	            {id:1,descripcion:"Bahia Principe Fantasy"},
-
-	            /*{id:2,descripcion:"Hard Rock Hotel & Casino"},*/
-
-	            {id:3,descripcion:"Zoetry Aqua"},
-	            {id:3,descripcion:"The Palms Punta Cana"},
-	            {id:3,descripcion:"Las Dunas Condo"},
-	            /*{id:3,descripcion:"Breathless Punta  Cana Resort & Spa"},*/
-	            {id:3,descripcion:"CHIC by Royalton Resorts "},
-	            /*{id:3,descripcion:"Dreams Punta Cana Resort & Spa"},*/
-	            {id:3,descripcion:"Excellence Punta Cana"},
-	            {id:3,descripcion:"Excellence El Carmen"},
-	            {id:3,descripcion:"Sensatori Resort Punta Cana"},
-	            {id:3,descripcion:"Sirenis Punta Cana Resort Casino & Aguagames"},
-	            {id:3,descripcion:"Sirenis Cocotal Beach Resort Punta Cana "},
-	            {id:3,descripcion:"Sirenis Tropical Suites Punta Cana "},
-	            {id:3,descripcion:"Sivory Punta Cana Boutique Hotel"},
-	            {id:3,descripcion:"Nickelodeon Hotels & Resorts Punta Cana "},
-	        ];
-
-	        $scope.aeropuerto = [
-	            {id:-1,descripcion:'Aeropuerto Punta Cana (PUJ)'},
-	            {id:5,descripcion:'Aeropuerto La Romana (LRM)'},
-	            {id:6,descripcion:'Aeropuerto Santo Domingo (SDQ)'},
-	        ];
-
-
-			$scope.cervezas = "0";
-			$scope.sodas = "0";
-			$scope.vino = "0";
-			$scope.champagne = "0";
-			$scope.vipTipos = ['Audi','Suburban'];
-
-			$scope.cambiarDe = function(obj){
-				$('.select2_para').select2();
-				if(obj.id==undefined)
-					$scope.paraOpciones = [];
-				else if(obj.id==-1 || obj.id==5 || obj.id==6)
-					$scope.paraOpciones = $scope.hoteles;
-				else
-					$scope.paraOpciones = $scope.aeropuerto;
-			}
-			
-			$scope.cambiarPara = function(){
-				$('.select2_para').select2();
-			}
-	        $scope.calcularPrecioTraslado = function(){
-	            var pasajeros = $scope.pasajerosModel;
-	            var de = $scope.de;
-	            var para = $scope.para;
-	            var aux;
-	            var precioTraslado = 0;
-	            var precioVIP = 0;
-	            var bebidas = parseInt($scope.cervezas) * 5 +  parseInt($scope.sodas) * 3 + parseInt($scope.vino) * 20 + parseInt($scope.champagne) * 25;
-	            if(de!=undefined &&  para!=undefined && pasajeros!=undefined){
-	                if(de.id>=5)
-	                    aux = de;
-	                else if(para.id>=5)
-	                    aux = para;
-	                else if(de.id!=-1)
-	                    aux=de;
-	                else
-	                    aux=para;
-	                $scope.hotelValue = aux.descripcion;
-	                
-	                if(pasajeros && aux.id!=undefined){
-	                    if(pasajeros<=4)
-	                        precioTraslado = $scope.paraV[aux.id].precio[0];
-	                    else if(pasajeros<=6)
-	                        precioTraslado = $scope.paraV[aux.id].precio[1];
-	                    else if(pasajeros<=10)
-	                        precioTraslado = $scope.paraV[aux.id].precio[2];
-	                    else if(pasajeros<=15)
-	                        precioTraslado = $scope.paraV[aux.id].precio[3];
-	                    else if(pasajeros<=20)
-	                        precioTraslado = $scope.paraV[aux.id].precio[4];
-	                    else
-	                        precioTraslado = $scope.paraV[aux.id].precio[4] + ((pasajeros-4)*5);
-
-	                    if($scope.tipoModel==2)
-	                        precioTraslado = (precioTraslado*2) + bebidas + (130);
-	                    else
-	                        precioTraslado = precioTraslado + bebidas + (65);
-	                }
-	            }
-
-	            if($scope.serviceVIP && $scope.pasajerosVIP){
-	                if($scope.arrivalVIP)
-	                    precioVIP = parseFloat($scope.pasajerosVIP *75);
-	                if($scope.departureVIP)
-	                    precioVIP = precioVIP + parseFloat($scope.pasajerosVIP *125);
-	            }
-	            $scope.precio = precioTraslado + precioVIP;
-	            $scope.precioTraslado = precioTraslado;
-	            $scope.precioVIP = precioVIP;
-	        }
-
-			$scope.cambiarCodigo = function(code){
-				$http.get('{{ url("/") }}/verificarCodigo/'+code).then(function(response){
-					$scope.calcularPrecioTraslado();
-					if(response.data=="correcto"){
-						$scope.precio = $scope.precio - 10;
-					};
-				});
-				
-			}
-
-			$scope.cambiarPasajeros = function(num){
-				$scope.vip = "";			
-				if(num<=2){
-					$scope.vipTipos = ['Suburban','Audi'];
-				}
-				else{
-					$scope.vipTipos = ['Suburban'];
-				}
-			}
 		});
 	</script>
 

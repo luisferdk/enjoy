@@ -156,7 +156,7 @@
                                                     <select 
                                                         class="form-control select2" 
                                                         name="adultos" 
-                                                        ng-change="calcularPrecioTraslado()" 
+                                                        ng-change="calcularPrecioTraslado();cambiarPasajeros()" 
                                                         ng-model="traslado.pasajeros" 
                                                         required>
                                                         <option value="">

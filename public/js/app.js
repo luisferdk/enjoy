@@ -321,7 +321,6 @@ $scope.vector = function(n){
   $scope.vino = "0";
   $scope.champagne = "0";
   $scope.traslado = {};
-  $scope.traslado.vip = false;
   $scope.traslado.precio = 0;
   $scope.descuento = false;
 
@@ -349,7 +348,6 @@ $scope.vector = function(n){
       var bebidas = parseInt($scope.cervezas) * 5 +  parseInt($scope.sodas) * 3 + parseInt($scope.vino) * 20 + parseInt($scope.champagne) * 25;
 
       if(pasajeros>2){
-          $scope.traslado.vip = false;
       }
       if(de!=undefined &&  para!=undefined && pasajeros!=undefined){
           if(de.id!=-1)
@@ -403,7 +401,6 @@ $scope.vector = function(n){
           }
         );
         $scope.traslado = {};
-        $scope.traslado.vip = false;
         $scope.traslado.precio = 0;
         $timeout(function(){
             $('#formTraslado select').select2();
@@ -908,7 +905,6 @@ $scope.vector = function(n){
     $timeout(function(){$('#tourModel').select2();},500);
   }
 
-
   $scope.precioTotal = function(){
     var precio = 0;
     for (var i = 0; i < $scope.carrito.traslados.length; i++) {
@@ -919,4 +915,18 @@ $scope.vector = function(n){
     }
     return precio;
   }
+
+
+
+  $scope.vipTipos = ['Audi','Suburban'];
+  $scope.cambiarPasajeros = function(){
+      $scope.traslado.vip = "";      
+      if($scope.traslado.pasajeros<=2){
+        $scope.vipTipos = ['Suburban','Audi'];
+      }
+      else{
+        $scope.vipTipos = ['Suburban'];
+      }
+      $timeout(function(){$('#vipSelect').select2();},500);
+    }
 });
