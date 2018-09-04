@@ -12,7 +12,8 @@ class Reservation extends Model
 		"correo",
 		"telefono",
 		"comentarios",
-		"precio"
+		"precio",
+		"id_pago"
     ];
 
     public function tours(){

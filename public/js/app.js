@@ -405,6 +405,10 @@ $scope.vector = function(n){
           }
         );
         $scope.traslado = {};
+        $scope.cervezas = "0";
+        $scope.sodas = "0";
+        $scope.vino = "0";
+        $scope.champagne = "0";
         $scope.traslado.precio = 0;
         $timeout(function(){
             $('#formTraslado select').select2();

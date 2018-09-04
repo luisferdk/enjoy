@@ -7,7 +7,7 @@
 <body>
 
 @if(ENV('SANDBOX')==true)
-	<form id="form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+	<form id="form" action="https://www.sandbox.paypal.com/webscr" method="post">
 	<input type="hidden" name="business" value="luisdk.03-facilitator@gmail.com">
 @else
 	<form id="form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
@@ -22,7 +22,9 @@
 	<input type="hidden" name="night_phone_a" value="{{ $reservation->telefono }}">
 	<input type="hidden" name="email" value="{{ $reservation->correo }}">
 	<input type="hidden" name="currency_code" value="USD">
-	<INPUT TYPE="hidden" name="return" value="{{ url('/ipn') }}">
+	<input type="hidden" name="cancel_return" value="{{ url("/ipn") }}">
+	<input type="hidden" name="notify_url" value="{{ url("/ipn") }}">
+	<input type="hidden" name="return" value="{{ url("/ipn") }}">
 </form>
 <script>
 	document.getElementById('form').submit();

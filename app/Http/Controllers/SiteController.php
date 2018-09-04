@@ -59,12 +59,23 @@ class SiteController extends Controller
         return view('sitio.paypal',compact('reservation'));
     }
 
+    public function ipn(Request $request){
+        $datos = $request->all();
+        if ($datos['credit_card_processed'] == "Y") {
+            $reservation = Reservation::find($datos["li_0_product_id"]);
+            $reservation->id_pago = $datos["order_number"];
+            $reservation->estado = 1;
+            $reservation->save();
+            return redirect('/')->with('status', 'Reservation Completed');
+        }
+    }
+
     public function sessionGet(){
         if(session('carrito')){
             return session('carrito');
         }
         else{
-            session([
+            return session([
                 "carrito"=> array
                 (
                     "traslados"=>array(),
@@ -75,7 +86,7 @@ class SiteController extends Controller
         }
     }
 
-    public function sessionPost(){
+    public function sessionPost(Request $request){
         session([
             "carrito" => $request->all()
         ]);
