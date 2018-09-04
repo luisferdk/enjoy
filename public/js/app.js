@@ -1,6 +1,6 @@
 var app = angular.module("app", []);
 
-app.controller("ctrl", function($scope,$http,$timeout) {
+app.controller("ctrl", function($scope,$http,$timeout,$window) {
 
 
 $scope.carrito = {
@@ -388,16 +388,20 @@ $scope.vector = function(n){
             para: $scope.traslado.para.descripcion,
             pasajeros: $scope.traslado.pasajeros,
             tipo: $scope.traslado.tipo,
-            fechaLlegada: $scope.traslado.fechaLlegada?$scope.traslado.fechaLlegada:null,
-            horaLlegada: $scope.traslado.horaLlegada?$scope.traslado.horaLlegada:null,
-            aerolineaLlegada: $scope.traslado.aerolineaLlegada?$scope.traslado.aerolineaLlegada:null,
-            vueloLlegada: $scope.traslado.vueloLlegada?$scope.traslado.vueloLlegada:null,
-            fechaSalida: $scope.traslado.fechaSalida?$scope.traslado.fechaSalida:null,
-            horaSalida: $scope.traslado.horaSalida?$scope.traslado.horaSalida:null,
-            aerolineaSalida: $scope.traslado.aerolineaSalida?$scope.traslado.aerolineaSalida:null,
-            vueloSalida: $scope.traslado.vueloSalida?$scope.traslado.vueloSalida:null,
+            llegada_fecha: $scope.traslado.llegada_fecha?$scope.traslado.llegada_fecha:null,
+            llegada_hora: $scope.traslado.llegada_hora?$scope.traslado.llegada_hora:null,
+            llegada_aerolinea: $scope.traslado.llegada_aerolinea?$scope.traslado.llegada_aerolinea:null,
+            llegada_vuelo: $scope.traslado.llegada_vuelo?$scope.traslado.llegada_vuelo:null,
+            salida_fecha: $scope.traslado.salida_fecha?$scope.traslado.salida_fecha:null,
+            salida_hora: $scope.traslado.salida_hora?$scope.traslado.salida_hora:null,
+            salida_aerolinea: $scope.traslado.salida_aerolinea?$scope.traslado.salida_aerolinea:null,
+            salida_vuelo: $scope.traslado.salida_vuelo?$scope.traslado.salida_vuelo:null,
             precio: $scope.traslado.precio?$scope.traslado.precio:null,
-            vip: $scope.traslado.vip,
+            vip: $scope.traslado.vip?$("#vip").val():null,
+            cervezas: $scope.cervezas?$scope.cervezas:null,
+            sodas: $scope.sodas?$scope.sodas:null,
+            vino: $scope.vino?$scope.vino:null,
+            champagne: $scope.champagne?$scope.champagne:null
           }
         );
         $scope.traslado = {};
@@ -882,18 +886,18 @@ $scope.vector = function(n){
   }
 
   $scope.calcularPrecioVIP = function(){
-    if($scope.VIP.serviceVIP && $scope.VIP.pasajerosVIP){
-        if($scope.VIP.arrivalVIP)
-            $scope.VIP.precio = parseFloat($scope.VIP.pasajerosVIP *75);
-        if($scope.VIP.departureVIP)
-            $scope.VIP.precio = $scope.VIP.precio + parseFloat($scope.VIP.pasajerosVIP *125);
+    if($scope.VIP.serviceVIP && $scope.VIP.pasajeros){
+        if($scope.VIP.arrival)
+            $scope.VIP.precio = parseFloat($scope.VIP.pasajeros *75);
+        if($scope.VIP.departure)
+            $scope.VIP.precio = $scope.VIP.precio + parseFloat($scope.VIP.pasajeros *125);
     }
   }
 
-$scope.VIP = {precio:0};
+  $scope.VIP = {precio:0};
   $scope.agregarVIP = function(event){
     event.preventDefault();
-    if($scope.VIP.serviceVIP && $scope.VIP.pasajerosVIP){
+    if($scope.VIP.serviceVIP && $scope.VIP.pasajeros){
         $scope.carrito.vip.push($scope.VIP);
         console.log($scope.carrito);
         $scope.vip = false;
@@ -904,6 +908,10 @@ $scope.VIP = {precio:0};
       $scope.agregarTraslado(event);
       $scope.transfer = false;
     }
+  }
+  $scope.eliminarVIP = function(index){
+    $scope.carrito.vip.splice(index,1);
+    $scope.actualizar();
   }
 
 
@@ -924,11 +932,6 @@ $scope.VIP = {precio:0};
   if(window.pos!=null){
     $scope.tour = $scope.tours[window.pos];
     $scope.tour.precio = $scope.tours[window.pos].modalidades[0].precio;
-  }
-
-  if(window.tour!=null){
-    $scope.tour = $scope.tours[window.tour];
-    $scope.tour.precio = $scope.tours[window.tour].modalidades[0].precio;
     $timeout(function(){$('#tourModel').select2();},500);
   }
 
@@ -939,6 +942,9 @@ $scope.VIP = {precio:0};
     }
     for (var i = 0; i < $scope.carrito.tours.length; i++) {
       precio += $scope.carrito.tours[i].precio;
+    }
+    for (var i = 0; i < $scope.carrito.vip.length; i++) {
+      precio += $scope.carrito.vip[i].precio;
     }
     return precio;
   }
@@ -954,6 +960,6 @@ $scope.VIP = {precio:0};
       else{
         $scope.vipTipos = ['Suburban'];
       }
-      $timeout(function(){$('#vipSelect').select2();},500);
+      $timeout(function(){$('.vipSelect').select2();},500);
     }
 });

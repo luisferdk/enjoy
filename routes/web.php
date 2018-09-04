@@ -9,38 +9,14 @@ Route::get('/tour/{id}', "SiteController@tour");
 Route::get('/packages', "SiteController@packages");
 Route::get('/wifiServices', "SiteController@wifiServices");
 Route::get('/puntacana', "SiteController@puntacana");
-Route::get('/shop', "SiteController@shop");
+Route::get('/shop', "SiteController@shopGet");
+Route::post('/shop', "SiteController@shopPost");
+Route::get('/session', "SiteController@sessionGet");
+Route::post('/session', "SiteController@sessionPost");
+Route::get('/borrar', "SiteController@borrar");
 
-Route::get('/session',function(){
-	if(session('carrito')){
-		return session('carrito');
-	}
-	else{
-		session([
-			"carrito"=> array
-			(
-				"traslados"=>array(),
-				"tours"=>array(),
-				"vip"=>array(),
-			)
-		]);
-	}
+Route::get('/ipn',function(Request $request){
+	dd($request->all());
 });
 
-Route::post('session',function(Request $request){
-	session([
-		"carrito" => $request->all()
-	]);
-});
-
-
-Route::get('/borrar',function(){
-	session([
-		"carrito"=> array
-		(
-			"traslados"=>array(),
-			"tours"=>array(),
-			"vip"=>array(),
-		)
-	]);
-});
+Route::get('/test','SiteController@test');

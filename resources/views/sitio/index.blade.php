@@ -195,8 +195,9 @@
                                                     <input  ng-change="calcularPrecioTraslado();" 
                                                             ng-model="traslado.vip" 
                                                             type="checkbox" 
-                                                            value="vip" 
-                                                            name="vip">
+                                                            id="vip"
+                                                            name="vip"
+                                                            value="Audi">
                                                         VIP Audi A4 2017 ($65.00 + tax per direction) Perfect for 2 people
                                                     </label>
                                                 </div>
@@ -211,10 +212,10 @@
                                                                 *Date
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.fechaLlegada"
+                                                                ng-model="traslado.llegada_fecha"
                                                                 class="form-control" 
                                                                 id="date1" 
-                                                                name="fechaLlegada" 
+                                                                name="llegada_fecha" 
                                                                 type="text" 
                                                                 placeholder="Select Date"
                                                                 ng-required="traslado.tipo">
@@ -226,10 +227,10 @@
                                                                 *Time
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.horaLlegada"
+                                                                ng-model="traslado.llegada_hora"
                                                                 class="form-control" 
                                                                 id="time1" 
-                                                                name="horaLlegada" 
+                                                                name="llegada_hora" 
                                                                 type="text" 
                                                                 placeholder="Select Time"
                                                                 ng-required="traslado.tipo">
@@ -241,10 +242,10 @@
                                                                 *Airline Name
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.aerolineaLlegada"
+                                                                ng-model="traslado.llegada_aerolinea"
                                                                 class="form-control" 
                                                                 name="
-                                                                aerolineaLlegada" 
+                                                                llegada_aerolinea" 
                                                                 type="text" 
                                                                 placeholder="Enter airline name"
                                                                 ng-required="traslado.tipo">
@@ -256,9 +257,9 @@
                                                                 *Flight Number
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.vueloLlegada"
+                                                                ng-model="traslado.llegada_vuelo"
                                                                 class="form-control" 
-                                                                name="vueloLlegada" 
+                                                                name="llegada_vuelo" 
                                                                 type="text" 
                                                                 placeholder="Enter flight name"
                                                                 ng-required="traslado.tipo">
@@ -276,10 +277,10 @@
                                                                 *Date
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.fechaSalida"
+                                                                ng-model="traslado.salida_fecha"
                                                                 class="form-control" 
                                                                 id="date2" 
-                                                                name="fechaSalida" 
+                                                                name="salida_fecha" 
                                                                 type="text" 
                                                                 placeholder="Select Date"
                                                                 ng-required="traslado.tipo==2">
@@ -291,10 +292,10 @@
                                                                 *Time
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.horaSalida"
+                                                                ng-model="traslado.salida_hora"
                                                                 class="form-control" 
                                                                 id="time2" 
-                                                                name="horaSalida" 
+                                                                name="salida_hora" 
                                                                 type="text" 
                                                                 placeholder="Select Time"
                                                                 ng-required="traslado.tipo==2">
@@ -306,9 +307,9 @@
                                                                 *Airline Name
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.aerolineaSalida"
+                                                                ng-model="traslado.salida_aerolinea"
                                                                 class="form-control" 
-                                                                name="aerolineaSalida" 
+                                                                name="salida_aerolinea" 
                                                                 type="text" 
                                                                 placeholder="Enter airline name"
                                                                 ng-required="traslado.tipo==2">
@@ -320,9 +321,9 @@
                                                                 *Flight Number
                                                             </label>
                                                             <input 
-                                                                ng-model="traslado.vueloSalida"
+                                                                ng-model="traslado.salida_vuelo"
                                                                 class="form-control" 
-                                                                name="vueloSalida" 
+                                                                name="salida_vuelo" 
                                                                 type="text" 
                                                                 placeholder="Enter flight name"
                                                                 ng-required="traslado.tipo==2">
@@ -913,8 +914,7 @@
 
     <?php if (isset($_GET['tour'])): ?>
         <script>
-            window.tour = {{ $_GET['tour'] }};
-            console.log(window.tour);
+            window.pos = {{ $_GET['tour'] }};
         </script>
     <?php endif ?>
 

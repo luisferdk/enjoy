@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Paypal</title>
+</head>
+<body>
+
+@if(ENV('SANDBOX')==true)
+	<form id="form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="business" value="luisdk.03-facilitator@gmail.com">
+@else
+	<form id="form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="business" value="manager@rennytraveldmc.com">
+@endif
+	<input type="hidden" name="cmd" value="_xclick">
+	<input type="hidden" name="item_name" value="Reservation Nro {{ $reservation->id }}">
+	<input type="hidden" name="item_number" value="{{ $reservation->id }}">
+	<input type="hidden" name="amount" value="{{ $reservation->precio }}">
+	<input type="hidden" name="first_name" value="{{ $reservation->nombre }}">
+	<input type="hidden" name="last_name" value="{{ $reservation->apellido }}">
+	<input type="hidden" name="night_phone_a" value="{{ $reservation->telefono }}">
+	<input type="hidden" name="email" value="{{ $reservation->correo }}">
+	<input type="hidden" name="currency_code" value="USD">
+	<INPUT TYPE="hidden" name="return" value="{{ url('/ipn') }}">
+</form>
+<script>
+	document.getElementById('form').submit();
+</script>
+</body>
+</html>

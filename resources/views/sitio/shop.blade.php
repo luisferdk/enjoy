@@ -2,9 +2,12 @@
 
 @section('content')
 
-	<section class="row">
+	<form class="row" action="" method="post">
+		@csrf
 		<h1 class="col-xs-12 text-center tituloVerde" style="font-size: 3em">Reservation</h1>
-		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0">
+		<div 
+			class="col-xs-10 col-xs-offset-1" 
+			ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0">
 			<div class="alert alert-success text-center">Add item to <i class="fa fa-shopping-cart"></i></div>
 		</div>
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.traslados.length>0">
@@ -14,6 +17,7 @@
 					<tr>
 						<th class="text-center">From</th>
 						<th class="text-center">To</th>
+						<th class="text-center">Service</th>
 						<th class="text-center">Passengers</th>
 						<th class="text-center">Type</th>
 						<th class="text-center">Price</th>
@@ -24,6 +28,7 @@
 					<tr ng-repeat="(index,aux) in carrito.traslados" ng-re>
 						<td>@{{ aux.de }}</td>
 						<td>@{{ aux.para }}</td>
+						<td>@{{ aux.vip?aux.vip:'Regular' }}</td>
 						<td>@{{ aux.pasajeros }}</td>
 						<td>@{{ aux.tipo==1?"One Way":"Round Trip" }}</td>
 						<td>@{{ aux.precio | currency:"$ " }}</td>
@@ -77,18 +82,18 @@
 				</thead>
 				<tbody>
 					<tr ng-repeat="aux in carrito.vip">
-						<td>@{{ aux.pasajerosVIP }}</td>
-						<td>@{{ aux.fechaLlegadaVIP }}</td>
-						<td>@{{ aux.fechaSalidaVIP }}</td>
+						<td>@{{ aux.pasajeros }}</td>
+						<td>@{{ aux.llegada_fecha }}</td>
+						<td>@{{ aux.salida_fecha }}</td>
 						<td>@{{ aux.precio | currency:"$ " }}</td>
 						<td>
-							<a ng-click="eliminarTour(index)"><i class="fa fa-trash"></i></a>
+							<a ng-click="eliminarVIP(index)"><i class="fa fa-trash"></i></a>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
-		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.tours.length>0">
+		<div class="col-xs-10 col-xs-offset-1" ng-if="precioTotal()>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Client Info</h2>
             <div class="col-xs-12 col-sm-6">
                 <div class="form-group">
@@ -131,16 +136,17 @@
                 </div>
             </div>
 		</div>
-		<h2 class="col-xs-10 col-xs-offset-1 tituloVerde text-center">
+		<h2 class="col-xs-10 col-xs-offset-1 tituloVerde text-center" ng-show="precioTotal()>0">
 			@{{ precioTotal() | currency:"$ "}}
+			<input type="hidden" name="precio" value="@{{ precioTotal() }}">
 		</h2>
-		<div class="col-xs-10 col-xs-offset-1 mt2">
+		<div class="col-xs-10 col-xs-offset-1 mt2" ng-show="precioTotal()>0">
 			<input data-toggle="tooltip" title="Accept terms and conditions" ng-model="terminos" id="terminos" name="terminos" type="checkbox" value="terminos">
 	        <a class="" href="#" data-toggle="modal" data-target="#terminosModal">
 	        	<strong data-toggle="tooltip" title="Read terms and conditions">I have read and accept the terms and conditions</strong>
 	    	</a>
 			<button type="submit" class="btn btn-success pull-right" ng-disabled="!terminos"><i class="fa fa-paypal"></i> Payment</button>
 		</div>
-	</section>
+	</form>
 
 @endsection
