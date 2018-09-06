@@ -126,7 +126,16 @@
                     </label>
                     <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number" required>
                 </div>
-            </div>
+			</div>
+			<div class="col-xs-12" ng-if="carrito.tours.length>0">
+				<div class="form-group">
+					<label for="">
+						*Hotel Pickup
+					</label>
+					<input class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel" required>
+					@include("base.hoteles")
+				</div>
+			</div>	
             <div class="col-xs-12">
                 <div class="form-group">
                     <label for="">

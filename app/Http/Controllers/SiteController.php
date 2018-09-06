@@ -3,11 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\Notification;
 
 use App\Reservation;
 use App\Transfer;
 use App\Tour;
 use App\Vip;
+
 class SiteController extends Controller
 {
     public function index(){
@@ -68,6 +72,8 @@ class SiteController extends Controller
             $reservation->id_pago = $datos["order_number"];
             $reservation->estado = 1;
             $reservation->save();
+            $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
+            Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
             return redirect('/')->with('status', 'Reservation Completed');
         }
     }

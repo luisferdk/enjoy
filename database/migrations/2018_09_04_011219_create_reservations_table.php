@@ -23,6 +23,7 @@ class CreateReservationsTable extends Migration
             $table->float("precio");
             $table->integer('estado')->unsigned()->default(0);
             $table->string('id_pago',30)->nullable();
+            $table->string("hotel")->nullable();
             $table->timestamps();
         });
     }

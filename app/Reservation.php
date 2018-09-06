@@ -13,6 +13,7 @@ class Reservation extends Model
 		"telefono",
 		"comentarios",
 		"precio",
+		"hotel",
 		"id_pago"
     ];
 

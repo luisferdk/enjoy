@@ -12,7 +12,7 @@ class Tour extends Model
     	"fecha",
     	"horario",
     	"adultos",
-    	"ninos",
+		"ninos",
     	"precio",
     	"reservation_id"
     ];
