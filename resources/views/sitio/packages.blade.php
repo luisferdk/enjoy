@@ -32,7 +32,7 @@
 	                    </div>
 	                </div>
 					<div class="row">
-						<form class="form-inline wedding-code col-sm-6" method="post" action="">
+						<form class="form-inline wedding-code col-sm-6">
 							<div class="border text-center">
 						  		<div class="form-group">
 								    <label for="text">Enter Code:</label>
@@ -88,7 +88,8 @@
 			</table>
 		</div>
 		-->
-			<form action="" method="post" class="col-xs-6 col-xs-offset-3 mt2">
+			<form action=" {{ url('/packages') }} " method="post" class="col-xs-6 col-xs-offset-3 mt2">
+				@csrf
 				<p class="text-center">Send your email to have access to the best vacation packages in DR</p>
 			  <div class="form-group">
 			  	<label for="nombre">Name</label>

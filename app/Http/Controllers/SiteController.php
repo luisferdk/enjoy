@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 use App\Mail\Notification;
+use App\Mail\Package;
 
 use App\Reservation;
 use App\Transfer;
@@ -32,6 +33,12 @@ class SiteController extends Controller
 
     public function packages(){
     	return view('sitio.packages');
+    }
+    
+    public function packagesPOST(Request $request){
+        return new Package($request->all());
+        Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
+        //return redirect('/packages')->with('status', 'Reservation Completed');
     }
 
     public function wifiServices(){
