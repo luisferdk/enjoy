@@ -46,7 +46,7 @@
                     <a href="http://www.facebook.com/rennytravel"><i aria-hidden="true" class="fa fa-facebook"></i></a>
                     <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                     <a href="https://www.instagram.com/rennytravel/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
-                    <a href="{{ url('/admin') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
+                    <a href="{{ url('/login') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
                     <a class="{{ Request::is('shop')?'tituloVerde':'' }}" href="{{ url('/shop') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
                 </div>
             </div>

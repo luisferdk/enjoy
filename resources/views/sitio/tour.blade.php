@@ -96,7 +96,7 @@
 			                	ng-model="tour.modalidad"
 			                	ng-change="calcularPrecioTour()"
 			                	ng-options="aux.descripcion for aux in tour.modalidades"
-			                	required>
+			                	ng-required="tour.modalidades.length>1">
 			                    <option value="">Choose one</option>
 			                </select>
 			            </div>
@@ -110,7 +110,7 @@
 			                	class="form-control" 
 			                	name="horario" 
 			                	ng-model="tour.horario"
-			                	required>
+			                	ng-required="tour.horarios.length>1">
 			                    <option value>Choose one</option>
 			                    <option ng-repeat="aux in tour.horarios" value="@{{ aux }}">@{{ aux }}</option>
 			                </select>

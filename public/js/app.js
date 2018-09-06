@@ -427,7 +427,7 @@ $scope.vector = function(n){
         $scope.carrito.tours.push(
           {
             tour:$scope.tour.titulo,
-            modalidad:$scope.tour.modalidad.descripcion,
+            modalidad: $scope.tour.modalidad ? $scope.tour.modalidad.descripcion:$scope.tour.modalidades[0].descripcion,
             fecha:$scope.tour.fecha,
             horario:$scope.tour.horario?$scope.tour.horario:null,
             adultos:$scope.tour.adultos,

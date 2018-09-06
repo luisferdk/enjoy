@@ -80,6 +80,14 @@ class SiteController extends Controller
             $reservation->save();
             $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
             Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+            session([
+                "reservation" => array(),
+                "carrito" => array(
+                    "traslados" => array(),
+                    "tours" => array(),
+                    "vip" => array(),
+                )
+            ]);
             return redirect('/')->with('status', 'Reservation Completed');
         }
     }
