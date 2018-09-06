@@ -928,7 +928,7 @@
         <?php endif ?>
     <?php endif ?>
 
-    @if (session('status') )
+    @if(session('status') )
     <div class="modal fade" id="completado">
         <div class="modal-dialog">
             <div class="modal-content">

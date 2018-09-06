@@ -36,9 +36,8 @@ class SiteController extends Controller
     }
     
     public function packagesPOST(Request $request){
-        return new Package($request->all());
         Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
-        //return redirect('/packages')->with('status', 'Reservation Completed');
+        return redirect('/packages')->with('status', 'Reservation Completed');
     }
 
     public function wifiServices(){

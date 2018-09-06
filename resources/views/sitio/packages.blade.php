@@ -322,3 +322,28 @@
 	</script>
 	<script src='https://www.google.com/recaptcha/api.js'></script>    
 @endsection
+
+
+@section('js')
+@if(session('status') )
+    <div class="modal fade" id="completado">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <h3 class="col-xs-12 text-center" style="color:green;"><i class="fa fa-check fa-2x"></i></h3>
+                        <h2 class="col-xs-12 text-center">Message Sent</h2>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#completado').modal('show');
+    </script>
+@endif
+@endsection
