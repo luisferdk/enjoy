@@ -42,27 +42,29 @@ class SiteController extends Controller
         return view('sitio.shop');
     }
     public function shopPost(Request $request){
-        $reservation = Reservation::create($request->all());
-        foreach (session('carrito')['traslados'] as $traslado){
-            $traslado["reservation_id"] = $reservation->id;
-            Transfer::create($traslado);
-        }
-        foreach (session('carrito')['tours'] as $tour){
-            $tour["reservation_id"] = $reservation->id;
-            Tour::create($tour);
-        }
-        foreach (session('carrito')['vip'] as $vip){
-            $vip["reservation_id"] = $reservation->id;
-            Vip::create($vip);
-        }
-
+        session(
+            ["reservation"=>$request->all()]
+        );
         return view('sitio.paypal',compact('reservation'));
     }
 
     public function ipn(Request $request){
         $datos = $request->all();
         if ($datos['credit_card_processed'] == "Y") {
-            $reservation = Reservation::find($datos["li_0_product_id"]);
+            $reservation = Reservation::create(session("reservation"));
+            foreach (session('carrito')['traslados'] as $traslado) {
+                $traslado["reservation_id"] = $reservation->id;
+                Transfer::create($traslado);
+            }
+            foreach (session('carrito')['tours'] as $tour) {
+                $tour["reservation_id"] = $reservation->id;
+                Tour::create($tour);
+            }
+            foreach (session('carrito')['vip'] as $vip) {
+                $vip["reservation_id"] = $reservation->id;
+                Vip::create($vip);
+            }
+
             $reservation->id_pago = $datos["order_number"];
             $reservation->estado = 1;
             $reservation->save();

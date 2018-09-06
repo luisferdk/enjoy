@@ -298,18 +298,6 @@
 
 	<script>
         window.url = '{{ url("/") }}';
-		setTimeout(function(){
-
-			if($('#menu li.active').hasClass('redirect')==true){
-			    $('#redirectTransfer').attr("href","{{ url("/") }}?opcion=1");
-			    $('#redirectTransfer2').attr("href","{{ url("/") }}?opcion=1");
-			    $('#redirectTours').attr("href","{{ url("/") }}?opcion=2");
-			    $('#redirectTransfer').removeAttr('data-toggle');
-			    $('#redirectTours').removeAttr('data-toggle');
-			}
-
-		}, 500);
-
 	</script>
 </body>
 </html>
