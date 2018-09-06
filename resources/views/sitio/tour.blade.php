@@ -155,14 +155,26 @@
 						<div class="row">
 							<div class="col-xs-6 text-center">
 					        	<div class="form-group">
-						            <button type="submit" style="margin-top: 15px;margin-bottom: 15px;border-color: white;"  class="col-xs-12 btn btn-primary" id="tour" name="tour" value="tour">
+									<button 
+										type="submit" 
+										style="margin-top: 15px;margin-bottom: 15px;border-color: white;" 
+										class="col-xs-12 btn btn-primary" 
+										name="tour" 
+										ng-click="opcion='agregar'"
+										value="tour">
 						                Add to <i class="fa fa-shopping-cart"></i>
 						            </button>
 					            </div>
 					        </div>	
 							<div class="col-xs-6 text-center">
 					        	<div class="form-group">
-						            <button type="submit" style="margin-top: 15px;margin-bottom: 15px;"  class="col-xs-12 btn btn-success" id="tour" name="tour" value="tour">
+									<button 
+										type="submit"
+										style="margin-top: 15px;margin-bottom: 15px;"  
+										class="col-xs-12 btn btn-success" 
+										name="tour" 
+										ng-click="opcion='reservar'"
+										value="tour">
 						                Book now
 						            </button>
 					            </div>

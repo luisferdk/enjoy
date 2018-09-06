@@ -382,7 +382,6 @@ $scope.vector = function(n){
 
   $scope.agregarTraslado = function(event){
         event.preventDefault();
-        console.log($scope.traslado);
         $scope.carrito.traslados.push({
             de: $scope.traslado.de.descripcion,
             para: $scope.traslado.para.descripcion,
@@ -929,8 +928,9 @@ $scope.vector = function(n){
   $scope.actualizar = function(){
     $scope.carrito._token=window._token;
     $http.post(window.url+'/session',$scope.carrito).then(function(response){});
-    if($scope.opcion=='reservar')
-      $window.location.herf =window.url+'/shop';
+    if($scope.opcion=='reservar'){
+      $window.location.href =window.url+'/shop';
+    }
   }
 
   if(window.pos!=null){
