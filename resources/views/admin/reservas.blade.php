@@ -180,7 +180,7 @@ Reservas
                             <p class="center-align" style="margin:0">
                                 <strong style="font-weight: bold">TRASLADO @{{key+1}}</strong>
                             </p>
-                            <p class="col s6 right-align" style="font-wight:bold;margin:15px 0 0 0;">
+                            <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
                                     De:
                                 <br>Para:
                                 <br>Pasajeros:
@@ -223,7 +223,7 @@ Reservas
                             <p class="center-align" style="margin:0">
                                 <strong style="font-weight: bold">VIP @{{key+1}}</strong>
                             </p>
-                            <p class="col s6 right-align" style="font-wight:bold;margin:15px 0 0 0;">
+                            <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
                                     Precio:
                                 <br>Pasajeros:
                             </p>

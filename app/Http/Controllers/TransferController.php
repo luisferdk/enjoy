@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Reservation;
-class ReservationController extends Controller
+use App\Transfer;
+class TransferController extends Controller
 {
 
     public function update(Request $request, $id)
     {
-        $reservation = Reservation::with('tours','vips','transfers')->find($id);
+        $reservation = Transfer::with('reservation')->find($id);
         $reservation->estado = $request->estado;
         $reservation->save();
         return $reservation;

@@ -23,8 +23,7 @@ class AdminController extends Controller
 
     public function traslados(){
         $reservas = Transfer::with('reservation')->get();
-        return view('admin.reservas',compact('reservas'));
-        return view('admin.traslados');
+        return view('admin.traslados',compact('reservas'));
     }
 
     public function excursiones(){

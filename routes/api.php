@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::resource('reservation', 'ReservationController');
+Route::resource('transfer', 'TransferController');
+Route::resource('tour', 'TourController');
+Route::resource('vip', 'VipController');
