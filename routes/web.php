@@ -21,4 +21,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/admin', 'AdminController@admin');
+Route::get('/admin/reservas', 'AdminController@reservas');
+Route::get('/admin/traslados', 'AdminController@traslados');
+Route::get('/admin/excursiones', 'AdminController@excursiones');
+Route::get('/admin/vip', 'AdminController@vip');
+Route::get('/admin/wifi', 'AdminController@wifi');

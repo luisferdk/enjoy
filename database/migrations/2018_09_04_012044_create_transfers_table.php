@@ -35,7 +35,7 @@ class CreateTransfersTable extends Migration
             $table->string("sodas")->nullable();
             $table->string("vino")->nullable();
             $table->string("champagne")->nullable();
-            $table->integer('estado')->unsigned()->default(0);
+            $table->integer('estado')->unsigned()->default(1);
             $table->integer('reservation_id')->unsigned();
             $table->timestamps();
         });

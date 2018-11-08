@@ -27,6 +27,7 @@ class CreateVipsTable extends Migration
 
             $table->string("pasajeros");
             $table->string("precio");
+            $table->integer('estado')->unsigned()->default(1);
             $table->integer('reservation_id')->unsigned();
             $table->timestamps();
         });

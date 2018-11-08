@@ -22,7 +22,7 @@ class CreateToursTable extends Migration
             $table->string("adultos");
             $table->string("ninos")->nullable();
             $table->float("precio");
-            $table->integer('estado')->unsigned()->default(0);
+            $table->integer('estado')->unsigned()->default(1);
             $table->integer('reservation_id')->unsigned();
             $table->timestamps();
         });

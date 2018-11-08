@@ -935,8 +935,8 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row">
-                        <h1 class="col-xs-12 text-center" style="color:green;"><i class="fa fa-check fa-2x"></i></h1>
-                        <h1 class="col-xs-12 text-center">Thanks for reservation</h1>
+                        <h2 class="col-xs-12 text-center" style="color:green;"><i class="fa fa-check fa-2x"></i></h2>
+                        <h2 class="col-xs-12 text-center">Thanks for reservation</h2>
                     </div>
                 </div>
                 <div class="modal-footer">
