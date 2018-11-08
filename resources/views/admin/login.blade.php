@@ -3,7 +3,8 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
-    <link rel="shortcut icon" type="image/png" href="{{ asset("/") }}img/logo.png">
+    <link rel="shortcut icon" type="image/png" href="{{ asset('/') }}img/logo.png">
+    <title>Renny Travel</title>
     <style>
         body {
       display: flex;
@@ -52,6 +53,7 @@
                     style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;min-width:40%">
 
                     <form class="col s12" method="post" action="{{ route('login') }}">
+                        @csrf
                         <div class='row'>
                             <div class='col s12'>
                             </div>
@@ -59,8 +61,8 @@
 
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='text' name='user' id='user' required />
-                                <label for='user'>Enter your user</label>
+                                <input class='validate' type='text' name='email' id='email' required />
+                                <label for='email'>Enter your email</label>
                             </div>
                         </div>
 

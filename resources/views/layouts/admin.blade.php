@@ -88,9 +88,13 @@
                         </div>
                         <ul class="right col s9 m3 nav-right-menu">
                             <li>
-                                <a href="">
+                                <a onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
                                     <i class="material-icons">exit_to_app</i>
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
                     </div>
