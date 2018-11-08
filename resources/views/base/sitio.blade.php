@@ -293,7 +293,7 @@
 	
 	<script src="{{ asset("/") }}js/angular.min.js"></script>
     @yield('js')
-	<script src="{{ asset("/") }}js/app.js"></script>
+	<script src="{{ asset("/") }}js/sitio.js"></script>
     <script src="{{ asset("/") }}js/main.js"></script>
 
 	<script>

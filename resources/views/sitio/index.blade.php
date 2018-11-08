@@ -919,7 +919,7 @@
         </script>
     <?php endif ?>
 
-    <script src="{{ asset("/") }}js/app.js"></script>
+    <script src="{{ asset("/") }}js/sitio.js"></script>
     <script src="{{ asset("/") }}js/main.js"></script>
     <?php if (isset($_GET['opcion'])): ?>
         <?php if ($_GET['opcion']==1): ?>
