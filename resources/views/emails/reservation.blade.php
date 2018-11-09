@@ -59,7 +59,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 				<table>
 					<tr>
 						<td colspan="2" style="color:#8dc740;text-align: center;">
-							<h2 style="margin:15px 0 5px 0;">Reserva</h2>
+							<h2 style="margin:30px 0 5px 0;">Reserva</h2>
 						</td>
 					</tr>
 					<tr>
@@ -104,7 +104,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 				<table>
 					<tr>
 						<td colspan="2" style="color:#8dc740;text-align: center;">
-							<h2 style="margin:15px 0 5px 0;">Traslado {{ count($reservation->transfers)>1?$key+1:'' }}</h2>
+							<h2 style="margin:30px 0 5px 0;">Traslado {{ count($reservation->transfers)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
@@ -202,7 +202,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 				<table>
 					<tr>
 						<td colspan="2" style="color:#8dc740;text-align: center;">
-							<h2 style="margin:15px 0 5px 0;">Tour {{ count($reservation->tours)>1?$key+1:'' }}</h2>
+							<h2 style="margin:30px 0 5px 0;">Tour {{ count($reservation->tours)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
@@ -246,7 +246,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 				<table>
 					<tr>
 						<td colspan="2" style="color:#8dc740;text-align: center;">
-							<h2 style="margin:15px 0 5px 0;">VIP {{ count($reservation->vips)>1?$key+1:'' }}</h2>
+							<h2 style="margin:30px 0 5px 0;">VIP {{ count($reservation->vips)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>

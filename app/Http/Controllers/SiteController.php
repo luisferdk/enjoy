@@ -79,7 +79,7 @@ class SiteController extends Controller
             $reservation->estado = 1;
             $reservation->save();
             $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
-            //Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+            Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
             session([
                 "reservation" => array(),
                 "carrito" => array(

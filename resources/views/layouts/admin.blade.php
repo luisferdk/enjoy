@@ -111,15 +111,18 @@
                     </div>
                     <div class="sidebar-account-settings">
                         <ul>
-                            <li class="no-padding">
+                            <!-- <li class="no-padding">
                                 <a class="waves-effect waves-grey"><i class="material-icons">mail_outline</i>Perfil</a>
                             </li>
                             <li class="no-padding">
                                 <a class="waves-effect waves-grey"><i class="material-icons">done</i>Contraseña</a>
                             </li>
-                            <li class="divider"></li>
+                            <li class="divider"></li> -->
                             <li class="no-padding">
-                                <a class="waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Cerrar Sesión</a>
+                                <a class="waves-effect waves-grey" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                                    <i class="material-icons">exit_to_app</i>
+                                    Cerrar Sesión
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -134,9 +137,9 @@
                             <i class="material-icons">settings_input_svideo</i>Traslados
                         </a>
                     </li>
-                    <li class="no-padding {{ Request::is('admin/excursiones')?'active':'' }}">
-                        <a class="waves-effect waves-grey" href="{{ url('/admin/excursiones') }}">
-                            <i class="material-icons">settings_input_svideo</i>Excursiones
+                    <li class="no-padding {{ Request::is('admin/tours')?'active':'' }}">
+                        <a class="waves-effect waves-grey" href="{{ url('/admin/tours') }}">
+                            <i class="material-icons">settings_input_svideo</i>Tours
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/vip')?'active':'' }}">
@@ -144,11 +147,11 @@
                             <i class="material-icons">settings_input_svideo</i>VIP
                         </a>
                     </li>
-                    <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
+                    <!-- <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/wifi') }}">
                             <i class="material-icons">settings_input_svideo</i>Wifi
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
                 <div class="footer center-align">
                     <p class="copyright">Domtecno ©</p>
@@ -162,7 +165,6 @@
                             @yield('titulo','Reservas')
                         </div>
                     </div>
-                    
                     @yield('content')
 
 

@@ -23,6 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/reservas', 'AdminController@reservas');
 Route::get('/admin/traslados', 'AdminController@traslados');
-Route::get('/admin/excursiones', 'AdminController@excursiones');
+Route::get('/admin/tours', 'AdminController@tours');
 Route::get('/admin/vip', 'AdminController@vip');
 Route::get('/admin/wifi', 'AdminController@wifi');
+
+use App\Reservation;
+use App\Mail\Notification;
+Route::get('/correo/reservation/{id}',function($id){
+    $reservation = Reservation::with('transfers','vips','tours')->find($id);
+    return new Notification($reservation);
+});

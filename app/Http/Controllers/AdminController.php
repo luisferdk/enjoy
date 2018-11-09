@@ -26,21 +26,18 @@ class AdminController extends Controller
         return view('admin.traslados',compact('reservas'));
     }
 
-    public function excursiones(){
-        $reservas = Reservation::with('tours','transfers','vips')->get();
-        return view('admin.reservas',compact('reservas'));
-        return view('admin.excursiones');
+    public function tours(){
+        $reservas = Tour::with('reservation')->get();
+        return view('admin.excursiones',compact('reservas'));
     }
 
     public function vip(){
-        $reservas = Reservation::with('tours','transfers','vips')->get();
-        return view('admin.reservas',compact('reservas'));
-        return view('admin.vip');
+        $reservas = Vip::with('reservation')->get();
+        return view('admin.vip',compact('reservas'));
     }
 
     public function wifi(){
-        $reservas = Reservation::with('tours','transfers','vips')->get();
-        return view('admin.reservas',compact('reservas'));
-        return view('admin.wifi');
+        $reservas = null;
+        return view('admin.wifi',compact('reservas'));
     }
 }

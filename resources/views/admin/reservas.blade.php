@@ -14,106 +14,115 @@ Reservas
                     <li class="tab col s3"><a href="#canceladas">Canceladas</a></li>
                 </ul>
             </div>
-            <div id="pendientes" class="col s12">               
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==1'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
-                            @{{aux.nombre}}
-                        </td>
-                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
-                            @{{aux.apellido}}
-                        </td>
-                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
-                            @{{aux.correo}}
-                        </td>
-                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
-                            @{{aux.telefono}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            
-                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
-                                <i class="material-icons">check</i>
-                            </a>
-                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div id="pendientes" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==1'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.id}}
+                                        </td>
+                                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
+                                            @{{aux.nombre}}
+                                        </td>
+                                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
+                                            @{{aux.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
+                                            @{{aux.correo}}
+                                        </td>
+                                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
+                                            @{{aux.telefono}}
+                                        </td>
+                                        <td width="10%" data-title="'precio'" sortable="'precio'">
+                                            @{{ aux.precio | currency:"$ " }}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            
+                                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
+                                                <i class="material-icons">check</i>
+                                            </a>
+                                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
+                                                <i class="material-icons">delete_forever</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="procesadas" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.id}}
+                                        </td>
+                                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
+                                            @{{aux.nombre}}
+                                        </td>
+                                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
+                                            @{{aux.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
+                                            @{{aux.correo}}
+                                        </td>
+                                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
+                                            @{{aux.telefono}}
+                                        </td>
+                                        <td width="10%" data-title="'precio'" sortable="'precio'">
+                                            @{{ aux.precio | currency:"$ " }}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
+                                                <i class="material-icons">delete_forever</i>
+                                            </a>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="canceladas" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.id}}
+                                        </td>
+                                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
+                                            @{{aux.nombre}}
+                                        </td>
+                                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
+                                            @{{aux.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
+                                            @{{aux.correo}}
+                                        </td>
+                                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
+                                            @{{aux.telefono}}
+                                        </td>
+                                        <td width="10%" data-title="'precio'" sortable="'precio'">
+                                            @{{ aux.precio | currency:"$ " }}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            
+                                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
+                                                <i class="material-icons">check</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="procesadas" class="col s12">
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
-                            @{{aux.nombre}}
-                        </td>
-                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
-                            @{{aux.apellido}}
-                        </td>
-                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
-                            @{{aux.correo}}
-                        </td>
-                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
-                            @{{aux.telefono}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                    </tr>
-                </table>
-            </div>
-            <div id="canceladas" class="col s12">
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="17%" data-title="'Nombre'" filter="{ nombre: 'text'}" sortable="'nombre'">
-                            @{{aux.nombre}}
-                        </td>
-                        <td width="17%" data-title="'Apellido'" filter="{ apellido: 'text'}" sortable="'apellido'">
-                            @{{aux.apellido}}
-                        </td>
-                        <td width="15%" data-title="'Correo'" filter="{ correo: 'text'}" sortable="'correo'">
-                            @{{aux.correo}}
-                        </td>
-                        <td width="15%" data-title="'Teléfono'" filter="{ telefono: 'text'}" sortable="'telefono'">
-                            @{{aux.telefono}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            
-                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
-                                <i class="material-icons">check</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+                       
         </div>
     </div>
 
@@ -146,11 +155,11 @@ Reservas
                     </p>
                     
                     
-                    <h5 ng-if="reserva.tours.length>0" class="col s12 center-align cyan-text m-t-lg">Excursiones</h5>
-                    <table class="col s12" ng-if="reserva.transfers.length>0">
+                    <h5 ng-if="reserva.tours.length>0" class="col s12 center-align cyan-text m-t-lg">Tours</h5>
+                    <table class="col s12 table bordered" ng-if="reserva.transfers.length>0">
                         <thead>
                             <tr>
-                                <th class="center-align">Excursión</th>
+                                <th class="center-align">Tour</th>
                                 <th class="center-align">Modalidad</th>
                                 <th class="center-align">Fecha</th>
                                 <th class="center-align">Horario</th>

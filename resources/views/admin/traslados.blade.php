@@ -14,106 +14,114 @@ Traslados
                     <li class="tab col s3"><a href="#canceladas">Canceladas</a></li>
                 </ul>
             </div>
-            <div id="pendientes" class="col s12">               
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==1'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
-                            @{{aux.de}}
-                        </td>
-                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
-                            @{{aux.para}}
-                        </td>
-                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                            @{{aux.tipo==1?'One Way':'Round Trip'}}
-                        </td>
-                        <td width="20%" data-title="'Nombre y Apellido'">
-                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            
-                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
-                                <i class="material-icons">check</i>
-                            </a>
-                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div id="procesadas" class="col s12">
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
-                            @{{aux.de}}
-                        </td>
-                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
-                            @{{aux.para}}
-                        </td>
-                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                            @{{aux.tipo==1?'One Way':'Round Trip'}}
-                        </td>
-                        <td width="20%" data-title="'Nombre y Apellido'">
-                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
-                                <i class="material-icons">delete_forever</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div id="canceladas" class="col s12">
-                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
-                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
-                            @{{aux.id}}
-                        </td>
-                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
-                            @{{aux.de}}
-                        </td>
-                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
-                            @{{aux.para}}
-                        </td>
-                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                            @{{aux.tipo==1?'One Way':'Round Trip'}}
-                        </td>
-                        <td width="20%" data-title="'Nombre y Apellido'">
-                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
-                        </td>
-                        <td width="10%" data-title="'precio'" sortable="'precio'">
-                            @{{ aux.precio | currency:"$ " }}
-                        </td>
-                        <td width="15%" data-title="'Opciones'">
-                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
-                                <i class="material-icons">receipt</i>
-                            </a>
-                            
-                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
-                                <i class="material-icons">check</i>
-                            </a>
-                        </td>
-                    </tr>
-                </table>
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div id="pendientes" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==1'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.reservation.id}}
+                                        </td>
+                                        <td width="10%" data-title="'Fecha'" sortable="'fecha'">
+                                            @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
+                                        </td>
+                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                            @{{aux.de}}
+                                        </td>
+                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                            @{{aux.para}}
+                                        </td>
+                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
+                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
+                                        </td>
+                                        <td width="20%" data-title="'Nombre y Apellido'">
+                                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            
+                                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
+                                                <i class="material-icons">check</i>
+                                            </a>
+                                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
+                                                <i class="material-icons">delete_forever</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="procesadas" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.reservation.id}}
+                                        </td>
+                                        <td width="10%" data-title="'Fecha'" sortable="'fecha'">
+                                            @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
+                                        </td>
+                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                            @{{aux.de}}
+                                        </td>
+                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                            @{{aux.para}}
+                                        </td>
+                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
+                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
+                                        </td>
+                                        <td width="20%" data-title="'Nombre y Apellido'">
+                                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            <a ng-click="cancelar(aux.id)" class="red-text tooltipped" data-position="top" data-tooltip="Cancelar reserva">
+                                                <i class="material-icons">delete_forever</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="canceladas" class="col s12">
+                                <table ng-table="tabla" class="table m-t-lg" show-filter="true">
+                                    <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
+                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                            @{{aux.reservation.id}}
+                                        </td>
+                                        <td width="10%" data-title="'Fecha'" sortable="'fecha'">
+                                            @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
+                                        </td>
+                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                            @{{aux.de}}
+                                        </td>
+                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                            @{{aux.para}}
+                                        </td>
+                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
+                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
+                                        </td>
+                                        <td width="20%" data-title="'Nombre y Apellido'">
+                                            @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
+                                        </td>
+                                        <td width="15%" data-title="'Opciones'">
+                                            <a ng-click="ver(aux.id)" class="cyan-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Ver reserva">
+                                                <i class="material-icons">receipt</i>
+                                            </a>
+                                            
+                                            <a ng-click="procesar(aux.id)" class="green-text text-darken-1 m-r-sm tooltipped" data-position="top" data-tooltip="Procesar reserva">
+                                                <i class="material-icons">check</i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -121,7 +129,7 @@ Traslados
     <div id="ver" class="modal modal-fixed-footer">
             <div class="modal-content">
                 <div class="row">
-                    <h3 class="col s12 center-align cyan-text" style="font-size:2.2em;">Traslado nro @{{ reserva.id }}</h3>
+                    <h3 class="col s12 center-align cyan-text" style="font-size:2.2em;">Reserva @{{ reserva.reservation.id }}</h3>
                     
 
                     <h5 class="col s12 center-align cyan-text">Datos del Traslado</h5>
@@ -168,7 +176,7 @@ Traslados
                         <span ng-if='reserva.reservation.telefono'><br>Telefono:</span>
                         <span ng-if='reserva.reservation.hotel'><br>Hotel:</span>
 
-                        <br><br>Precio:
+                        <br><br>Precio Reserva:
                         <br>ID de Págo:
                         <span ng-if='reserva.reservation.comentarios'><br><br>Comentarios:</span>
                     </p>
