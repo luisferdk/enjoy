@@ -54,7 +54,7 @@ $(function(){
                     "nombre":{required:true,noSpace:true},
                     "apellido":{required:true,noSpace:true},
                     "correo":{required:true,email:true},
-                    "telefono":{required:false},
+                    "telefono":{required:false,noSpace:true},
                     "hotel":{required:true},
                     "comentarios":{required:false},
             },
