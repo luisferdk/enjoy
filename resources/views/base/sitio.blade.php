@@ -296,7 +296,7 @@
 	<script src="{{ asset("/") }}js/angular.min.js"></script>
     @yield('js')
 	<script src="{{ asset("/") }}js/sitio.js"></script>
-    <script src="{{ asset("/") }}js/main.js"></script>
+    <script src="{{ asset("/") }}js/main.js?v=1"></script>
 
 	<script>
         window.url = '{{ url("/") }}';

@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<form class="row" action="" method="post">
+	<form class="row" action="" method="post" id='reservation'>
 		@csrf
 		<h1 class="col-xs-12 text-center tituloVerde" style="font-size: 3em">Reservation</h1>
 		<div 
@@ -100,7 +100,7 @@
                     <label for="">
                         *First Name
                     </label>
-                    <input class="form-control" name="nombre" type="text"  placeholder="Enter name" required>
+                    <input class="form-control" name="nombre" type="text"  placeholder="Enter name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -108,7 +108,7 @@
                     <label for="">
                         *Surname
                     </label>
-                    <input class="form-control" name="apellido" type="text"  placeholder="Enter last name" required>
+                    <input class="form-control" name="apellido" type="text"  placeholder="Enter last name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -116,7 +116,7 @@
                     <label for="">
                         *Email
                     </label>
-                    <input class="form-control" name="correo" type="email"  placeholder="Enter email" required>
+                    <input class="form-control" name="correo" type="email"  placeholder="Enter email">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -124,7 +124,7 @@
                     <label for="">
                         *Phone number
                     </label>
-                    <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number" required>
+                    <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number">
                 </div>
 			</div>
 			<div class="col-xs-12" ng-if="carrito.tours.length>0">
@@ -132,7 +132,7 @@
 					<label for="">
 						*Hotel Pickup
 					</label>
-					<input class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel" required>
+					<input class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel">
 					@include("base.hoteles")
 				</div>
 			</div>	

@@ -45,50 +45,27 @@ $(function(){
         $('#time2').timepicker({ 'timeFormat': 'H:i' });
         $('.hora').timepicker({ 'timeFormat': 'H:i' });
 
-        /*$("#formTraslado").validate({
+        $.validator.addMethod("noSpace", function(value, element) { 
+            return value.indexOf(" ") < 0 && value != ""; 
+        }, "No space please and don't leave it empty");
+
+        $("#reservation").validate({
             rules: {
-                    "de":{required:true},
-                    "para":{required:true},
-                    "adultos":{required:true},
-                    "ninos":{required:true},
-                    "hotel":{required:true},
-                    "fechaLlegada":{required:true},
-                    "horaLlegada":{required:true},
-                    "aerolineaLlegada":{required:true},
-                    "vueloLlegada":{required:true},
-                    "fechaSalida":{required:true},
-                    "horaSalida":{required:true},
-                    "aerolineaSalida":{required:true},
-                    "vueloSalida":{required:true},
-                    "nombre":{required:true},
-                    "apellido":{required:true},
+                    "nombre":{required:true,noSpace:true},
+                    "apellido":{required:true,noSpace:true},
                     "correo":{required:true,email:true},
-                    "telefono":{required:true},
+                    "telefono":{required:false},
+                    "hotel":{required:true},
                     "comentarios":{required:false},
-                    "terminos":{required:true}
             },
             messages: {
-                    "de":{required:"This field is required"},
-                    "para":{required:"This field is required"},
-                    "adultos":{required:"This field is required"},
-                    "ninos":{required:"This field is required"},
-                    "hotel":{required:"This field is required"},
-                    "fechaLlegada":{required:"This field is required"},
-                    "horaLlegada":{required:"This field is required"},
-                    "aerolineaLlegada":{required:"This field is required"},
-                    "vueloLlegada":{required:"This field is required"},
-                    "fechaSalida":{required:"This field is required"},
-                    "horaSalida":{required:"This field is required"},
-                    "aerolineaSalida":{required:"This field is required"},
-                    "vueloSalida":{required:"This field is required"},
                     "nombre":{required:"This field is required"},
                     "apellido":{required:"This field is required"},
-                    "correo":{required:"This field is required",email:"Email not valid"},
+                    "correo":{required:"This field is required"},
                     "telefono":{required:"This field is required"},
-                    "comentarios":{},
-                    "terminos":{},
+                    "hotel":{required:"This field is required"},
             }
-        });*/
+        });
         $('#terminos').change(function(event) {
             if($(this).is(":checked")){
                 $('.traslado').removeClass('disabled');
