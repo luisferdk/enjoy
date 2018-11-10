@@ -13,7 +13,8 @@
         <link href="{{ asset('/') }}bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
         <link href="{{ asset('/') }}bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
         <link href="{{ asset('/') }}bower_components/jt.timepicker/jquery.timepicker.css" rel="stylesheet">
-        <link href="{{ asset('/') }}css/main.css?10" rel="stylesheet">
+        <link href="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+        <link href="{{ asset('/') }}css/main.css?11" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
@@ -119,8 +120,8 @@
 			<h4>About Us</h4>	
 			<p>We are a DMC Company based in the Dominican Republic with the vision to provide the best travel experience in the caribbean.</p>
 			<br>
-			<a style="display:block;color:white;" href="{{ url("/faqs") }}">Faqs</a>
-			<a style="display:block;color:white;" href="{{ url("/contactUs") }}">Form Contact Us</a>
+			<!-- <a style="display:block;color:white;" href="{{ url("/faqs") }}">Faqs</a>
+			<a style="display:block;color:white;" href="{{ url("/contactUs") }}">Form Contact Us</a> -->
 			
 		</div>
 		<div class="col-xs-6 col-sm-4 hidden-xs">
@@ -289,7 +290,8 @@
 	<script src="{{ asset("/") }}bower_components/jquery-ui/jquery-ui.min.js"></script>
 	<script src="{{ asset("/") }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src="{{ asset("/") }}bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-	<script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="{{ asset("/") }}bower_components/sweetalert2/sweetalert2.min.js"></script>
 	
 	<script src="{{ asset("/") }}js/angular.min.js"></script>
     @yield('js')

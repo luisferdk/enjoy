@@ -414,6 +414,13 @@ $scope.vector = function(n){
             $("html, body").animate({ scrollTop: 0 }, 500);
         },500);
         $scope.actualizar();
+
+        swal({
+            title:'Traslado',
+            text:'Agregado exitosamente',
+            type:'success',
+            confirmButtonColor: '#8cc640',
+        });
   }
 
   $scope.eliminarTraslado = function(index){
@@ -451,6 +458,13 @@ $scope.vector = function(n){
             $("html, body").animate({ scrollTop: 0 }, 500);
         },500);
         $scope.actualizar();
+
+        swal({
+            title:'Tour',
+            text:'Agregado exitosamente',
+            type:'success',
+            confirmButtonColor: '#8cc640',
+        });
   }
   $scope.eliminarTour = function(index){
     $scope.carrito.tours.splice(index,1);
@@ -911,6 +925,12 @@ $scope.vector = function(n){
       $scope.agregarTraslado(event);
       $scope.transfer = false;
     }
+        swal({
+            title:'VIP',
+            text:'Agregado exitosamente',
+            type:'success',
+            confirmButtonColor: '#8cc640',
+        });
   }
   $scope.eliminarVIP = function(index){
     $scope.carrito.vip.splice(index,1);

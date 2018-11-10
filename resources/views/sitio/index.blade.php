@@ -12,7 +12,8 @@
         <link href="{{ asset('/') }}bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
         <link href="{{ asset('/') }}bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
         <link href="{{ asset('/') }}bower_components/jt.timepicker/jquery.timepicker.css" rel="stylesheet">
-        <link href="{{ asset('/') }}css/main.css?10" rel="stylesheet">
+        <link href="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.css" rel="stylesheet">
+        <link href="{{ asset('/') }}css/main.css?11" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
@@ -337,11 +338,11 @@
                                                     <div class="col-xs-12">
                                                         <label for="">Extras</label>
                                                     </div>
-                                                    <div class="col-xs-6 col-sm-3">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3">
                                                         <div class="thumbnail">
                                                             <img ng-src="{{ asset("/") }}img/productos/cerveza.jpg" alt="...">
                                                             <div class="caption text-center">
-                                                                <h3>Beer</h3>
+                                                                <h4>Beer</h4>
                                                                 <select ng-model="cervezas" name="cervezas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
                                                                     <option value="0">($5.00)</option>
                                                                     <option value="1">1</option>
@@ -360,11 +361,11 @@
                                                     </div>
 
 
-                                                    <div class="col-xs-6 col-sm-3">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3">
                                                         <div class="thumbnail">
                                                             <img ng-src="{{ asset("/") }}img/productos/cocacola.jpg" alt="...">
                                                             <div class="caption text-center">
-                                                                <h3>Sodas</h3>
+                                                                <h4>Sodas</h4>
                                                                 <select ng-model="sodas" name="sodas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
                                                                     <option value="0">($3.00)</option>
                                                                     <option value="1">1</option>
@@ -383,11 +384,11 @@
                                                     </div>
 
 
-                                                    <div class="col-xs-6 col-sm-3">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3">
                                                         <div class="thumbnail">
                                                             <img ng-src="{{ asset("/") }}img/productos/vino.jpg" alt="...">
                                                             <div class="caption text-center">
-                                                                <h3>Wine</h3>
+                                                                <h4>Wine</h4>
                                                                 <select ng-model="vino" name="vino" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
                                                                 <option value="0">($20.00 bottle)</option>
                                                                 <option value="1">1</option>
@@ -405,11 +406,11 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-xs-6 col-sm-3">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3">
                                                         <div class="thumbnail">
                                                             <img ng-src="{{ asset("/") }}img/productos/champagne.jpg" alt="...">
                                                             <div class="caption text-center">
-                                                                <h3>Champagne</h3>
+                                                                <h4>Champagne</h4>
                                                                 <select ng-model="champagne" name="champagne" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
                                                                     <option value="0">($25.00 bottle)</option>
                                                                     <option value="1">1</option>
@@ -775,7 +776,7 @@
                         <div class="thumbnail">
                             <img ng-src="{{asset('/')}}img/tours/@{{ tours[0].id }}.jpg" alt="...">
                             <div class="caption text-center">
-                                <h3>@{{ tours[0].titulo }}</h3>
+                                <h3 style="font-size: 1.5em">@{{ tours[0].titulo }}</h3>
                                 <p class="thumbnail-text">@{{ tours[0].descripcion }}</p>
                                 <p>
                                     <a href="{{ url('/tour') }}/@{{ tours[0].id }}" class="btn btn-primary" role="button">Book Now</a>
@@ -861,8 +862,8 @@
             <h4>About Us</h4>   
             <p>We are a DMC Company based in the Dominican Republic with the vision to provide the best travel experience in the caribbean.</p>
             <br>
-            <a style="display:block;color:white;" href="{{ url("/faqs") }}">Faqs</a>
-            <a style="display:block;color:white;" href="{{ url("/contactUs") }}">Form Contact Us</a>
+            <!-- <a style="display:block;color:white;" href="{{ url("/faqs") }}">Faqs</a>
+            <a style="display:block;color:white;" href="{{ url("/contactUs") }}">Form Contact Us</a> -->
             
         </div>
         <div class="col-xs-6 col-sm-4 hidden-xs">
@@ -890,6 +891,8 @@
     <script src="{{ asset("/") }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="{{ asset("/") }}bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="{{ asset("/") }}bower_components/sweetalert2/sweetalert2.min.js"></script>
     
     <script src="{{ asset("/") }}js/angular.min.js"></script>
 
