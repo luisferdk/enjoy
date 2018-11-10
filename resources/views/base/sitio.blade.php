@@ -79,10 +79,10 @@
                                 <li class=" {{ Request::is('packages')?'active':'' }}
                                             redirect weddingActive">
                                     <a href="{{ url('/packages') }}">PACKAGES</a></li>
-                                <li class=" {{ Request::is('wifiServices')?'active':'' }}
+                                <!-- <li class=" {{ Request::is('wifiServices')?'active':'' }}
                                             redirect wifiActive">
                                     <a href="{{ url('/wifiServices') }}">WIFI SERVICES</a></li>
-                                <li>
+                                <li> -->
                                     <a target="_blank" href="https://www.booking.com/searchresults.en-us.html?aid=390851;sid=afea1e48601e7ca6d406845265afe3b4;city=-3364907&;ilp=1;lp_index_textlink2srdaterec=1;d_dcp=1">HOTEL BOOKING</a>
                                 </li>
                                 <li class=" {{ Request::is('puntacana')?'active':'' }}
