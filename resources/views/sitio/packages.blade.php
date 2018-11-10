@@ -305,7 +305,7 @@
 			    	</select>
 			  	</div>
 				<div class="col-xs-12 text-center" style="margin-bottom: 2em;">
-					<div class="g-recaptcha" data-sitekey="6Lct1h8UAAAAAKGn1B1Qdfu7D2QCkPb23HbGgarW"></div>
+					<div class="g-recaptcha" data-sitekey="6LfC0nkUAAAAABfScHUwOO6TP27IPN6_HfHFs3ef"></div>
 				</div>
 				<div class="col-xs-12 text-center">
 			  		<button type="submit" name="mensaje" class="btn btn-primary" style="padding-left:3em;padding-right:3em;">Send</button>	
