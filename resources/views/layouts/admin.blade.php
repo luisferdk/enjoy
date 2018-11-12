@@ -129,17 +129,17 @@
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
                     <li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/reservas') }}">
-                            <i class="material-icons">settings_input_svideo</i>Reservas
+                            <i class="material-icons">assignment</i>Reservas
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/traslados')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/traslados') }}">
-                            <i class="material-icons">settings_input_svideo</i>Traslados
+                            <i class="material-icons">directions_car</i>Traslados
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/tours')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/tours') }}">
-                            <i class="material-icons">settings_input_svideo</i>Tours
+                            <i class="material-icons">directions_boat</i>Tours
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/vip')?'active':'' }}">

@@ -430,7 +430,18 @@ $scope.vector = function(n){
 /*------------------------------Tours------------------------------*/
   $scope.agregarTour = function(event){
         event.preventDefault();
-        console.log($scope.tour);
+        console.log($scope.tour.titulo);
+        var pos = $scope.carrito.tours.map(function(e) { return e.tour; }).indexOf($scope.tour.titulo+"");
+        if(pos>-1){
+            swal({
+                title:'Ya existe',
+                text:'El Tour ya esta agregado al carrito',
+                type:'error',
+                confirmButtonColor: '#8cc640',
+            });
+            return false;
+        }
+        if($scope.carrito.tours)
         $scope.carrito.tours.push(
           {
             tour:$scope.tour.titulo,

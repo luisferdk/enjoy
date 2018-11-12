@@ -1,12 +1,14 @@
 @extends('base.sitio')
 
 @section('content')
-
+<div class="container">
 <section 
 	class="row partyBoatsDetails" 
 	ng-app="app" 
-	ng-controller="ctrl">
+	ng-controller="ctrl"
+	style="margin:0 !important;">
 	<div class="col-xs-12 fondoDetails">
+			<a style="position:absolute;top:30px;left:0;" href="{{ URL::previous() }}" class="right"><i class="fa fa-2x fa-arrow-left"></i></a>
 			<h1 class="text-center" style="color:white;">@{{ tour.titulo }}</h1>
 	</div>
 	<div class="container">
@@ -54,13 +56,13 @@
 			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-0"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/1.jpg"></a>
 			                </li>
 			                <li class="col-sm-3" style="margin-bottom: 0">
-			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-0"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/2.jpg"></a>
+			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-1"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/2.jpg"></a>
 			                </li>
 			                <li class="col-sm-3" style="margin-bottom: 0">
-			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-0"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/3.jpg"></a>
+			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-2"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/3.jpg"></a>
 			                </li>
 			                <li class="col-sm-3" style="margin-bottom: 0">
-			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-0"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/4.jpg"></a>
+			                    <a class="thumbnail" style="margin-bottom: 0" id="carousel-selector-3"><img ng-src="{{ asset("/") }}img/tours/@{{tour.id}}/4.jpg"></a>
 			                </li>
 			            </ul>                 
 			    </div>
@@ -193,6 +195,7 @@
 	</div>
 	
 </section>
+</div>
 @endsection
 
 @section('js')
