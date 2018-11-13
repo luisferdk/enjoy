@@ -928,7 +928,7 @@
     <?php endif ?>
 
     <script src="{{ asset("/") }}js/sitio.js?v=2"></script>
-    <script src="{{ asset("/") }}js/main.js?v=1"></script>
+    <script src="{{ asset("/") }}js/main.js?v=2"></script>
     <?php if (isset($_GET['opcion'])): ?>
         <?php if ($_GET['opcion']==1): ?>
             <script>$(function(){$('.transfer').trigger('click');});</script>
