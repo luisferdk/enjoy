@@ -416,8 +416,8 @@ $scope.vector = function(n){
         $scope.actualizar();
 
         swal({
-            title:'Traslado',
-            text:'Agregado exitosamente',
+            title:'Transfers',
+            text:'added successfully',
             type:'success',
             confirmButtonColor: '#8cc640',
         });
@@ -434,8 +434,8 @@ $scope.vector = function(n){
         var pos = $scope.carrito.tours.map(function(e) { return e.tour; }).indexOf($scope.tour.titulo+"");
         if(pos>-1){
             swal({
-                title:'Ya existe',
-                text:'El Tour ya esta agregado al carrito',
+                title:'Error',
+                text:'existing tour',
                 type:'error',
                 confirmButtonColor: '#8cc640',
             });
@@ -472,7 +472,7 @@ $scope.vector = function(n){
 
         swal({
             title:'Tour',
-            text:'Agregado exitosamente',
+            text:'added successfully',
             type:'success',
             confirmButtonColor: '#8cc640',
         });
@@ -676,7 +676,7 @@ $scope.vector = function(n){
                   Your naturalist guides will show you the way, helping you make the most of the adventure.
                   Your tour consists of 15 towers and 11 Zip Lines stretche across the length of the mountain range more than 1 mile.
                   The final line at 900 meters is the longest in the Dominican Republic as well as the entire Caribbean.
-                  
+
                   <br>
                   <br>
 
@@ -703,7 +703,7 @@ $scope.vector = function(n){
               </p>
           `,
           modalidades:[
-              {id: 0,precio: 75,nino: 45,descripcion: "Party Boat and Jet Boat"} 
+              {id: 0,precio: 75,nino: 45,descripcion: "Party Boat and Jet Boat"}
           ]
       },
       {
@@ -754,7 +754,7 @@ $scope.vector = function(n){
                    The Real Countryside Adventure is the ultimate riding experience. Experienced guides will show you a glimpse of the day-to-day life of the Dominican Cowboy, walking through the beautiful trails, hills, lagoons and green pastures. You will participate in the daily quest, completing the tasks assigned and become an honorary Cana Tequila rancher. <br>
                    <strong>Includes:</strong>
                    Transportation, welcome hot beverages and pastries, soft drinks, a cowboy lunch and a tequila shot. (Snacks, hamburgers, hot dogs and alcoholic beverages are available at an extra cost.
-               </p> 
+               </p>
           `,
           modalidades:[
               {id: 0,precio: 99,nino: 99,descripcion: "Dominican Cowboy Adventure"}
@@ -843,7 +843,7 @@ $scope.vector = function(n){
           mostrar:true,
           descripcion:`
               Come and discover the first city of the new world. An expert tourist guide will take you through the first city of the Americas, learning historically relevant facts of this modem-day metropolitan city. Stroll down through the Colonial Zone and observe monuments and museums. Pay homage to the ﬁrst cathedral of the Americas, known as the Catedral Metropolitana Santa Maria de la Encarnacion. Stroll down Las Damas Street, the oldest back street not only in the Dominican Republic, in all of the Americas, where you can see the largest amount of monuments. Pass by the Museo de las Casa Reales, formerly the government palace. A walk across the Alcazar de Colon, will transport you back to the era of the ﬁrst Spanish Con-quistadors. 
-              Lunch will be a typical Dominican meal in an authentic Dominican restaurant. 
+              Lunch will be a typical Dominican meal in an authentic Dominican restaurant.
               This tour may be privatized. Please ask us how.
           `,
           modalidades:[
@@ -855,11 +855,11 @@ $scope.vector = function(n){
           titulo:"Snuba, Snorkel Et Speedboat",
           mostrar:true,
           descripcion:`
-              Have fun, feel the adventure! This is a three-in-one fun-filled half day tour! 
+              Have fun, feel the adventure! This is a three-in-one fun-filled half day tour!
               Snorkel the crystal clear water of a protected reef, drive a speed boat. and explore the bottom of the ocean with SNUBA® excursion (you don’t need to be a certiﬁed diver) 
               Drive your own speedboat like James Bond!!! While you drive you will also enjoy the most beautiful beaches of Bavaro - Punta Cana while experiencing this exciting adventurell 
               You will meet professional guides and experience an unforgettable adventure known as ‘SNUBA®’. Thanks to this new technology you don’t need a diving license to explore the underwater world. SNUBA® is without a doubt the best combination between diving and snorkeling. Our SNUBA® equipment consists of a floating RAFT and an air hose of 20 feet. This will give you the freedom to choose the level of depth that you are comfortable with. 
-              Certiﬁed guides will assist you in small groups of 4 persons per RAFT.                    
+              Certiﬁed guides will assist you in small groups of 4 persons per RAFT.
           `,
           modalidades:[
               {id: 0,precio: 109,nino: 0,descripcion: "Snuba, Snorkel Et Speedboat"}
@@ -938,7 +938,7 @@ $scope.vector = function(n){
     }
         swal({
             title:'VIP',
-            text:'Agregado exitosamente',
+            text:'added successfully',
             type:'success',
             confirmButtonColor: '#8cc640',
         });
@@ -988,7 +988,7 @@ $scope.vector = function(n){
 
   $scope.vipTipos = ['Audi','Suburban'];
   $scope.cambiarPasajeros = function(){
-      $scope.traslado.vip = "";      
+      $scope.traslado.vip = "";
       if($scope.traslado.pasajeros<=2){
         $scope.vipTipos = ['Suburban','Audi'];
       }
