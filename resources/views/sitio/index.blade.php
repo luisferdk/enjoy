@@ -20,6 +20,11 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="google-site-verification" content="pxRHwV5wzDBWOzzL23ZQvE2lqSneigj29rU_UTXBj_s" />
 
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Last-Modified" content="0">
+        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+
         <!--Select 2-->
         <link href="{{ asset('/') }}bower_components/select2/dist/css/select2.css" rel="stylesheet" />
     </head>
