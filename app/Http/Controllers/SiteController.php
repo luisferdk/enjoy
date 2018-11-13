@@ -34,9 +34,9 @@ class SiteController extends Controller
     public function packages(){
     	return view('sitio.packages');
     }
-    
+
     public function packagesPOST(Request $request){
-        Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
+        //Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
         return redirect('/packages')->with('status', 'Reservation Completed');
     }
 
