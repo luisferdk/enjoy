@@ -33,3 +33,9 @@ Route::get('/correo/reservation/{id}',function($id){
     $reservation = Reservation::with('transfers','vips','tours')->find($id);
     return new Notification($reservation);
 });
+
+
+
+
+Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
+Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
