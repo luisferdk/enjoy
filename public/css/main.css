@@ -926,6 +926,9 @@ fieldset[disabled] .btn-success.focus:focus,
   background: #73a235;
   border-color: #73a235;
 }
+.swal2-popup {
+  font-size: 1em;
+}
 @-moz-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
@@ -989,8 +992,4 @@ fieldset[disabled] .btn-success.focus:focus,
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-.swal2-popup{
-  font-size: 1em !important;
 }
