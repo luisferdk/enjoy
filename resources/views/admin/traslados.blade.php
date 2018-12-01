@@ -21,16 +21,16 @@ Traslados
                             <div id="pendientes" class="col s12">
                                 <table ng-table="tabla" class="table m-t-lg" show-filter="true">
                                     <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==1'>
-                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                        <td width="5%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
                                             @{{aux.reservation.id}}
                                         </td>
                                         <td width="10%" data-title="'Fecha'" sortable="'fecha'">
                                             @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
                                         </td>
-                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                        <td width="18%" data-title="'Origen'" sortable="'nombre'">
                                             @{{aux.de}}
                                         </td>
-                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                        <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
                                         </td>
                                         <td width="15%" data-title="'Tipo'" sortable="'correo'">
@@ -57,16 +57,16 @@ Traslados
                             <div id="procesadas" class="col s12">
                                 <table ng-table="tabla" class="table m-t-lg" show-filter="true">
                                     <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
-                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                        <td width="5%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
                                             @{{aux.reservation.id}}
                                         </td>
                                         <td width="10%" data-title="'Fecha'" sortable="'fecha'">
                                             @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
                                         </td>
-                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                        <td width="18%" data-title="'Origen'" sortable="'nombre'">
                                             @{{aux.de}}
                                         </td>
-                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                        <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
                                         </td>
                                         <td width="15%" data-title="'Tipo'" sortable="'correo'">
@@ -89,16 +89,16 @@ Traslados
                             <div id="canceladas" class="col s12">
                                 <table ng-table="tabla" class="table m-t-lg" show-filter="true">
                                     <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
-                                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                                        <td width="5%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
                                             @{{aux.reservation.id}}
                                         </td>
                                         <td width="10%" data-title="'Fecha'" sortable="'fecha'">
                                             @{{ aux.llegada_fecha?aux.llegada_fecha:aux.salida_fecha }}
                                         </td>
-                                        <td width="15%" data-title="'Origen'" sortable="'nombre'">
+                                        <td width="18%" data-title="'Origen'" sortable="'nombre'">
                                             @{{aux.de}}
                                         </td>
-                                        <td width="15%" data-title="'Destino'" sortable="'apellido'">
+                                        <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
                                         </td>
                                         <td width="15%" data-title="'Tipo'" sortable="'correo'">
@@ -150,21 +150,40 @@ Traslados
                         <br>@{{ reserva.precio | currency:'$ ' }}
                     </p>
 
-                    <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.llegada_fecha">
-                        <strong style="font-weight: bold">LLEGADA</strong>
-                        <br>@{{ reserva.llegada_fecha }}
-                        <br>@{{ reserva.llegada_hora }}
-                        <br>@{{ reserva.llegada_aerolinea }}
-                        <br>@{{ reserva.llegada_vuelo }}
-                    </p>
-
-                    <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.salida_fecha">
-                            <strong style="font-weight: bold">SALIDA</strong>
-                            <br>@{{ reserva.salida_fecha }}
-                            <br>@{{ reserva.salida_hora }}
-                            <br>@{{ reserva.salida_aerolinea }}
-                            <br>@{{ reserva.salida_vuelo }}
-                    </p>
+                    <div class="col s12" style="margin:15px 0 0 0;" ng-if="reserva.llegada_fecha">
+                        <div class="row">
+                            <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                            <p class="col s6 right-align" style="font-weight: bold">
+                                Fecha:
+                                <br>Hora:
+                                <br>Aerolinea:
+                                <br>Vuelo:
+                            </p>
+                            <p class="col s6">
+                                @{{ reserva.llegada_fecha }}
+                                <br>@{{ reserva.llegada_hora }}
+                                <br>@{{ reserva.llegada_aerolinea }}
+                                <br>@{{ reserva.llegada_vuelo }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col s12" style="margin:15px 0 0 0;" ng-if="reserva.salida_fecha">
+                        <div class="row">
+                            <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                            <p class="col s6 right-align" style="font-weight: bold">
+                                Fecha:
+                                <br>Hora:
+                                <br>Aerolinea:
+                                <br>Vuelo:
+                            </p>
+                            <p class="col s6">
+                                @{{ reserva.salida_fecha }}
+                                <br>@{{ reserva.salida_hora }}
+                                <br>@{{ reserva.salida_aerolinea }}
+                                <br>@{{ reserva.salida_vuelo }}
+                            </p>
+                        </div>
+                    </div>
 
 
 

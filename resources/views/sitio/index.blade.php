@@ -781,7 +781,7 @@
                         <div class="thumbnail">
                             <img ng-src="{{asset('/')}}img/tours/@{{ tours[0].id }}.jpg" alt="...">
                             <div class="caption text-center">
-                                <h3 style="font-size: 1.5em">@{{ tours[0].titulo }}</h3>
+                                <h3><span style="font-size: .85em">@{{ tours[0].titulo }}</span></h3>
                                 <p class="thumbnail-text">@{{ tours[0].descripcion }}</p>
                                 <p>
                                     <a href="{{ url('/tour') }}/@{{ tours[0].id }}" class="btn btn-primary" role="button">Book Now</a>

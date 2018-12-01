@@ -881,6 +881,10 @@ body {
   -ms-transition: font-size 1s;
   transition: font-size 1s;
 }
+.btn {
+  padding-left: 2em;
+  padding-right: 2em;
+}
 .btn-success,
 .btn-success.disabled:hover,
 .btn-success[disabled]:hover,

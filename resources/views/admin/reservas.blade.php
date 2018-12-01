@@ -126,186 +126,186 @@ Reservas
         </div>
     </div>
 
-    <div id="ver" class="modal modal-fixed-footer">
-            <div class="modal-content">
-                <div class="row">
-                    <h3 class="col s12 center-align cyan-text" style="font-size:2.2em;">Reserva nro @{{ reserva.id }}</h3>
-                    <h5 class="col s12 center-align cyan-text">Datos de la Reserva</h5>
-                    <p class="col s6 right-align negrita" style="font-weight:bold">
-                        Nombre:
-                        <br>Apellido:
-                        <br>Correo:
-                        <span ng-if='reserva.telefono'><br>Telefono:</span>
-                        <span ng-if='reserva.hotel'><br>Hotel:</span>
+    <div id="ver" class="modal modal-fixed-footer" style="width:80%">
+        <div class="modal-content">
+            <div class="row">
+                <h3 class="col s12 center-align cyan-text" style="font-size:2.2em;">Reserva nro @{{ reserva.id }}</h3>
+                <h5 class="col s12 center-align cyan-text">Datos de la Reserva</h5>
+                <p class="col s6 right-align negrita" style="font-weight:bold">
+                    Nombre:
+                    <br>Apellido:
+                    <br>Correo:
+                    <span ng-if='reserva.telefono'><br>Telefono:</span>
+                    <span ng-if='reserva.hotel'><br>Hotel:</span>
 
-                        <br><br>Precio:
-                        <br>ID de Págo:
-                        <span ng-if='reserva.comentarios'><br><br>Comentarios:</span>
-                    </p>
-                    <p class="col s6">
-                        @{{ reserva.nombre }}
-                        <br>@{{ reserva.apellido }}
-                        <br>@{{ reserva.correo }}
-                        <span ng-if='reserva.telefono'><br>@{{ reserva.telefono }}</span>
-                        <span ng-if='reserva.hotel'><br>@{{ reserva.hotel }}</span>
+                    <br><br>Precio:
+                    <br>ID de Págo:
+                    <span ng-if='reserva.comentarios'><br><br>Comentarios:</span>
+                </p>
+                <p class="col s6">
+                    @{{ reserva.nombre }}
+                    <br>@{{ reserva.apellido }}
+                    <br>@{{ reserva.correo }}
+                    <span ng-if='reserva.telefono'><br>@{{ reserva.telefono }}</span>
+                    <span ng-if='reserva.hotel'><br>@{{ reserva.hotel }}</span>
 
-                        <br><br>@{{ reserva.precio | currency:'$ ' }}
-                        <br>@{{ reserva.id_pago }}
-                        <span ng-if='reserva.comentarios'><br><br>@{{ reserva.comentarios }}</span>
-                    </p>
-                    
-                    
-                    <h5 ng-if="reserva.tours.length>0" class="col s12 center-align cyan-text m-t-lg">Tours</h5>
-                    <table class="col s12 table bordered" ng-if="reserva.transfers.length>0">
-                        <thead>
-                            <tr>
-                                <th class="center-align">Tour</th>
-                                <th class="center-align">Modalidad</th>
-                                <th class="center-align">Fecha</th>
-                                <th class="center-align">Horario</th>
-                                <th class="center-align">Adultos</th>
-                                <th class="center-align">Ninos</th>
-                                <th class="center-align">Precio</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="aux in reserva.tours">
-                                <td class="center-align">@{{ aux.tour }}</td>
-                                <td class="center-align">@{{ aux.modalidad?aux.modalidad:'-' }}</td>
-                                <td class="center-align">@{{ aux.fecha }}</td>
-                                <td class="center-align">@{{ aux.horario?aux.horario:'-' }}</td>
-                                <td class="center-align">@{{ aux.adultos }}</td>
-                                <td class="center-align">@{{ aux.ninos?aux.ninos:'-' }}</td>
-                                <td class="center-align">@{{ aux.precio | currency:'$ ' }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <br><br>@{{ reserva.precio | currency:'$ ' }}
+                    <br>@{{ reserva.id_pago }}
+                    <span ng-if='reserva.comentarios'><br><br>@{{ reserva.comentarios }}</span>
+                </p>
+                
+                
+                <h5 ng-if="reserva.tours.length>0" class="col s12 center-align cyan-text m-t-lg">Tours</h5>
+                <table ng-if="reserva.tours.length>0" class="col s12 table bordered">
+                    <thead>
+                        <tr>
+                            <th class="center-align">Tour</th>
+                            <th class="center-align">Modalidad</th>
+                            <th class="center-align">Fecha</th>
+                            <th class="center-align">Horario</th>
+                            <th class="center-align">Adultos</th>
+                            <th class="center-align">Ninos</th>
+                            <th class="center-align">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="aux in reserva.tours">
+                            <td class="center-align">@{{ aux.tour }}</td>
+                            <td class="center-align">@{{ aux.modalidad?aux.modalidad:'-' }}</td>
+                            <td class="center-align">@{{ aux.fecha }}</td>
+                            <td class="center-align">@{{ aux.horario?aux.horario:'-' }}</td>
+                            <td class="center-align">@{{ aux.adultos }}</td>
+                            <td class="center-align">@{{ aux.ninos?aux.ninos:'-' }}</td>
+                            <td class="center-align">@{{ aux.precio | currency:'$ ' }}</td>
+                        </tr>
+                    </tbody>
+                </table>
 
 
-                    <h5 ng-if="reserva.transfers.length>0" class="col s12 center-align cyan-text m-t-lg">Traslados</h5>
+                <h5 ng-if="reserva.transfers.length>0" class="col s12 center-align cyan-text m-t-lg">Traslados</h5>
 
-                    <div class="col s12" ng-repeat="(key,aux) in reserva.transfers">
-                        <div class="row">
-                            <p class="center-align" style="margin:0">
-                                <strong style="font-weight: bold">TRASLADO @{{key+1}}</strong>
-                            </p>
-                            <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
-                                    De:
-                                <br>Para:
-                                <br>Pasajeros:
-                                <br>Tipo:
-                                <br>Precio:
-                            </p>
+                <div class="col s12" ng-repeat="(key,aux) in reserva.transfers">
+                    <div class="row">
+                        <p class="center-align" style="margin:0">
+                            <strong style="font-weight: bold">TRASLADO @{{key+1}}</strong>
+                        </p>
+                        <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
+                                De:
+                            <br>Para:
+                            <br>Pasajeros:
+                            <br>Tipo:
+                            <br>Precio:
+                        </p>
 
-                            <p class="col s6" style="margin:15px 0 0 0;">
-                                    @{{ aux.de }}
-                                <br>@{{ aux.para }}
-                                <br>@{{ aux.pasajeros }}
-                                <br>@{{ aux.tipo==1?'One Way':'Round Trip' }}
-                                <br>@{{ aux.precio | currency:'$ ' }}
-                            </p>
+                        <p class="col s6" style="margin:15px 0 0 0;">
+                                @{{ aux.de }}
+                            <br>@{{ aux.para }}
+                            <br>@{{ aux.pasajeros }}
+                            <br>@{{ aux.tipo==1?'One Way':'Round Trip' }}
+                            <br>@{{ aux.precio | currency:'$ ' }}
+                        </p>
 
-                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
-                                <div class="row">
-                                    <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
-                                    <p class="col s6 right-align" style="font-weight: bold">
-                                        Fecha:
-                                        <br>Hora:
-                                        <br>Aerolinea:
-                                        <br>Vuelo:
-                                    </p>
-                                    <p class="col s6">
-                                        @{{ aux.llegada_fecha }}
-                                        <br>@{{ aux.llegada_hora }}
-                                        <br>@{{ aux.llegada_aerolinea }}
-                                        <br>@{{ aux.llegada_vuelo }}
-                                    </p>
-                                </div>
+                        <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6">
+                                    @{{ aux.llegada_fecha }}
+                                    <br>@{{ aux.llegada_hora }}
+                                    <br>@{{ aux.llegada_aerolinea }}
+                                    <br>@{{ aux.llegada_vuelo }}
+                                </p>
                             </div>
-                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
-                                <div class="row">
-                                    <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
-                                    <p class="col s6 right-align" style="font-weight: bold">
-                                        Fecha:
-                                        <br>Hora:
-                                        <br>Aerolinea:
-                                        <br>Vuelo:
-                                    </p>
-                                    <p class="col s6">
-                                        @{{ aux.salida_fecha }}
-                                        <br>@{{ aux.salida_hora }}
-                                        <br>@{{ aux.salida_aerolinea }}
-                                        <br>@{{ aux.salida_vuelo }}
-                                    </p>
-                                </div>
+                        </div>
+                        <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6">
+                                    @{{ aux.salida_fecha }}
+                                    <br>@{{ aux.salida_hora }}
+                                    <br>@{{ aux.salida_aerolinea }}
+                                    <br>@{{ aux.salida_vuelo }}
+                                </p>
                             </div>
                         </div>
                     </div>
-
-
-
-                    <h5 ng-if="reserva.vips.length>0" class="col s12 center-align m-t-lg cyan-text">VIPS</h5>
-
-                    <div class="col s12" ng-repeat="(key,aux) in reserva.vips">
-                        <div class="row">
-                            <p class="center-align" style="margin:0">
-                                <strong style="font-weight: bold">VIP @{{key+1}}</strong>
-                            </p>
-                            <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
-                                    Precio:
-                                <br>Pasajeros:
-                            </p>
-
-                            <p class="col s6" style="margin:15px 0 0 0;">
-                                    @{{ aux.precio | currency:'$ ' }}
-                                <br>@{{ aux.pasajeros }}
-                            </p>
-
-                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
-                                <div class="row">
-                                    <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
-                                    <p class="col s6 right-align" style="font-weight: bold">
-                                        Fecha:
-                                        <br>Hora:
-                                        <br>Aerolinea:
-                                        <br>Vuelo:
-                                    </p>
-                                    <p class="col s6">
-                                        @{{ aux.llegada_fecha }}
-                                        <br>@{{ aux.llegada_hora }}
-                                        <br>@{{ aux.llegada_aerolinea }}
-                                        <br>@{{ aux.llegada_vuelo }}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
-                                <div class="row">
-                                    <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
-                                    <p class="col s6 right-align" style="font-weight: bold">
-                                        Fecha:
-                                        <br>Hora:
-                                        <br>Aerolinea:
-                                        <br>Vuelo:
-                                    </p>
-                                    <p class="col s6">
-                                        @{{ aux.salida_fecha }}
-                                        <br>@{{ aux.salida_hora }}
-                                        <br>@{{ aux.salida_aerolinea }}
-                                        <br>@{{ aux.salida_vuelo }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
                 </div>
-            </div>
-            <div class="modal-footer">
-                <a class="modal-action modal-close waves-effect cyan-text waves-blue btn-flat ">Cerrar</a>
+
+
+
+                <h5 ng-if="reserva.vips.length>0" class="col s12 center-align m-t-lg cyan-text">VIPS</h5>
+
+                <div class="col s12" ng-repeat="(key,aux) in reserva.vips">
+                    <div class="row">
+                        <p class="center-align" style="margin:0">
+                            <strong style="font-weight: bold">VIP @{{key+1}}</strong>
+                        </p>
+                        <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
+                                Precio:
+                            <br>Pasajeros:
+                        </p>
+
+                        <p class="col s6" style="margin:15px 0 0 0;">
+                                @{{ aux.precio | currency:'$ ' }}
+                            <br>@{{ aux.pasajeros }}
+                        </p>
+
+                        <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6">
+                                    @{{ aux.llegada_fecha }}
+                                    <br>@{{ aux.llegada_hora }}
+                                    <br>@{{ aux.llegada_aerolinea }}
+                                    <br>@{{ aux.llegada_vuelo }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6">
+                                    @{{ aux.salida_fecha }}
+                                    <br>@{{ aux.salida_hora }}
+                                    <br>@{{ aux.salida_aerolinea }}
+                                    <br>@{{ aux.salida_vuelo }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect cyan-text waves-blue btn-flat ">Cerrar</a>
+        </div>
+    </div>
 @endsection
 
 

@@ -88,6 +88,7 @@ class SiteController extends Controller
                 if (!isset($token["id"])) {
                     return redirect("/");
                 }
+                dd($token);
                 $charge = $stripe->charges()->create([
                     "card" => $token["id"],
                     "currency" => "USD",
