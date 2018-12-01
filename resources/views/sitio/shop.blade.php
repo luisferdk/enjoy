@@ -5,11 +5,13 @@
 	<form class="row" action="" method="post" id='reservation'>
 		@csrf
 		<h1 class="col-xs-12 text-center tituloVerde" style="font-size: 3em">Reservation</h1>
+		
 		<div 
 			class="col-xs-10 col-xs-offset-1" 
 			ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0">
 			<div class="alert alert-success text-center">Add item to <i class="fa fa-shopping-cart"></i></div>
 		</div>
+
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.traslados.length>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Transfers</h2>
 			<table class="table table-bordered text-center">
@@ -39,6 +41,7 @@
 				</tbody>
 			</table>
 		</div>
+
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.tours.length>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Tours</h2>
 			<table class="table table-bordered text-center">
@@ -68,6 +71,7 @@
 				</tbody>
 			</table>
 		</div>
+
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.vip.length>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Service VIP</h2>
 			<table class="table table-bordered text-center">
@@ -93,6 +97,7 @@
 				</tbody>
 			</table>
 		</div>
+
 		<div class="col-xs-10 col-xs-offset-1" ng-if="precioTotal()>0">
 			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Client Info</h2>
             <div class="col-xs-12 col-sm-6">
@@ -145,16 +150,76 @@
                 </div>
             </div>
 		</div>
+
 		<h2 class="col-xs-10 col-xs-offset-1 tituloVerde text-center" ng-show="precioTotal()>0">
 			@{{ precioTotal() | currency:"$ "}}
 			<input type="hidden" name="precio" value="@{{ precioTotal() }}">
 		</h2>
+		<div class="col-xs-12 col-sm-6 col-sm-offset-3 panel mt2" ng-show="precioTotal()>0" style="background:rgba(128, 128, 128, 0.2);padding:2em 0;">
+			<div class="row panel-body">
+				<img class="col-xs-5 col-xs-offset-3" src="{{ asset('img/tarjetas.png') }}" alt="">
+				<div class='col-xs-12 form-group'>
+					<label class='control-label'>Card Number</label>
+					<input 
+						autocomplete='off' 
+						class='form-control'
+						size='20' 
+						type='text' 
+						name="card_no"
+						required>
+				</div>
+				<div class='col-xs-4 form-group'>
+					<label class='control-label'>CVV</label>
+					<input 
+						autocomplete='off'
+						class='form-control'
+						placeholder='ex. 311'
+						size='4'
+						type='text'
+						name="cvvNumber"
+						required>
+				</div>
+				<div class='col-xs-4 form-group'>
+					<label class='control-label'>Expiration Month</label>
+					<input 
+						class='form-control'
+						placeholder='MM'
+						size='2'
+						type='text'
+						name="ccExpiryMonth"
+						required>
+				</div>
+				<div class='col-xs-4 form-group'>
+					<label class='control-label'>Expiration Year</label>
+					<input 
+						class='form-control card-expiry-year'
+						placeholder='YY'
+						size='2'
+						type='text'
+						name="ccExpiryYear"
+						required>
+				</div>
+			</div>
+		</div>
+		
 		<div class="col-xs-10 col-xs-offset-1 mt2" ng-show="precioTotal()>0">
 			<input data-toggle="tooltip" title="Accept terms and conditions" ng-model="terminos" id="terminos" name="terminos" type="checkbox" value="terminos">
-	        <a class="" href="#" data-toggle="modal" data-target="#terminosModal">
-	        	<strong data-toggle="tooltip" title="Read terms and conditions">I have read and accept the terms and conditions</strong>
+	        <a	class=""
+				href="#"
+				data-toggle="modal"
+				data-target="#terminosModal">
+	        	<strong data-toggle="tooltip" 
+						title="Read terms and conditions">
+						I have read and accept the terms and conditions
+				</strong>
 	    	</a>
-			<button type="submit" class="btn btn-success pull-right" ng-disabled="!terminos"><i class="fa fa-paypal"></i> Payment</button>
+			<button 
+				type="submit"
+				class="btn btn-success pull-right"
+				ng-disabled="!terminos">
+					<i class="fa fa-paypal"></i>
+					Payment
+			</button>
 		</div>
 	</form>
 

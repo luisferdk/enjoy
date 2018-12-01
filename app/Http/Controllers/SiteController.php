@@ -13,6 +13,14 @@ use App\Transfer;
 use App\Tour;
 use App\Vip;
 
+use Validator;
+use URL;
+use Session;
+use Redirect;
+use Input;
+use Stripe\Error\Card;
+use Cartalyst\Stripe\Stripe;
+
 class SiteController extends Controller
 {
     public function index(){
@@ -55,7 +63,84 @@ class SiteController extends Controller
         session(
             ["reservation"=>$request->all()]
         );
-        return view('sitio.paypal',compact('reservation'));
+
+        $validator = Validator::make($request->all(), [
+            "card_no" => "required",
+            "ccExpiryMonth" => "required",
+            "ccExpiryYear" => "required",
+            "cvvNumber" => "required",
+            //"amount" => "required",
+        ]);
+        
+        $datos = $request->all();
+        if ($validator->passes()) {
+            $datos = array_except($datos, array("_token"));
+            $stripe = Stripe::make(ENV('STRIPE_SECRET'));
+            try {
+                $token = $stripe->tokens()->create([
+                    "card" => [
+                        "number" => $request->get("card_no"),
+                        "exp_month" => $request->get("ccExpiryMonth"),
+                        "exp_year" => $request->get("ccExpiryYear"),
+                        "cvc" => $request->get("cvvNumber"),
+                    ],
+                ]);
+                if (!isset($token["id"])) {
+                    return redirect("/");
+                }
+                $charge = $stripe->charges()->create([
+                    "card" => $token["id"],
+                    "currency" => "USD",
+                    "amount" => $datos['precio'],
+                    "description" => "Reservation Renny Travel",
+                ]);
+
+                if ($charge["status"] == "succeeded") {
+                    $reservation = Reservation::create(session("reservation"));
+                    foreach (session('carrito')['traslados'] as $traslado) {
+                        $traslado["reservation_id"] = $reservation->id;
+                        Transfer::create($traslado);
+                    }
+                    foreach (session('carrito')['tours'] as $tour) {
+                        $tour["reservation_id"] = $reservation->id;
+                        Tour::create($tour);
+                    }
+                    foreach (session('carrito')['vip'] as $vip) {
+                        $vip["reservation_id"] = $reservation->id;
+                        Vip::create($vip);
+                    }
+
+                    $reservation->id_pago = $charge["id"];
+                    $reservation->estado = 1;
+                    $reservation->save();
+                    $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
+                    Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+                    session([
+                        "reservation" => array(),
+                        "carrito" => array(
+                            "traslados" => array(),
+                            "tours" => array(),
+                            "vip" => array(),
+                        )
+                    ]);
+                    return redirect('/')->with('status', 'Reservation Completed');
+                } else {
+                    \Session::put("error", "Money not add in wallet !!");
+                    return redirect()->route("addmoney.paywithstripe");
+                }
+            } catch (Exception $e) {
+                \Session::put("error", $e->getMessage());
+                return redirect()->route("addmoney.paywithstripe");
+            } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
+                \Session::put("error", $e->getMessage());
+                return redirect()->route("addmoney.paywithstripe");
+            } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
+                \Session::put("error", $e->getMessage());
+                return redirect()->route("addmoney.paywithstripe");
+            }
+        }
+
+        //return view('sitio.paypal',compact('reservation'));
     }
 
     public function ipn(Request $request){
@@ -75,7 +160,7 @@ class SiteController extends Controller
                 Vip::create($vip);
             }
 
-            $reservation->id_pago = $datos["order_number"];
+            $reservation->id_pago = $datos["id"];
             $reservation->estado = 1;
             $reservation->save();
             $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
