@@ -195,6 +195,10 @@ Reservas
                             <br>Pasajeros:
                             <br>Tipo:
                             <br>Precio:
+                            <span ng-if="aux.cervezas>0"><br>Cervezas: </span>
+                            <span ng-if="aux.sodas>0"><br>Sodas: </span>
+                            <span ng-if="aux.vinos>0"><br>Vinos: </span>
+                            <span ng-if="aux.champagne>0"><br>Champagne: </span>
                         </p>
 
                         <p class="col s6" style="margin:15px 0 0 0;">
@@ -203,6 +207,10 @@ Reservas
                             <br>@{{ aux.pasajeros }}
                             <br>@{{ aux.tipo==1?'One Way':'Round Trip' }}
                             <br>@{{ aux.precio | currency:'$ ' }}
+                            <span ng-if="aux.cervezas>0"><br>@{{ aux.cervezas }}</span>
+                            <span ng-if="aux.sodas>0"><br>@{{ aux.sodas }}</span>
+                            <span ng-if="aux.vinos>0"><br>@{{ aux.vinos }}</span>
+                            <span ng-if="aux.champagne>0"><br>@{{ aux.champagne }}</span>
                         </p>
 
                         <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
