@@ -188,10 +188,7 @@
 
 
 		</div>
-		<div class="col-xs-12" style="margin-top: 2em">
-			<h2 class="text-center azul">Description</h2>
-			<p>@{{ tour.descripcion }}</p>	
-		</div>
+		<div class="row tour-detalle" ng-bind-html="tour.descripcion_completa"></div>
 	</div>
 	
 </section>

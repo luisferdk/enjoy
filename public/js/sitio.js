@@ -1,4 +1,4 @@
-var app = angular.module("app", []);
+var app = angular.module("app", ['ngSanitize']);
 
 app.controller("ctrl", function($scope,$http,$timeout,$window) {
 
@@ -495,7 +495,57 @@ $scope.vector = function(n){
           mostrar:true,
           partyBoat:true,
           titulo:"Sabina del Mar VIP Party Boat",
-          descripcion:'You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.',
+          descripcion:'Youll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean.',
+          descripcion_completa:`
+          <h2 class="col-xs-12">Overview</h2>
+          <p class="col-xs-12">
+              Youll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. 
+              <br>While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
+              
+              <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. 
+              <br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+          </p>
+          
+          <h2 class="col-xs-12">Know More about this tour</h2>
+          <p class="col-xs-12">
+              Youll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area.
+              <br>While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
+          
+              <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers.
+              <br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+          </p>
+          
+          <div class="col-xs-12 col-md-4">
+              <div class="row">
+                  <h2 class="col-xs-12">Inclusions</h2>
+                  <ul class="col-xs-12 incluye">
+                      <li>Local taxes</li>
+                      <li>Entrance fees</li>
+                      <li>Fuel surcharge</li>
+                      <li>National Park fees</li>
+                  </ul>
+              </div>	
+          </div>
+          <div class="col-xs-12 col-md-4">
+              <div class="row">
+                  <h2 class="col-xs-12">Exclusions</h2>
+                  <ul class="col-xs-12 excluye">
+                      <li>Gratuities (recommended)</li>
+                      <li>DVD (available to purchase)</li>
+                      <li>Souvenir photos (available to purchase)</li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-xs-12 col-md-4">
+              <div class="row">
+                  <h2 class="col-xs-12">Additional Info</h2>
+                  <ul class="col-xs-12">
+                      <li>Confirmation will be received at time of booking</li>
+                      <li>Children must be accompanied by an adult</li>
+                  </ul>
+              </div>	
+          </div>
+          `,
           horarios:['9-12 PM','12-3 PM','3-6 PM'],
               modalidades:[
               {id:0,precio:45,nino:25,descripcion:'VIP Hotdog menu'},

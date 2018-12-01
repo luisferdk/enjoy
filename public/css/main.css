@@ -929,6 +929,28 @@ fieldset[disabled] .btn-success.focus:focus,
 .swal2-popup {
   font-size: 1em;
 }
+.tour-detalle {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+.tour-detalle ul {
+  list-style-type: none;
+}
+.tour-detalle ul li {
+  padding: 0.3em;
+}
+.tour-detalle ul.incluye li:before {
+  font-family: "fontAwesome";
+  content: "\f00c";
+  color: #008000;
+  margin-right: 0.5em;
+}
+.tour-detalle ul.excluye li:before {
+  font-family: "fontAwesome";
+  content: "\f00d";
+  color: #f00;
+  margin-right: 0.5em;
+}
 @-moz-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);

@@ -598,6 +598,27 @@ fieldset[disabled] .btn-success.focus
 		background #73a235
 		border-color #73a235
 
-.swal2-popup{
-	font-size: 1em;
-}
+.swal2-popup
+	font-size: 1em
+
+.tour-detalle
+	margin-top: 1em
+	margin-bottom: 2em
+	ul
+		list-style-type: none
+		li
+			padding:.3em
+		&.incluye
+			li
+				&:before
+					font-family: "fontAwesome"
+					content:"\f00c"
+					color: green
+					margin-right: .5em
+		&.excluye
+			li
+				&:before
+					font-family: "fontAwesome"
+					content:"\f00d"
+					color: red
+					margin-right: .5em
