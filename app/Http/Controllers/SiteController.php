@@ -96,7 +96,7 @@ class SiteController extends Controller
                 ]);
 
                 $customer = $stripe->customers()->create([
-                    "email"=> session('reservation')['correo']
+                    'email' => session('reservation')['correo'],
                 ]);
 
                 if ($charge["status"] == "succeeded") {
