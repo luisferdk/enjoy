@@ -546,6 +546,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     </ul>
                 </div>	
             </div>
+
+            <p class="col-xs-12 text-center">
+                <a class="btn btn-primary" target="_blank" href="/pdf/SabinadelMar.pdf">Download PDF</a>
+            </p>
+
           `,
             horarios: ['9-12 PM', '12-3 PM', '3-6 PM'],
             modalidades: [
@@ -579,6 +584,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations.
                     <br><br>The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/BuggysAdventure.pdf">Download PDF</a>
+                </p>                
             `,
             modalidades: [
                 { id: 0, precio: 80, nino: 45, descripcion: 'Doble' },
@@ -598,6 +606,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>This adventure includes profesional guides that will be with you the entire road trip to help you find the beauty Dominican Republic has to offer.
                     <br><br>Book with us this amazing adventure a live an unforgettable experience
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/BuggysAdventure.pdf">Download PDF</a>
+                </p>                
             `,
             modalidades: [
                 { id: 0, precio: 65, nino: 35, descripcion: 'Doble' },
@@ -615,6 +626,10 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     Bird's eye view of the entire area giving you amazing photo opportunities of your hotel and the surrounding area.
                     <br><br>Discover new sensations. Fly over the beautiful Dominican landscape, and admire the exuberant flora and fauna
                 </p>
+
+                <p class="col-xs-12 text-center">
+				    <a class="btn btn-primary" target="_blank" href="/pdf/HelicopterTour.pdf">Download PDF</a>
+				</p>
             `,
             modalidades: [
                 { id: 0, precio: 89, nino: 89, descripcion: '10 min' },
@@ -638,6 +653,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>The final line at 900 meters is the longest in the Dominican Republic as well as the entire Caribbean.
                     <br><br><strong>Requirements:</strong> Min age 6 years old, max weight 250lbs (46’ waist), no pregnant women or guests with heart conditions can participate.
                 </p>
+				<p class="col-xs-12 text-center">
+				    <a class="btn btn-primary" target="_blank" href="/pdf/ZipLineAdventure.pdf">Download PDF</a>
+				</p>                
             `,
             modalidades: [
                 { id: 0, precio: 90, nino: 75, descripcion: 'Day' },
@@ -663,6 +681,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>These small simians are accustomed to human contact, so don’t be (too) surprised if they swing down from a tree onto your shoulder and eat right from your hands.
                     <br><br>Not camera-shy either, they might just strike a pose when you snap photos.      
                 </p>
+                <p class="col-xs-12 text-center">
+				    <a class="btn btn-primary" target="_blank" href="/pdf/MonkeyLand.pdf">Download PDF</a>
+				</p>
             `,
             modalidades: [
                 { id: 0, precio: 75, nino: 55, descripcion: 'Básico' }
@@ -689,6 +710,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             descripcion_completa: `
                 <h2 class="col-xs-12 text-center">Description</h2>
                 <p class="col-xs-12">Floats silently above the trees and into a world where silence is priceless while enjoying the sunrise over Punta Cana.</p>
+                <p class="col-xs-12 text-center">
+				    <a class="btn btn-primary" target="_blank" href="/pdf/HotAirBalloningRides.pdf">Download PDF</a>
+				</p>
             `,
             horarios: ['5:30 AM'],
             modalidades: [
@@ -703,6 +727,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             descripcion_completa: `
                 <h2 class="col-xs-12 text-center">Description</h2>
                 <p class="col-xs-12">Floats silently above the trees and into a world where silence is priceless while enjoying the sunrise over Punta Cana.</p>
+                <p class="col-xs-12 text-center">
+				    <a class="btn btn-primary" target="_blank" href="/pdf/DeepSeaFishing.pdf">Download PDF</a>
+				</p>
             `,
             modalidades: [
                 { id: 0, precio: 110, nino: 110, descripcion: "Invidual" },
@@ -784,6 +811,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Inhabited by corals and vibrant fish, it is a must for divers and snorkelers alike.
                     <br><br>Our second dive spot, the Aquarium, is an enjoyable dive where lobster, yellow stingrays and moray eels are part of the attractid
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/DivingatCatalinaIsland.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 110, nino: 55, descripcion: 'Basic' },
@@ -803,6 +833,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>A beautiful beach, virtually untouched, where you can enjoy the sun, swim and have fun with recreational activities carried out there: Volleyball, music to dance merengue, salsa, bachata, among others.
                     <br><br>At noon Lunch will offer a delicious buffet. National drinks (soft drinks, rum, Free Cuba, water) during the time on the island. Back to Bayahibe aboard speedboats or catamaran, with a stop at the natural pool and then transfer by bus back to the hotels.
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/DiscoverSaonaIsland.pdf">Download PDF</a>
+                </p>                
             `,
             modalidades: [
                 { id: 0, precio: 75, nino: 45, descripcion: 'Basic' },
@@ -835,6 +868,10 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     At Monkey land, a natural habitat located deep in the Dominican Republic’s jungle, you can interact with playful squirrel monkeys.
                     <br><br>On this 5 hour guided tour aboard a safari—style truck, you'll also explore the habitat's on—site botanical garden, as well as a coffee and cacao plantation. Chat it up with local farmers, learn about their organic methods and taste tropical fruit just plucked from a tree.
                 </p>
+
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/ZipLineandMonkeyLand.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 119, nino: 74, descripcion: "Zip Line and Monkey Land" }
@@ -864,6 +901,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>It is an incredible boat with a powerful brake, which is capable of performing and braking at high speeds, skidding over the Caribbean Sea and flying over the waves.
                     <br><br>Jet Boat is a fun in the sea and an unforgettable experience, besides being the only Jet Boat in Punta Cana, but throughout the Dominican Repub—lic. Are you going to miss it?
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/PartyBoatandJetBoat.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 75, nino: 45, descripcion: "Party Boat and Jet Boat" }
@@ -878,7 +918,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 From our ranch in Macao, we go tearing through the remote farmland of northern Punta Cana, passing palm trees and tobacco plantations with the Ori—ental Mountain Range deep in the background. These narrow, secluded country roads offer a safe haven but be ready to get dirty!
             `,
             descripcion_completa: `
-                <h2 class="col-xs-12 text-center">Party Boat</h2>
+                <h2 class="col-xs-12 text-center">Buggy</h2>
                 <p class="col-xs-12">
                     You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. 
                     <br><br>While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
@@ -891,6 +931,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     From our ranch in Macao, we go tearing through the remote farmland of northern Punta Cana, passing palm trees and tobacco plantations with the Ori—ental Mountain Range deep in the background.
                     <br>
                     <br>These narrow, secluded country roads offer a safe haven but be ready to get dirty!
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/PartyBoatandBuggy.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -915,6 +958,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     Coco Bongo provides several shows each night, in between which contemporary music plays.
                     <br><br> Coco Bongo is known for the music, theme and that which mimics the stars of international music or are related to "soundtrack" of famous films.
                     <br><br>'The Mask", "Moulin Rouge", "Chicago', "The Phantom of the Opera"," Batman, “" Spiden'nan, "" Tron, "" Saturday Night Fever "are fantastically recreated by combining talents live, videos and other technological resources.
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/CocoBongoDiscoEtShow.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -944,6 +990,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
                     <br><br><br><strong>Includes:</strong>
                     Transportation, welcome hot beverages and pastries, soft drinks, a cowboy lunch and a tequila shot. (Snacks, hamburgers, hot dogs and alcoholic beverages are available at an extra cost.
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/DominicanCowboyAdventure.pdf">Download PDF</a>
                 </p>
             `,
             descripcion: `
@@ -982,6 +1031,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>You will have free time in the afternoon to swim in the turquoise beaches of Catalina Island, enjoy unlimited drinks by the beach bar or simply relax in the sun.
                 <br><br>
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/DivingatCatalinaIsland.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 195, nino: 0, descripcion: "Diving at Catalina Island" }
@@ -998,6 +1050,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     Dolphin Discovery is home of the most loved dolphins, our parks and staff are certified to give them the best care.
                     <br><br>We can offer you the experience of a lifetime! For over 20 years, Dolphin Discovery has contributed to the study and conservation of marine mammals, creating a bond of love of re-spect through the best interaction experience in unique habitats around the world.
                     <br><br>Children up to 5 years Free.
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/DolphinsDiscovery.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -1023,6 +1078,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Each as magniﬁcent and astounding as the previous! Each cave comes complete with its own prominent Dj playing only the hottest tracks, rhythms and beats the Dominican Republic, and the world, has to offer! 
                     <br><br>You’ll dance the night away, savoring one of our signature cocktails, all the while being entertained by our ﬁre breathing, ﬂare bartenders. 
                     <br><br>And when the time comes to return to the “real world”, you’ll wish your fairy godmother would wave her magic wand and turn the clock back to mid-night, so you could do it all over again!
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/ImagineDisco.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -1050,6 +1108,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br><br>
                     <strong>0R0 Nightclub</strong> Punta Cana has been the scene of great DJs such as Steve Angelo, Erick Morillo, Bob Sinclar, Chris Lake, Dimitri Vegas & Like Mike, Hook n Sling, Pauly D, Shermanology, Roger Sanchez, Wolfgang Gartner, DJ Chuckie and world-renowned artists such as Inna, Akon,Daddy Yankee, Don Omar, Wisin y Yandel, Snoop Dogg aka Snoop Lion, La Formula de Pina Records, among many others.
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/OroNightclub.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 45, nino: 0, descripcion: "1 Drink transportation" },
@@ -1068,6 +1129,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>The whale-watching season runs from 15 January to 30 March. Punta Balandra, on the road from Samana City to Las Galeras, is a vantage point for watching the whales without having to get on a boat.
                     <br><br>If you don’t get the chance to go whale watching, the small Museo de las Ballenas has interesting information on the whales that pass close to Samana. 
                     <br><br><br><strong>Included:</strong> Tour guide, whale watch, buffet, nacional drinks, transportation.
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/SamanaWhaleWatching.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -1096,6 +1160,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     After a while you board the boat and head to Samana, where transportation awaits to take you to the ranch.
                     <br><br>Here you saddle up and ride into the virgin forest along the banks of Rio Limon, down to Salto Del Limon.
                     <br><br>The 60 meter high waterfall awaits you for a refreshing and rejuvenating bath to take off the dust.
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/Samana.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
@@ -1126,6 +1193,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 <br><br>This tour may be privatized.
                 <br><br>Please ask us how.
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/SantoDomingo.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 95, nino: 50, descripcion: "City Tour" }
@@ -1154,6 +1224,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>This will give you the freedom to choose the level of depth that you are comfortable with. 
                     <br><br>Certiﬁed guides will assist you in small groups of 4 persons per RAFT.
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/SnubaSnorkelEtSpeedboat.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 109, nino: 0, descripcion: "Snuba, Snorkel Et Speedboat" }
@@ -1175,6 +1248,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>You will reach maximum relaxation while participating in our Individual massage treatment. This massage is offered in private cubicles with ocean view, and includes head massage, and full back massage. 
                     <br><br>Enjoy a relaxation session on our floating mattresses in the natural pool. Let us introduce you to our wor1d famous Doctor Fish where you will be treated to the most amazing natural feet exfoliation treatment. Also you will enjoy our Detox treatments; a therapy aimed to improve, among other things, your liver and kidney function, through an electromagnetic detoxiﬁcation process carried out on the feet.  
                 </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/RennySpaBoat.pdf">Download PDF</a>
+                </p>
             `,
             modalidades: [
                 { id: 0, precio: 154, nino: 0, descripcion: "Spa Boat" }
@@ -1193,6 +1269,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>After that we will go to the submarine museum. something new in the area. From there we will make a stop at Playa Blanca to enjoy a delicious meal with lobster.
                     <br><br>Boarding again the catamaran we will sail to the natural pool, having time for swim and a drink. Coming back to the marina we will do our last stop at the ecological reserve “Ojos lndigenas” for a chance to swim in the natural fresh water of the lagoons.
                     <br><br>A full day VIP catamaran adventure!
+                </p>
+                <p class="col-xs-12 text-center">
+                    <a class="btn btn-primary" target="_blank" href="/pdf/ExclusiveVIPCatamaran.pdf">Download PDF</a>
                 </p>
             `,
             modalidades: [
