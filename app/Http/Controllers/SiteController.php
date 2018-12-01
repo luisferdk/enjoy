@@ -183,11 +183,8 @@ class SiteController extends Controller
     }
 
     public function sessionGet(){
-        if(session('carrito')){
-            return session('carrito');
-        }
-        else{
-            return session([
+        if(!session('carrito')){
+            session([
                 "carrito"=> array
                 (
                     "traslados"=>array(),
@@ -196,6 +193,7 @@ class SiteController extends Controller
                 )
             ]);
         }
+        return session('carrito');
     }
 
     public function sessionPost(Request $request){

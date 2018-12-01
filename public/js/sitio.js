@@ -1341,13 +1341,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.cargar = function () {
         $http.get(window.url + '/session').then(function (response) {
             $scope.carrito = response.data;
-            if(!$scope.carrito){
-                $scope.carrito = {
-                    traslados:[],
-                    tours:[],
-                    vip:[],
-                };
-            }
+            console.log(response.data);
         });
     }
     $scope.cargar();
