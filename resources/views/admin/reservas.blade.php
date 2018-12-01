@@ -205,21 +205,40 @@ Reservas
                                 <br>@{{ aux.precio | currency:'$ ' }}
                             </p>
 
-                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
-                                <strong style="font-weight: bold">LLEGADA</strong>
-                                <br>@{{ aux.llegada_fecha }}
-                                <br>@{{ aux.llegada_hora }}
-                                <br>@{{ aux.llegada_aerolinea }}
-                                <br>@{{ aux.llegada_vuelo }}
-                            </p>
-
-                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
-                                    <strong style="font-weight: bold">SALIDA</strong>
-                                    <br>@{{ aux.salida_fecha }}
-                                    <br>@{{ aux.salida_hora }}
-                                    <br>@{{ aux.salida_aerolinea }}
-                                    <br>@{{ aux.salida_vuelo }}
-                                </p>
+                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
+                                <div class="row">
+                                    <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                                    <p class="col s6 right-align" style="font-weight: bold">
+                                        Fecha:
+                                        <br>Hora:
+                                        <br>Aerolinea:
+                                        <br>Vuelo:
+                                    </p>
+                                    <p class="col s6">
+                                        @{{ aux.llegada_fecha }}
+                                        <br>@{{ aux.llegada_hora }}
+                                        <br>@{{ aux.llegada_aerolinea }}
+                                        <br>@{{ aux.llegada_vuelo }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
+                                <div class="row">
+                                    <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                                    <p class="col s6 right-align" style="font-weight: bold">
+                                        Fecha:
+                                        <br>Hora:
+                                        <br>Aerolinea:
+                                        <br>Vuelo:
+                                    </p>
+                                    <p class="col s6">
+                                        @{{ aux.salida_fecha }}
+                                        <br>@{{ aux.salida_hora }}
+                                        <br>@{{ aux.salida_aerolinea }}
+                                        <br>@{{ aux.salida_vuelo }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -242,21 +261,40 @@ Reservas
                                 <br>@{{ aux.pasajeros }}
                             </p>
 
-                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
-                                <strong style="font-weight: bold">LLEGADA</strong>
-                                <br>@{{ aux.llegada_fecha }}
-                                <br>@{{ aux.llegada_hora }}
-                                <br>@{{ aux.llegada_aerolinea }}
-                                <br>@{{ aux.llegada_vuelo }}
-                            </p>
-
-                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
-                                    <strong style="font-weight: bold">SALIDA</strong>
-                                    <br>@{{ aux.salida_fecha }}
-                                    <br>@{{ aux.salida_hora }}
-                                    <br>@{{ aux.salida_aerolinea }}
-                                    <br>@{{ aux.salida_vuelo }}
-                                </p>
+                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
+                                <div class="row">
+                                    <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                                    <p class="col s6 right-align" style="font-weight: bold">
+                                        Fecha:
+                                        <br>Hora:
+                                        <br>Aerolinea:
+                                        <br>Vuelo:
+                                    </p>
+                                    <p class="col s6">
+                                        @{{ aux.llegada_fecha }}
+                                        <br>@{{ aux.llegada_hora }}
+                                        <br>@{{ aux.llegada_aerolinea }}
+                                        <br>@{{ aux.llegada_vuelo }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
+                                <div class="row">
+                                    <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                                    <p class="col s6 right-align" style="font-weight: bold">
+                                        Fecha:
+                                        <br>Hora:
+                                        <br>Aerolinea:
+                                        <br>Vuelo:
+                                    </p>
+                                    <p class="col s6">
+                                        @{{ aux.salida_fecha }}
+                                        <br>@{{ aux.salida_hora }}
+                                        <br>@{{ aux.salida_aerolinea }}
+                                        <br>@{{ aux.salida_vuelo }}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
