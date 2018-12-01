@@ -900,6 +900,7 @@
     <script src="{{ asset("/") }}bower_components/sweetalert2/sweetalert2.min.js"></script>
     
     <script src="{{ asset("/") }}js/angular.min.js"></script>
+    <script src="{{ asset("/") }}js/angular-sanitize.min.js"></script>
 
     <script>
         window.opcion="index";
