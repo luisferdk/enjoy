@@ -96,6 +96,7 @@ class SiteController extends Controller
                 ]);
 
                 $customer = $stripe->customers()->create([
+                    'description' => session('reservation')['nombre']." ".session('reservation')['apellido'],
                     'email' => session('reservation')['correo'],
                 ]);
 
