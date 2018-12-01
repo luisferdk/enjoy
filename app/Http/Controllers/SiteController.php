@@ -88,12 +88,15 @@ class SiteController extends Controller
                 if (!isset($token["id"])) {
                     return redirect("/");
                 }
-                dd($token);
                 $charge = $stripe->charges()->create([
                     "card" => $token["id"],
                     "currency" => "USD",
-                    "amount" => $datos['precio'],
+                    "amount" => session('reservation')['precio'],
                     "description" => "Reservation Renny Travel",
+                ]);
+
+                $customer = $stripe->customers()->create([
+                    "email"=> session('reservation')['correo']
                 ]);
 
                 if ($charge["status"] == "succeeded") {
@@ -127,17 +130,17 @@ class SiteController extends Controller
                     return redirect('/')->with('status', 'Reservation Completed');
                 } else {
                     \Session::put("error", "Money not add in wallet !!");
-                    return redirect()->route("addmoney.paywithstripe");
+                    return redirect('/shop');
                 }
             } catch (Exception $e) {
                 \Session::put("error", $e->getMessage());
-                return redirect()->route("addmoney.paywithstripe");
+                return redirect('/shop');
             } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
                 \Session::put("error", $e->getMessage());
-                return redirect()->route("addmoney.paywithstripe");
+                return redirect('/shop');
             } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
                 \Session::put("error", $e->getMessage());
-                return redirect()->route("addmoney.paywithstripe");
+                return redirect('/shop');
             }
         }
 
