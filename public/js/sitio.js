@@ -3,10 +3,11 @@ var app = angular.module("app", ['ngSanitize']);
 app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
 
-    $scope.carrito = {};
-    $scope.carrito.traslados = [];
-    $scope.carrito.tours = [];
-    $scope.carrito.vip = [];
+    $scope.carrito = {
+        traslados:[],
+        tours:[],
+        vip:[],
+    };
     $scope.opcion = 'agregar';
     $scope.vector = function (n) {
         var array = [];
@@ -1340,6 +1341,13 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.cargar = function () {
         $http.get(window.url + '/session').then(function (response) {
             $scope.carrito = response.data;
+            if(!$scope.carrito){
+                $scope.carrito = {
+                    traslados:[],
+                    tours:[],
+                    vip:[],
+                };
+            }
         });
     }
     $scope.cargar();
