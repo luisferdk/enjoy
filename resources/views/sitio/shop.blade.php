@@ -201,8 +201,8 @@
 						autocomplete='off'
 						class='form-control'
 						placeholder='ex. 311'
-						size='4'
-						type='text'
+						size='3'
+						type='number'
 						name="cvvNumber"
 						required>
 				</div>
@@ -212,7 +212,9 @@
 						class='form-control'
 						placeholder='MM'
 						size='2'
-						type='text'
+						min="0"
+						max="12"
+						type='number'
 						name="ccExpiryMonth"
 						required>
 				</div>
@@ -222,7 +224,8 @@
 						class='form-control card-expiry-year'
 						placeholder='YY'
 						size='2'
-						type='text'
+						min="18"
+						type='number'
 						name="ccExpiryYear"
 						required>
 				</div>
