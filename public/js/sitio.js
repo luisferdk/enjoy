@@ -1363,16 +1363,16 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.precioTotal = function () {
         var precio = 0;
         for (var i = 0; i < $scope.carrito.traslados.length; i++) {
-            precio += $scope.carrito.traslados[i].precio;
+            precio += parseFloat($scope.carrito.traslados[i].precio);
         }
         for (var i = 0; i < $scope.carrito.tours.length; i++) {
-            precio += $scope.carrito.tours[i].precio;
+            precio += parseFloat($scope.carrito.tours[i].precio);
         }
         for (var i = 0; i < $scope.carrito.vip.length; i++) {
-            precio += $scope.carrito.vip[i].precio;
+            precio += parseFloat($scope.carrito.vip[i].precio);
         }
         for (var i = 0; i < $scope.carrito.wifi.length; i++) {
-            precio += $scope.carrito.wifi[i].precio;
+            precio += parseFloat($scope.carrito.wifi[i].precio);
         }
         return precio;
     }

@@ -26,6 +26,7 @@ class CreateWifisTable extends Migration
             $table->string("salida_vuelo");
             $table->integer("dispositivos");
             $table->string("hotel");
+            $table->float("precio");
             $table->integer('estado')->unsigned()->default(1);
             $table->integer("reservation_id")->unsigned();
             $table->timestamps();

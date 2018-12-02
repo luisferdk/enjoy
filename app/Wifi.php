@@ -18,6 +18,7 @@ class Wifi extends Model
         "salida_vuelo",
         "dispositivos",
         "hotel",
+        "precio",
         "reservation_id"
     ];
 

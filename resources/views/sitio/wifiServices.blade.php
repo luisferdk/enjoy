@@ -180,6 +180,7 @@
 			$('#dias').val(dias);
 
 			var precio = dias*8*$('#wifi').val();
+			precio = parseFloat(precio);
 			if(precio){
 				$('#precio').text(''+precio);
 				$("#precio2").val(precio);

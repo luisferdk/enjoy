@@ -8,6 +8,7 @@ use App\Reservation;
 use App\Transfer;
 use App\Tour;
 use App\Vip;
+use App\Wifi;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,7 @@ class AdminController extends Controller
     }
 
     public function reservas(){
-        $reservas = Reservation::with('tours','transfers','vips')->get();
+        $reservas = Reservation::with('tours','transfers','vips','wifis')->get();
         return view('admin.reservas',compact('reservas'));
     }
 
@@ -37,7 +38,7 @@ class AdminController extends Controller
     }
 
     public function wifi(){
-        $reservas = null;
+        $reservas = Wifi::with('reservation')->get();
         return view('admin.wifi',compact('reservas'));
     }
 }

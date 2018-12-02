@@ -147,11 +147,11 @@
                             <i class="material-icons">settings_input_svideo</i>VIP
                         </a>
                     </li>
-                    <!-- <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
+                    <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/wifi') }}">
-                            <i class="material-icons">settings_input_svideo</i>Wifi
+                            <i class="material-icons">wifi</i>Wifi
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
                 <div class="footer center-align">
                     <p class="copyright">Domtecno ©</p>

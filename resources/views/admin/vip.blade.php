@@ -134,34 +134,34 @@ Reservas
                     
                     <h5 class="col s12 center-align cyan-text">Datos de Vip</h5>
                     <div class="col s12">
-                            <div class="row">
-                                <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
-                                        Precio:
-                                    <br>Pasajeros:
+                        <div class="row">
+                            <p class="col s6 right-align" style="font-weight:bold;margin:15px 0 0 0;">
+                                    Precio:
+                                <br>Pasajeros:
+                            </p>
+
+                            <p class="col s6" style="margin:15px 0 0 0;">
+                                    @{{ reserva.precio | currency:'$ ' }}
+                                <br>@{{ reserva.pasajeros }}
+                            </p>
+
+                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.llegada_fecha">
+                                <strong style="font-weight: bold">LLEGADA</strong>
+                                <br>@{{ reserva.llegada_fecha }}
+                                <br>@{{ reserva.llegada_hora }}
+                                <br>@{{ reserva.llegada_aerolinea }}
+                                <br>@{{ reserva.llegada_vuelo }}
+                            </p>
+
+                            <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.salida_fecha">
+                                    <strong style="font-weight: bold">SALIDA</strong>
+                                    <br>@{{ reserva.salida_fecha }}
+                                    <br>@{{ reserva.salida_hora }}
+                                    <br>@{{ reserva.salida_aerolinea }}
+                                    <br>@{{ reserva.salida_vuelo }}
                                 </p>
-    
-                                <p class="col s6" style="margin:15px 0 0 0;">
-                                        @{{ reserva.precio | currency:'$ ' }}
-                                    <br>@{{ reserva.pasajeros }}
-                                </p>
-    
-                                <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.llegada_fecha">
-                                    <strong style="font-weight: bold">LLEGADA</strong>
-                                    <br>@{{ reserva.llegada_fecha }}
-                                    <br>@{{ reserva.llegada_hora }}
-                                    <br>@{{ reserva.llegada_aerolinea }}
-                                    <br>@{{ reserva.llegada_vuelo }}
-                                </p>
-    
-                                <p class="col s12 center-align" style="margin:15px 0 0 0;" ng-if="reserva.salida_fecha">
-                                        <strong style="font-weight: bold">SALIDA</strong>
-                                        <br>@{{ reserva.salida_fecha }}
-                                        <br>@{{ reserva.salida_hora }}
-                                        <br>@{{ reserva.salida_aerolinea }}
-                                        <br>@{{ reserva.salida_vuelo }}
-                                    </p>
-                            </div>
                         </div>
+                    </div>
 
 
                     <h5 class="col s12 center-align cyan-text">Datos del Cliente</h5>

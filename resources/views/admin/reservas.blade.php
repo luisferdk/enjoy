@@ -216,13 +216,13 @@ Reservas
                         <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
                             <div class="row">
                                 <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
-                                <p class="col s6 right-align" style="font-weight: bold">
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
                                     Fecha:
                                     <br>Hora:
                                     <br>Aerolinea:
                                     <br>Vuelo:
                                 </p>
-                                <p class="col s6">
+                                <p class="col s6" style="margin:0;">
                                     @{{ aux.llegada_fecha }}
                                     <br>@{{ aux.llegada_hora }}
                                     <br>@{{ aux.llegada_aerolinea }}
@@ -233,13 +233,13 @@ Reservas
                         <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
                             <div class="row">
                                 <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
-                                <p class="col s6 right-align" style="font-weight: bold">
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
                                     Fecha:
                                     <br>Hora:
                                     <br>Aerolinea:
                                     <br>Vuelo:
                                 </p>
-                                <p class="col s6">
+                                <p class="col s6" style="margin:0;">
                                     @{{ aux.salida_fecha }}
                                     <br>@{{ aux.salida_hora }}
                                     <br>@{{ aux.salida_aerolinea }}
@@ -272,13 +272,13 @@ Reservas
                         <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
                             <div class="row">
                                 <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
-                                <p class="col s6 right-align" style="font-weight: bold">
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
                                     Fecha:
                                     <br>Hora:
                                     <br>Aerolinea:
                                     <br>Vuelo:
                                 </p>
-                                <p class="col s6">
+                                <p class="col s6" style="margin:0;">
                                     @{{ aux.llegada_fecha }}
                                     <br>@{{ aux.llegada_hora }}
                                     <br>@{{ aux.llegada_aerolinea }}
@@ -289,13 +289,66 @@ Reservas
                         <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.salida_fecha">
                             <div class="row">
                                 <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
-                                <p class="col s6 right-align" style="font-weight: bold">
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
                                     Fecha:
                                     <br>Hora:
                                     <br>Aerolinea:
                                     <br>Vuelo:
                                 </p>
-                                <p class="col s6">
+                                <p class="col s6" style="margin:0;">
+                                    @{{ aux.salida_fecha }}
+                                    <br>@{{ aux.salida_hora }}
+                                    <br>@{{ aux.salida_aerolinea }}
+                                    <br>@{{ aux.salida_vuelo }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 ng-if="reserva.wifis.length>0" class="col s12 center-align m-t-lg cyan-text">WIFIS</h5>
+
+                <div class="col s12" ng-repeat="(key,aux) in reserva.wifis">
+                    <div class="row">
+                        <p class="center-align" style="margin:0">
+                            <strong style="font-weight: bold">Wifi @{{key+1}}</strong>
+                        </p>
+                        <p class="col s6 right-align" style="font-weight:bold;margin:0;">
+                                Precio:
+                            <br>Dispositivos:
+                        </p>
+
+                        <p class="col s6" style="margin:0;">
+                                @{{ aux.precio | currency:'$ ' }}
+                            <br>@{{ aux.dispositivos }}
+                        </p>
+
+                        <div class="col s12" style="margin:15px 0 0 0;" ng-if="aux.llegada_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">LLEGADA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6" style="margin:0;">
+                                    @{{ aux.llegada_fecha }}
+                                    <br>@{{ aux.llegada_hora }}
+                                    <br>@{{ aux.llegada_aerolinea }}
+                                    <br>@{{ aux.llegada_vuelo }}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col s12" style="margin:0;" ng-if="aux.salida_fecha">
+                            <div class="row">
+                                <strong class="col s12 center-align" style="font-weight: bold">SALIDA</strong>
+                                <p class="col s6 right-align" style="font-weight: bold;margin:0;">
+                                    Fecha:
+                                    <br>Hora:
+                                    <br>Aerolinea:
+                                    <br>Vuelo:
+                                </p>
+                                <p class="col s6" style="margin:0;">
                                     @{{ aux.salida_fecha }}
                                     <br>@{{ aux.salida_hora }}
                                     <br>@{{ aux.salida_aerolinea }}
