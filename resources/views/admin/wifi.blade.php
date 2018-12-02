@@ -53,10 +53,10 @@ Reservas
             <div id="procesadas" class="col s12">
                 <table ng-table="tabla" class="table m-t-lg" show-filter="true">
                     <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==2'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                    <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
                             @{{aux.id}}
                         </td>
-                        <td width="15%" data-title="'Fecha LLegada'" sortable="'fecha_llegada'">
+                        <td width="15%" data-title="'Fecha LLegada'" sortable="'llegada_fecha'">
                             @{{aux.llegada_fecha}}
                         </td>
                         <td width="15%" data-title="'Fecha Salida'" sortable="'salida_fecha'">
@@ -84,10 +84,10 @@ Reservas
             <div id="canceladas" class="col s12">
                 <table ng-table="tabla" class="table m-t-lg" show-filter="true">
                     <tr ng-repeat="(index,aux) in $data" ng-if='aux.estado==3'>
-                        <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
+                    <td width="10%" data-title="'ID'" filter="{ id: 'number'}" sortable="'id'">
                             @{{aux.id}}
                         </td>
-                        <td width="15%" data-title="'Fecha LLegada'" sortable="'fecha_llegada'">
+                        <td width="15%" data-title="'Fecha LLegada'" sortable="'llegada_fecha'">
                             @{{aux.llegada_fecha}}
                         </td>
                         <td width="15%" data-title="'Fecha Salida'" sortable="'salida_fecha'">
@@ -239,7 +239,7 @@ Reservas
                     confirmButtonText: "Procesar", 
                     closeOnConfirm: false 
                 }, function(){  
-                    $http.put('{{ url("/api/reservation") }}/'+id,{_token:'{{ csrf_token() }}',estado:2})
+                    $http.put('{{ url("/api/wifi") }}/'+id,{_token:'{{ csrf_token() }}',estado:2})
                     .then(function(response){
                         $scope.index = $scope.getIndex(id);
                         $scope.reservas[$scope.index] = response.data;
@@ -259,7 +259,7 @@ Reservas
                     confirmButtonText: "Cancelar", 
                     closeOnConfirm: false 
                 }, function(){  
-                    $http.put('{{ url("/api/reservation") }}/'+id,{_token:'{{ csrf_token() }}',estado:3})
+                    $http.put('{{ url("/api/wifi") }}/'+id,{_token:'{{ csrf_token() }}',estado:3})
                     .then(function(response){
                         $scope.index = $scope.getIndex(id);
                         $scope.reservas[$scope.index] = response.data;
