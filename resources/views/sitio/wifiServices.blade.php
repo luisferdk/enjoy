@@ -4,7 +4,7 @@
 @section('content')
 <section class="row">
 	<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
-		<div class="row wifiServices">
+		<div class="row">
 			<div class="col-xs-12 col-sm-6">
 				<img class="img-responsive" src="{{ asset("/") }}img/wifi.jpg" alt="">
 			</div>
@@ -27,13 +27,13 @@
 	</div>
 </section>
 
-<form action="" method="post" class="modal fade" id="wifiModal" tabindex="-1" role="dialog">
-	<input type="hidden" name="dias" id="dias">
+<form action="" method="post" class="modal fade" id="wifiModal" tabindex="-1" role="dialog" ng-submit="agregarWifi($event)">
+	<input type="hidden" name="dias" ng-model="wifi.dias" id="dias">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h4 class="modal-title" id="exampleModalLabel">Book Now Wifi Services</h4>
+				<h4 class="modal-title text-center" id="exampleModalLabel">Wifi Service</h4>
 			</div>
 			<div class="modal-body">
 				<div class="row">
@@ -47,7 +47,7 @@
 									<label for="">
 										*Date
 									</label>
-									<input class="form-control" id="date1" name="fechaLlegada" type="text" placeholder="Select Date" required>
+									<input class="form-control" id="date1" name="llegada_fecha" ng-model="wifi.llegada_fecha" type="text" placeholder="Select Date" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -55,7 +55,7 @@
 									<label for="">
 										*Time
 									</label>
-									<input class="form-control" id="time1" name="horaLlegada" type="text" placeholder="Select Time" required>
+									<input class="form-control" id="time1" name="llegada_hora" ng-model="wifi.llegada_hora" type="text" placeholder="Select Time" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -63,7 +63,7 @@
 									<label for="">
 										*Airline Name
 									</label>
-									<input class="form-control" name="aerolineaLlegada" type="text" placeholder="Enter airline name" required>
+									<input class="form-control" name="llegada_aerolinea" ng-model="wifi.llegada_aerolinea" type="text" placeholder="Enter airline name" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -71,7 +71,7 @@
 									<label for="">
 										*Flight Number
 									</label>
-									<input class="form-control" name="vueloLlegada" type="text" placeholder="Enter flight name" required>
+									<input class="form-control" name="llegada_vuelo" ng-model="wifi.llegada_vuelo" type="text" placeholder="Enter flight name" required>
 								</div>
 							</div>	
 						</div>
@@ -86,7 +86,7 @@
 									<label for="">
 										*Date
 									</label>
-									<input class="form-control" id="date2" name="fechaSalida" type="text" placeholder="Select Date" required>
+									<input class="form-control" id="date2" name="salida_fecha" ng-model="wifi.salida_fecha" type="text" placeholder="Select Date" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -94,7 +94,7 @@
 									<label for="">
 										*Time
 									</label>
-									<input class="form-control" id="time2" name="horaSalida" type="text" placeholder="Select Time" required>
+									<input class="form-control" id="time2" name="salida_hora" ng-model="wifi.salida_hora" type="text" placeholder="Select Time" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -102,7 +102,7 @@
 									<label for="">
 										*Airline Name
 									</label>
-									<input class="form-control" name="aerolineaSalida" type="text" placeholder="Enter airline name" required>
+									<input class="form-control" name="salida_aerolinea" ng-model="wifi.salida_aerolinea" type="text" placeholder="Enter airline name" required>
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
@@ -110,7 +110,7 @@
 									<label for="">
 										*Flight Number
 									</label>
-									<input class="form-control" name="vueloSalida" type="text" placeholder="Enter flight name" required>
+									<input class="form-control" name="salida_vuelo" ng-model="wifi.salida_vuelo" type="text" placeholder="Enter flight name" required>
 								</div>
 							</div>	
 						</div>
@@ -123,7 +123,8 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 									<label for="wifi" class="control-label">Wifi:</label>
-									<select name="wifi" id="wifi" class="form-control">
+									<select name="wifi" ng-model="wifi.dispositivos" id="wifi" class="form-control">
+									<option value>Choose one</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -140,31 +141,14 @@
 							<div class="col-xs-12 col-sm-6">
 								<div class="form-group">
 									<label class="control-label">*Hotel:</label>
-									<input type="text" class="form-control" name="hotel" list="listHoteles">
+									<input type="text" class="form-control" name="hotel" ng-model="wifi.hotel" list="listHoteles">
 									@include("base.hoteles")
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<div class="form-group">
-									<label class="control-label">*Name:</label>
-									<input type="text" class="form-control" name="nombre">
-								</div>
-							</div>
-							<div class="col-xs-12 col-sm-6">
-								<div class="form-group">
-									<label  class="control-label">*Email:</label>
-									<input type="text" class="form-control" name="correo">
-								</div>
-							</div>
-							<div class="col-xs-12">
-								<div class="form-group">
-									<label class="control-label">Comments:</label>
-									<textarea class="form-control" name="comentarios"></textarea>
 								</div>
 							</div>
 							
 							<div class="col-xs-12 precioWifi azul">
 								<h3 class="row">
+									<input type="hidden" id="precio2">
 									<div class="col-xs-12 col-sm-6 text-right">Price:</div>
 									<div class="col-xs-12 col-sm-6"><span id="precio">0.00</span> $</div>
 								</h3>
@@ -174,54 +158,19 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="submit" name="reservar" id="reservar" value="reservar" class="btn btn-primary">Book now</button>
+				<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+				<button type="submit" ng-click="opcion='agregar'" value="reservar" class="btn btn-success">Add to <i class="fa fa-shopping-cart"></i></button>
+				<button type="submit" ng-click="opcion='reservar'" value="reservar" class="btn btn-primary">Book Now</button>
 			</div>
 		</div>
 	</div>
 </form>
 
+@endsection
+
+@section('js')
 <script>
 	$(function(){
-		$('#menu li').removeClass('active');
-		$('#menu li.wifiActive').addClass('active');
-		
-		$("#wifiModal").validate({
-		    rules: {
-		        "nombre":{required:true},
-		        "correo":{required:true,email:true},
-		        "comentarios":{required:false},
-		        "wifi":{required:true},
-		        "fechaInicio":{required:true},
-		        "fechaFin":{required:true},
-		        "hotel":{required:true}
-		    },
-		    messages: {
-		        "nombre":{required:"This field is required"},
-		        "correo":{required:"This field is required",email:"This field is email"},
-		        "comentarios":{},
-		        "wifi":{required:"This field is required"},
-		        "fechaInicio":{required:"This field is required"},
-		        "fechaFin":{required:"This field is required"},
-		        "hotel":{required:"This field is required"}
-		    }
-		});
-	    $("#date2").datepicker({
-	        minDate: "0"
-	    });
-	    
-	    $("#date1").datepicker({
-	        minDate: 0,
-	        onSelect: function(date) {
-	            var date1 = $('#date1').datepicker('getDate');
-	            var date = new Date(Date.parse(date1));
-	            date.setDate(date.getDate() + 1);
-	            var newDate = date.toDateString();
-	            newDate = new Date(Date.parse(newDate));
-	            $('#date2').datepicker("option", "minDate", newDate);
-	        }
-	    });
-
 	    $('#date1,#date2,#wifi').on('change',function(){
 	    	var fechaInicio = new Date($('#date1').val()).getTime();
 			var fechaFin    = new Date($('#date2').val()).getTime();
@@ -231,10 +180,12 @@
 			$('#dias').val(dias);
 
 			var precio = dias*8*$('#wifi').val();
-			$('#precio').text(''+precio);
-			console.log(precio);
+			if(precio){
+				$('#precio').text(''+precio);
+				$("#precio2").val(precio);
+				console.log(precio);
+			}
 	    });
 	});
 </script>
-
 @endsection

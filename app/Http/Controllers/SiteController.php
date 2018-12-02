@@ -12,6 +12,7 @@ use App\Reservation;
 use App\Transfer;
 use App\Tour;
 use App\Vip;
+use App\Wifi;
 
 use Validator;
 use URL;
@@ -114,6 +115,10 @@ class SiteController extends Controller
                         $vip["reservation_id"] = $reservation->id;
                         Vip::create($vip);
                     }
+                    foreach (session('carrito')['wifi'] as $wifi) {
+                        $wifi["reservation_id"] = $reservation->id;
+                        Wifi::create($wifi);
+                    }
 
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;
@@ -126,6 +131,7 @@ class SiteController extends Controller
                             "traslados" => array(),
                             "tours" => array(),
                             "vip" => array(),
+                            "wifi" => array(),
                         )
                     ]);
                     return redirect('/')->with('status', 'Reservation Completed');
@@ -164,6 +170,10 @@ class SiteController extends Controller
                 $vip["reservation_id"] = $reservation->id;
                 Vip::create($vip);
             }
+            foreach (session('carrito')['wifi'] as $wifi) {
+                $wifi["reservation_id"] = $reservation->id;
+                Vip::create($wifi);
+            }
 
             $reservation->id_pago = $datos["id"];
             $reservation->estado = 1;
@@ -176,6 +186,7 @@ class SiteController extends Controller
                     "traslados" => array(),
                     "tours" => array(),
                     "vip" => array(),
+                    "wifi" => array(),
                 )
             ]);
             return redirect('/')->with('status', 'Reservation Completed');
@@ -187,9 +198,10 @@ class SiteController extends Controller
             session([
                 "carrito"=> array
                 (
-                    "traslados"=>array(),
-                    "tours"=>array(),
-                    "vip"=>array(),
+                    "traslados" => array(),
+                    "tours" => array(),
+                    "vip" => array(),
+                    "wifi" => array(),
                 )
             ]);
         }
@@ -206,9 +218,10 @@ class SiteController extends Controller
         session([
             "carrito"=> array
             (
-                "traslados"=>array(),
-                "tours"=>array(),
-                "vip"=>array(),
+                "traslados" => array(),
+                "tours" => array(),
+                "vip" => array(),
+                "wifi" => array(),
             )
         ]);
     }

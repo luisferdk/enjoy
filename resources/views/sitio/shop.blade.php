@@ -8,7 +8,7 @@
 		
 		<div 
 			class="col-xs-10 col-xs-offset-1" 
-			ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0">
+			ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0 && carrito.wifi.length==0">
 			<div class="alert alert-success text-center">Add item to <i class="fa fa-shopping-cart"></i></div>
 		</div>
 
@@ -73,7 +73,7 @@
 		</div>
 
 		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.vip.length>0">
-			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Service VIP</h2>
+			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">VIP Service</h2>
 			<table class="table table-bordered text-center">
 				<thead>
 					<tr>
@@ -92,6 +92,32 @@
 						<td>@{{ aux.precio | currency:"$ " }}</td>
 						<td>
 							<a ng-click="eliminarVIP(index)"><i class="fa fa-trash"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="col-xs-10 col-xs-offset-1" ng-if="carrito.wifi.length>0">
+			<h2 class="col-xs-12 text-center tituloVerde" style="font-size: 2em">Wifi Service</h2>
+			<table class="table table-bordered text-center">
+				<thead>
+					<tr>
+						<th class="text-center">Nro Device</th>
+						<th class="text-center">Arrival Date</th>
+						<th class="text-center">Departure Date</th>
+						<th class="text-center">Price</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="aux in carrito.wifi">
+						<td>@{{ aux.dispositivos }}</td>
+						<td>@{{ aux.llegada_fecha }}</td>
+						<td>@{{ aux.salida_fecha }}</td>
+						<td>@{{ aux.precio | currency:"$ " }}</td>
+						<td>
+							<a ng-click="eliminarWifi(index)"><i class="fa fa-trash"></i></a>
 						</td>
 					</tr>
 				</tbody>
@@ -155,6 +181,7 @@
 			@{{ precioTotal() | currency:"$ "}}
 			<input type="hidden" name="precio" value="@{{ precioTotal() }}">
 		</h2>
+
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 panel mt2" ng-show="precioTotal()>0" style="background:rgba(128, 128, 128, 0.2);padding:2em 0;">
 			<div class="row panel-body">
 				<img class="col-xs-5 col-xs-offset-3" src="{{ asset('img/tarjetas.png') }}" alt="">
@@ -221,6 +248,7 @@
 					Payment
 			</button>
 		</div>
+
 	</form>
 
 @endsection

@@ -27,5 +27,9 @@ class Reservation extends Model
 
     public function vips(){
     	return $this->hasMany(Vip::class,'reservation_id','id');
+	}
+	
+	public function wifis(){
+    	return $this->hasMany(Wifi::class,'reservation_id','id');
     }
 }

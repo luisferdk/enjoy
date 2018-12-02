@@ -4,9 +4,10 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
 
     $scope.carrito = {
-        traslados:[],
-        tours:[],
-        vip:[],
+        traslados: [],
+        tours: [],
+        vip: [],
+        wifi:[]
     };
     $scope.opcion = 'agregar';
     $scope.vector = function (n) {
@@ -401,8 +402,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             sodas: $scope.sodas ? $scope.sodas : null,
             vino: $scope.vino ? $scope.vino : null,
             champagne: $scope.champagne ? $scope.champagne : null
-        }
-        );
+        });
         $scope.traslado = {};
         $scope.cervezas = "0";
         $scope.sodas = "0";
@@ -597,7 +597,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             id: 3,
             mostrar: true,
             titulo: "Buggys Adventure",
-            descripcion:`Prepare to begin a new experience, get on a buggy with us for an adventure in Dominican Republic. Get to know a Tobacco Plantation, a Wild Ranch, the Nature Cave and finally the beautiful Macao Beach.This adventure includes profesional guides that will be with you the entire road trip to help you find the beauty Dominican Republic has to offer. Book with us this amazing adventure a live an unforgettable experience`,
+            descripcion: `Prepare to begin a new experience, get on a buggy with us for an adventure in Dominican Republic. Get to know a Tobacco Plantation, a Wild Ranch, the Nature Cave and finally the beautiful Macao Beach.This adventure includes profesional guides that will be with you the entire road trip to help you find the beauty Dominican Republic has to offer. Book with us this amazing adventure a live an unforgettable experience`,
             descripcion_completa: `
                 <h2 class="col-xs-12 text-center">Description</h2>
                 <p class="col-xs-12">
@@ -885,7 +885,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                   You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
                   440 HP of power at more than 90 km/h on the sea 360 turns, fly over the waves, incredible pirouettes  The Jet Boat is an aquatic attraction and a maritime excursion that allows you to download pure adrenaline. It is an incredible boat with a powerful brake, which is capable of performing and braking at high speeds, skidding over the Caribbean Sea and flying over the waves. Jet Boat is a fun in the sea and an unforgettable experience, besides being the only Jet Boat in Punta Cana, but throughout the Dominican Repub—lic. Are you going to miss it?
           `,
-          descripcion_completa: `
+            descripcion_completa: `
                 <h2 class="col-xs-12 text-center">Party Boat</h2>
                 <p class="col-xs-12">
                     You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area.
@@ -1371,6 +1371,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         for (var i = 0; i < $scope.carrito.vip.length; i++) {
             precio += $scope.carrito.vip[i].precio;
         }
+        for (var i = 0; i < $scope.carrito.wifi.length; i++) {
+            precio += $scope.carrito.wifi[i].precio;
+        }
         return precio;
     }
 
@@ -1386,5 +1389,34 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             $scope.vipTipos = ['Suburban'];
         }
         $timeout(function () { $('.vipSelect').select2(); }, 500);
+    }
+
+
+
+
+    /* Agregar Wifi */
+    
+    $scope.wifi = {};
+    $scope.agregarWifi = function (event) {        
+        event.preventDefault();
+        $scope.wifi.dias = $('#dias').val();
+        $scope.wifi.precio = $("#precio2").val();
+        console.log($scope.wifi);
+        $scope.carrito.wifi.push($scope.wifi);
+        $scope.actualizar();
+        swal({
+            title: 'Wifi',
+            text: 'added successfully',
+            type: 'success',
+            confirmButtonColor: '#8cc640',
+        });
+        $("#wifiModal").modal('hide');
+        $scope.wifi = {};
+        return false;
+    }
+
+    $scope.eliminarWifi = function (index) {
+        $scope.carrito.wifi.splice(index, 1);
+        $scope.actualizar();
     }
 });
