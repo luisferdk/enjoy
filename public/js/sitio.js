@@ -1342,13 +1342,14 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         $http.get(window.url + '/session').then(function (response) {
             $scope.carrito = response.data;
             console.log(response.data);
+            $scope.nro_carrito();
         });
     }
     $scope.cargar();
 
     $scope.actualizar = function () {
         $scope.carrito._token = window._token;
-        $http.post(window.url + '/session', $scope.carrito).then(function (response) { });
+        $http.post(window.url + '/session', $scope.carrito).then(function (response) {});
         if ($scope.opcion == 'reservar') {
             $window.location.href = window.url + '/shop';
         }
@@ -1421,6 +1422,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     }
 
     $scope.nro_carrito = function(){
-        return $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.vip.length + $scope.carrito.wifi.length;
+        $scope.nro =  $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.vip.length + $scope.carrito.wifi.length;
     }
 });
