@@ -48,7 +48,7 @@
                     <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                     <a href="https://www.instagram.com/rennytravel/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                     <a href="{{ url('/login') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
-                    <a class="{{ Request::is('shop')?'tituloVerde':'' }}" href="{{ url('/shop') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    <a class="{{ Request::is('shop')?'tituloVerde':'' }}" href="{{ url('/shop') }}"><i style="padding-right:.2em" class="fa fa-shopping-cart" aria-hidden="true"></i>(@{{nro_carrito()}})</a>
                 </div>
             </div>
             <div class="menu">
@@ -296,8 +296,8 @@
     <script src="{{ asset("/") }}js/angular.min.js"></script>
     <script src="{{ asset("/") }}js/angular-sanitize.min.js"></script>
     @yield('js')
-	<script src="{{ asset("/") }}js/sitio.js?v=1"></script>
-    <script src="{{ asset("/") }}js/main.js?v=1"></script>
+	<script src="{{ asset("/") }}js/sitio.js?v=11"></script>
+    <script src="{{ asset("/") }}js/main.js?v=11"></script>
 
 	<script>
         window.url = '{{ url("/") }}';

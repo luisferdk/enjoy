@@ -1419,4 +1419,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         $scope.carrito.wifi.splice(index, 1);
         $scope.actualizar();
     }
+
+    $scope.nro_carrito = function(){
+        return $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.vip.length + $scope.carrito.wifi.length;
+    }
 });

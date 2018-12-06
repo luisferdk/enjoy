@@ -64,7 +64,7 @@
                             <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                             <a href="https://www.instagram.com/rennytravel/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
                             <a href="{{ url('/login') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
-                            <a href="{{ url('/shop') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                            <a href="{{ url('/shop') }}"><i style="padding-right:.2em" class="fa fa-shopping-cart" aria-hidden="true"></i>(@{{nro_carrito()}})</a>
                         </div>
                     </div>
                 </div>
@@ -928,8 +928,8 @@
         </script>
     <?php endif ?>
 
-    <script src="{{ asset("/") }}js/sitio.js?v=1"></script>
-    <script src="{{ asset("/") }}js/main.js?v=1"></script>
+    <script src="{{ asset("/") }}js/sitio.js?v=11"></script>
+    <script src="{{ asset("/") }}js/main.js?v=11"></script>
     <?php if (isset($_GET['opcion'])): ?>
         <?php if ($_GET['opcion']==1): ?>
             <script>$(function(){$('.transfer').trigger('click');});</script>
