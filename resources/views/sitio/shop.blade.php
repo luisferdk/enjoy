@@ -131,7 +131,7 @@
                     <label for="">
                         *First Name
                     </label>
-                    <input class="form-control" name="nombre" type="text"  placeholder="Enter name">
+                    <input class="form-control" name="nombre" type="text"  placeholder="Enter name" required>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -139,7 +139,7 @@
                     <label for="">
                         *Surname
                     </label>
-                    <input class="form-control" name="apellido" type="text"  placeholder="Enter last name">
+                    <input class="form-control" name="apellido" type="text"  placeholder="Enter last name" required>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -147,7 +147,7 @@
                     <label for="">
                         *Email
                     </label>
-                    <input class="form-control" name="correo" type="email"  placeholder="Enter email">
+                    <input class="form-control" name="correo" type="email"  placeholder="Enter email" required>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-6">
@@ -155,7 +155,7 @@
                     <label for="">
                         *Phone number
                     </label>
-                    <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number">
+                    <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number" required>
                 </div>
 			</div>
 			<div class="col-xs-12" ng-if="carrito.tours.length>0">
@@ -163,7 +163,7 @@
 					<label for="">
 						*Hotel Pickup
 					</label>
-					<input class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel">
+					<input class="form-control" name="hotel" type="text" list="listHoteles" placeholder="Enter Hotel" required>
 					@include("base.hoteles")
 				</div>
 			</div>	
