@@ -430,7 +430,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     /*------------------------------Tours------------------------------*/
     $scope.agregarTour = function (event) {
         event.preventDefault();
-        console.log($scope.tour.titulo);
         var pos = $scope.carrito.tours.map(function (e) { return e.tour; }).indexOf($scope.tour.titulo + "");
         if (pos > -1) {
             swal({
@@ -1316,7 +1315,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         event.preventDefault();
         if ($scope.VIP.serviceVIP && $scope.VIP.pasajeros) {
             $scope.carrito.vip.push($scope.VIP);
-            console.log($scope.carrito);
             $scope.vip = false;
             $scope.VIP = { precio: 0 };
             $scope.actualizar();
@@ -1341,7 +1339,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.cargar = function () {
         $http.get(window.url + '/session').then(function (response) {
             $scope.carrito = response.data;
-            console.log(response.data);
             $scope.nro_carrito();
         });
     }
@@ -1402,7 +1399,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         event.preventDefault();
         $scope.wifi.dias = $('#dias').val();
         $scope.wifi.precio = $("#precio2").val();
-        console.log($scope.wifi);
         $scope.carrito.wifi.push($scope.wifi);
         $scope.actualizar();
         swal({
