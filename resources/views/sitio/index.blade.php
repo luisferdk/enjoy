@@ -20,11 +20,6 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <meta name="google-site-verification" content="pxRHwV5wzDBWOzzL23ZQvE2lqSneigj29rU_UTXBj_s" />
 
-        <meta http-equiv="Expires" content="0">
-        <meta http-equiv="Last-Modified" content="0">
-        <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-        <meta http-equiv="Pragma" content="no-cache">
-
         <!--Select 2-->
         <link href="{{ asset('/') }}bower_components/select2/dist/css/select2.css" rel="stylesheet" />
     </head>
@@ -928,8 +923,8 @@
         </script>
     <?php endif ?>
 
-    <script src="{{ asset("/") }}js/sitio.js?v=11"></script>
-    <script src="{{ asset("/") }}js/main.js?v=11"></script>
+    <script src="{{ asset("/") }}js/sitio.js?v=30"></script>
+    <script src="{{ asset("/") }}js/main.js?v=30"></script>
     <?php if (isset($_GET['opcion'])): ?>
         <?php if ($_GET['opcion']==1): ?>
             <script>$(function(){$('.transfer').trigger('click');});</script>

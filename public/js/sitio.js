@@ -1346,6 +1346,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
     $scope.actualizar = function () {
         $scope.carrito._token = window._token;
+        $scope.nro_carrito();
         $http.post(window.url + '/session', $scope.carrito).then(function (response) {});
         if ($scope.opcion == 'reservar') {
             $window.location.href = window.url + '/shop';
