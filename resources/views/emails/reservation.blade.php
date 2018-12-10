@@ -90,7 +90,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 					</tr>
 					<tr>
 						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">ID Paypal:</td>
-						<td>{{ $reservation->id_pago }}<td>
+						<td>{{ substr($reservation->id_pago,-10) }}<td>
 					</tr>
 					@if($reservation->comentarios!==null)
 						<tr>
