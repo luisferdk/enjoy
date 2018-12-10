@@ -26,7 +26,7 @@ class Package extends Mailable
 
         $cc = explode(',', $cc);
         $bcc = explode(',', $bcc);
-        return $this->from("info@rennytravel.com", $de)
+        return $this->from("info@rennytours.com", $de)
             ->subject("Solicitud de Paquete")
             ->cc($cc)
             ->bcc($bcc)
