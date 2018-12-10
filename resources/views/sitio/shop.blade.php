@@ -193,6 +193,7 @@
 						size='20' 
 						type='text' 
 						name="card_no"
+						id="card_no"
 						required>
 				</div>
 				<div class='col-xs-4 form-group'>
@@ -204,6 +205,7 @@
 						size='3'
 						type='number'
 						name="cvvNumber"
+						id="cvvNumber"
 						required>
 				</div>
 				<div class='col-xs-4 form-group'>
@@ -214,8 +216,9 @@
 						size='2'
 						min="0"
 						max="12"
-						type='number'
+						type='text'
 						name="ccExpiryMonth"
+						id="ccExpiryMonth"
 						required>
 				</div>
 				<div class='col-xs-4 form-group'>
@@ -225,8 +228,9 @@
 						placeholder='YY'
 						size='2'
 						min="18"
-						type='number'
+						type='text'
 						name="ccExpiryYear"
+						id="ccExpiryYear"
 						required>
 				</div>
 			</div>
@@ -254,4 +258,24 @@
 
 	</form>
 
+@endsection
+
+@section('js')
+<script src="{{ asset('js/cleave.min.js') }}"></script>
+<script>
+	new Cleave('#card_no', {
+		creditCard: true
+	});
+
+	new Cleave('#ccExpiryMonth', {
+		date: true,
+		datePattern: ['m']
+	});
+
+	new Cleave('#ccExpiryYear', {
+		date: true,
+		datePattern: ['y']
+	});
+	
+</script>
 @endsection

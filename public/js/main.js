@@ -83,7 +83,6 @@ $(function(){
                 $('#dateTour').trigger("change");
             }
         });
-
         /*$("#formTour").validate({
             rules: {
                 "tour":{required:true},
