@@ -123,7 +123,7 @@ class SiteController extends Controller
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;
                     $reservation->save();
-                    $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
+                    $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
                     Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
                     session([
                         "reservation" => array(),
@@ -178,7 +178,7 @@ class SiteController extends Controller
             $reservation->id_pago = $datos["id"];
             $reservation->estado = 1;
             $reservation->save();
-            $reservation = $reservation::with('transfers','tours','vips')->where("id",$reservation->id)->first();
+            $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
             Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
             session([
                 "reservation" => array(),

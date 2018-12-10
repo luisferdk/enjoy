@@ -440,7 +440,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             });
             return false;
         }
-        if ($scope.carrito.tours)
+
+        if ($scope.carrito.tours){
             $scope.carrito.tours.push(
                 {
                     tour: $scope.tour.titulo,
@@ -452,6 +453,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     precio: $scope.tour.precio
                 }
             );
+        }
+
         if (window.pos != null) {
             $scope.tour.fecha = null;
             $scope.tour.adultos = null;
@@ -467,6 +470,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             $('#formTour select').select2();
             $("html, body").animate({ scrollTop: 0 }, 500);
         }, 500);
+        
         $scope.actualizar();
 
         swal({
@@ -486,7 +490,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         v99.push(i);
     }
     $scope.v99 = v99;
-    $scope.tour = { precio: 0 };
 
     var tours = [
         {
@@ -560,7 +563,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 4, precio: 75, nino: 55, descripcion: 'VIP Lobster menu' },
             ]
         },
-        {
+/*         {
             id: 1,
             mostrar: false,
             titulo: "Mini Coopers",
@@ -568,7 +571,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 159, nino: 70, descripcion: 'Básico' }
             ]
-        },
+        }, */
         {
             id: 2,
             mostrar: true,
@@ -735,7 +738,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 1, precio: 800, nino: 0, descripcion: "Charter Boat (Max 6 people Fishing Boat and Max 2 Companions Watching)" }
             ]
         },
-        {
+/*         {
             id: 10,
             mostrar: false,
             titulo: "Marina Caribe Party Boat",
@@ -749,8 +752,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 1, precio: 75, nino: 50, descripcion: 'Caribbean Paradise' },
                 { id: 2, precio: 99, nino: 60, descripcion: 'Platinum VIP' },
             ]
-        },
-        {
+        }, */
+        /* {
             id: 11,
             mostrar: false,
             titulo: "Panchanga Party Boat",
@@ -775,7 +778,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 59, nino: 30, descripcion: 'Básico' }
             ]
-        },
+        }, */
         {
             id: 13,
             mostrar: true,
