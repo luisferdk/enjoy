@@ -185,7 +185,7 @@
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 panel mt2" ng-show="precioTotal()>0" style="background:rgba(128, 128, 128, 0.2);padding:2em 0;">
 			<div class="row panel-body">
 				<img class="col-xs-5 col-xs-offset-3" src="{{ asset('img/tarjetas.png') }}" alt="">
-				<div class='col-xs-12 form-group'>
+				<div class='col-xs-6 form-group'>
 					<label class='control-label'>Card Number</label>
 					<input 
 						autocomplete='off' 
@@ -194,6 +194,16 @@
 						type='text' 
 						name="card_no"
 						id="card_no"
+						required>
+				</div>
+				<div class='col-xs-6 form-group'>
+					<label class='control-label'>Full Name</label>
+					<input 
+						autocomplete='off' 
+						class='form-control'
+						type='text' 
+						name="full_name"
+						id="full_name"
 						required>
 				</div>
 				<div class='col-xs-4 form-group'>
