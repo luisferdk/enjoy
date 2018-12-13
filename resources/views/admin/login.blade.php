@@ -79,6 +79,7 @@
                             </div>
                         </center>
                     </form>
+                    <a href="{{ url('register') }}">Create a Acount</a>
                 </div>
             </div>
         </center>

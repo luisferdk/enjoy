@@ -261,7 +261,7 @@
 				type="submit"
 				class="btn btn-success pull-right"
 				ng-disabled="!terminos">
-					<i class="fa fa-paypal"></i>
+					<!--i class="fa fa-paypal"></i-->
 					Payment
 			</button>
 		</div>

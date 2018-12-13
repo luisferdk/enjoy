@@ -125,6 +125,7 @@ class SiteController extends Controller
                     $reservation->save();
                     $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
                     Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+                    Mail::to('manager@rennytravel.com','Manager Renny')->send(new Notification($reservation));
                     session([
                         "reservation" => array(),
                         "carrito" => array(

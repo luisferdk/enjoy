@@ -26,10 +26,11 @@ class Notification extends Mailable
 
         $cc = explode(',', $cc);
         $bcc = explode(',', $bcc);
+
         return $this->from("info@rennytours.com", $de)
             ->subject("Reservation Nº ".$this->reservation->id)
-            ->cc($cc)
-            ->bcc($bcc)
+            //->cc($cc)
+           // ->bcc($bcc)
             ->view("emails.reservation")
             ->with(["reservation" => $this->reservation]);
     }
