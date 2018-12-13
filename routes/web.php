@@ -27,6 +27,10 @@ Route::get('/admin/tours', 'AdminController@tours');
 Route::get('/admin/vip', 'AdminController@vip');
 Route::get('/admin/wifi', 'AdminController@wifi');
 
+Route::post('/user/create','UserController@createUser');
+Route::get('/user/confirm/{token}','UserController@confirm');
+Route::get('/result-confirm/{message}','UserController@resultConfirm');
+
 use App\Reservation;
 use App\Mail\Notification;
 Route::get('/correo/reservation/{id}',function($id){

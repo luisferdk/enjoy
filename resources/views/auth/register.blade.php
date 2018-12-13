@@ -5,10 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
+                    <h4 class="text-center text-primary" >Register</h4>
+                    <form method="POST" action="{{ url('user/create') }}" aria-label="{{ __('Register') }}">
                         @csrf
 
                         <div class="form-group row">
