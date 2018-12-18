@@ -13,6 +13,7 @@
         
         <!-- Styles -->
         <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link type="text/css" rel="stylesheet" href="{{ asset('administrador') }}/plugins/materialize/css/materialize.min.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="{{ asset('administrador') }}/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
@@ -150,6 +151,11 @@
                     <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/wifi') }}">
                             <i class="material-icons">wifi</i>Wifi
+                        </a>
+                    </li>
+                    <li class="no-padding {{ Request::is('admin/coupon')?'active':'' }}">
+                        <a class="waves-effect waves-grey" href="{{ url('/admin/coupon') }}">
+                            <i class="material-icons">bookmark_border</i>Cupones
                         </a>
                     </li>
                 </ul>

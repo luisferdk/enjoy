@@ -27,6 +27,10 @@ Route::get('/admin/tours', 'AdminController@tours');
 Route::get('/admin/vip', 'AdminController@vip');
 Route::get('/admin/wifi', 'AdminController@wifi');
 
+Route::get('admin/coupon','CouponController@coupons');
+Route::get('admin/getcoupons','CouponController@getcoupons');
+Route::post('admin/savecoupons','CouponController@saveCoupons');
+
 Route::post('/user/create','UserController@createUser');
 Route::get('/user/confirm/{token}','UserController@confirm');
 Route::get('/result-confirm/{message}','UserController@resultConfirm');
