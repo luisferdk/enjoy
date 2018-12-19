@@ -5,15 +5,89 @@ $(document).ready(function(){
         format:'yyyy-mm-dd'
     });
 
-    $(document).on('click','#sendCoupon',function(){
-        if($.trim($("#code").val()) === '' || $.trim($('#name').val()) === '' || $.trim($('#percentage').val()) === '' ||
-            $.trim($("#dti").val()) === '' || $.trim($("#dte").val()) === '')
-            saveCoupon($("#code").val(),$('#name').val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
-        else{
-            swal('Error, existen campos vacios','','success');
+    $(document).on("click","span[id^='upc-']",function(){
+        var id = $(this).attr('id').split('-').pop();
+        var coupon = specificCounpon(id);
+
+        if(coupon !== ''){
+            $('#modal1').openModal();
+
+            $("#code").val(coupon['code']);
+            $("#name").val(coupon['name']);
+            $("#percentage").val(coupon['percentage']);
+            $("#dti").val(coupon['date_init']);
+            $("#dte").val(coupon['date_end']);
+            $("#status").val(coupon['status']);
+            $("#validUp").val(1);
+            $("#coupon_id").val(coupon['id']);
         }
     });
+
+    $(document).on("click","span[id^='delc-']",function(){
+        var id = $(this).attr('id').split('-').pop();
+
+        swal({
+            title: 'Estas seguro de eliminar este cupon?',
+            text: "El cupon de borrara de la base de datos permanentemente",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminarlo'
+        },(result) => {
+            if (result) {
+
+                $.ajax({
+                    url: 'deletecoupons',
+                    type: 'POST',
+                    data:{id:id,_token:$("#token").val()},
+                    success: function(data) {
+                        if(data){
+                            swal(
+                                'Elininado!',
+                                'El cupon ha sido eliminado.',
+                                'success'
+                            );
+                        }else{
+                            swal(
+                                'Error!',
+                                'Ha ocurrido un error, intente luego.',
+                                'warning'
+                            );
+                        }
+                        getCoupons();
+                    },
+                });
+            }
+        });
+    });
+
+    $(document).on('click','#sendCoupon',function(){
+
+        if(parseInt($("#validUp").val()) === 1)
+            updateCoupons($('#name').val(),$("#code").val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
+        else
+            saveCoupon($("#code").val(),$('#name').val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
+
+
+    });
 });
+
+function specificCounpon(id){
+    var coupon = '';
+    if(id !== undefined || id !== ''){
+        $.ajax({
+            url: 'getspecific-coupon/'+id,
+            type: 'GET',
+            async:false,
+            success: function(data) {
+                coupon = data;
+            },
+        });
+        return coupon;
+    }else
+        return '';
+}
 
 function getCoupons(){
     $.ajax({
@@ -38,17 +112,17 @@ function getCoupons(){
 
                     var valueCoupon =
                         '<tr>' +
-                            '<td>'+coupons[i]['code']+'<td/>'+
-                            '<td>'+coupons[i]['name']+'<td/>'+
-                            '<td>'+coupons[i]['percentage']+'<td/>'+
-                            '<td>'+coupons[i]['date_init']+'<td/>'+
-                            '<td>'+coupons[i]['date_end']+'<td/>'+
-                            '<td>'+date[0]+'<td/>'+
-                            '<td>'+status+'<td/>'+
-                            '<td>'+
-                                '<i class="small material-icons">insert_chart</i>'+
-                                '<i class="small material-icons">insert_chart</i>'+
-                            '<td/>'+
+                        '<td>'+coupons[i]['code']+'<td/>'+
+                        '<td>'+coupons[i]['name']+'<td/>'+
+                        '<td>'+coupons[i]['percentage']+'<td/>'+
+                        '<td>'+coupons[i]['date_init']+'<td/>'+
+                        '<td>'+coupons[i]['date_end']+'<td/>'+
+                        '<td>'+date[0]+'<td/>'+
+                        '<td>'+status+'<td/>'+
+                        '<td>'+
+                        '<span class="small material-icons" id="upc-'+coupons[i]['id']+'">autorenew</span>'+
+                        '<span class="small material-icons" id="delc-'+coupons[i]['id']+'">delete</span>'+
+                        '<td/>'+
                         '</tr>';
                     $("#dataCoupon").append(valueCoupon);
                     $("td:empty").remove();
@@ -56,15 +130,6 @@ function getCoupons(){
             }
         },
     });
-}
-
-function validSendCoupon(){
-    if($.trim($("#code").val()) === '' || $.trim($('#name').val()) === '' || $.trim($('#percentage').val()) === '' ||
-        $.trim($("#dti").val()) === '' || $.trim($("#dte").val()) === '')
-        swal('Error, existen campos vacios','','error');
-    else{
-        saveCoupon($('#name').val(),$("#code").val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
-    }
 }
 
 function cleanFormCoupon() {
@@ -77,6 +142,7 @@ function cleanFormCoupon() {
 }
 
 function saveCoupon(name,code,dti,dte,status,percentage){
+
     $.ajax({
         url: 'savecoupons',
         type: 'POST',
@@ -98,5 +164,52 @@ function saveCoupon(name,code,dti,dte,status,percentage){
             }
             getCoupons();
         },
+    });
+}
+
+function updateCoupons(name,code,dti,dte,status,percentage) {
+
+    swal({
+        title: 'Estas seguro de actualizar este cupon?',
+        text: "Se actualizara los datos del cupon",
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Actualizar'
+    },(result) => {
+        if (result) {
+            $.ajax({
+                url: 'updatecoupons',
+                type: 'POST',
+                data:{
+                    id:$("#coupon_id").val(),
+                    code:code,
+                    name:name,
+                    percentage: percentage,
+                    date_init:dti,
+                    date_end:dte,
+                    status:status,
+                    _token:$("#token").val()
+                },
+                success: function(data) {
+                    if(data){
+                        swal(
+                            'Actualizado!',
+                            'El cupon ha sido actualizado.',
+                            'success'
+                        );
+                    }else{
+                        swal(
+                            'Error!',
+                            'Ha ocurrido un error, intente luego.',
+                            'warning'
+                        );
+                    }
+                    $("#validUp").val('');
+                    getCoupons();
+                },
+            });
+        }
     });
 }

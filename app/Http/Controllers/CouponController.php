@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Coupon;
 class CouponController extends Controller
@@ -25,8 +26,8 @@ class CouponController extends Controller
         return Coupon::where('id',$id)->first();
     }
 
-    public function deleteCoupon($id){
-        return Coupon::where('id',$id)->delete();
+    public function deleteCoupon(Request $request){
+        return Coupon::where('id',$request->input('id'))->delete();
     }
 
     public function updateCoupon(Request $request){
@@ -41,6 +42,8 @@ class CouponController extends Controller
             $coupon->status    = $request->input('status');
             $coupon->save();
         }else
-            return response()->json(['message'=>'Coupon no encontrado'],40);
+            return response()->json(['message'=>'Coupon no encontrado'],400);
+
+        return Response()->json(['message'=>"Cupon Actualizado"],200);
     }
 }

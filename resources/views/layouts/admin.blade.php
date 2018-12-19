@@ -184,6 +184,7 @@
         @yield('angular')
         <!-- Javascripts -->
         <script src="{{ asset('administrador') }}/plugins/jquery/jquery-2.2.0.min.js"></script>
+        <script src="{{ asset('js/materialize-new.js') }}"></script>
         <script src="{{ asset('administrador') }}/plugins/materialize/js/materialize.min.js"></script>
         <script src="{{ asset('administrador') }}/plugins/material-preloader/js/materialPreloader.min.js"></script>
         <script src="{{ asset('administrador') }}/plugins/jquery-blockui/jquery.blockui.js"></script>

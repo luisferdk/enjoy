@@ -23,7 +23,7 @@
                                     <thead>
                                         <tr>
                                             <th>Codigo</th>
-                                            <th>Name</th>
+                                            <th>Nombre de Cupon</th>
                                             <th>Porcentaje</th>
                                             <th>Fecha de Inicio</th>
                                             <th>Fecha de Culminacion</th>
@@ -37,7 +37,7 @@
                                     </tbody>
                                 </table>
                                 <br>
-                                <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Nuevo Cupon</a>
+                                <a class="waves-effect waves-light btn modal-trigger" onclick="cleanFormCoupon()" href="#modal1">Nuevo Cupon</a>
                             </div>
                             <!--Modal-->
                             <!-- Modal Structure -->
@@ -69,7 +69,8 @@
                                                         <input id="name" type="text">
                                                         <label for="name">Name</label>
                                                     </div>
-
+                                                    <input type="hidden" id="validUp">
+                                                    <input type="hidden" id="coupon_id">
                                                     <div class="input-field col s12">
                                                         <select id="status">
                                                             <option value="" disabled selected>Choose your option</option>
@@ -80,7 +81,7 @@
                                                     </div>
 
                                                 </div>
-                                                <a class="waves-effect waves-light btn" onClick="validSendCoupon()" id="sendCoupon">Guardar</a>
+                                                <a class="waves-effect waves-light btn" id="sendCoupon">Guardar</a>
                                             </form>
                                         </div>
                                     </form>
@@ -109,6 +110,5 @@
 
 @endsection
 @section('js')
-    <!--script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script-->
     <script src="{{ asset('js/coupon.js') }}"></script>
 @endsection

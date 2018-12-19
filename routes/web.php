@@ -30,6 +30,9 @@ Route::get('/admin/wifi', 'AdminController@wifi');
 Route::get('admin/coupon','CouponController@coupons');
 Route::get('admin/getcoupons','CouponController@getcoupons');
 Route::post('admin/savecoupons','CouponController@saveCoupons');
+Route::post('admin/updatecoupons','CouponController@updateCoupon');
+Route::post('admin/deletecoupons','CouponController@deleteCoupon');
+Route::get('admin/getspecific-coupon/{id}','CouponController@getSpecificCoupons');
 
 Route::post('/user/create','UserController@createUser');
 Route::get('/user/confirm/{token}','UserController@confirm');
