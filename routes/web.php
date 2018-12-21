@@ -46,7 +46,7 @@ Route::get('/correo/reservation/{id}',function($id){
 });
 
 
-
+Route::get('register-agency','AgencyController@indexAgency');
 
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
