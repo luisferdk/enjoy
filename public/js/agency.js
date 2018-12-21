@@ -8,7 +8,19 @@ $(document).ready(function(){
 });
 
  function saveAgency(object){
-    return true;
+     $.ajax({
+         url: 'saveagency',
+         type: 'POST',
+         data:object,
+         success: function(data) {
+             if(data){
+                 swal('Agencia registrada exitosamente','','success');
+                 cleanFormAgency()
+             }else{
+                 swal('Error al registrar la agencia,intente luego','','error');
+             }
+         },
+     });
  }
 
  function validFormAgency(){
@@ -33,7 +45,25 @@ $(document).ready(function(){
             'last_name':$('#last').val(),
             'email':$('#email').val(),
             'phone_number':$('#number').val(),
+            'state':$('#state').val(),
+            '_token':$('#token').val(),
             'status':0
         };
     }
+ }
+
+ function cleanFormAgency(){
+     $('#company_name').val('');
+     $('#company_type').val('');
+     $('#web').val('');
+     $('#address').val('');
+     $('#city').val('');
+     $('#zip').val('');
+     $('#country').val('');
+     $('#title').val('');
+     $('#name').val('');
+     $('#last').val('');
+     $('#email').val('');
+     $('#number').val('');
+     $('#state').val('');
  }

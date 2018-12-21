@@ -107,6 +107,7 @@
                             <option value="Saskatchewan">Saskatchewan</option>
                             <option value="Other">Other</option>
                         </select><br>
+                        <input type="hidden" value="{{ csrf_token() }}" id="token">
                         <select name="country" id="country" class="form-control">
                             <option value="" disabled="" selected="">Choose One</option>
                             <option value="UNITED STATES">UNITED STATES</option>
