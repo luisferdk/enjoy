@@ -28,6 +28,7 @@ class CreateAgenciesTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->string('phone_number');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }
