@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    getAgencies();
     $("#sendAgency").click(function(){
         var object = validFormAgency();
         console.log(object);
@@ -15,10 +16,11 @@ $(document).ready(function(){
          success: function(data) {
              if(data){
                  swal('Agencia registrada exitosamente','','success');
-                 cleanFormAgency()
+                 cleanFormAgency();
              }else{
                  swal('Error al registrar la agencia,intente luego','','error');
              }
+             getAgencies();
          },
      });
  }
@@ -66,4 +68,45 @@ $(document).ready(function(){
      $('#email').val('');
      $('#number').val('');
      $('#state').val('');
+ }
+
+ function getAgencies(){
+     $.ajax({
+         url: 'getagencies',
+         type: 'GET',
+         error: function() {
+             $('#info').html('<p>An error has occurred</p>');
+         },
+         success: function(data) {
+             if(data.length > 0){
+                 $("#dataAgency").html('');
+                 var agencies = data;
+
+                 for(var i = 0; i < agencies.length; i++){
+                     var status = '';
+
+                     if( parseInt(agencies[i]['status']) === 1 )
+                         status = 'Activo';
+                     else
+                         status = 'Inactivo';
+
+                     var valueAgencies =
+                         '<tr>' +
+                         '<td>'+agencies[i]['company_name']+'<td/>'+
+                         '<td>'+agencies[i]['company_type']+'<td/>'+
+                         '<td>'+agencies[i]['city']+'<td/>'+
+                         '<td>'+agencies[i]['country']+'<td/>'+
+                         '<td>'+agencies[i]['email']+'<td/>'+
+                         '<td>'+agencies[i]['status']+'<td/>'+
+                         '<td>'+
+                         '<span class="small material-icons" id="upc-'+agencies[i]['id']+'">autorenew</span>'+
+                         '<span class="small material-icons" id="delc-'+agencies[i]['id']+'">delete</span>'+
+                         '<td/>'+
+                         '</tr>';
+                     $("#dataAgency").append(valueAgencies);
+                     $("td:empty").remove();
+                 }
+             }
+         },
+     });
  }

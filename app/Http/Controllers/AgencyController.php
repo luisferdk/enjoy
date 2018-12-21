@@ -10,6 +10,10 @@ class AgencyController extends Controller
         return view('sitio.agency');
     }
 
+    public function viewAdminAgency(){
+        return view('admin.agency');
+    }
+
     public function createAgency(Request $request)
     {
         return response()->json(Agency::create($request->all()), 200);
