@@ -102,9 +102,9 @@ $(document).ready(function(){
                      var status = '';
 
                      if( parseInt(agencies[i]['status']) === 1 )
-                         status = 'Activo';
+                         status = 'Confirmada';
                      else
-                         status = 'Inactivo';
+                         status = 'No Confirmada';
 
                      var valueAgencies =
                          '<tr>' +
@@ -113,7 +113,7 @@ $(document).ready(function(){
                          '<td>'+agencies[i]['city']+'<td/>'+
                          '<td>'+agencies[i]['country']+'<td/>'+
                          '<td>'+agencies[i]['email']+'<td/>'+
-                         '<td>'+agencies[i]['status']+'<td/>'+
+                         '<td>'+status+'<td/>'+
                          '<td>'+
                          '<span class="small material-icons" id="upa-'+agencies[i]['id']+'">autorenew</span>'+
                          '<td/>'+
