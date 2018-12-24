@@ -339,7 +339,7 @@
                             <option value="ZIMBABWE">ZIMBABWE</option>
                             <option value="-Other-">-Other-</option>
                         </select><br>
-                        <button type="button" id="sendAgency" class="button">Guardar</button>
+                        <button type="button" id="sendAgency" class="button">Save</button>
                     </form>
                 </div>
             </div>

@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Coupon;
 class CouponController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function coupons(){
         $coupons = Coupon::all();
         return view('admin.coupon',compact('coupons'));

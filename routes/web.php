@@ -49,7 +49,11 @@ Route::get('/correo/reservation/{id}',function($id){
 Route::get('register-agency','AgencyController@indexAgency');
 Route::post('saveagency','AgencyController@createAgency');
 Route::get('admin/agency','AgencyController@viewAdminAgency');
+Route::get('admin/change-status','AgencyController@sendEmailAgencyConfirmed');
 Route::get('admin/getagencies','AgencyController@getAllAgencies');
+Route::get('testv',function(){
+    return view('');
+});
 
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));

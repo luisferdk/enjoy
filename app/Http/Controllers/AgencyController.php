@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 use App\Agency;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AgencyCreated;
+use App\Mail\AgencyConfirmed;
 
 class AgencyController extends Controller
 {
+
     public function indexAgency(){
         return view('sitio.agency');
     }
@@ -16,7 +20,9 @@ class AgencyController extends Controller
 
     public function createAgency(Request $request)
     {
-        return response()->json(Agency::create($request->all()), 200);
+        $agency = Agency::create($request->all());
+        $this->sendEmailAgencyRegisted($agency->company_name,$agency->email);
+        return response()->json($agency, 200);
     }
 
     public function getAllAgencies(){
@@ -45,5 +51,20 @@ class AgencyController extends Controller
             return response()->json($agency->update($data),200);
         }else
             return response()->json(['message'=>'Error,no se encontro la agencia!'],200);
+    }
+
+    public function sendEmailAgencyRegisted($agencyName,$agencyEmail){
+        Mail::to($agencyEmail)->send(new AgencyCreated($agencyName));
+    }
+
+    public function sendEmailAgencyConfirmed(Request $request){
+        $agen = Agency::whereId($request->input('id'))->first();
+
+        if($agen != null){
+            $agen->update(['status'=>1]);
+            Mail::to($agen->email)->send(new AgencyConfirmed($agen->company_name,$agen->email));
+            return response()->json(['message'=>'good'],200);
+        }
+        return response()->json(['message'=>'bad'],200);
     }
 }

@@ -1,16 +1,35 @@
 $(document).ready(function(){
     getAgencies();
+
     $("#sendAgency").click(function(){
         var object = validFormAgency();
         console.log(object);
         if(object !== 0)
             saveAgency(object);
     });
+
+    $(document).on("click","span[id^='upa-']",function(){
+        var id = $(this).attr('id').split('-').pop();
+        $.ajax({
+            url: 'change-status',
+            type: 'GET',
+            data:{'id':id},
+            success: function(data) {
+                if(data){
+                    swal('Agencia confirmada exitosamente','','success');
+                    //cleanFormAgency();
+                }else{
+                    swal('Error al confirmar la agencia,intente luego','','error');
+                }
+                getAgencies();
+            },
+        });
+    });
 });
 
  function saveAgency(object){
      $.ajax({
-         url: 'saveagency',
+         url: 'change-status',
          type: 'POST',
          data:object,
          success: function(data) {
@@ -74,9 +93,6 @@ $(document).ready(function(){
      $.ajax({
          url: 'getagencies',
          type: 'GET',
-         error: function() {
-             $('#info').html('<p>An error has occurred</p>');
-         },
          success: function(data) {
              if(data.length > 0){
                  $("#dataAgency").html('');
@@ -99,8 +115,7 @@ $(document).ready(function(){
                          '<td>'+agencies[i]['email']+'<td/>'+
                          '<td>'+agencies[i]['status']+'<td/>'+
                          '<td>'+
-                         '<span class="small material-icons" id="upc-'+agencies[i]['id']+'">autorenew</span>'+
-                         '<span class="small material-icons" id="delc-'+agencies[i]['id']+'">delete</span>'+
+                         '<span class="small material-icons" id="upa-'+agencies[i]['id']+'">autorenew</span>'+
                          '<td/>'+
                          '</tr>';
                      $("#dataAgency").append(valueAgencies);

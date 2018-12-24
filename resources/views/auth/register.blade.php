@@ -69,6 +69,7 @@
                             </div>
                         </div>
                     </form>
+                    <a href="{{ url('register-agency') }}">Register a Agency</a>
                 </div>
             </div>
         </div>
