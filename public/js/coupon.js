@@ -5,6 +5,10 @@ $(document).ready(function(){
         format:'yyyy-mm-dd'
     });
 
+    $(document).on('blur','#cupon',function(){
+        getCounponValue($(this).val());
+    });
+
     $(document).on("click","span[id^='upc-']",function(){
         var id = $(this).attr('id').split('-').pop();
         var coupon = specificCounpon(id);
@@ -212,4 +216,28 @@ function updateCoupons(name,code,dti,dte,status,percentage) {
             });
         }
     });
+}
+
+function getCounponValue(code){
+
+    if(code === '' || code === undefined)
+        return false;
+    else{
+        $.ajax({
+            url: 'getcouponValue',
+            type: 'GET',
+            data:{'code':code},
+            success: function(data) {
+                if(data){
+                    var value = parseFloat($("#price").text());
+                    var per = parseFloat(data['percentage']);
+                    var finalPrice = parseInt(per * value / 100);
+                    $("price").text(finalPrice);
+                }else{
+                    swal('Cupon expirado o no encontrado')
+                }
+            },
+        });
+    }
+
 }

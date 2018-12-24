@@ -7,10 +7,6 @@ use Illuminate\Http\Request;
 use App\Coupon;
 class CouponController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function coupons(){
         $coupons = Coupon::all();
@@ -29,6 +25,17 @@ class CouponController extends Controller
 
     public function getSpecificCoupons($id){
         return Coupon::where('id',$id)->first();
+    }
+
+    public function getSpecificCouponsByCode(Request $request){
+        $cupon = Coupon::where('code',$request->input('code'))
+                       ->where('status',1)
+                       ->first();
+
+        if($cupon != null)
+            return response()->json($cupon,200);
+        else
+            return response()->json(false,400);
     }
 
     public function deleteCoupon(Request $request){

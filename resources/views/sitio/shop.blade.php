@@ -158,6 +158,14 @@
                     <input class="form-control" name="telefono" type="text"  placeholder="Enter phone number" required>
                 </div>
 			</div>
+			<div class="col-xs-12 col-sm-6">
+				<div class="form-group">
+					<label for="">
+						*Cupon
+					</label>
+					<input class="form-control" id="cupon" name="cupon" type="text"  placeholder="cupon">
+				</div>
+			</div>
 			<div class="col-xs-12" ng-if="carrito.tours.length>0">
 				<div class="form-group">
 					<label for="">
@@ -179,7 +187,7 @@
 
 		<h2 class="col-xs-10 col-xs-offset-1 tituloVerde text-center" ng-show="precioTotal()>0">
 			@{{ precioTotal() | currency:"$ "}}
-			<input type="hidden" name="precio" value="@{{ precioTotal() }}">
+			<input type="hidden" id="price" name="precio" value="@{{ precioTotal() }}">
 		</h2>
 
 		<div class="col-xs-12 col-sm-6 col-sm-offset-3 panel mt2" ng-show="precioTotal()>0" style="background:rgba(128, 128, 128, 0.2);padding:2em 0;">
@@ -272,6 +280,7 @@
 
 @section('js')
 <script src="{{ asset('js/cleave.min.js') }}"></script>
+<script src="{{ asset('js/coupon.js') }}"></script>
 <script>
 	new Cleave('#card_no', {
 		creditCard: true
