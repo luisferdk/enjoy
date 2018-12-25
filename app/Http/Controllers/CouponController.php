@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use http\Env\Response;
+use Carbon\Carbon;
+use DB;
 use Illuminate\Http\Request;
 use App\Coupon;
+
 class CouponController extends Controller
 {
 
@@ -57,5 +59,25 @@ class CouponController extends Controller
             return response()->json(['message'=>'Coupon no encontrado'],400);
 
         return Response()->json(['message'=>"Cupon Actualizado"],200);
+    }
+
+    public function updateStateCoupon(){
+        try{
+            DB::beginTransaction();
+            $coupon = Coupon::whereStatus(1)->get();
+
+            if( !empty($coupon) && count($coupon) > 0 ){
+                for($i = 0,$j = count($coupon); $i < $j; $i++){
+                    $dt = Carbon::now()->toDateString();
+
+                    if($dt === $coupon[$i]->date_end){
+                        Coupon::whereId($coupon[$i]->id)->update(['status'=>0]);
+                    }
+                }
+            }
+            DB::commit();
+        }catch(\Exception $e){
+            DB::rollBack();
+        }
     }
 }

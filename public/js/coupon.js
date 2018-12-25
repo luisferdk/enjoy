@@ -72,8 +72,6 @@ $(document).ready(function(){
             updateCoupons($('#name').val(),$("#code").val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
         else
             saveCoupon($("#code").val(),$('#name').val(),$("#dti").val(),$("#dte").val(),$("#status").val(),$('#percentage').val());
-
-
     });
 });
 
@@ -231,7 +229,7 @@ function getCounponValue(code){
                 if(data){
                     var value = parseFloat($("#price").text());
                     var per = parseFloat(data['percentage']);
-                    var finalPrice = parseInt(per * value / 100);
+                    var finalPrice = parseInt(per * value / 100) - value;
                     $("price").text(finalPrice);
                 }else{
                     swal('Cupon expirado o no encontrado')
