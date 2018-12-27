@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Agency;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\AgencyCreated;
@@ -18,11 +19,36 @@ class AgencyController extends Controller
         return view('admin.agency');
     }
 
+    public static function generateRandomString($length = 10) {
+	    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    $charactersLength = strlen($characters);
+	    $randomString = '';
+
+	    for ($i = 0; $i < $length; $i++) {
+	        $randomString .= $characters[rand(0, $charactersLength - 1)];
+	    }
+
+        return $randomString;
+    }
+
     public function createAgency(Request $request)
     {
-        $agency = Agency::create($request->all());
-        $this->sendEmailAgencyRegisted($agency->company_name,$agency->email);
-        return response()->json($agency, 200);
+        if( self::checkEmailUser($request->input('email')) ){
+            $agency = Agency::create($request->all());
+            $this->sendEmailAgencyRegisted($agency->company_name,$agency->email);
+            return response()->json(['message'=>'Agencia Registrada exitosamente','status'=>1], 200);
+        }else
+            return response()->json(['message'=>'El email introducido esta en uso','status'=>0],400);
+    }
+
+    public static function checkEmailUser($email){
+        $user   = User::whereEmail($email)->first();
+        $agency = Agency::whereEmail($email)->first();
+
+        if ( is_null($user) && is_null($agency) )
+            return true;
+        else
+            return false;
     }
 
     public function getAllAgencies(){
@@ -57,12 +83,37 @@ class AgencyController extends Controller
         Mail::to($agencyEmail)->send(new AgencyCreated($agencyName));
     }
 
+    public function isConfirmed($email){
+        $agen = Agency::whereEmail($email)->first();
+
+        if(!is_null($agen)){
+            if($agen->status == 1)
+                return true;
+            else
+                return false;
+        }
+        return false;
+    }
+
     public function sendEmailAgencyConfirmed(Request $request){
         $agen = Agency::whereId($request->input('id'))->first();
 
         if($agen != null){
+
+            if($this->isConfirmed($agen->email))
+                return response()->json('confirmed',200);
+
             $agen->update(['status'=>1]);
-            Mail::to($agen->email)->send(new AgencyConfirmed($agen->company_name,$agen->email));
+            $pass = self::generateRandomString();
+            User::create([
+                'name'  => $agen->company_name,
+                'email' => $agen->email,
+                'password' => bcrypt($pass),
+                'type'  => 3,
+                'token' => ''
+            ]);
+
+            Mail::to($agen->email)->send(new AgencyConfirmed($agen->company_name,$agen->email,$pass));
             return response()->json(['message'=>'good'],200);
         }
         return response()->json(['message'=>'bad'],200);

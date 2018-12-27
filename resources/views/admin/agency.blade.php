@@ -44,7 +44,48 @@
 
         </div>
     </div>
+    <!-- Modal Structure -->
+    <div id="modalAgen" class="modal">
+        <div class="modal-content">
+            <h4>Aplicar Descuento a la Agencia</h4>
+            <form>
+                <div class="row">
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="percentage" type="text">
+                                <label for="percentage">Percentage</label>
+                            </div>
+                            <input type="hidden" id="token" value="{{ csrf_token() }}">
+                            <div class="input-field col s6">
+                                <input name="dti" type="text" id="dti"  class="datepicker">
+                                <label for="dti">Fecha de Inicio</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input name="dte" type="text" id="dte" class="datepicker">
+                                <label for="dte">Fecha de Culminacion</label>
+                            </div>
+                            <input type="hidden" id="idAgen">
+                            <div class="input-field col s12">
+                                <select id="status">
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Activo</option>
+                                    <option value="0">Inactivo</option>
+                                </select>
+                                <label>Status del Cupon</label>
+                            </div>
 
+                        </div>
+                        <a class="waves-effect waves-light btn" id="sendCoupon">Guardar</a>
+                    </form>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar Modal</a>
+        </div>
+    </div>
+    <!--Fin Modal-->
     <div id="ver" class="modal modal-fixed-footer" style="width:80%">
         <div class="modal-content">
             <div class="row"></div>

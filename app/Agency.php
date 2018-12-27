@@ -65,4 +65,8 @@ class Agency extends Model
         'status'
     ];
     protected $table = 'agencies';
+
+    public function discounts(){
+        return $this->hasMany('App\Discount');
+    }
 }

@@ -64,7 +64,7 @@
                 </tr>
                 <tr>
                     <td style="width:50%;">Feliciades,su agencia {{$name}} ha sido confirmada.
-                    Puede Iniciar Sesion con estas credenciales user: {{ $email }} Email: {{ 'frefadf3' }}
+                    Puede Iniciar Sesion con estas credenciales user: {{ $email }} password: {{ $pass }}
                     <td>
                 </tr>
             </table>

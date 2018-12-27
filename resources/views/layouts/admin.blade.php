@@ -75,6 +75,7 @@
                 </div>
             </div>
         </div>
+        <input type="hidden" id="tokenglobal" value="{{ csrf_token() }}">
         <div class="mn-content fixed-sidebar">
             <header class="mn-header navbar-fixed">
                 <nav class="cyan darken-1">

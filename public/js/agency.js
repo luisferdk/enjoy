@@ -1,6 +1,10 @@
 $(document).ready(function(){
     getAgencies();
 
+    $('.datepicker').datepicker({
+        format:'yyyy-mm-dd'
+    });
+
     $("#sendAgency").click(function(){
         var object = validFormAgency();
         console.log(object);
@@ -17,7 +21,6 @@ $(document).ready(function(){
             success: function(data) {
                 if(data){
                     swal('Agencia confirmada exitosamente','','success');
-                    //cleanFormAgency();
                 }else{
                     swal('Error al confirmar la agencia,intente luego','','error');
                 }
@@ -25,18 +28,33 @@ $(document).ready(function(){
             },
         });
     });
+
+    $(document).on("click","span[id^='dela-']",function(){
+        var id = $(this).attr('id').split('-').pop();
+        deleteAgency(id);
+    });
+
+    $(document).on("click","span[id^='desa-']",function(){
+        var id = $(this).attr('id').split('-').pop();
+        $("#idAgen").val(id);
+        $('#modalAgen').openModal();
+    });
 });
 
  function saveAgency(object){
      $.ajax({
-         url: 'change-status',
+         url: 'saveagency',
          type: 'POST',
          data:object,
          success: function(data) {
-             if(data){
+             if(data['status'] == 1){
                  swal('Agencia registrada exitosamente','','success');
                  cleanFormAgency();
-             }else{
+             }else if(data['status'] == 0){
+                 swal('El email introducido esta en uso','','success');
+                 cleanFormAgency();
+             }
+             else{
                  swal('Error al registrar la agencia,intente luego','','error');
              }
              getAgencies();
@@ -115,7 +133,9 @@ $(document).ready(function(){
                          '<td>'+agencies[i]['email']+'<td/>'+
                          '<td>'+status+'<td/>'+
                          '<td>'+
-                         '<span class="small material-icons" id="upa-'+agencies[i]['id']+'">autorenew</span>'+
+                         '<span class="small material-icons" id="upa-'+agencies[i]['id']+'">check_box</span>'+
+                         '<span class="small material-icons" id="dela-'+agencies[i]['id']+'">delete_forever</span>'+
+                         '<span class="small material-icons" id="desa-'+agencies[i]['id']+'">account_balance</span>'+
                          '<td/>'+
                          '</tr>';
                      $("#dataAgency").append(valueAgencies);
@@ -124,4 +144,24 @@ $(document).ready(function(){
              }
          },
      });
+ }
+
+ function deleteAgency(id){
+     if(id === '' || id === undefined){
+         return false
+     }else{
+         $.ajax({
+             url: 'delete-agency/'+id,
+             type: 'GET',
+             success: function(data) {
+                 if(data){
+                     swal('Agencia eliminada exitosamente','','success');
+                     getAgencies();
+                 }else{
+                     swal('Error al eliminar la agencia,intente luego','','error');
+                 }
+                 getAgencies();
+             },
+         });
+     }
  }
