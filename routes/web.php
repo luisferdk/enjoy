@@ -54,6 +54,7 @@ Route::get('admin/delete-agency/{id}','AgencyController@deleteAgency');
 Route::get('admin/change-status','AgencyController@sendEmailAgencyConfirmed');
 Route::get('admin/getagencies','AgencyController@getAllAgencies');
 
+Route::post('admin/apply-discount','DiscountController@applyDiscount');
 
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));

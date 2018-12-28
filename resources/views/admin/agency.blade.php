@@ -68,15 +68,15 @@
                             <input type="hidden" id="idAgen">
                             <div class="input-field col s12">
                                 <select id="status">
-                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="0" disabled selected>Choose your option</option>
                                     <option value="1">Activo</option>
-                                    <option value="0">Inactivo</option>
+                                    <option value="2">Inactivo</option>
                                 </select>
                                 <label>Status del Cupon</label>
                             </div>
 
                         </div>
-                        <a class="waves-effect waves-light btn" id="sendCoupon">Guardar</a>
+                        <a class="waves-effect waves-light btn" id="applydiscount">Guardar</a>
                     </form>
                 </div>
             </form>
@@ -98,4 +98,5 @@
 @endsection
 @section('js')
     <script src="{{ asset('js/agency.js') }}"></script>
+    <script src="{{ asset('js/discount.js') }}"></script>
 @endsection
