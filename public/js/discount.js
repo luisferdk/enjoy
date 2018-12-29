@@ -30,10 +30,18 @@ function saveDiscount(obj){
         success: function(data) {
             if(data){
                 swal('Descuento aplicado a la agencia exitosamente','','success');
+                cleanFormDiscount();
             }else{
                 swal('Error al aplicar descuento','','error');
             }
             getAgencies();
         },
     });
+}
+
+function cleanFormDiscount(){
+    $('#percentage').val();
+    $('#dti').val();
+    $('#dte').val();
+    $("#idAgen").val();
 }

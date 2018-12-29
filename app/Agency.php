@@ -45,6 +45,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Agency whereUpdatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Agency whereWebsite($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Agency whereZip($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Discount[] $discounts
  */
 class Agency extends Model
 {
