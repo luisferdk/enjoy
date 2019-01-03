@@ -6,7 +6,12 @@ $(document).ready(function(){
 
     $(document).on("click","span[id^='upu-']",function(){
         var id = $(this).attr('id').split('-').pop();
+        $("#idUsu").val(id);
         $("#modalUsu").openModal();
+    });
+
+    $(document).on("click","#upusu",function(){
+        updateUser();
     });
 });
 
@@ -45,7 +50,7 @@ function getAllUser(){
                             '<td>'+data[i]['type']+'<td/>'+
                             '<td>'+data[i]['created_at']+'<td/>'+
                             '<td>'+
-                            '<span class="small material-icons" id="upu-'+data[i]['id']+'">check_box</span>'+
+                            '<span class="small material-icons" id="upu-'+data[i]['id']+'">loop</span>'+
                             '<span class="small material-icons" id="delu-'+data[i]['id']+'">delete_forever</span>'+
                             '<td/>'+
                             '</tr>';
@@ -53,6 +58,40 @@ function getAllUser(){
                     }
                 }
             }
+        }
+    });
+}
+
+function updateUser(){
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var type  = $("#type").val();
+    var id    = $("#idUsu").val();
+    var token = $("#tokenglobal").val();
+
+    if($.trim(name) === '' || $.trim(email) === '' || $.trim(type) == 0){
+        swal('Error existen campos vacios','','error');
+        return false;
+    }
+    var obj = {
+        name:name,
+        email:email,
+        type:type,
+        id:id,
+        _token:token
+    };
+
+    $.ajax({
+        url:'updateusu',
+        type:'POST',
+        data:obj,
+        success:function(data){
+            if(data)
+                swal('Usuario modificado exitosamente','','success');
+            else
+                swal('Error al modificar el usuario. Intente luego','','error');
+
+            getAllUser();
         }
     });
 }

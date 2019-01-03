@@ -37,7 +37,7 @@
                                                 <td>{{ $user->type }}</td>
                                                 <td>{{ $user->created_at }}</td>
                                                 <td>
-                                                    <span class="small material-icons" id="upu-{{ $user->id }}">check_box</span>
+                                                    <span class="small material-icons" id="upu-{{ $user->id }}">loop</span>
                                                     <span class="small material-icons" id="delu-{{ $user->id }}">delete_forever</span>
                                                 </td>
                                             </tr>
@@ -73,7 +73,7 @@
                             </div>
                             <input type="hidden" id="idUsu">
                             <div class="input-field col s12">
-                                <select id="status">
+                                <select id="type">
                                     <option value="0" disabled selected>Choose your option</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Colaborador</option>

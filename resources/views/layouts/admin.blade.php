@@ -166,7 +166,7 @@
                     </li>
                     <li class="no-padding {{ Request::is('admin/users')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/users') }}">
-                            <i class="material-icons">business_center</i>Usuarios
+                            <i class="material-icons">person</i>Usuarios
                         </a>
                     </li>
                 </ul>
