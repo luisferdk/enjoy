@@ -164,6 +164,11 @@
                             <i class="material-icons">business_center</i>Agencias
                         </a>
                     </li>
+                    <li class="no-padding {{ Request::is('admin/users')?'active':'' }}">
+                        <a class="waves-effect waves-grey" href="{{ url('/admin/users') }}">
+                            <i class="material-icons">business_center</i>Usuarios
+                        </a>
+                    </li>
                 </ul>
                 <div class="footer center-align">
                     <p class="copyright">Domtecno ©</p>

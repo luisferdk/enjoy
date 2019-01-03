@@ -58,3 +58,8 @@ Route::post('admin/apply-discount','DiscountController@applyDiscount');
 
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
+
+Route::get('admin/users','UserController@viewAdminUser')->middleware('auth');
+Route::get('admin/delUser/{id}','UserController@deleteUser');
+Route::get('admin/alluser','UserController@getAllUser');
+Route::post('admin/updateusu','UserController@updateUser');
