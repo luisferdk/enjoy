@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ asset('bower_components/sweetalert2/sweetalert2.min.css') }}">
     <link rel="shortcut icon" type="image/png" href="{{ asset('/') }}img/logo.png">
     <title>Renny Travel</title>
     <style>
@@ -75,7 +76,7 @@
                         <br />
                         <center>
                             <div class='row'>
-                                <button type='submit' name='ingresar' value="ingresar" class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                                <button type='button' onclick="login()" name='ingresar' value="ingresar" class='col s12 btn btn-large waves-effect indigo'>Login</button>
                             </div>
                         </center>
                     </form>
@@ -83,13 +84,15 @@
                 </div>
             </div>
         </center>
+        <input type="hidden" id="token" name="token" value="{{csrf_token()}}">
 
         <div class="section"></div>
         <div class="section"></div>
     </main>
-
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+    <script src="{{ asset('sitio/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('bower_components/sweetalert2/sweetalert2.min.js') }}"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="{{ asset('js/login.js') }}"></script>
 </body>
 
 </html>

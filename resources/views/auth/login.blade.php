@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content')location.href = '/';
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -24,9 +24,8 @@
                                 @endif
                             </div>
                         </div>
-
                         <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        location.href = '/';    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -51,7 +50,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="button" onclick="login()" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 

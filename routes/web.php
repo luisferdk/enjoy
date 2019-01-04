@@ -63,3 +63,8 @@ Route::get('admin/users','UserController@viewAdminUser')->middleware('auth');
 Route::get('admin/delUser/{id}','UserController@deleteUser');
 Route::get('admin/alluser','UserController@getAllUser');
 Route::post('admin/updateusu','UserController@updateUser');
+
+//login
+Route::post('login','LoginController@login');
+Route::get('logout','LoginController@logout');
+//end login
