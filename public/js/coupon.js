@@ -227,10 +227,12 @@ function getCounponValue(code){
             data:{'code':code},
             success: function(data) {
                 if(data){
-                    var value = parseFloat($("#price").text());
+                    var value = parseFloat($("#price").val());
                     var per = parseFloat(data['percentage']);
-                    var finalPrice = parseInt(per * value / 100) - value;
-                    $("price").text(finalPrice);
+                    console.log(value,per);
+                    var finalPrice = value - parseInt(per * value / 100);
+                    console.log(finalPrice);
+                    $("#priceText").text('$ '+finalPrice+'.00');
                 }else{
                     swal('Cupon expirado o no encontrado')
                 }

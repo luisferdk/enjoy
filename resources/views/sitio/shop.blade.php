@@ -185,7 +185,7 @@
             </div>
 		</div>
 
-		<h2 class="col-xs-10 col-xs-offset-1 tituloVerde text-center" ng-show="precioTotal()>0">
+		<h2 id="priceText" class="col-xs-10 col-xs-offset-1 tituloVerde text-center" ng-show="precioTotal()>0">
 			@{{ precioTotal() | currency:"$ "}}
 			<input type="hidden" id="price" name="precio" value="@{{ precioTotal() }}">
 		</h2>
