@@ -26,7 +26,10 @@ class DatabaseSeeder extends Seeder
         $user = User::create([
             'name' => 'Admin',
             'email' => 'admin@rennytravel.com',
-            'password' => bcrypt('admin')
+            'password' => bcrypt('admin'),
+            'token' => '',
+            'status' => 1,
+            'type' => 1
         ]);
     }
 }
