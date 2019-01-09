@@ -164,11 +164,13 @@
                             <i class="material-icons">business_center</i>Agencias
                         </a>
                     </li>
-                    <li class="no-padding {{ Request::is('admin/users')?'active':'' }}">
-                        <a class="waves-effect waves-grey" href="{{ url('/admin/users') }}">
-                            <i class="material-icons">person</i>Usuarios
-                        </a>
-                    </li>
+                    @if(Auth::user()->id == 1)
+                        <li class="no-padding {{ Request::is('admin/users')?'active':'' }}">
+                            <a class="waves-effect waves-grey" href="{{ url('/admin/users') }}">
+                                <i class="material-icons">person</i>Usuarios
+                            </a>
+                        </li>
+                    @endif
                 </ul>
                 <div class="footer center-align">
                     <p class="copyright">Domtecno ©</p>
