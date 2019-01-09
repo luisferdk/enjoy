@@ -28,7 +28,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@rennytravel.com',
             'password' => bcrypt('admin'),
             'token' => '',
-            'status' => 1,
             'type' => 1
         ]);
     }
