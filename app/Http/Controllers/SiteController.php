@@ -61,8 +61,12 @@ class SiteController extends Controller
         return view('sitio.shop');
     }
     public function shopPost(Request $request){
+        $data = $request->all();
+        if(!isset($data['precio']))
+            $data['precio'] = $request->input('finalPrice');
+
         session(
-            ["reservation"=>$request->all()]
+            ["reservation"=>$data]
         );
 
         $validator = Validator::make($request->all(), [
