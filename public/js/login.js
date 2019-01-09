@@ -13,7 +13,7 @@ function login(){
         data:{'email':email,'password':pass,'_token':$("#token").val()},
         success:function(data){
             if(data['status'])
-                location.href = '/';
+                location.href = data['redirect'];
             else
                 swal('Error, credenciales irroneos','El email o la clave estan erronea','error');
         },

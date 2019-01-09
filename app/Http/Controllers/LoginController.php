@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Agency;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
@@ -14,8 +15,16 @@ class LoginController extends Controller
         if(Auth::attempt($credencials)){
             $user = User::whereEmail($request->input('email'))->first();
 
-            if($user->type == 3)
-                return response()->json(['status'=>true,'redirect'=>'/']);
+            if($user->type == 3){
+                $agency = Agency::with(['discounts'=>function($query){
+                    $query->where('status',1)->first();
+                }])->whereEmail($request->input('email'))
+                          ->where('status',1)
+                          ->first();
+
+                return response()->json(['status'=>true,'redirect'=>'/','agencyUser'=>$agency]);
+            }
+
             else
                 return response()->json(['status'=>true,'redirect'=>'admin/reservas']);
         }

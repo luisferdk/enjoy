@@ -44,16 +44,27 @@ function getAllUser(){
                 if( data.length > 0 ){
                     $("#dataUser").html("");
                     for(var i = 0; i < data.length; i++){
-                        var html = '<tr>' +
-                            '<td>'+data[i]['name']+'<td/>'+
-                            '<td>'+data[i]['email']+'<td/>'+
-                            '<td>'+data[i]['type']+'<td/>'+
-                            '<td>'+data[i]['created_at']+'<td/>'+
-                            '<td>'+
-                            '<span class="small material-icons" id="upu-'+data[i]['id']+'">loop</span>'+
-                            '<span class="small material-icons" id="delu-'+data[i]['id']+'">delete_forever</span>'+
-                            '<td/>'+
-                            '</tr>';
+                        if(data['type'] !== 1){
+                            var html = '<tr>' +
+                                '<td>'+data[i]['name']+'<td/>'+
+                                '<td>'+data[i]['email']+'<td/>'+
+                                '<td>'+data[i]['type']+'<td/>'+
+                                '<td>'+data[i]['created_at']+'<td/>'+
+                                '<td>'+
+                                '<span class="small material-icons" id="upu-'+data[i]['id']+'">loop</span>'+
+                                '<span class="small material-icons" id="delu-'+data[i]['id']+'">delete_forever</span>'+
+                                '<td/>'+
+                                '</tr>';
+                        }else{
+                            var html = '<tr>' +
+                                '<td>'+data[i]['name']+'<td/>'+
+                                '<td>'+data[i]['email']+'<td/>'+
+                                '<td>'+data[i]['type']+'<td/>'+
+                                '<td>'+data[i]['created_at']+'<td/>'+
+                                '<td>'+
+                                '<td/>'+
+                                '</tr>';
+                        }
                         $("#dataUser").append(html);
                     }
                 }

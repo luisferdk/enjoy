@@ -36,10 +36,12 @@
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->type }}</td>
                                                 <td>{{ $user->created_at }}</td>
-                                                <td>
-                                                    <span class="small material-icons" id="upu-{{ $user->id }}">loop</span>
-                                                    <span class="small material-icons" id="delu-{{ $user->id }}">delete_forever</span>
-                                                </td>
+                                                @if($user->type != 1)
+                                                    <td>
+                                                        <span class="small material-icons" id="upu-{{ $user->id }}">loop</span>
+                                                        <span class="small material-icons" id="delu-{{ $user->id }}">delete_forever</span>
+                                                    </td>
+                                                @endif
                                             </tr>
                                         @endforeach
                                     @endif

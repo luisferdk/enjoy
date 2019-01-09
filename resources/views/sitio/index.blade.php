@@ -47,7 +47,8 @@
                                     <strong>+1 (809) 949-0519</strong>
                                 </a>
                                 <a href="mailto:info@rennytravel.com" class="col-xs-12">
-                                    <strong>info@rennytravel.com</strong>
+                                    <strong>info@rennytravel.com
+                                    </strong>
                                 </a>
                                 <a href="#" class="col-xs-12 hidden-xs">
                                     <strong>08:00 AM - 05:00 PM</strong>
@@ -55,10 +56,16 @@
                             </div>
                         </div>
                         <div class="col-xs-4 col-sm-3 text-right iconos">
+                            @if(Auth::check())
+                                <span>{{ 'Bienvenido:' . Auth::user()->name }} </span>
+                            @endif
                             <a href="http://www.facebook.com/rennytravel"><i aria-hidden="true" class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
                             <a href="https://www.instagram.com/rennytravel/"><i aria-hidden="true" class="fa fa-instagram"></i></a>
-                            <a href="{{ url('/login') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
+                            @if(!Auth::check())
+                                <a href="{{ url('/login') }}"><i class="border-right fa fa-user-circle" aria-hidden="true"></i></a>
+                            @else
+                            @endif
                             <a href="{{ url('/shop') }}"><i style="padding-right:.2em" class="fa fa-shopping-cart" aria-hidden="true"></i>(@{{nro}})</a>
                         </div>
                     </div>
