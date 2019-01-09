@@ -62,6 +62,7 @@ function getAllUser(){
                                 '<td>'+data[i]['type']+'<td/>'+
                                 '<td>'+data[i]['created_at']+'<td/>'+
                                 '<td>'+
+                                ''+
                                 '<td/>'+
                                 '</tr>';
                         }
