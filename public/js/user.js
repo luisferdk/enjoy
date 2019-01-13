@@ -31,16 +31,30 @@ function deleteUser(id){
         return false;
 
     else{
-        $.ajax({
-            url:'delUser/'+id,
-            type:'get',
-            success:function(data){
-                if(data)
-                    swal('Usuario eliminado exitosamente!');
-                else
-                    swal('Error, no se pudo eliminar el usuario');
 
-                getAllUser();
+        swal({
+            title: 'Estas seguro de eliminar este usuario?',
+            text: "El usuario de borrara de la base de datos permanentemente",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Eliminarlo'
+        },(result) => {
+            if (result) {
+
+                $.ajax({
+                    url:'delUser/'+id,
+                    type:'get',
+                    success:function(data){
+                        if(data)
+                            swal('Usuario eliminado exitosamente!');
+                        else
+                            swal('Error, no se pudo eliminar el usuario');
+
+                        getAllUser();
+                    }
+                });
             }
         });
     }
