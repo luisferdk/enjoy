@@ -80,7 +80,7 @@
                             </div>
                         </center>
                     </form>
-                    <a href="{{ url('register') }}">Registro de agencias</a>
+                    <a href="{{ url('register-agency') }}">Registro de agencias</a>
                 </div>
             </div>
         </center>
