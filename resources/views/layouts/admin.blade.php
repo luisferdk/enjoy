@@ -17,9 +17,8 @@
         <link type="text/css" rel="stylesheet" href="{{ asset('administrador') }}/plugins/materialize/css/materialize.min.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="{{ asset('administrador') }}/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
-        <link href="{{ asset('administrador') }}/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>  
-
-        	
+        <link href="{{ asset('administrador') }}/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="{{ asset('css/modal.css') }}">
         <!-- Theme Styles -->
         <link href="{{ asset('administrador') }}/css/alpha.min.css" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('administrador') }}/css/custom.css" rel="stylesheet" type="text/css"/>
