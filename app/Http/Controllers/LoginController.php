@@ -6,6 +6,7 @@ use App\Agency;
 use Illuminate\Http\Request;
 use Auth;
 use App\User;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -22,6 +23,7 @@ class LoginController extends Controller
                           ->where('status',1)
                           ->first();
 
+                Session::put(['discount' => $agency->discounts[0]->percentage]);
                 return response()->json(['status'=>true,'redirect'=>'/','agencyUser'=>$agency]);
             }
 
@@ -33,6 +35,7 @@ class LoginController extends Controller
 
     public function logout(){
         Auth::logout();
-        return response()->json('logout');
+        Session::flush();
+        return response()->redirectTo('/');
     }
 }

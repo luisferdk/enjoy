@@ -242,3 +242,24 @@ function getCounponValue(code){
     }
 
 }
+
+function getDiscountSession(){
+    $.ajax({
+        url: 'get-data-session',
+        type: 'GET',
+        success: function(data) {
+            if(data){
+                if(data > 0){
+                    var value = parseFloat($("#price").val());
+                    var per = parseFloat(data);
+                    console.log(value,per);
+                    var finalPrice = value - parseInt(per * value / 100);
+                    console.log(finalPrice);
+                    $("#priceText").text('$ '+finalPrice+'.00');
+                    $("#price").val(parseFloat(finalPrice));
+                    $("#finalPrice").val(parseFloat(finalPrice));
+                }
+            }
+        },
+    });
+}

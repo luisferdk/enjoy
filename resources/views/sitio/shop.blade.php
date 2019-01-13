@@ -295,6 +295,8 @@
 		date: true,
 		datePattern: ['y']
 	});
-	
+	$(document).ready(function(){
+		getDiscountSession();
+	});
 </script>
 @endsection

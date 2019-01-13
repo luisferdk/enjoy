@@ -65,6 +65,8 @@ Route::get('admin/alluser','UserController@getAllUser');
 Route::post('admin/updateusu','UserController@updateUser');
 Route::post('admin/create-user-admin','UserController@createUser');
 
+Route::get('get-data-session','GetDataSession@getdataSession');
+
 //login
 Route::post('login','LoginController@login');
 Route::get('logout','LoginController@logout');

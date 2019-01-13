@@ -58,6 +58,7 @@
                         <div class="col-xs-4 col-sm-3 text-right iconos">
                             @if(Auth::check())
                                 <span>{{ 'Bienvenido:' . Auth::user()->name }} </span>
+                                <a href="{{ url('logout') }}"><i aria-hidden="true" class="fa fa-sign-out"></i></a>
                             @endif
                             <a href="http://www.facebook.com/rennytravel"><i aria-hidden="true" class="fa fa-facebook"></i></a>
                             <a href="https://twitter.com/RennysTravel"><i aria-hidden="true" class="fa fa-twitter"></i></a>
