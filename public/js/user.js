@@ -13,6 +13,17 @@ $(document).ready(function(){
     $(document).on("click","#upusu",function(){
         updateUser();
     });
+
+    $(document).on('click','#saveUsu',function(){
+        var name = $("#name-ad").val();
+        var email = $("#email-ad").val();
+        var password = $("#password-ad").val();
+
+        if($.trim(name) === '' || $.trim(email) === '' || $.trim(password) === '')
+            swal('Error,existen campos vacios','','error');
+        else
+            saveUsuario(name,email,password);
+    })
 });
 
 function deleteUser(id){
@@ -102,6 +113,32 @@ function updateUser(){
                 swal('Usuario modificado exitosamente','','success');
             else
                 swal('Error al modificar el usuario. Intente luego','','error');
+
+            getAllUser();
+        }
+    });
+}
+
+function saveUsuario(name,email,pass){
+    var obj = {
+        'name':name,
+        'email':email,
+        'password':pass,
+        'type':2,
+        'token':'',
+        '_token':$("#token_usu").val(),
+        'ajax':true
+    };
+
+    $.ajax({
+        url:'create-user-admin',
+        type:'POST',
+        data:obj,
+        success:function(data){
+            if(data)
+                swal('Usuario registrado exitosamente','','success');
+            else
+                swal('Error al registrar el usuario. Intente luego','','error');
 
             getAllUser();
         }

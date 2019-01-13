@@ -52,10 +52,41 @@
                         </div>
                     </div>
                 </div>
+                <a class="waves-effect waves-light btn-small modal-trigger" href="#modalu">Crear Usuario</a>
             </div>
 
         </div>
     </div>
+    <!-- modal usuarios admin-->
+    <div id="modalu" class="modal">
+        <div class="modal-content">
+            <h4>Crear Usuario</h4>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="name-ad" type="text">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="email-ad" type="text">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <input type="hidden" id="token_usu" value="{{ csrf_token() }}">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="password-ad" type="password" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn" id="saveUsu">Guardar Usuario</a>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar Modal</a>
+        </div>
+    </div>
+    <!--fin-->
     <!-- Modal Structure -->
     <div id="modalUsu" class="modal">
         <div class="modal-content">
