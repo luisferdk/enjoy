@@ -55,29 +55,22 @@ function getAllUser(){
                 if( data.length > 0 ){
                     $("#dataUser").html("");
                     for(var i = 0; i < data.length; i++){
-                        if(data['type'] !== 1){
-                            var html = '<tr>' +
-                                '<td>'+data[i]['name']+'<td/>'+
-                                '<td>'+data[i]['email']+'<td/>'+
-                                '<td>'+data[i]['type']+'<td/>'+
-                                '<td>'+data[i]['created_at']+'<td/>'+
-                                '<td>'+
-                                '<span class="small material-icons" id="upu-'+data[i]['id']+'">loop</span>'+
-                                '<span class="small material-icons" id="delu-'+data[i]['id']+'">delete_forever</span>'+
-                                '<td/>'+
-                                '</tr>';
-                        }else{
-                            var html = '<tr>' +
-                                '<td>'+data[i]['name']+'<td/>'+
-                                '<td>'+data[i]['email']+'<td/>'+
-                                '<td>'+data[i]['type']+'<td/>'+
-                                '<td>'+data[i]['created_at']+'<td/>'+
-                                '<td>'+
-                                ''+
-                                '<td/>'+
-                                '</tr>';
+                        var buttons = "";
+                        if(data[i]['type'] !== 1){
+                           buttons = '<span class="small material-icons" id="upu-'+data[i]['id']+'">loop</span>'+
+                               '<span class="small material-icons" id="delu-'+data[i]['id']+'">delete_forever</span>';
                         }
+                        var html = '<tr>' +
+                            '<td>'+data[i]['name']+'<td/>'+
+                            '<td>'+data[i]['email']+'<td/>'+
+                            '<td>'+data[i]['type']+'<td/>'+
+                            '<td>'+data[i]['created_at']+'<td/>'+
+                            '<td>'+
+                            buttons+
+                            '<td/>'+
+                            '</tr>';
                         $("#dataUser").append(html);
+                        $("td:empty").remove();
                     }
                 }
             }
@@ -135,8 +128,13 @@ function saveUsuario(name,email,pass){
         type:'POST',
         data:obj,
         success:function(data){
-            if(data)
+            if(data){
+                $("#name-ad").val('');
+                $("#email-ad").val('');
+                $("#password-ad").val('');
+                $("#modalu").closeModal();
                 swal('Usuario registrado exitosamente','','success');
+            }
             else
                 swal('Error al registrar el usuario. Intente luego','','error');
 
