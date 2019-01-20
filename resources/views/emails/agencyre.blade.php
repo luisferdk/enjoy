@@ -59,12 +59,12 @@
             <table>
                 <tr>
                     <td colspan="2" style="color:#8dc740;text-align: center;">
-                        <h2 style="margin:15px 0 5px 0;">Registro de Agencia</h2>
+                        <h2 style="margin:15px 0 5px 0;">Register Agency</h2>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:50%;">Feliciades,su agencia {{$name}} ha sido registrada y
-                        proximamente entrara en un proceso de aprobacion
+                    <td style="width:50%;">Congratulations,your agency {{$name}} has been confirmed and
+                        soon will enter in a approval proccess
                     <td>
                 </tr>
             </table>

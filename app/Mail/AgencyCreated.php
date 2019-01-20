@@ -28,6 +28,6 @@ class AgencyCreated extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.agencyre')->subject('Registro de agecia');
+        return $this->view('emails.agencyre')->subject('Register agency');
     }
 }

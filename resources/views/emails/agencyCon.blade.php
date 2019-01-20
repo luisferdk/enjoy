@@ -59,12 +59,12 @@
             <table>
                 <tr>
                     <td colspan="2" style="color:#8dc740;text-align: center;">
-                        <h2 style="margin:15px 0 5px 0;">Agencia Confirmada</h2>
+                        <h2 style="margin:15px 0 5px 0;">Confirmed Agency</h2>
                     </td>
                 </tr>
                 <tr>
-                    <td style="width:50%;">Feliciades,su agencia {{$name}} ha sido confirmada.
-                    Puede Iniciar Sesion con estas credenciales user: {{ $email }} password: {{ $pass }}
+                    <td style="width:50%;">Congratulations,your agency {{$name}} has been confirmed.
+                    You may login with these credencials, user: {{ $email }} password: {{ $pass }}
                     <td>
                 </tr>
             </table>

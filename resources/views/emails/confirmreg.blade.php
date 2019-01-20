@@ -59,12 +59,12 @@
             <table>
                 <tr>
                     <td colspan="2" style="color:#8dc740;text-align: center;">
-                        <h2 style="margin:30px 0 5px 0;">Confirmar Registo</h2>
+                        <h2 style="margin:30px 0 5px 0;">Confirming  Register</h2>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <spam>Para Confirmar registro, haga click en el enlace
+                        <spam>To Confirm register, make click in this link
                             <a href="{{ url('user/confirm/'.$token) }}">Confirmar</a></spam>
                     </td>
                 </tr>

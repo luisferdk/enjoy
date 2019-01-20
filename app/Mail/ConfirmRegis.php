@@ -34,7 +34,7 @@ class ConfirmRegis extends Mailable
     {
         $de = "Renny Travel";
         return $this->from("info@rennytours.com", $de)
-            ->subject("Confirmar Registro")
+            ->subject("Confirming agency")
             //->cc($cc)
             // ->bcc($bcc)
             ->view("emails.confirmreg")

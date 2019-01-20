@@ -59,19 +59,19 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 				<table>
 					<tr>
 						<td colspan="2" style="color:#8dc740;text-align: center;">
-							<h2 style="margin:15px 0 5px 0;">Solicitud de Paquete</h2>
+							<h2 style="margin:15px 0 5px 0;">Request of package</h2>
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Nombre:</td>
+						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Name:</td>
 						<td style="width:50%;">{{ $package["nombre"] }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Correo:</td>
+						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Email:</td>
 						<td style="width:50%;">{{ $package["correo"] }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Pais:</td>
+						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Country:</td>
 						<td style="width:50%;">{{ $package["pais"] }}<td>
 					</tr>
 				</table>

@@ -33,6 +33,6 @@ class AgencyConfirmed extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.agencyCon')->subject('Agencia Confirmada');
+        return $this->view('emails.agencyCon')->subject('Agency confirmed');
     }
 }

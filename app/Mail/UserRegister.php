@@ -32,7 +32,7 @@ class UserRegister extends Mailable
     {
         $de = "Renny Travel";
         return $this->from("info@rennytours.com", $de)
-            ->subject("Nuevo Registro de usuario ")
+            ->subject("Register a new user ")
             //->cc($cc)
             // ->bcc($bcc)
             ->view("emails.userregis")
