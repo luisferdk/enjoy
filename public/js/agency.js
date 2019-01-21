@@ -63,48 +63,38 @@ $(document).ready(function(){
  }
 
  function validFormAgency(){
-    if($.trim($('#title').val()) === '' || $.trim($('#name').val()) === '' || $.trim($('#last').val()) === '' ||
-        $.trim($('#email').val()) === '' || $.trim($('#number').val()) === '' ||
-        $.trim($('#company_name').val()) === '' || $.trim($('#company_type').val()) === '' ||
-        $.trim($('#web').val()) === '' || $.trim($('#address').val()) === '' || $.trim($('#city').val()) === '' ||
-        $.trim($('#zip').val()) === '' || $.trim($('#state').val()) === '' || $.trim($('#country').val()) === ''){
+    if($.trim($('#email').val()) === '' || $.trim($('#number').val()) === '' ||
+        $.trim($('#industry_market').val()) === '' || $.trim($('#host_agency_name').val()) === '' ||
+        $.trim($('#postal_code').val()) === '' || $.trim($('#address').val()) === '' || $.trim($('#lata').val()) === '' ){
         swal("Error! Existen campos vacios!");
         return 0;
     }else{
         return {
-            'company_name':$('#company_name').val(),
-            'company_type':$('#company_type').val(),
-            'website':$('#web').val(),
-            'street_address':$('#address').val(),
-            'city':$('#city').val(),
-            'zip':$('#zip').val(),
-            'country':$('#country').val(),
-            'title':$('#title').val(),
-            'first_name':$('#name').val(),
-            'last_name':$('#last').val(),
+            'industry_market':$('#industry_market').val(),
+            'host_agency_name':$('#host_agency_name').val(),
+            'postal_code':$('#postal_code').val(),
+            'address':$('#address').val(),
+            'lata_number':$('#lata').val(),
             'email':$('#email').val(),
             'phone_number':$('#number').val(),
             'state':$('#state').val(),
             '_token':$('#token').val(),
+            'comment':$("#comment").val(),
             'status':0
         };
     }
  }
 
  function cleanFormAgency(){
-     $('#company_name').val('');
-     $('#company_type').val('');
-     $('#web').val('');
+     $('#industry_market').val('');
+     $('#host_agency_name').val('');
+     $('#postal_code').val('');
      $('#address').val('');
-     $('#city').val('');
-     $('#zip').val('');
+     $('#lata').val('');
      $('#country').val('');
-     $('#title').val('');
-     $('#name').val('');
-     $('#last').val('');
      $('#email').val('');
      $('#number').val('');
-     $('#state').val('');
+
  }
 
  function getAgencies(){
@@ -126,11 +116,13 @@ $(document).ready(function(){
 
                      var valueAgencies =
                          '<tr>' +
-                         '<td>'+agencies[i]['company_name']+'<td/>'+
-                         '<td>'+agencies[i]['company_type']+'<td/>'+
-                         '<td>'+agencies[i]['city']+'<td/>'+
-                         '<td>'+agencies[i]['country']+'<td/>'+
+                         '<td>'+agencies[i]['industry_market']+'<td/>'+
+                         '<td>'+agencies[i]['host_agency_name']+'<td/>'+
+                         '<td>'+agencies[i]['postal_code']+'<td/>'+
+                         '<td>'+agencies[i]['lata_number']+'<td/>'+
                          '<td>'+agencies[i]['email']+'<td/>'+
+                         '<td>'+agencies[i]['address']+'<td/>'+
+                         '<td>'+agencies[i]['phone_number']+'<td/>'+
                          '<td>'+status+'<td/>'+
                          '<td>'+
                          '<span class="small material-icons" id="upa-'+agencies[i]['id']+'">check_box</span>'+

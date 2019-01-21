@@ -22,12 +22,14 @@
                                 <table class="centered striped" id="tableCou">
                                     <thead>
                                     <tr>
-                                        <th>Nombre de Agencia</th>
-                                        <th>Tipo</th>
-                                        <th>Ciudad</th>
-                                        <th>Pais</th>
+                                        <th>Industry Market</th>
+                                        <th>Host Agency Name</th>
+                                        <th>Postal Code</th>
+                                        <th>LATA Number</th>
                                         <th>Email</th>
-                                        <th>Estatus</th>
+                                        <th>Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Status</th>
                                         <th>Opciones</th>
                                     </tr>
                                     </thead>

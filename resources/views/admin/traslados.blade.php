@@ -33,9 +33,6 @@ Traslados
                                         <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
                                         </td>
-                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
-                                        </td>
                                         <td width="20%" data-title="'Nombre y Apellido'">
                                             @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
                                         </td>
@@ -69,9 +66,6 @@ Traslados
                                         <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
                                         </td>
-                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
-                                        </td>
                                         <td width="20%" data-title="'Nombre y Apellido'">
                                             @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}
                                         </td>
@@ -100,9 +94,6 @@ Traslados
                                         </td>
                                         <td width="17%" data-title="'Destino'" sortable="'apellido'">
                                             @{{aux.para}}
-                                        </td>
-                                        <td width="15%" data-title="'Tipo'" sortable="'correo'">
-                                            @{{aux.tipo==1?'One Way':'Round Trip'}}
                                         </td>
                                         <td width="20%" data-title="'Nombre y Apellido'">
                                             @{{aux.reservation.nombre}} @{{aux.reservation.apellido}}

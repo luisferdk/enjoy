@@ -35,7 +35,7 @@ class AgencyController extends Controller
     {
         if( self::checkEmailUser($request->input('email')) ){
             $agency = Agency::create($request->all());
-            $this->sendEmailAgencyRegisted($agency->company_name,$agency->email);
+            $this->sendEmailAgencyRegisted($agency->host_agency_name,$agency->email);
             return response()->json(['message'=>'Agencia Registrada exitosamente','status'=>1], 200);
         }else
             return response()->json(['message'=>'El email introducido esta en uso','status'=>0],400);
@@ -106,14 +106,14 @@ class AgencyController extends Controller
             $agen->update(['status'=>1]);
             $pass = self::generateRandomString();
             User::create([
-                'name'  => $agen->company_name,
+                'name'  => $agen->host_agency_name,
                 'email' => $agen->email,
                 'password' => bcrypt($pass),
                 'type'  => 3,
                 'token' => ''
             ]);
 
-            Mail::to($agen->email)->send(new AgencyConfirmed($agen->company_name,$agen->email,$pass));
+            Mail::to($agen->email)->send(new AgencyConfirmed($agen->host_agency_name,$agen->email,$pass));
             return response()->json(['message'=>'good'],200);
         }
         return response()->json(['message'=>'bad'],200);

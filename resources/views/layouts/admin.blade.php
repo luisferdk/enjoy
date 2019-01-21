@@ -128,11 +128,11 @@
                         </ul>
                     </div>
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                    <li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
+                    <!--li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/reservas') }}">
                             <i class="material-icons">assignment</i>Reservas
                         </a>
-                    </li>
+                    </li-->
                     <li class="no-padding {{ Request::is('admin/traslados')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/traslados') }}">
                             <i class="material-icons">directions_car</i>Traslados

@@ -49,23 +49,18 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Agency extends Model
 {
+    protected $table = 'agencies';
     protected $fillable = [
-        'company_name',
-        'company_type',
-        'website',
-        'street_address',
-        'city',
-        'zip',
-        'state',
-        'country',
-        'title',
-        'first_name',
-        'last_name',
+        'lata_number',
+        'postal_code',
+        'host_agency_name',
+        'industry_market',
+        'comment',
+        'address',
         'email',
         'phone_number',
         'status'
     ];
-    protected $table = 'agencies';
 
     public function discounts(){
         return $this->hasMany('App\Discount');
