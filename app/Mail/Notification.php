@@ -12,10 +12,12 @@ class Notification extends Mailable
     use Queueable, SerializesModels;
 
     protected $reservation;
+    protected $reserv;
 
-    public function __construct($reservation)
+    public function __construct($reservation,$reserv)
     {
         $this->reservation = $reservation;
+        $this->reserv = $reserv;
     }
     public function build()
     {

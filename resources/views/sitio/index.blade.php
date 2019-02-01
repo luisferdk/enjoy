@@ -869,7 +869,16 @@
     <footer class="row rojo">
         <div class="col-xs-6 col-sm-4">
             <h4>About Us</h4>   
-            <p>We are a DMC Company based in the Dominican Republic with the vision to provide the best travel experience in the caribbean.</p>
+            <p>Renny Travel International is a tour operator in the Dominican Republic, as your local experts that
+                have been providing high quality destination travel services for over 4 years operating in Dominican
+                Republic. <br><br>
+                We are a team dedicated to offering tailored and exclusive tourism products and services to individuals,
+                tour operators wedding groups, and corporate businesses. We provide transfers, tours, golf, excursions,
+                group packages, hotel accommodations, conventions, catamarans excursions, private Yacht rental and
+                weddings options featuring the most extensive quality of service and reliability to exceed your expectations.
+                <br><br>
+                We are based in Punta Cana, providing the best experience in luxury travel since 2014.
+            </p>
             <br>
             <!-- <a style="display:block;color:white;" href="{{ url("/faqs") }}">Faqs</a>
             <a style="display:block;color:white;" href="{{ url("/contactUs") }}">Form Contact Us</a> -->

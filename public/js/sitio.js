@@ -563,7 +563,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 4, precio: 75, nino: 55, descripcion: 'VIP Lobster menu' },
             ]
         },
-/*         {
+        /*         {
             id: 1,
             mostrar: false,
             titulo: "Mini Coopers",
@@ -738,7 +738,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 1, precio: 800, nino: 0, descripcion: "Charter Boat (Max 6 people Fishing Boat and Max 2 Companions Watching)" }
             ]
         },
-/*         {
+        /*         {
             id: 10,
             mostrar: false,
             titulo: "Marina Caribe Party Boat",
