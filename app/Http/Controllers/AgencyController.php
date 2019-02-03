@@ -34,7 +34,9 @@ class AgencyController extends Controller
     public function createAgency(Request $request)
     {
         if( self::checkEmailUser($request->input('email')) ){
-            $agency = Agency::create($request->all());
+            $dataAll = $request->all();
+            $dataAll['comment'] = is_null($request->input('email')) || $request->input('email') == '' ? "" : $request->input('email');
+            $agency = Agency::create($dataAll);
             $this->sendEmailAgencyRegisted($agency->host_agency_name,$agency->email);
             return response()->json(['message'=>'Agencia Registrada exitosamente','status'=>1], 200);
         }else
