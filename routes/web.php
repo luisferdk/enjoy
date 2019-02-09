@@ -1,6 +1,7 @@
 <?php
+Route::get('/', "SiteController@index2");
+/*
 Route::get('/', "SiteController@index");
-Route::get('/index2', "SiteController@index2");
 Route::get('/partyBoats', "SiteController@partyBoats");
 Route::get('/partyBoats/{id}', "SiteController@tour");
 Route::get('/tours', "SiteController@tours");
@@ -71,4 +72,4 @@ Route::get('get-data-session','GetDataSession@getdataSession');
 //login
 Route::post('login','LoginController@login');
 Route::get('logout','LoginController@logout');
-//end login
+//end login */
