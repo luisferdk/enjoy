@@ -1,5 +1,6 @@
 <?php
 Route::get('/', "SiteController@index");
+Route::get('/index2', "SiteController@index2");
 Route::get('/partyBoats', "SiteController@partyBoats");
 Route::get('/partyBoats/{id}', "SiteController@tour");
 Route::get('/tours', "SiteController@tours");
