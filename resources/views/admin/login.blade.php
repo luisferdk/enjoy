@@ -43,10 +43,8 @@
     <main>
         <center>
             <a href="{{ url("/") }}"><img class="responsive-img" style="width: 250px;" src="{{ asset("/") }}img/logoLogin.png" /></a>
-            <div class="section"></div>
 
             <h5 class="indigo-text">Please, login into your account</h5>
-            <div class="section"></div>
 
             <div class="container">
                 <div 

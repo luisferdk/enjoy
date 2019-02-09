@@ -480,10 +480,12 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             confirmButtonColor: '#8cc640',
         });
     }
+
     $scope.eliminarTour = function (index) {
         $scope.carrito.tours.splice(index, 1);
         $scope.actualizar();
     }
+
     $scope.precioTour = 0;
     var v99 = [];
     for (var i = 1; i <= 99; i++) {
@@ -2758,6 +2760,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     }
 
     $scope.VIP = { precio: 0 };
+    
     $scope.agregarVIP = function (event) {
         event.preventDefault();
         if ($scope.VIP.serviceVIP && $scope.VIP.pasajeros) {
@@ -2777,11 +2780,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             confirmButtonColor: '#8cc640',
         });
     }
+
     $scope.eliminarVIP = function (index) {
         $scope.carrito.vip.splice(index, 1);
         $scope.actualizar();
     }
-
 
     $scope.cargar = function () {
         $http.get(window.url + '/session').then(function (response) {
@@ -2789,6 +2792,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             $scope.nro_carrito();
         });
     }
+
     $scope.cargar();
 
     $scope.actualizar = function () {
@@ -2868,4 +2872,236 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.nro_carrito = function(){
         $scope.nro =  $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.vip.length + $scope.carrito.wifi.length;
     }
+
+
+
+    /* Flights */
+    $scope.vuelo = {};
+    $scope.vuelos = [
+        {
+            id:0,
+            origen:"Puerto Plata",
+            destinos:[
+                {
+                    id:0,
+                    descripcion:"Arroyo Barril",
+                    tiempo:"35 minutes",
+                    precio:900,
+                    categoria:"Equipo 1"
+                },
+                {
+                    id:1,
+                    descripcion:"Catey Samana",
+                    tiempo:"30 minutes",
+                    precio:900,
+                    categoria:"Equipo 1"
+                },
+                {
+                    id:2,
+                    descripcion:"Romana",
+                    tiempo:"50 minutes",
+                    precio:1000,
+                    categoria:"Equipo 1"
+                },
+                {
+                    id:3,
+                    descripcion:"Santo Domingo",
+                    tiempo:"45 minutes",
+                    precio:1300,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:4,
+                    descripcion:"Higuero",
+                    tiempo:"45 minutes",
+                    precio:1300,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:5,
+                    descripcion:"Romana ",
+                    tiempo:"1:15 minutes",
+                    precio:1350,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:6,
+                    descripcion:"Arroyo Barril",
+                    tiempo:"40 minutes",
+                    precio:1250,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:7,
+                    descripcion:"Catey Samana",
+                    tiempo:"30 minutes",
+                    precio:1250,
+                    categoria:"Equipo 2"
+                },
+
+
+
+                {
+                    id:8,
+                    descripcion:"Santo Domingo",
+                    tiempo:"35 minutes",
+                    precio:1800,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:9,
+                    descripcion:"Higuero",
+                    tiempo:"30 minutes",
+                    precio:1800,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:10,
+                    descripcion:"Romana",
+                    tiempo:"60 minutes",
+                    precio:1900,
+                    categoria:"Equipo 3"
+                },
+            ]
+        },
+        {
+            id:1,
+            origen:"Punta cana",
+            destinos:[
+                {
+                    id:0,
+                    descripcion:"Samana Arroyo Barril",
+                    tiempo:"40 minutes",
+                    precio:650,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:1,
+                    descripcion:"Puerto Plata",
+                    tiempo:"120 minutes",
+                    precio:1300,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:2,
+                    descripcion:"Santo Domingo",
+                    tiempo:"40 minutes",
+                    precio:700,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:3,
+                    descripcion:"Santiago",
+                    tiempo:"120 minutes",
+                    precio:1300,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:4,
+                    descripcion:"Barahona",
+                    tiempo:"150 minutes",
+                    precio:1550,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:5,
+                    descripcion:"Catey Samana",
+                    tiempo:"45:minutos minutes",
+                    precio:750,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:6,
+                    descripcion:"Monte Cristi",
+                    tiempo:"120 minutes",
+                    precio:1700,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:7,
+                    descripcion:"Higuero",
+                    tiempo:"50 minutes",
+                    precio:700,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:8,
+                    descripcion:"Cabo Rojo",
+                    tiempo:"220 minutes",
+                    precio:1700,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:9,
+                    descripcion:"Romana",
+                    tiempo:"15 minutes",
+                    precio:600,
+                    categoria:"Equipo 2"
+                },
+                {
+                    id:10,
+                    descripcion:"Samana Arroyo Barril",
+                    tiempo:"30 minutes",
+                    precio:1500,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:11,
+                    descripcion:"Puerto Plata",
+                    tiempo:"60 minutes",
+                    precio:1900,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:12,
+                    descripcion:"Santo Domingo",
+                    tiempo:"30 minutes",
+                    precio:1800,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:13,
+                    descripcion:"Santiago",
+                    tiempo:"60 minutes",
+                    precio:1900,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:14,
+                    descripcion:"Barahona",
+                    tiempo:"115 minutes",
+                    precio:2200,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:15,
+                    descripcion:"Catey Samana",
+                    tiempo:"35 minutes",
+                    precio:16,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:16,
+                    descripcion:"Monte Cristi",
+                    tiempo:"135 minutes",
+                    precio:2500,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:17,
+                    descripcion:"Higuero",
+                    tiempo:"35 minutes",
+                    precio:1650,
+                    categoria:"Equipo 3"
+                },
+                {
+                    id:18,
+                    descripcion:"Cabo Rojo",
+                    tiempo:"140 minutes",
+                    precio:2400,
+                    categoria:"Equipo 3"
+                },
+            ]
+        }
+    ]
 });

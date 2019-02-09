@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5,
 			background-position: center !important;
 			background-repeat: no-repeat;
 			background-position: center center;
-			height: calc(100vh - 240px);
+			height: calc(100vh - 285px);
 			overflow: hidden;
 			position: relative;
 			.overlay{
@@ -468,7 +468,7 @@ h1, h2, h3, h4, h5,
 
 //SEARCH
 .ftco-section-search{
-	background: $primary;
+	background: white;
 }
 .tabulation-search{
 	@include media-breakpoint-up(md){
@@ -482,9 +482,11 @@ h1, h2, h3, h4, h5,
 			float: left;
 			border-radius: 0;
 			margin-bottom: 0;
-			background: rgba(255,255,255,1);
+			background: $primary;
+			color:white;
 			&.active{
-				background: $primary;
+				background: white;
+				color:$primary;
 				@include media-breakpoint-up(md){
 					margin-top: -10px;
 				}
@@ -760,15 +762,19 @@ h1, h2, h3, h4, h5,
 
 // USEFUL CODE
 .form-control {
-	height: 52px!important;
+	height: 48px!important;
 	background: $white!important;
 	color: $black!important;
 	font-size: 18px;
 	border-radius: 0px;
 	box-shadow: none!important;
+
 	&:focus, &:active {
 		border-color: $black;
 	}
+}
+input.form-control{
+	border: 1px solid $primary;
 }
 textarea.form-control {
 	height: inherit!important;
@@ -1304,7 +1310,7 @@ textarea.form-control {
 .block-17 {
 	form {
 		.fields {
-			width: calc(100% - 140px);
+			//width: calc(100% - 140px);
 			position: relative;
 			@include media-breakpoint-down(md) {
 				width: 100%;
@@ -1332,9 +1338,9 @@ textarea.form-control {
 			}
 			.form-control {
 				box-shadow: none!important;
-				border: 2px solid rgba(255,255,255,.5);
-				background: transparent !important;
-				color: rgba($white,1) !important;
+				border: 1px solid $primary;
+				//background: transparent !important;
+				color: $primary !important;
 				font-size: 16px;
 				width: 100%;
 				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -2027,7 +2033,7 @@ textarea.form-control {
 
 @keyframes loader-dash {
   0% {
-    stroke-dasharray: 1, 200;
+		stroke-dasharray: 1, 200;
     stroke-dashoffset: 0;
   }
   50% {
@@ -2055,4 +2061,54 @@ textarea.form-control {
 
 .btn-action{
 	width: 120px;
+}
+
+.header-line{
+	background: $primary;
+	color:white;
+	text-align: right;
+	margin:0;
+	padding:0;
+	.iconos{
+		a{
+			font-size: 22px;
+			color:white !important;
+			padding-right:9px;
+			&:last-child{
+				border-left: 1px solid white;
+				padding-left:9px;
+			}
+		}
+	}
+}
+
+span.select2.select2-container.select2-container--default.select2-container--focus{
+	width: 100% !important;
+}
+
+.select2-container .select2-selection--single{
+	height: 48px;
+	border-color: $primary;
+	border-radius: none !important;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 48px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 48px;
+}
+.select2-container--default .select2-results__group{
+	color:black;
+	font-weight: bold;
+}
+.select2-results__option[aria-selected]{
+	color:black;
+}
+select.form-control{
+	border:$primary;
+}
+
+.thumbnail img{
+	height: 180px;
 }

@@ -909,7 +909,6 @@
     <script src="{{ asset("/") }}bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="{{ asset("/") }}bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
     <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
-    <script src="{{ asset("/") }}bower_components/select2/dist/js/select2.min.js"></script>
     <script src="{{ asset("/") }}bower_components/sweetalert2/sweetalert2.min.js"></script>
     
     <script src="{{ asset("/") }}js/angular.min.js"></script>

@@ -67,7 +67,7 @@
                         </div>
                         <div id="menu" class="navbar-collapse collapse">
                             <ul class="nav navbar-nav">
-                                <li class=" {{ Request::is('/')?'active':'' }}">
+                                <li class="{{ Request::is('/')?'active':'' }}">
                                     <a href="{{ url('/') }}">HOME</a>
                                 </li>
                                 <li class=" {{ Request::is('partyBoats')?'active':'' }}

@@ -6467,7 +6467,7 @@ h1, h2, h3, h4, h5,
       background-position: center !important;
       background-repeat: no-repeat;
       background-position: center center;
-      height: calc(100vh - 240px);
+      height: calc(100vh - 285px);
       overflow: hidden;
       position: relative; }
       .owl-carousel.home-slider .slider-item .overlay {
@@ -6600,7 +6600,7 @@ h1, h2, h3, h4, h5,
       color: #000; }
 
 .ftco-section-search {
-  background: #2ca7b0; }
+  background: white; }
 
 @media (min-width: 768px) {
   .tabulation-search {
@@ -6613,9 +6613,11 @@ h1, h2, h3, h4, h5,
   float: left;
   border-radius: 0;
   margin-bottom: 0;
-  background: white; }
+  background: #2ca7b0;
+  color: white; }
   .tabulation-search .nav-pills .nav-link.active {
-    background: #2ca7b0; }
+    background: white;
+    color: #2ca7b0; }
     @media (min-width: 768px) {
       .tabulation-search .nav-pills .nav-link.active {
         margin-top: -10px; } }
@@ -6834,7 +6836,7 @@ h1, h2, h3, h4, h5,
     color: white !important; }
 
 .form-control {
-  height: 52px !important;
+  height: 48px !important;
   background: #fff !important;
   color: #000 !important;
   font-size: 18px;
@@ -6842,6 +6844,9 @@ h1, h2, h3, h4, h5,
   box-shadow: none !important; }
   .form-control:focus, .form-control:active {
     border-color: #000; }
+
+input.form-control {
+  border: 1px solid #2ca7b0; }
 
 textarea.form-control {
   height: inherit !important; }
@@ -7234,7 +7239,6 @@ textarea.form-control {
     font-size: 16px; }
 
 .block-17 form .fields {
-  width: calc(100% - 140px);
   position: relative; }
   @media (max-width: 991.98px) {
     .block-17 form .fields {
@@ -7258,9 +7262,8 @@ textarea.form-control {
       border-right: none; }
   .block-17 form .fields .form-control {
     box-shadow: none !important;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    background: transparent !important;
-    color: white !important;
+    border: 1px solid #2ca7b0;
+    color: #2ca7b0 !important;
     font-size: 16px;
     width: 100%; }
     .block-17 form .fields .form-control::-webkit-input-placeholder {
@@ -7786,5 +7789,46 @@ textarea.form-control {
 
 .btn-action {
   width: 120px; }
+
+.header-line {
+  background: #2ca7b0;
+  color: white;
+  text-align: right;
+  margin: 0;
+  padding: 0; }
+  .header-line .iconos a {
+    font-size: 22px;
+    color: white !important;
+    padding-right: 9px; }
+    .header-line .iconos a:last-child {
+      border-left: 1px solid white;
+      padding-left: 9px; }
+
+span.select2.select2-container.select2-container--default.select2-container--focus {
+  width: 100% !important; }
+
+.select2-container .select2-selection--single {
+  height: 48px;
+  border-color: #2ca7b0;
+  border-radius: none !important; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 48px; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 48px; }
+
+.select2-container--default .select2-results__group {
+  color: black;
+  font-weight: bold; }
+
+.select2-results__option[aria-selected] {
+  color: black; }
+
+select.form-control {
+  border: #2ca7b0; }
+
+.thumbnail img {
+  height: 180px; }
 
 /*# sourceMappingURL=style.css.map */

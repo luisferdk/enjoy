@@ -29,7 +29,7 @@ class SiteController extends Controller
     }
 
     public function index2(){
-    	return view('sitio.index2');
+    	return view('sitio2.index');
     }
 
     public function partyBoats(){
