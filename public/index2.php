@@ -21,7 +21,7 @@ define('LARAVEL_START', microtime(true));
 |
 */
 
-require __DIR__.'/../rennytours/vendor/autoload.php';
+require __DIR__.'/../das/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ require __DIR__.'/../rennytours/vendor/autoload.php';
 |
 */
 
-$app = require_once __DIR__.'/../rennytours/bootstrap/app.php';
+$app = require_once __DIR__.'/../das/bootstrap/app.php';
 
 /*
 |--------------------------------------------------------------------------
