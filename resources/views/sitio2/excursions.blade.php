@@ -1,8 +1,10 @@
 @extends("layouts.sitio")
 
 @section("content")
-
-<section class="ftco-section">
+<div class="container d-flex justify-content-center align-items-center" style="height: 30vh;">
+    <h1 class="text-center text-primary">In Construction</h1>
+</div>
+<!-- <section class="ftco-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-7 text-center heading-section">
@@ -27,6 +29,6 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 @endsection
