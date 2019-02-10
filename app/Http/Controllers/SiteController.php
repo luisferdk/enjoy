@@ -44,8 +44,8 @@ class SiteController extends Controller
     	return view('sitio2.contact');
     }
 
-    public function cart(){
-    	return view('sitio2.cart');
+    public function shop(){
+    	return view('sitio2.shop');
     }
 
     public function index(){

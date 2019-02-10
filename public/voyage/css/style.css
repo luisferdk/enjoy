@@ -7832,4 +7832,7 @@ select.form-control {
 .thumbnail img {
   height: 180px; }
 
+label {
+  font-size: 1.2em; }
+
 /*# sourceMappingURL=style.css.map */

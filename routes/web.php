@@ -4,7 +4,7 @@ Route::get('/flights', "SiteController@flights");
 Route::get('/transfers', "SiteController@transfers");
 Route::get('/excursions', "SiteController@excursions");
 Route::get('/contact', "SiteController@contact");
-Route::get('/cart', "SiteController@cart");
+Route::get('/shop', "SiteController@shop");
 
 Route::get('/index', "SiteController@index");
 Route::get('/partyBoats', "SiteController@partyBoats");
@@ -15,7 +15,7 @@ Route::get('/packages', "SiteController@packages");
 Route::post('/packages', "SiteController@packagesPOST");
 Route::get('/wifiServices', "SiteController@wifiServices");
 Route::get('/puntacana', "SiteController@puntacana");
-Route::get('/shop', "SiteController@shopGet");
+//Route::get('/shop', "SiteController@shopGet");
 Route::post('/shop', "SiteController@shopPost");
 Route::get('/ipn', 'SiteController@ipn');
 Route::get('/session', "SiteController@sessionGet");

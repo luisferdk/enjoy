@@ -76,8 +76,8 @@
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
             </li>
-            <li class="nav-item {{ Request::is('cart')?'active':'' }}">
-              <a href="{{ url('/cart') }}" class="nav-link"> <i class="ion-ios-cart"></i> Cart</a>
+            <li class="nav-item {{ Request::is('shop')?'active':'' }}">
+              <a href="{{ url('/shop') }}" class="nav-link"> <i class="ion-ios-cart"></i> Cart</a>
             </li>
           </ul>
         </div>
