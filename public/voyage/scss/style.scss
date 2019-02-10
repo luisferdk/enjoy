@@ -469,6 +469,8 @@ h1, h2, h3, h4, h5,
 //SEARCH
 .ftco-section-search{
 	background: white;
+	border-bottom: 1px solid $primary;
+	box-shadow: 1px 1px 8px $primary;
 }
 .tabulation-search{
 	@include media-breakpoint-up(md){
@@ -888,7 +890,7 @@ textarea.form-control {
 
 
 .ftco-section {
-	padding: 1em 0;
+	//padding: 1em 0;
 	position: relative;
 }
 

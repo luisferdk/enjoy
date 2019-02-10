@@ -6600,7 +6600,9 @@ h1, h2, h3, h4, h5,
       color: #000; }
 
 .ftco-section-search {
-  background: white; }
+  background: white;
+  border-bottom: 1px solid #2ca7b0;
+  box-shadow: 1px 1px 8px #2ca7b0; }
 
 @media (min-width: 768px) {
   .tabulation-search {
@@ -6933,7 +6935,6 @@ textarea.form-control {
   border-radius: 50%; }
 
 .ftco-section {
-  padding: 1em 0;
   position: relative; }
 
 .ftco-bg-dark {

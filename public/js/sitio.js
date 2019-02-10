@@ -500,8 +500,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             partyBoat: true,
             titulo: "Sabina del Mar VIP Party Boat",
             descripcion: 'Youll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean.',
-            descripcion_completa:
-                `
+            descripcion_completa:`
             <h2 class="col-xs-12">Overview</h2>
             <p class="col-xs-12">
                 Youll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. 
