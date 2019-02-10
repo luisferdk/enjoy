@@ -64,6 +64,7 @@ h1, h2, h3, h4, h5,
 	right: 0;
 	z-index: 3;
 	top: 0;
+	border-bottom: 1px solid $primary;
 	@include media-breakpoint-down(md) {
 		//background: $black!important;
 		color: $primary;
@@ -1124,7 +1125,6 @@ textarea.form-control {
 		height: 70px;
 		border-radius: (50%);
 		margin: 0 auto;
-		margin-top: -60px;
 	}
 	.name{
 		font-weight: 500;

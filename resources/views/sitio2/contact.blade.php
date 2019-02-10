@@ -1,5 +1,5 @@
 @extends('layouts.sitio')
-@section('main')
+@section('content')
 <div class="container section-top">
   <div class="row">
     <section class="col-12">

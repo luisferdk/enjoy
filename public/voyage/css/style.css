@@ -6300,7 +6300,8 @@ h1, h2, h3, h4, h5,
   left: 0;
   right: 0;
   z-index: 3;
-  top: 0; }
+  top: 0;
+  border-bottom: 1px solid #2ca7b0; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       color: #2ca7b0;
@@ -7107,8 +7108,7 @@ textarea.form-control {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    margin: 0 auto;
-    margin-top: -60px; }
+    margin: 0 auto; }
   .testimony-wrap .name {
     font-weight: 500;
     font-size: 16px;

@@ -24,12 +24,32 @@ use Cartalyst\Stripe\Stripe;
 
 class SiteController extends Controller
 {
-    public function index(){
-    	return view('sitio.index');
-    }
-
     public function index2(){
     	return view('sitio2.index');
+    }
+
+    public function flights(){
+    	return view('sitio2.flights');
+    }
+
+    public function transfers(){
+    	return view('sitio2.transfers');
+    }
+
+    public function excursions(){
+    	return view('sitio2.excursions');
+    }
+
+    public function contact(){
+    	return view('sitio2.contact');
+    }
+
+    public function cart(){
+    	return view('sitio2.cart');
+    }
+
+    public function index(){
+    	return view('sitio.index');
     }
 
     public function partyBoats(){

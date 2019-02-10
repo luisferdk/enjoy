@@ -6,34 +6,49 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/png">
+  <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
 
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/animate.css">
-
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/owl.carousel.min.css">
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/magnific-popup.css">
-
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/aos.css">
-
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/ionicons.min.css">
-
-  <link rel="stylesheet" href="{{ asset('voyage') }}/css/bootstrap-datepicker.css">
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/jquery.timepicker.css">
-
-
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/flaticon.css">
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/icomoon.css">
+
+  <!--Bower-->
+  <link href="{{ asset('/') }}bower_components/select2/dist/css/select2.css" rel="stylesheet" />
+  <link href="{{ asset('/') }}bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/style.css">
 
-  <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/png">
+  @yield('css')
 </head>
 
 <body>
 
-  <div id="app">
+  <div ng-app="app" ng-controller="ctrl">
+
+
+    <div class="container-fluid header-line">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 iconos">
+            <a href="#"><i class="ion-logo-instagram"></i></a>
+            <a href="#"><i class="ion-logo-facebook"></i></a>
+            <a href="#"><i class="ion-logo-twitter"></i></a>
+            <a href="{{ url('login') }}"><i class="ion-ios-log-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -58,9 +73,6 @@
             <li class="nav-item {{ Request::is('excursions')?'active':'' }}">
               <a href="{{ url('/excursions') }}" class="nav-link">Excursions</a>
             </li>
-            <li class="nav-item {{ Request::is('about')?'active':'' }}">
-              <a href="{{ url('/about') }}" class="nav-link">About</a>
-            </li>
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
             </li>
@@ -74,17 +86,7 @@
     <!-- END nav -->
 
 
-
-
-
-
     @yield('content')
-
-
-
-
-
-
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
@@ -130,9 +132,9 @@
           <div class="col-md-12">
             <div class="">
               <ul class="ftco-footer-social list-unstyled text-center mt-0">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="><a href=" #"><span class="icon-twitter"></span></a></li>
+                <li class="><a href=" #"><span class="icon-facebook"></span></a></li>
+                <li class="><a href=" #"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
@@ -164,14 +166,28 @@
   <script src="{{ asset('voyage') }}/js/jquery.magnific-popup.min.js"></script>
   <script src="{{ asset('voyage') }}/js/aos.js"></script>
   <script src="{{ asset('voyage') }}/js/jquery.animateNumber.min.js"></script>
-  <script src="{{ asset('voyage') }}/js/bootstrap-datepicker.js"></script>
   <script src="{{ asset('voyage') }}/js/jquery.timepicker.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="{{ asset('voyage') }}/js/google-map.js"></script>
+  <script src="{{ asset('/') }}bower_components/jquery-ui/jquery-ui.min.js"></script>
+  <script src="{{ asset('/') }}bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+  <script src="{{ asset('/') }}bower_components/select2/dist/js/select2.min.js"></script>
+  <script src="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.js"></script>
+  <!-- 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="{{ asset('voyage') }}/js/google-map.js"></script>
+    -->
   <script src="{{ asset('voyage') }}/js/main.js"></script>
 
-  <script src="{{ asset('/') }}js/vue.min.js"></script>
-  <script src="{{ asset('/') }}js/sitio.js"></script>
+  <script src="{{ asset('/') }}js/angular.min.js"></script>
+  <script src="{{ asset('/') }}js/angular-sanitize.min.js"></script>
+
+  <script>
+    window.opcion = "index";
+    window.url = '{{ url("/") }}';
+    window._token = '{{ csrf_token() }}';
+  </script>
+
+  <script src="{{ asset("/") }}js/sitio.js?v=30"></script>
+  <script src="{{ asset("/") }}js/main.js?v=30"></script>
 
 </body>
 
