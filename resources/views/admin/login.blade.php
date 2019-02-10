@@ -2,10 +2,10 @@
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link rel="stylesheet" href="{{ asset('css/login.min.css') }}">
     <link rel="stylesheet" href="{{ asset('bower_components/sweetalert2/sweetalert2.min.css') }}">
     <link rel="shortcut icon" type="image/png" href="{{ asset('/') }}img/logo.png">
-    <title>Renny Travel</title>
+    <title>Dominican Air Services</title>
     <style>
         body {
       display: flex;
