@@ -3,6 +3,7 @@ Route::get('/', "SiteController@index2");
 Route::get('/flights', "SiteController@flights");
 Route::get('/transfers', "SiteController@transfers");
 Route::get('/excursions', "SiteController@excursions");
+Route::get('/excursion/{id}', "SiteController@excursion");
 Route::get('/contact', "SiteController@contact");
 Route::get('/shop', "SiteController@shop");
 

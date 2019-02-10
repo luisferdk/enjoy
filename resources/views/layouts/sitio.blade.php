@@ -23,6 +23,7 @@
   <!--Bower-->
   <link href="{{ asset('/') }}bower_components/select2/dist/css/select2.css" rel="stylesheet" />
   <link href="{{ asset('/') }}bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
+  <link href="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.css" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ asset('voyage') }}/css/style.css">
@@ -179,7 +180,7 @@
 
   <script src="{{ asset('/') }}js/angular.min.js"></script>
   <script src="{{ asset('/') }}js/angular-sanitize.min.js"></script>
-
+  @yield('js')
   <script>
     window.opcion = "index";
     window.url = '{{ url("/") }}';
