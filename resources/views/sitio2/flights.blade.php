@@ -5,7 +5,7 @@
     <div class="col-12 mt-5">
       <div class="card">
         <div class="card-header m-0 p-0">
-          <h4 class="col-12 text-primary text-center mt-3 mb-3">Flights</h4>
+          <h4 class="col-12 text-white text-center mt-3 mb-3">Flights</h4>
         </div>
         <div class="card-body">
           <div class="row">

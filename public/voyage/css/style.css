@@ -7841,4 +7841,7 @@ i {
 div#ui-datepicker-div {
   z-index: 3 !important; }
 
+.card-header {
+  background: #2ca7b0; }
+
 /*# sourceMappingURL=style.css.map */
