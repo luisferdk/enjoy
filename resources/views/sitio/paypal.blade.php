@@ -11,7 +11,7 @@
 	<input type="hidden" name="business" value="luisdk.03-facilitator@gmail.com">
 @else
 	<form id="form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-	<input type="hidden" name="business" value="manager@rennytraveldmc.com">
+	<input type="hidden" name="business" value="widder1604@hotmail.com">
 @endif
 	<input type="hidden" name="cmd" value="_xclick">
 	<input type="hidden" name="item_name" value="Reservation Renny Travel">
