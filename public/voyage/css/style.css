@@ -7844,4 +7844,10 @@ div#ui-datepicker-div {
 .card-header {
   background: #2ca7b0; }
 
+.titulo {
+  color: #2ca7b0;
+  text-align: center;
+  margin-top: 1.5em;
+  font-size: 1.5em; }
+
 /*# sourceMappingURL=style.css.map */

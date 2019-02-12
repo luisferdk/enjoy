@@ -65,7 +65,7 @@
       <div class="row no-gutters">
         @for($i=1; $i<=8;$i++) 
           <div class="col-md-6 col-lg-6 ftco-animate">
-            <a href="#" class="block-5" style="background: transparent url('{{asset('img')}}/jets/{{ $i }}.jpeg') no-repeat center center; background-size:cover;"></a>
+            <div href="#" class="block-5" style="background: transparent url('{{asset('img')}}/jets/{{ $i }}.jpeg') no-repeat center center; background-size:cover;"></div>
           </div>
         @endfor
       </div>
