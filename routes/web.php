@@ -31,8 +31,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/reservas', 'AdminController@reservas');
 Route::get('/admin/traslados', 'AdminController@traslados');
 Route::get('/admin/tours', 'AdminController@tours');
-Route::get('/admin/vip', 'AdminController@vip');
-Route::get('/admin/wifi', 'AdminController@wifi');
+//Route::get('/admin/vip', 'AdminController@vip');
+//Route::get('/admin/wifi', 'AdminController@wifi');
 
 Route::get('admin/coupon','CouponController@coupons')->middleware('auth');
 Route::get('admin/getcoupons','CouponController@getcoupons');

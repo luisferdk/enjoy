@@ -3,35 +3,14 @@
 <section class="home-slider owl-carousel">
   <div class="slider-item" style="background-image: url('{{asset('voyage')}}/images/bg_4.jpg');">
     <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12">
-          <h1 class="mb-3">Experience the best trip ever</h1>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="slider-item" style="background-image: url('{{asset('voyage')}}/images/bg_1.jpg');">
     <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12">
-          <h1 class="mb-3">Making the most out of your holiday</h1>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="slider-item" style="background-image: url('{{asset('voyage')}}/images/bg_3.jpg');">
     <div class="overlay"></div>
-    <div class="container">
-      <div class="row slider-text align-items-center">
-        <div class="col-md-7 col-sm-12">
-          <h1 class="mb-3">Travel Operator Just For You</h1>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
