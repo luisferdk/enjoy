@@ -226,6 +226,16 @@ class SiteController extends Controller
                 )
             ]);
         }
+        elseif(session('carrito')['wifi']){
+            session([
+                "carrito"=> array
+                (
+                    "traslados" => array(),
+                    "tours" => array(),
+                    "vuelos" => array()
+                )
+            ]);
+        }
         return session('carrito');
     }
 
