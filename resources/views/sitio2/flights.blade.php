@@ -35,7 +35,7 @@
                 </select>
               </div>
             </div>
-            <div class="col-12" ng-show="vuelo.destino.precio>0">
+            <div class="col-12">
               <div class="form-group">
                 <label for="">
                   *Date Flight
@@ -44,12 +44,12 @@
                   required>
               </div>
             </div>
-            <div class="col-12 mt-2 mb-1" ng-show="vuelo.destino.precio>0">
+            <div class="col-12 mt-2 mb-1">
               <h3 class="text-center">
                 @{{vuelo.destino.precio | currency:"$ "}}
               </h3>
             </div>
-            <div class="col-12 text-center" ng-show="vuelo.destino.precio>0">
+            <div class="col-12 text-center">
               <button class="btn btn-primary" ng-click="opcion='agregar'" name="vuelo" type="submit" value="vuelo">
                 Add to <i class="ion-ios-cart"></i>
               </button>
