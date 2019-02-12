@@ -6,10 +6,35 @@
 		@csrf
 		<h1 class="col-12 text-center text-primary">Reservation</h1>
 
-		<div class="col-10 offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vip.length==0 && carrito.wifi.length==0">
+		<div class="col-10 offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vuelos.length==0">
 			<div class="alert alert-primary text-center">Add item to <i class="ion-ios-cart"></i></div>
 		</div>
 
+		<div class="col-10 offset-1" ng-if="carrito.vuelos.length>0">
+			<h2 class="col-12 text-center text-primary">Flights</h2>
+			<table class="table table-bordered text-center">
+				<thead>
+					<tr>
+							<th class="text-center">Date</th>
+						<th class="text-center">Origin</th>
+						<th class="text-center">Destination</th>
+						<th class="text-center">Price</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(index,aux) in carrito.vuelos">
+						<td>@{{ aux.fecha }}</td>
+						<td>@{{ aux.origen }}</td>
+						<td>@{{ aux.destino }}</td>
+						<td>@{{ aux.precio | currency:"$ " }}</td>
+						<td>
+							<a ng-click="eliminarVuelo(index)"><i class="ion-md-trash text-danger"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 		<div class="col-10 offset-1" ng-if="carrito.traslados.length>0">
 			<h2 class="col-12 text-center text-primary">Transfers</h2>
 			<table class="table table-bordered text-center">
@@ -25,7 +50,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="(index,aux) in carrito.traslados" ng-re>
+					<tr ng-repeat="(index,aux) in carrito.traslados">
 						<td>@{{ aux.de }}</td>
 						<td>@{{ aux.para }}</td>
 						<td>@{{ aux.vip?aux.vip:'Regular' }}</td>
@@ -64,58 +89,6 @@
 						<td>@{{ aux.precio | currency:"$ " }}</td>
 						<td>
 							<a ng-click="eliminarTour(index)"><i class="ion-md-trash text-danger"></i></a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="col-10 offset-1" ng-if="carrito.vip.length>0">
-			<h2 class="col-12 text-center text-primary">VIP Service</h2>
-			<table class="table table-bordered text-center">
-				<thead>
-					<tr>
-						<th class="text-center">Nº Persons</th>
-						<th class="text-center">Arrival Date</th>
-						<th class="text-center">Departure Date</th>
-						<th class="text-center">Price</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="aux in carrito.vip">
-						<td>@{{ aux.pasajeros }}</td>
-						<td>@{{ aux.llegada_fecha }}</td>
-						<td>@{{ aux.salida_fecha }}</td>
-						<td>@{{ aux.precio | currency:"$ " }}</td>
-						<td>
-							<a ng-click="eliminarVIP(index)"><i class="ion-trash-a"></i></a>
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<div class="col-10 offset-1" ng-if="carrito.wifi.length>0">
-			<h2 class="col-12 text-center text-primary">Wifi Service</h2>
-			<table class="table table-bordered text-center">
-				<thead>
-					<tr>
-						<th class="text-center">Nro Device</th>
-						<th class="text-center">Arrival Date</th>
-						<th class="text-center">Departure Date</th>
-						<th class="text-center">Price</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="aux in carrito.wifi">
-						<td>@{{ aux.dispositivos }}</td>
-						<td>@{{ aux.llegada_fecha }}</td>
-						<td>@{{ aux.salida_fecha }}</td>
-						<td>@{{ aux.precio | currency:"$ " }}</td>
-						<td>
-							<a ng-click="eliminarWifi(index)"><i class="ion-trash-a"></i></a>
 						</td>
 					</tr>
 				</tbody>

@@ -143,28 +143,18 @@ class SiteController extends Controller
                         $tour["reservation_id"] = $reservation->id;
                         Tour::create($tour);
                     }
-                    foreach (session('carrito')['vip'] as $vip) {
-                        $vip["reservation_id"] = $reservation->id;
-                        Vip::create($vip);
-                    }
-                    foreach (session('carrito')['wifi'] as $wifi) {
-                        $wifi["reservation_id"] = $reservation->id;
-                        Wifi::create($wifi);
-                    }
-
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;
                     $reservation->save();
                     $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
                     Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation,1));
-                    Mail::to('manager@rennytravel.com','Manager Renny')->send(new Notification($reservation,0));
+                    Mail::to('luisjosedeveloper@gmail.com','Luis')->send(new Notification($reservation,0));
                     session([
                         "reservation" => array(),
                         "carrito" => array(
                             "traslados" => array(),
                             "tours" => array(),
-                            "vip" => array(),
-                            "wifi" => array(),
+                            "vuelos" => array()
                         )
                     ]);
                     return redirect('/')->with('status', 'Reservation Completed');
@@ -218,8 +208,7 @@ class SiteController extends Controller
                 "carrito" => array(
                     "traslados" => array(),
                     "tours" => array(),
-                    "vip" => array(),
-                    "wifi" => array(),
+                    "vuelos" => array()
                 )
             ]);
             return redirect('/')->with('status', 'Reservation Completed');
@@ -233,8 +222,7 @@ class SiteController extends Controller
                 (
                     "traslados" => array(),
                     "tours" => array(),
-                    "vip" => array(),
-                    "wifi" => array(),
+                    "vuelos" => array()
                 )
             ]);
         }
@@ -253,8 +241,7 @@ class SiteController extends Controller
             (
                 "traslados" => array(),
                 "tours" => array(),
-                "vip" => array(),
-                "wifi" => array(),
+                "vuelos" => array()
             )
         ]);
     }

@@ -6,22 +6,22 @@ Route::get('/excursions', "SiteController@excursions");
 Route::get('/excursion/{id}', "SiteController@excursion");
 Route::get('/contact', "SiteController@contact");
 Route::get('/shop', "SiteController@shop");
-
-Route::get('/index', "SiteController@index");
-Route::get('/partyBoats', "SiteController@partyBoats");
-Route::get('/partyBoats/{id}', "SiteController@tour");
-Route::get('/tours', "SiteController@tours");
-Route::get('/tour/{id}', "SiteController@tour");
-Route::get('/packages', "SiteController@packages");
-Route::post('/packages', "SiteController@packagesPOST");
-Route::get('/wifiServices', "SiteController@wifiServices");
-Route::get('/puntacana', "SiteController@puntacana");
-//Route::get('/shop', "SiteController@shopGet");
 Route::post('/shop', "SiteController@shopPost");
 Route::get('/ipn', 'SiteController@ipn');
 Route::get('/session', "SiteController@sessionGet");
 Route::post('/session', "SiteController@sessionPost");
 Route::get('/borrar', "SiteController@borrar");
+//Route::get('/index', "SiteController@index");
+//Route::get('/partyBoats', "SiteController@partyBoats");
+//Route::get('/partyBoats/{id}', "SiteController@tour");
+//Route::get('/tours', "SiteController@tours");
+//Route::get('/tour/{id}', "SiteController@tour");
+//Route::get('/packages', "SiteController@packages");
+//Route::post('/packages', "SiteController@packagesPOST");
+//Route::get('/wifiServices', "SiteController@wifiServices");
+//Route::get('/puntacana', "SiteController@puntacana");
+//Route::get('/shop', "SiteController@shopGet");
+
 
 
 Auth::routes();

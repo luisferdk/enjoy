@@ -140,7 +140,14 @@ $(function(){
         });
 
 
-
+        /** Flighs */
+        $('.fecha').datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: +1,
+            onSelect:function(){
+                $('.fecha').trigger("change");
+            }
+        });
     /*Carrousel*/
      
     $('#myCarousel').carousel({
