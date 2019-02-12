@@ -226,7 +226,7 @@ class SiteController extends Controller
                 )
             ]);
         }
-        elseif(session('carrito')['wifi']){
+        elseif(isset(session('carrito')['wifi'])){
             session([
                 "carrito"=> array
                 (
