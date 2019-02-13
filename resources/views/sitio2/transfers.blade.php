@@ -53,15 +53,6 @@
               </select>
             </div>
           </div>
-          <div class="col-12" ng-show="traslado.pasajeros<=2">
-            <div class="checkbox">
-              <label style="color:#555555;">
-                <input ng-change="calcularPrecioTraslado();" ng-model="traslado.vip" type="checkbox" id="vip"
-                  name="vip" value="Audi">
-                VIP Audi A4 2017 ($65.00 + tax per direction) Perfect for 2 people
-              </label>
-            </div>
-          </div>
           <div class="col-12" ng-show="traslado.tipo==1 || traslado.tipo==2">
             <div class="row">
               <h5 class="col-12 titulo" ng-show="traslado.de.id==-1">ARRIVAL</h5>

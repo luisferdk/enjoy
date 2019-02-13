@@ -78,7 +78,13 @@
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
             </li>
             <li class="nav-item {{ Request::is('shop')?'active':'' }}">
-              <a href="{{ url('/shop') }}" class="nav-link"> <i class="ion-ios-cart"></i> Cart</a>
+              <a href="{{ url('/shop') }}" class="nav-link"> <i class="ion-ios-cart"></i> 
+                @if(!Request::is('shop'))
+                  <span class="badge badge-primary text-white">@{{ nro }}</span>
+                @else
+                  <span class="badge badge-light text-primary">@{{ nro }}</span>
+                @endif
+                Cart</a>
             </li>
           </ul>
         </div>
