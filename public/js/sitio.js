@@ -2715,95 +2715,51 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             destinos:[
                 {
                     id:0,
-                    descripcion:"Arroyo Barril",
-                    tiempo:"35 minutes",
-                    precio:900,
-                    categoria:"Equipo 1",
-                    capacidad:6
+                    descripcion:"Samana Arroyo Barril",
+                    aviones:[
+                        {id:0,tiempo:"35 minutes",precio:900,titulo:"Cessna 182 R",foto:"avion1.jpeg",capacidad:3},
+                        {id:1,tiempo:"40 minutes",precio:1250,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6}
+                    ]
                 },
                 {
                     id:1,
                     descripcion:"Catey Samana",
-                    tiempo:"30 minutes",
-                    precio:900,
-                    categoria:"Equipo 1",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"30 minutes",precio:900,titulo:"Cessna 182 R",foto:"avion1.jpeg",capacidad:3},
+                        {id:1,tiempo:"30 minutes",precio:1250,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6}
+                    ]
                 },
                 {
                     id:2,
                     descripcion:"Romana",
-                    tiempo:"50 minutes",
-                    precio:1000,
-                    categoria:"Equipo 1",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"50 minutes",precio:1000,titulo:"Cessna 182 R",foto:"avion1.jpeg",capacidad:3}
+                    ]
                 },
                 {
                     id:3,
                     descripcion:"Santo Domingo",
-                    tiempo:"45 minutes",
-                    precio:1300,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"45 minutes",precio:1300,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"35 minutes",precio:1800,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:4,
                     descripcion:"Higuero",
-                    tiempo:"45 minutes",
-                    precio:1300,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"45 minutes",precio:1300,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"30 minutes",precio:1800,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:5,
-                    descripcion:"Romana ",
-                    tiempo:"1:15 minutes",
-                    precio:1350,
-                    categoria:"Equipo 2",
-                    capacidad:6
-                },
-                {
-                    id:6,
-                    descripcion:"Arroyo Barril",
-                    tiempo:"40 minutes",
-                    precio:1250,
-                    categoria:"Equipo 2",
-                    capacidad:6
-                },
-                {
-                    id:7,
-                    descripcion:"Catey Samana",
-                    tiempo:"30 minutes",
-                    precio:1250,
-                    categoria:"Equipo 2",
-                    capacidad:6
-                },
-
-
-
-                {
-                    id:8,
-                    descripcion:"Santo Domingo",
-                    tiempo:"35 minutes",
-                    precio:1800,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:9,
-                    descripcion:"Higuero",
-                    tiempo:"30 minutes",
-                    precio:1800,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:10,
                     descripcion:"Romana",
-                    tiempo:"60 minutes",
-                    precio:1900,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
+                    aviones:[
+                        {id:0,tiempo:"1:15 minutes",precio:1350,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"60 minutes",precio:1900,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
+                }
             ]
         },
         {
@@ -2813,155 +2769,82 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 {
                     id:0,
                     descripcion:"Samana Arroyo Barril",
-                    tiempo:"40 minutes",
-                    precio:650,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"40 minutes",precio:650,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"30 minutes",precio:1500,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:1,
                     descripcion:"Puerto Plata",
-                    tiempo:"120 minutes",
-                    precio:1300,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"120 minutes",precio:1300,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"60 minutes",precio:1900,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:2,
                     descripcion:"Santo Domingo",
-                    tiempo:"40 minutes",
-                    precio:700,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"40 minutes",precio:700,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"30 minutes",precio:1800,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:3,
                     descripcion:"Santiago",
-                    tiempo:"120 minutes",
-                    precio:1300,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"120 minutes",precio:1300,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"60 minutes",precio:1900,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:4,
                     descripcion:"Barahona",
-                    tiempo:"150 minutes",
-                    precio:1550,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"150 minutes",precio:1550,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:0,tiempo:"115 minutes",precio:2200,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:5,
                     descripcion:"Catey Samana",
-                    tiempo:"45:minutos minutes",
-                    precio:750,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"45 minutes",precio:750,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"35 minutes",precio:16,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:6,
                     descripcion:"Monte Cristi",
-                    tiempo:"120 minutes",
-                    precio:1700,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"120 minutes",precio:1700,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"135 minutes",precio:2500,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:7,
                     descripcion:"Higuero",
-                    tiempo:"50 minutes",
-                    precio:700,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"50 minutes",precio:700,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"35 minutes",precio:1650,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:8,
                     descripcion:"Cabo Rojo",
-                    tiempo:"220 minutes",
-                    precio:1700,
-                    categoria:"Equipo 2",
-                    capacidad:6
+                    aviones:[
+                        {id:0,tiempo:"220 minutes",precio:1700,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6},
+                        {id:1,tiempo:"140 minutes",precio:2400,titulo:"Piper Navajo",foto:"avion3.jpeg",capacidad:9}
+                    ]
                 },
                 {
                     id:9,
                     descripcion:"Romana",
-                    tiempo:"15 minutes",
-                    precio:600,
-                    categoria:"Equipo 2",
-                    capacidad:6
-                },
-                {
-                    id:10,
-                    descripcion:"Samana Arroyo Barril",
-                    tiempo:"30 minutes",
-                    precio:1500,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:11,
-                    descripcion:"Puerto Plata",
-                    tiempo:"60 minutes",
-                    precio:1900,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:12,
-                    descripcion:"Santo Domingo",
-                    tiempo:"30 minutes",
-                    precio:1800,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:13,
-                    descripcion:"Santiago",
-                    tiempo:"60 minutes",
-                    precio:1900,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:14,
-                    descripcion:"Barahona",
-                    tiempo:"115 minutes",
-                    precio:2200,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:15,
-                    descripcion:"Catey Samana",
-                    tiempo:"35 minutes",
-                    precio:16,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:16,
-                    descripcion:"Monte Cristi",
-                    tiempo:"135 minutes",
-                    precio:2500,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:17,
-                    descripcion:"Higuero",
-                    tiempo:"35 minutes",
-                    precio:1650,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
-                {
-                    id:18,
-                    descripcion:"Cabo Rojo",
-                    tiempo:"140 minutes",
-                    precio:2400,
-                    categoria:"Equipo 3",
-                    capacidad:9
-                },
+                    aviones:[
+                        {id:0,tiempo:"15 minutes",precio:600,titulo:"Cherokee 6",foto:"avion2.jpeg",capacidad:6}
+                    ]
+                }
             ]
         }
     ]
@@ -2972,7 +2855,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         $scope.carrito.vuelos.push({
             origen:$scope.vuelo.origen.origen,
             destino:$scope.vuelo.destino.descripcion,
-            precio:$scope.vuelo.destino.precio,
+            precio:$scope.vuelo.avion.precio,
             fecha:$scope.vuelo.fecha,
             pasajeros:$scope.vuelo.pasajeros
         });
