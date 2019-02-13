@@ -31,14 +31,18 @@
                 required>
             </div>
           </div>
-
+          
           <div class="col-12" ng-show="vuelo.destino">
             <div class="row">
               <h4 class="col-12 text-center text-primary">Select Airplane</h4>
               <div class="col-4" ng-repeat="avion in vuelo.destino.aviones">
-                <input style="display:none;" type="radio" name="avion" ng-model="vuelo.avion" id="avion@{{avion.id}}"
+                <input
+                  style="display:none;"
+                  type="radio"
+                  name="avion"
+                  ng-model="vuelo.avion" id="avion@{{avion.id}}"
                   ng-value="avion">
-                <label for="avion@{{avion.id}}" class="block-5 avion" style="background-image: url({{ asset('/') }}img/jets/@{{avion.id+1}}.jpeg);">
+                <label for="avion@{{avion.id}}" class="block-5 avion" style="background-image: url({{ asset('/') }}img/jets/@{{avion.foto}});">
                   <div class="text">
                     <h3 class="heading">@{{ avion.titulo }}</h3>
                     <p class="price">
@@ -58,7 +62,11 @@
           </div>
           <div class="col-12 mt-4">
             <div class="form-group">
-              <select class="form-control select2" name="pasajeros" ng-model="vuelo.pasajeros" ng-change="cambiarPasajerosVuelos()"
+              <select 
+                class="form-control select2"
+                name="pasajeros"
+                ng-model="vuelo.pasajeros"
+                ng-change="cambiarPasajerosVuelos()"
                 required>
                 <option value="">Passengers</option>
                 <option ng-repeat="aux in vector(vuelo.avion.capacidad)" value="@{{aux}}">@{{aux}}</option>
@@ -72,20 +80,20 @@
               <h4 class="col-12 text-primary">Passenger @{{aux}}</h4>
               <div class="col-4">
                 <div class="form-group">
-                  <input ng-model="vuelo.listaPasajeros[key].passport" class="form-control" type="text" placeholder="Passport"
-                    required>
+                  <input ng-model="vuelo.listaPasajeros[key].passport" class="form-control" type="text"
+                    placeholder="Passport" required>
                 </div>
               </div>
               <div class="col-4">
                 <div class="form-group">
-                  <input name="nombres[]" ng-model="vuelo.listaPasajeros[key].full_name" class="form-control" type="text"
-                    placeholder="Full Name" required>
+                  <input name="nombres[]" ng-model="vuelo.listaPasajeros[key].full_name" class="form-control"
+                    type="text" placeholder="Full Name" required>
                 </div>
               </div>
               <div class="col-4">
                 <div class="form-group">
-                  <input name="telefono[]" ng-model="vuelo.listaPasajeros[key].phone_number" class="form-control" type="text"
-                    placeholder="Phone Number" required>
+                  <input name="telefono[]" ng-model="vuelo.listaPasajeros[key].phone_number" class="form-control"
+                    type="text" placeholder="Phone Number" required>
                 </div>
               </div>
               <div class="col-4">
