@@ -55,7 +55,12 @@
                   </div>
                   <div class="col-4">
                     <div class="form-group">
-                      <select class="form-control select2" name="pasajeros" ng-model="vuelo.pasajeros" required>
+                      <select 
+                        class="form-control select2"
+                        name="pasajeros"
+                        ng-model="vuelo.pasajeros"
+                        ng-change="cambiarPasajerosVuelos()"
+                        required>
                         <option value="">
                           Passengers
                         </option>
@@ -71,6 +76,64 @@
                       </label>
                       <input ng-model="vuelo.fecha" class="form-control fecha" name="fecha"
                         type="text" placeholder="Select Date" required>
+                    </div>
+                  </div>
+                  <h3 
+                      class="col-12 text-center text-primary"
+                      ng-show="vuelo.pasajeros>0">Passengers</h3>
+                  <div 
+                      class="col-12"
+                      ng-show="vuelo.destino.precio>0" 
+                      ng-repeat="(key,aux) in vector(vuelo.pasajeros)">
+                    <div class="row">  
+                      <h4 class="col-12 text-primary">Passenger @{{aux}}</h4>               
+                      <div class="col-4">
+                        <div class="form-group">
+                          <input ng-model="vuelo.listaPasajeros[key].passport" class="form-control" type="text" placeholder="Passport" required>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <input name="nombres[]" ng-model="vuelo.listaPasajeros[key].full_name" class="form-control" type="text" placeholder="Full Name" required>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <input name="telefono[]" ng-model="vuelo.listaPasajeros[key].phone_number" class="form-control" type="text" placeholder="Phone Number" required>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <input 
+                            name="email[]"
+                            ng-model="vuelo.listaPasajeros[key].email"
+                            class="form-control"
+                            type="email"
+                            placeholder="Email" required>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <select 
+                            class="form-control selectVuelo"
+                            ng-model="vuelo.listaPasajeros[key].nacionalization">
+                            <option value>Nationalization</option>
+                            <option ng-repeat="pais in paises" value="@{{pais}}">@{{pais}}</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <select 
+                            name="edad[]"
+                            class="form-control selectVuelo"
+                            ng-model="vuelo.listaPasajeros[key].age"
+                            placeholder="Age" required>
+                            <option value>Age</option>
+                            <option ng-repeat="aux in vector(100)" value="@{{ aux }}">@{{ aux }}</option>
+                          </select>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-12 mt-2 mb-1" ng-show="vuelo.destino.precio>0">
@@ -118,7 +181,10 @@
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <select class="form-control select2" name="adultos" ng-change="calcularPrecioTraslado();cambiarPasajeros()"
+                      <select 
+                        class="form-control select2"
+                        name="pasajeros[]"
+                        ng-change="calcularPrecioTraslado();cambiarPasajeros()"
                         ng-model="traslado.pasajeros" required>
                         <option value="">
                           Passengers

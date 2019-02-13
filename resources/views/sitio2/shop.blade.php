@@ -15,9 +15,10 @@
 			<table class="table table-bordered text-center">
 				<thead>
 					<tr>
-							<th class="text-center">Date</th>
+						<th class="text-center">Date</th>
 						<th class="text-center">Origin</th>
 						<th class="text-center">Destination</th>
+						<th class="text-center">Passengers</th>
 						<th class="text-center">Price</th>
 						<th></th>
 					</tr>
@@ -27,6 +28,7 @@
 						<td>@{{ aux.fecha }}</td>
 						<td>@{{ aux.origen }}</td>
 						<td>@{{ aux.destino }}</td>
+						<td>@{{ aux.pasajeros }}</td>
 						<td>@{{ aux.precio | currency:"$ " }}</td>
 						<td>
 							<a ng-click="eliminarVuelo(index)"><i class="ion-md-trash text-danger"></i></a>

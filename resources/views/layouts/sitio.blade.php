@@ -182,7 +182,6 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="{{ asset('voyage') }}/js/google-map.js"></script>
     -->
-  <script src="{{ asset('voyage') }}/js/main.js"></script>
 
   <script src="{{ asset('/') }}js/angular.min.js"></script>
   <script src="{{ asset('/') }}js/angular-sanitize.min.js"></script>
@@ -195,7 +194,6 @@
 
   <script src="{{ asset("/") }}js/sitio.js?v=31"></script>
   <script src="{{ asset("/") }}js/main.js?v=31"></script>
-
 </body>
 
 </html>

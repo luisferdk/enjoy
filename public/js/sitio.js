@@ -2652,6 +2652,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
     $scope.vipTipos = ['Audi', 'Suburban'];
     $scope.cambiarPasajeros = function () {
+        console.log("Hola");
         $scope.traslado.vip = "";
         if ($scope.traslado.pasajeros <= 2) {
             $scope.vipTipos = ['Suburban', 'Audi'];
@@ -2659,8 +2660,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         else {
             $scope.vipTipos = ['Suburban'];
         }
-        $timeout(function () { $('.vipSelect').select2(); }, 500);
+        $timeout(function () { $('.vipSelect,.selectNacionalizacion').select2(); }, 500);
     }
+
 
 
 
@@ -2696,8 +2698,16 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
 
 
+    $scope.paises = ["Puntacana","Dominican Republic","Mexico","Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina","Armenia","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bhutan","Bolivia","Bosnia and Herzegovina","Botswana","Brazil","Brunei","Bulgaria","Burkina Faso","Burundi","Cabo Verde","Cambodia","Cameroon","Canada","Central African Republic","Chad","Chile","China","Colombia","Comoros","Congo, Republic of the","Congo, Democratic Republic of the","Costa Rica","Cote d'Ivoire","Croatia","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Fiji","Finland","France","Gabon","Gambia","Georgia","Germany","Ghana","Greece","Grenada","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Kosovo","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Mauritania","Mauritius","Micronesia","Moldova","Monaco","Mongolia","Montenegro","Morocco","Mozambique","Myanmar (Burma)","Namibia","Nauru","Nepal","Netherlands","New Zealand","Nicaragua","Niger","Nigeria","North Korea","Norway","Oman","Pakistan","Palau","Palestine","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Poland","Portugal","Qatar","Romania","Russia","Rwanda","St. Kitts and Nevis","St. Lucia","St. Vincent and The Grenadines","Samoa","San Marino","Sao Tome and Principe","Saudi Arabia","Senegal","Serbia","Seychelles","Sierra Leone","Singapore","Slovakia","Slovenia","Solomon Islands","Somalia","South Africa","South Korea","South Sudan","Spain","Sri Lanka","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Timor-Leste","Togo","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","Uganda","Ukraine","United Arab Emirates","United Kingdom (UK)","United States of America (USA)","Uruguay","Uzbekistan","Vanuatu","Vatican City (Holy See)","Venezuela","Vietnam","Yemen","Zambia","Zimbabwe"];
     /* Flights */
-    $scope.vuelo = {};
+
+    $scope.cambiarPasajerosVuelos = function(){
+        $timeout(function(){
+            $(".selectVuelo").select2();
+        },1000);
+        console.log("asdas");
+    }
+    $scope.vuelo = {listaPasajeros:[]};
     $scope.vuelos = [
         {
             id:0,
@@ -2966,7 +2976,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             fecha:$scope.vuelo.fecha,
             pasajeros:$scope.vuelo.pasajeros
         });
-        $scope.vuelo = {};
+        $scope.vuelo = {listaPasajeros:[]};
         $timeout(function () {
             $("html, body").animate({ scrollTop: 0 }, 500);
         }, 500);
