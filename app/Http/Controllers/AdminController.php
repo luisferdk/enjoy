@@ -10,6 +10,7 @@ use App\Transfer;
 use App\Tour;
 use App\Vip;
 use App\Wifi;
+use App\Flight;
 
 class AdminController extends Controller
 {
@@ -36,6 +37,11 @@ class AdminController extends Controller
     public function vip(){
         $reservas = Vip::with('reservation')->get();
         return view('admin.vip',compact('reservas'));
+    }
+
+    public function vuelos(){
+        $reservas = Flight::with('reservation')->get();
+        return view('admin.vuelos',compact('reservas'));
     }
 
     public function wifi(){

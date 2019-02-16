@@ -3,7 +3,7 @@
     <head>
         
         <!-- Title -->
-        <title>Renny Travel</title>
+        <title>Dominican Air Services</title>
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <meta charset="UTF-8">
@@ -13,7 +13,6 @@
         
         <!-- Styles -->
         <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link type="text/css" rel="stylesheet" href="{{ asset('administrador') }}/plugins/materialize/css/materialize.min.css"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="{{ asset('administrador') }}/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
@@ -128,29 +127,24 @@
                         </ul>
                     </div>
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
-                    <!--li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
+                    <li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/reservas') }}">
                             <i class="material-icons">assignment</i>Reservas
                         </a>
-                    </li-->
+                    </li>
                     <li class="no-padding {{ Request::is('admin/traslados')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/traslados') }}">
                             <i class="material-icons">directions_car</i>Traslados
                         </a>
                     </li>
-                    <li class="no-padding {{ Request::is('admin/tours')?'active':'' }}">
-                        <a class="waves-effect waves-grey" href="{{ url('/admin/tours') }}">
-                            <i class="material-icons">directions_boat</i>Tours
+                    <li class="no-padding {{ Request::is('admin/excursiones')?'active':'' }}">
+                        <a class="waves-effect waves-grey" href="{{ url('/admin/excursiones') }}">
+                            <i class="material-icons">directions_boat</i>Excursiones
                         </a>
                     </li>
-                    <li class="no-padding {{ Request::is('admin/vip')?'active':'' }}">
-                        <a class="waves-effect waves-grey" href="{{ url('/admin/vip') }}">
-                            <i class="material-icons">settings_input_svideo</i>VIP
-                        </a>
-                    </li>
-                    <li class="no-padding {{ Request::is('admin/wifi')?'active':'' }}">
-                        <a class="waves-effect waves-grey" href="{{ url('/admin/wifi') }}">
-                            <i class="material-icons">wifi</i>Wifi
+                    <li class="no-padding {{ Request::is('admin/vuelos')?'active':'' }}">
+                        <a class="waves-effect waves-grey" href="{{ url('/admin/vuelos') }}">
+                            <i class="material-icons">airplanemode_active</i>Vuelos
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/coupon')?'active':'' }}">

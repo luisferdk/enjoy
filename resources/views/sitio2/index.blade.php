@@ -66,7 +66,7 @@
                   <div class="col-12" ng-show="vuelo.destino">
                     <div class="row">
                       <h4 class="col-12 text-center text-primary">Select Airplane</h4>
-                      <div class="col-4" ng-repeat="avion in vuelo.destino.aviones">
+                      <div class="col-12 col-md-4" ng-repeat="avion in vuelo.destino.aviones">
                         <input
                           style="display:none;"
                           type="radio"

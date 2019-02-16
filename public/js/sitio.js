@@ -2851,14 +2851,17 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
     $scope.agregarVuelo = function (event) {
         event.preventDefault();
-        console.log($scope.carrito);
         $scope.carrito.vuelos.push({
             origen:$scope.vuelo.origen.origen,
             destino:$scope.vuelo.destino.descripcion,
-            precio:$scope.vuelo.avion.precio,
             fecha:$scope.vuelo.fecha,
-            pasajeros:$scope.vuelo.pasajeros
+            pasajeros:$scope.vuelo.pasajeros,
+            avion:$scope.vuelo.avion.titulo,
+            tiempo:$scope.vuelo.avion.tiempo,
+            capacidad:$scope.vuelo.avion.capacidad,
+            precio:$scope.vuelo.avion.precio
         });
+        console.log($scope.carrito.vuelos);
         $scope.vuelo = {listaPasajeros:[]};
         $timeout(function () {
             $("html, body").animate({ scrollTop: 0 }, 500);

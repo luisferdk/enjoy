@@ -60,15 +60,25 @@
 
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='text' name='email' id='email' required />
-                                <label for='email'>Enter your email</label>
+                                <input 
+                                    class='validate'
+                                    type='text'
+                                    name='email'
+                                    id='email'
+                                    placeholder="Enter your email"
+                                    required />
                             </div>
                         </div>
 
                         <div class='row'>
                             <div class='input-field col s12'>
-                                <input class='validate' type='password' name='password' id='password' required />
-                                <label for='password'>Enter your password</label>
+                                <input 
+                                    class='validate'
+                                    type='password'
+                                    name='password'
+                                    id='password'
+                                    placeholder="Enter your password"
+                                    required />
                             </div>
                         </div>
                         <br />

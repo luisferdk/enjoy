@@ -35,7 +35,7 @@
           <div class="col-12" ng-show="vuelo.destino">
             <div class="row">
               <h4 class="col-12 text-center text-primary">Select Airplane</h4>
-              <div class="col-4" ng-repeat="avion in vuelo.destino.aviones">
+              <div class="col-12 col-md-4" ng-repeat="avion in vuelo.destino.aviones">
                 <input
                   style="display:none;"
                   type="radio"
@@ -138,14 +138,4 @@
     </div>
   </div>
 </div>
-<!-- <section class="ftco-section mt-5 mb-5">
-  <div class="container">
-    <div class="row no-gutters">
-      @for($i=1; $i<=8;$i++) <div class="col-md-6 col-lg-6 ftco-animate">
-        <div href="#" class="block-5" style="background: transparent url('{{asset('img')}}/jets/{{ $i }}.jpeg') no-repeat center center; background-size:cover;"></div>
-    </div>
-    @endfor
-  </div>
-  </div>
-</section> -->
 @endsection

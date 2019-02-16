@@ -24,3 +24,4 @@ Route::resource('transfer', 'TransferController');
 Route::resource('tour', 'TourController');
 Route::resource('vip', 'VipController');
 Route::resource('wifi', 'WifiController');
+Route::resource('flight', 'FlightController');

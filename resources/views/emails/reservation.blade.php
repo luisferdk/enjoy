@@ -312,21 +312,6 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 		</td>
 	</tr>
 </table>
-@if($reserv == 1)
-	<center>
-		<p>
-			Thank you for choosing Renny Travel for your upcoming visit to Punta Cana.
-			We are delighted to welcome you as our guest and hope to make your stay as enjoyable as possible.
-			Please take a moment to review your reservation details below. In the event that you need to modify your
-			reservation prior to arrival, please contact our Reservations Department via email at info@rennytravel.com 
-			or speak directly to an agent at 1(809)-949-0519 <br> <br>
-			Please see attached the picture of our reps that will be waiting for you upon arrival,
-			they will greet you and take you to your vehicle. Please don’t stop inside, continue until you get out of
-			the airport and our rep will be waiting for you. <br>
-			Looking forward to giving you the best service ever.
-		</p>
-	</center>
-@endif
 
 </body>
 </html>

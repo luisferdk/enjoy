@@ -13,6 +13,7 @@ use App\Transfer;
 use App\Tour;
 use App\Vip;
 use App\Wifi;
+use App\Flight;
 
 use Validator;
 use URL;
@@ -189,13 +190,9 @@ class SiteController extends Controller
                 $tour["reservation_id"] = $reservation->id;
                 Tour::create($tour);
             }
-            foreach (session('carrito')['vip'] as $vip) {
-                $vip["reservation_id"] = $reservation->id;
-                Vip::create($vip);
-            }
-            foreach (session('carrito')['wifi'] as $wifi) {
-                $wifi["reservation_id"] = $reservation->id;
-                Vip::create($wifi);
+            foreach (session('carrito')['vuelos'] as $vuelo) {
+                $vuelo["reservation_id"] = $reservation->id;
+                Flight::create($vuelo);
             }
 
             $reservation->id_pago = $datos["id"];
@@ -254,9 +251,5 @@ class SiteController extends Controller
                 "vuelos" => array()
             )
         ]);
-    }
-
-    public function test(){
-        return Reservation::with("transfers","tours","vips")->find(1);
     }
 }
