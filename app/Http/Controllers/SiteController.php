@@ -144,10 +144,14 @@ class SiteController extends Controller
                         $tour["reservation_id"] = $reservation->id;
                         Tour::create($tour);
                     }
+                    foreach (session('carrito')['vuelos'] as $flight) {
+                        $flight["reservation_id"] = $reservation->id;
+                        Flight::create($flight);
+                    }
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;
                     $reservation->save();
-                    $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
+                    $reservation = $reservation::with('transfers','tours','vips','wifis','flights')->where("id",$reservation->id)->first();
                     Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation,1));
                     Mail::to('luisjosedeveloper@gmail.com','Luis')->send(new Notification($reservation,0));
                     session([
@@ -198,7 +202,7 @@ class SiteController extends Controller
             $reservation->id_pago = $datos["id"];
             $reservation->estado = 1;
             $reservation->save();
-            $reservation = $reservation::with('transfers','tours','vips','wifis')->where("id",$reservation->id)->first();
+            $reservation = $reservation::with('transfers','tours','vips','wifis','flights')->where("id",$reservation->id)->first();
             Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
             session([
                 "reservation" => array(),

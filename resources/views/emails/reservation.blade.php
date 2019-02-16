@@ -309,44 +309,44 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 			@endforeach
 
 
-			@foreach ($reservation->vuelos as $key => $vuelo)
+			@foreach ($reservation->flights as $key => $flight)
 				<table>
 					<tr>
 						<td colspan="2" style="color:#2ca7b0;text-align: center;">
-							<h2 style="margin:30px 0 5px 0;">Flight {{ count($reservation->vuelos)>1?$key+1:'' }}</h2>
+							<h2 style="margin:30px 0 5px 0;">Flight {{ count($reservation->flights)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Origin:</td>
-						<td style="width:50%;">{{ $vuelo->origen }}<td>
+						<td style="width:50%;">{{ $flight->origen }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Destination:</td>
-						<td style="width:50%;">{{ $vuelo->destino }}<td>
+						<td style="width:50%;">{{ $flight->destino }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
-						<td style="width:50%;">{{ $vuelo->fecha }}<td>
+						<td style="width:50%;">{{ $flight->fecha }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Passengers:</td>
-						<td style="width:50%;">{{ $vuelo->pasajeros }}<td>
+						<td style="width:50%;">{{ $flight->pasajeros }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Plane:</td>
-						<td style="width:50%;">{{ $vuelo->avion }}<td>
+						<td style="width:50%;">{{ $flight->avion }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Time:</td>
-						<td style="width:50%;">{{ $vuelo->tiempo }}<td>
+						<td style="width:50%;">{{ $flight->tiempo }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Cap:</td>
-						<td style="width:50%;">{{ $vuelo->capacidad }}<td>
+						<td style="width:50%;">{{ $flight->capacidad }}<td>
 					</tr>
 					<tr>
 						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Price:</td>
-						<td style="width:50%;">{{ $vuelo->precio }}<td>
+						<td style="width:50%;">{{ $flight->precio }}<td>
 					</tr>
 				</table>
 			@endforeach

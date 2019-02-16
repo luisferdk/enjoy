@@ -63,9 +63,13 @@ class Reservation extends Model
 
     public function vips(){
     	return $this->hasMany(Vip::class,'reservation_id','id');
-	}
+		}
 	
-	public function wifis(){
+		public function wifis(){
     	return $this->hasMany(Wifi::class,'reservation_id','id');
+		}
+		
+		public function flights(){
+    	return $this->hasMany(Flight::class,'reservation_id','id');
     }
 }
