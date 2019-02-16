@@ -5,7 +5,7 @@
 <!-- view port meta tag -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Renny Travel</title>
+<title>Dominican Air Services</title>
 <style type="text/css">
 /* hacks */
 * { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; max-height:1000000px;}
@@ -58,43 +58,43 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 			<img height="150" src="{{ asset('img/logo.png') }}" alt="" />
 				<table>
 					<tr>
-						<td colspan="2" style="color:#8dc740;text-align: center;">
+						<td colspan="2" style="color:#2ca7b0;text-align: center;">
 							<h2 style="margin:30px 0 5px 0;">Reservation</h2>
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Name:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Name:</td>
 						<td style="width:50%;">{{ $reservation->nombre }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Lastname:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Lastname:</td>
 						<td style="width:50%;">{{ $reservation->apellido }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Email:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Email:</td>
 						<td style="width:50%;">{{ $reservation->correo }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Phone:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Phone:</td>
 						<td>{{ $reservation->telefono }}<td>
 					</tr>
 					@if($reservation->hotel!==null)
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Hotel:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Hotel:</td>
 						<td>{{ $reservation->hotel }}<td>
 					</tr>
 					@endif
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Price:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Price:</td>
 						<td>$ {{ $reservation->precio }}<td>
 					</tr>
 					<!--tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">ID Paypal:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">ID Paypal:</td>
 						<td>{{ substr($reservation->id_pago,-10) }}<td>
 					</tr-->
 					@if($reservation->comentarios!==null)
 						<tr>
-							<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Comments:</td>
+							<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Comments:</td>
 							<td>{{ $reservation->comentarios }}<td>
 						</tr>
 					@endif
@@ -103,47 +103,47 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 			@foreach ($reservation->transfers as $key => $transfer)
 				<table>
 					<tr>
-						<td colspan="2" style="color:#8dc740;text-align: center;">
+						<td colspan="2" style="color:#2ca7b0;text-align: center;">
 							<h2 style="margin:30px 0 5px 0;">Transferred {{ count($reservation->transfers)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">From:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">From:</td>
 						<td style="width:50%;">{{ $transfer->de }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">To:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">To:</td>
 						<td style="width:50%;">{{ $transfer->para }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Passagers:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Passagers:</td>
 						<td style="width:50%;">{{ $transfer->pasajeros }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">price:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">price:</td>
 						<td>$ {{ $transfer->precio }}<td>
 					</tr>
 					@if($transfer->cervezas!="0")
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Beers:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Beers:</td>
 						<td>{{ $transfer->cervezas }}<td>
 					</tr>
 					@endif
 					@if($transfer->sodas!="0")
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Sodas:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Sodas:</td>
 						<td>{{ $transfer->sodas }}<td>
 					</tr>
 					@endif
 					@if($transfer->vino!="0")
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Wine:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Wine:</td>
 						<td>{{ $transfer->vino }}<td>
 					</tr>
 					@endif
 					@if($transfer->champagne!="0")
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Champagne:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Champagne:</td>
 						<td>{{ $transfer->champagne }}<td>
 					</tr>
 					@endif
@@ -155,19 +155,19 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
 						<td style="width:50%;">{{ $transfer->llegada_fecha }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Hour:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Hour:</td>
 						<td style="width:50%;">{{ $transfer->llegada_hora }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">aeroline:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">aeroline:</td>
 						<td style="width:50%;">{{ $transfer->llegada_aerolinea }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Travel:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Travel:</td>
 						<td style="width:50%;">{{ $transfer->llegada_vuelo }}<td>
 					</tr>
 					@endif
@@ -179,19 +179,19 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
 						<td style="width:50%;">{{ $transfer->salida_fecha }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Hour:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Hour:</td>
 						<td style="width:50%;">{{ $transfer->salida_hora }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Aeroline:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Aeroline:</td>
 						<td style="width:50%;">{{ $transfer->salida_aerolinea }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Travel</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Travel</td>
 						<td style="width:50%;">{{ $transfer->salida_vuelo }}<td>
 					</tr>
 					@endif
@@ -201,42 +201,42 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 			@foreach ($reservation->tours as $key => $tour)
 				<table>
 					<tr>
-						<td colspan="2" style="color:#8dc740;text-align: center;">
+						<td colspan="2" style="color:#2ca7b0;text-align: center;">
 							<h2 style="margin:30px 0 5px 0;">Tour {{ count($reservation->tours)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Tour:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Tour:</td>
 						<td style="width:50%;">{{ $tour->tour }}</td>
 					</tr>
 					@if($tour->horario!==null)
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Modality:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Modality:</td>
 						<td style="width:50%;">{{ $tour->modalidad }}</td>
 					</tr>
 					@endif
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
 						<td style="width:50%;">{{ $tour->fecha }}</td>
 					</tr>
 					@if($tour->horario!==null)
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Schedule:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Schedule:</td>
 						<td style="width:50%;">{{ $tour->horario }}</td>
 					</tr>
 					@endif
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Adults:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Adults:</td>
 						<td style="width:50%;">{{ $tour->adultos }}</td>
 					</tr>
 					@if($tour->ninos!==null)
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Kids:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Kids:</td>
 						<td style="width:50%;">{{ $tour->ninos }}</td>
 					</tr>
 					@endif
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Price:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Price:</td>
 						<td style="width:50%;">$ {{ $tour->precio }}</td>
 					</tr>
 				</table>
@@ -245,16 +245,16 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 			@foreach ($reservation->vips as $key => $vip)
 				<table>
 					<tr>
-						<td colspan="2" style="color:#8dc740;text-align: center;">
+						<td colspan="2" style="color:#2ca7b0;text-align: center;">
 							<h2 style="margin:30px 0 5px 0;">VIP {{ count($reservation->vips)>1?$key+1:'' }}</h2>
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Nº Peoples:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Nº Peoples:</td>
 						<td style="width:50%;">{{ $vip->pasajeros }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Price:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Price:</td>
 						<td>$ {{ $vip->precio }}<td>
 					</tr>
 					
@@ -265,19 +265,19 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
 						<td style="width:50%;">{{ $vip->llegada_fecha }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Hour:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Hour:</td>
 						<td style="width:50%;">{{ $vip->llegada_hora }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">aeroline:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">aeroline:</td>
 						<td style="width:50%;">{{ $vip->llegada_aerolinea }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Travel:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Travel:</td>
 						<td style="width:50%;">{{ $vip->llegada_vuelo }}<td>
 					</tr>
 					@endif
@@ -289,22 +289,65 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 						</td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
 						<td style="width:50%;">{{ $vip->salida_fecha }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Hour:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Hour:</td>
 						<td style="width:50%;">{{ $vip->salida_hora }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Aeroline:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Aeroline:</td>
 						<td style="width:50%;">{{ $vip->salida_aerolinea }}<td>
 					</tr>
 					<tr>
-						<td style="color:#334960;width:50%;padding-right:5px;text-align:right;">Travel:</td>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Travel:</td>
 						<td style="width:50%;">{{ $vip->salida_vuelo }}<td>
 					</tr>
 					@endif
+				</table>
+			@endforeach
+
+
+			@foreach ($reservation->vuelos as $key => $vuelo)
+				<table>
+					<tr>
+						<td colspan="2" style="color:#2ca7b0;text-align: center;">
+							<h2 style="margin:30px 0 5px 0;">Flight {{ count($reservation->vuelos)>1?$key+1:'' }}</h2>
+						</td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Origin:</td>
+						<td style="width:50%;">{{ $vuelo->origen }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Destination:</td>
+						<td style="width:50%;">{{ $vuelo->destino }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Date:</td>
+						<td style="width:50%;">{{ $vuelo->fecha }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Passengers:</td>
+						<td style="width:50%;">{{ $vuelo->pasajeros }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Plane:</td>
+						<td style="width:50%;">{{ $vuelo->avion }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Time:</td>
+						<td style="width:50%;">{{ $vuelo->tiempo }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Cap:</td>
+						<td style="width:50%;">{{ $vuelo->capacidad }}<td>
+					</tr>
+					<tr>
+						<td style="color:#2ca7b0;width:50%;padding-right:5px;text-align:right;">Price:</td>
+						<td style="width:50%;">{{ $vuelo->precio }}<td>
+					</tr>
 				</table>
 			@endforeach
 
