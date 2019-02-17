@@ -14,6 +14,7 @@ use App\Tour;
 use App\Vip;
 use App\Wifi;
 use App\Flight;
+use App\Passenger;
 
 use Validator;
 use URL;
@@ -146,7 +147,12 @@ class SiteController extends Controller
                     }
                     foreach (session('carrito')['vuelos'] as $flight) {
                         $flight["reservation_id"] = $reservation->id;
-                        Flight::create($flight);
+                        $flightNew = Flight::create($flight);
+                        $passengers = $flight['listaPasajeros'];
+                        foreach ($passengers as $passenger) {
+                            $passenger['flight_id'] = $flightNew->id;
+                            Passenger::create($passenger);
+                        }
                     }
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;

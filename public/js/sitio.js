@@ -2652,7 +2652,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
     $scope.vipTipos = ['Audi', 'Suburban'];
     $scope.cambiarPasajeros = function () {
-        console.log("Hola");
         $scope.traslado.vip = "";
         if ($scope.traslado.pasajeros <= 2) {
             $scope.vipTipos = ['Suburban', 'Audi'];
@@ -2705,7 +2704,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         $timeout(function(){
             $(".selectVuelo").select2();
         },1000);
-        console.log("asdas");
     }
     $scope.vuelo = {listaPasajeros:[]};
     $scope.vuelos = [
@@ -2859,9 +2857,9 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             avion:$scope.vuelo.avion.titulo,
             tiempo:$scope.vuelo.avion.tiempo,
             capacidad:$scope.vuelo.avion.capacidad,
-            precio:$scope.vuelo.avion.precio
+            precio:$scope.vuelo.avion.precio,
+            listaPasajeros:$scope.vuelo.listaPasajeros
         });
-        console.log($scope.carrito.vuelos);
         $scope.vuelo = {listaPasajeros:[]};
         $timeout(function () {
             $("html, body").animate({ scrollTop: 0 }, 500);
