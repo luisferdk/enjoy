@@ -1,11 +1,9 @@
-$primary: #2ca7b0 !default;
+$primary: #1576c8 !default;
 
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
-$font-primary: 'Muli',
-Arial,
-sans-serif;
+$font-primary: 'Muli',Arial,sans-serif;
 $white: #fff;
 $black: #000;
 
@@ -2456,7 +2454,7 @@ span.select2.select2-container.select2-container--default.select2-container--foc
 }
 
 select.form-control {
-	border: 1px solid #2ca7b0;
+	border: 1px solid $primary;
 	color: #6c747d !important;
 }
 

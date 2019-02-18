@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Dominican Air Services</title>
+  <title>Enjoyment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -65,9 +65,9 @@
             <li class="nav-item {{ Request::is('/')?'active':'' }}">
               <a href="{{ url('/') }}" class="nav-link">Home</a>
             </li>
-            <li class="nav-item {{ Request::is('flights')?'active':'' }}">
+<!--             <li class="nav-item {{ Request::is('flights')?'active':'' }}">
               <a href="{{ url('/flights') }}" class="nav-link">Flights</a>
-            </li>
+            </li> -->
             <li class="nav-item {{ Request::is('transfers')?'active':'' }}">
               <a href="{{ url('/transfers') }}" class="nav-link">Transfers</a>
             </li>
@@ -90,11 +90,6 @@
         </div>
       </div>
     </nav>
-    <a class="weatherwidget-io" href="https://forecast7.com/en/18d58n68d41/punta-cana/" data-label_1="PUNTA CANA" data-label_2="WEATHER" data-theme="original" data-basecolor="#2ca7b0" data-highcolor="white" data-lowcolor="white" data-cloudfill="white" >PUNTA CANA WEATHER</a>
-    <script>
-    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
-    </script>
-    <!-- END nav -->
 
 
     @yield('content')
@@ -104,7 +99,7 @@
         <div class="row mb-3">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Dominican Air Service</h2>
+              <h2 class="ftco-heading-2">Enjoymentd</h2>
               <p>Description ...</p>
             </div>
           </div>
@@ -134,7 +129,7 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Punta Cana, Dominican Republic</a></li>
                 <li><a href="#" class="py-2 d-block">+1 (809)123-45678</a></li>
-                <li><a href="#" class="py-2 d-block">info@dominicanairservices.com</a></li>
+                <li><a href="#" class="py-2 d-block">info@enjoyment.com</a></li>
               </ul>
             </div>
           </div>
@@ -151,7 +146,7 @@
           </div>
           <div class="col-md-12 text-center">
             <p>
-              Copyright &copy; All rights reserved | Dominican Air Services
+              Copyright &copy; All rights reserved | Enjoyment
             </p>
           </div>
         </div>

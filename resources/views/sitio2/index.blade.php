@@ -21,9 +21,9 @@
       <div class="col-md-12 tabulation-search">
         <div class="element-animate">
           <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-flights" role="tab"
-              aria-controls="v-pills-flights" aria-selected="true">Flighs</a>
-            <a class="nav-link p-3" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers" role="tab"
+            <!-- <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-flights" role="tab"
+              aria-controls="v-pills-flights" aria-selected="true">Flighs</a> -->
+            <a class="nav-link p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers" role="tab"
               aria-controls="v-pills-transfers" aria-selected="false">Transfers</a>
             <a class="nav-link p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
               aria-controls="v-pills-excursions" aria-selected="false"> Excursions</a>
@@ -31,7 +31,7 @@
         </div>
 
         <div class="tab-content py-5" id="v-pills-tabContent">
-          <div class="tab-pane fade show active" id="v-pills-flights" role="tabpanel" aria-labelledby="v-pills-flights-tab">
+          <!-- <div class="tab-pane fade" id="v-pills-flights" role="tabpanel" aria-labelledby="v-pills-flights-tab">
             <div class="block-17">
 
 
@@ -168,9 +168,9 @@
               </form>
 
             </div>
-          </div>
+          </div> -->
 
-          <div class="tab-pane fade" id="v-pills-transfers" role="tabpanel" aria-labelledby="v-pills-transfers-tab">
+          <div class="tab-pane fade show active" id="v-pills-transfers" role="tabpanel" aria-labelledby="v-pills-transfers-tab">
             <div class="block-17">
 
 

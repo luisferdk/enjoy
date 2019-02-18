@@ -25,7 +25,7 @@
           </div>
           <div class="col mb-3 d-flex py-4 border" style="background: white;">
             <div class="align-self-center">
-              <p class="mb-0"><span>Email:</span> <a href="mailto:info@dominicanairservice.com">info@dominicanairservice.com</a></p>
+              <p class="mb-0"><span>Email:</span> <a href="mailto:info@enjoyment.com">info@enjoyment.com</a></p>
             </div>
           </div>
           <div class="col mb-3 d-flex py-4 border" style="background: white;">
