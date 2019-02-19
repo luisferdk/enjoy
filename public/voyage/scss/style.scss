@@ -349,6 +349,7 @@ h5,
 			height: calc(100vh - 285px);
 			overflow: hidden;
 			position: relative;
+			background-size: cover;
 
 			.overlay {
 				position: absolute;

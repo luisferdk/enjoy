@@ -6478,7 +6478,8 @@ h5,
       background-position: center center;
       height: calc(100vh - 285px);
       overflow: hidden;
-      position: relative; }
+      position: relative;
+      background-size: cover; }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
         top: 0;
