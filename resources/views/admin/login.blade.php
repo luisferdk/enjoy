@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('css/login.min.css') }}">
     <link rel="stylesheet" href="{{ asset('bower_components/sweetalert2/sweetalert2.min.css') }}">
     <link rel="shortcut icon" type="image/png" href="{{ asset('/') }}img/logo.png">
-    <title>Dominican Air Services</title>
+    <title>Enjoyment</title>
     <style>
         body {
       display: flex;
@@ -88,7 +88,6 @@
                             </div>
                         </center>
                     </form>
-                    <a href="{{ url('register-agency') }}">Registro de agencias</a>
                 </div>
             </div>
         </center>
