@@ -99,7 +99,7 @@
         <div class="row mb-3">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Enjoymentd</h2>
+              <h2 class="ftco-heading-2">Enjoyment</h2>
               <p>Description ...</p>
             </div>
           </div>
@@ -107,7 +107,6 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Book Now</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Flight</a></li>
                 <li><a href="#" class="py-2 d-block">Transfers</a></li>
                 <li><a href="#" class="py-2 d-block">Excursions</a></li>
               </ul>
