@@ -22,9 +22,9 @@
 	<input type="hidden" name="night_phone_a" value="{{ session('reservation')['telefono'] }}">
 	<input type="hidden" name="email" value="{{ session('reservation')['correo'] }}">
 	<input type="hidden" name="currency_code" value="USD">
-	<input type="hidden" name="cancel_return" value="{{ url("/ipn") }}">
-	<input type="hidden" name="notify_url" value="{{ url("/ipn") }}">
-	<input type="hidden" name="return" value="{{ url("/ipn") }}">
+	<input type="hidden" name="cancel_return" value="{{ url('/ipn') }}">
+	<input type="hidden" name="notify_url" value="{{ url('/ipn') }}">
+	<input type="hidden" name="return" value="{{ url('/ipn') }}">
 </form>
 <script>
 	document.getElementById('form').submit();

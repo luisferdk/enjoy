@@ -68,12 +68,6 @@
 <!--             <li class="nav-item {{ Request::is('flights')?'active':'' }}">
               <a href="{{ url('/flights') }}" class="nav-link">Flights</a>
             </li> -->
-            <li class="nav-item {{ Request::is('transfers')?'active':'' }}">
-              <a href="{{ url('/transfers') }}" class="nav-link">Transfers</a>
-            </li>
-            <li class="nav-item {{ Request::is('excursions')?'active':'' }}">
-              <a href="{{ url('/excursions') }}" class="nav-link">Excursions</a>
-            </li>
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
             </li>

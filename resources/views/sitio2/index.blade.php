@@ -26,7 +26,9 @@
             <a class="nav-link p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers" role="tab"
               aria-controls="v-pills-transfers" aria-selected="false">Transfers</a>
             <a class="nav-link p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
-              aria-controls="v-pills-excursions" aria-selected="false"> Excursions</a>
+              aria-controls="v-pills-excursions" aria-selected="false">Excursions</a>
+            <a class="nav-link p-3" id="v-pills-hotels-tab" data-toggle="pill" href="#v-pills-hotels" role="tab"
+              aria-controls="v-pills-hotels" aria-selected="false">Hotels</a>
           </div>
         </div>
 
@@ -431,8 +433,7 @@
           <div class="tab-pane fade" id="v-pills-excursions" role="tabpanel" aria-labelledby="v-pills-excursions-tab">
             <div class="block-17">
 
-
-
+              
               <form action="" class="col-12" id="formTour" method="post" ng-submit="agregarTour($event)">
                 <div class="row">
                   <div class="col-12 col-sm-3">
@@ -501,8 +502,31 @@
                   </div>
                 </div>
               </form>
+
+
             </div>
           </div>
+
+          <div class="tab-pane fade" id="v-pills-hotels" role="tabpanel" aria-labelledby="v-pills-hotels-tab">
+            <div class="block-17">
+
+
+                <div class="block-17">
+
+              
+                  <form action="" class="col-12" id="formHotel" method="post" ng-submit="agregarHotel($event)">
+                    <div class="row"></div>
+                  </form>
+    
+    
+                </div>
+
+
+            </div>
+          </div>
+
+
+
         </div>
       </div>
     </div>
