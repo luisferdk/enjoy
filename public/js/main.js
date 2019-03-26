@@ -21,6 +21,26 @@ $(function(){
             }
         });
 
+
+        $(".hasta").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: "0"
+        });
+        
+        $(".desde").datepicker({
+            dateFormat: "yy-mm-dd",
+            minDate: 0,
+            onSelect: function(date) {
+                var date1 = $('.desde').datepicker('getDate');
+                var date = new Date(Date.parse(date1));
+                date.setDate(date.getDate() + 1);
+                var newDate = date.toDateString();
+                newDate = new Date(Date.parse(newDate));
+                $('.hasta').datepicker("option", "minDate", newDate);
+                $('.desde').trigger("change");
+            }
+        });
+
         $("#date2VIP").datepicker({
             dateFormat: "yy-mm-dd",
             minDate: "0"

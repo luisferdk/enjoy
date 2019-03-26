@@ -23,12 +23,18 @@
           <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
             <!-- <a class="nav-link p-3 active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-flights" role="tab"
               aria-controls="v-pills-flights" aria-selected="true">Flighs</a> -->
-            <a class="nav-link p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers" role="tab"
-              aria-controls="v-pills-transfers" aria-selected="false">Transfers</a>
+            <a class="nav-link p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers"
+              role="tab" aria-controls="v-pills-transfers" aria-selected="false">
+              <i class="icon-car"></i> Transfers
+            </a>
             <a class="nav-link p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
-              aria-controls="v-pills-excursions" aria-selected="false">Excursions</a>
+              aria-controls="v-pills-excursions" aria-selected="false">
+              <i class="icon-sun-o"></i> Excursions
+            </a>
             <a class="nav-link p-3" id="v-pills-hotels-tab" data-toggle="pill" href="#v-pills-hotels" role="tab"
-              aria-controls="v-pills-hotels" aria-selected="false">Hotels</a>
+              aria-controls="v-pills-hotels" aria-selected="false">
+              <i class="icon-hotel"></i> Hotels
+            </a>
           </div>
         </div>
 
@@ -172,7 +178,8 @@
             </div>
           </div> -->
 
-          <div class="tab-pane fade show active" id="v-pills-transfers" role="tabpanel" aria-labelledby="v-pills-transfers-tab">
+          <div class="tab-pane fade show active" id="v-pills-transfers" role="tabpanel"
+            aria-labelledby="v-pills-transfers-tab">
             <div class="block-17">
 
 
@@ -188,8 +195,9 @@
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <select id="hotel" class="form-control select2_para" name="para" ng-change="calcularPrecioTraslado(); cambiarPara();"
-                        ng-model="traslado.para" ng-options="aux.descripcion for aux in paraOpciones" required>
+                      <select id="hotel" class="form-control select2_para" name="para"
+                        ng-change="calcularPrecioTraslado(); cambiarPara();" ng-model="traslado.para"
+                        ng-options="aux.descripcion for aux in paraOpciones" required>
                         <option value="">
                           To
                         </option>
@@ -198,8 +206,8 @@
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <select class="form-control select2" name="pasajeros[]" ng-change="calcularPrecioTraslado();cambiarPasajeros()"
-                        ng-model="traslado.pasajeros" required>
+                      <select class="form-control select2" name="pasajeros[]"
+                        ng-change="calcularPrecioTraslado();cambiarPasajeros()" ng-model="traslado.pasajeros" required>
                         <option value="">
                           Passengers
                         </option>
@@ -209,8 +217,8 @@
                   </div>
                   <div class="col-3">
                     <div class="form-group">
-                      <select class="form-control select2" name="tipo" ng-change="calcularPrecioTraslado()" ng-model="traslado.tipo"
-                        required>
+                      <select class="form-control select2" name="tipo" ng-change="calcularPrecioTraslado()"
+                        ng-model="traslado.tipo" required>
                         <option value="">
                           Type Transfer
                         </option>
@@ -251,8 +259,8 @@
                             *Airline Name
                           </label>
                           <input ng-model="traslado.llegada_aerolinea" class="form-control" name="
-                                                  llegada_aerolinea"
-                            type="text" placeholder="Enter airline name" ng-required="traslado.tipo">
+                                                  llegada_aerolinea" type="text" placeholder="Enter airline name"
+                            ng-required="traslado.tipo">
                         </div>
                       </div>
                       <div class="col-6 col-sm-3">
@@ -293,8 +301,8 @@
                           <label for="">
                             *Airline Name
                           </label>
-                          <input ng-model="traslado.salida_aerolinea" class="form-control" name="salida_aerolinea" type="text"
-                            placeholder="Enter airline name" ng-required="traslado.tipo==2">
+                          <input ng-model="traslado.salida_aerolinea" class="form-control" name="salida_aerolinea"
+                            type="text" placeholder="Enter airline name" ng-required="traslado.tipo==2">
                         </div>
                       </div>
                       <div class="col-6 col-sm-3">
@@ -319,7 +327,8 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/cerveza.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Beer</h4>
-                            <select ng-model="cervezas" name="cervezas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
+                            <select ng-model="cervezas" name="cervezas" id="" class="form-control"
+                              data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($5.00)</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -342,7 +351,8 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/cocacola.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Sodas</h4>
-                            <select ng-model="sodas" name="sodas" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
+                            <select ng-model="sodas" name="sodas" id="" class="form-control"
+                              data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($3.00)</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -365,7 +375,8 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/vino.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Wine</h4>
-                            <select ng-model="vino" name="vino" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
+                            <select ng-model="vino" name="vino" id="" class="form-control"
+                              data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($20.00 bottle)</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -387,7 +398,8 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/champagne.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Champagne</h4>
-                            <select ng-model="champagne" name="champagne" id="" class="form-control" data-ng-change="calcularPrecioTraslado();">
+                            <select ng-model="champagne" name="champagne" id="" class="form-control"
+                              data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($25.00 bottle)</option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -433,34 +445,37 @@
           <div class="tab-pane fade" id="v-pills-excursions" role="tabpanel" aria-labelledby="v-pills-excursions-tab">
             <div class="block-17">
 
-              
+
               <form action="" class="col-12" id="formTour" method="post" ng-submit="agregarTour($event)">
                 <div class="row">
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <select class="form-control" id="tourModel" ng-model="tour" ng-change="cambiarTour();calcularPrecioTour()"
-                        ng-options="aux.titulo for aux in tours" required>
+                      <select class="form-control" id="tourModel" ng-model="tour"
+                        ng-change="cambiarTour();calcularPrecioTour()" ng-options="aux.titulo for aux in tours"
+                        required>
                         <option value>Tour</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <input type="text" class="form-control" id="dateTour" name="fecha" placeholder="Date" ng-model="tour.fecha"
-                        required>
+                      <input type="text" class="form-control" id="dateTour" name="fecha" placeholder="Date"
+                        ng-model="tour.fecha" required>
                     </div>
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.modalidades.length>1">
                     <div class="form-group">
-                      <select class="form-control" id="modalidad" name="modalidad" ng-model="tour.modalidad" ng-change="calcularPrecioTour()"
-                        ng-options="aux.descripcion for aux in tour.modalidades" ng-required="tour.modalidades.length>1">
+                      <select class="form-control" id="modalidad" name="modalidad" ng-model="tour.modalidad"
+                        ng-change="calcularPrecioTour()" ng-options="aux.descripcion for aux in tour.modalidades"
+                        ng-required="tour.modalidades.length>1">
                         <option value="">Tour Type</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.horarios.length>1">
                     <div class="form-group">
-                      <select class="form-control" name="horario" ng-model="tour.horario" ng-required="tour.horarios.length>1">
+                      <select class="form-control" name="horario" ng-model="tour.horario"
+                        ng-required="tour.horarios.length>1">
                         <option value="">Schedule</option>
                         <option ng-repeat="aux in tour.horarios" value="@{{ aux }}">@{{ aux }}</option>
                       </select>
@@ -468,8 +483,8 @@
                   </div>
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <select class="form-control" name="adultos" ng-model="tour.adultos" ng-change="calcularPrecioTour()"
-                        required>
+                      <select class="form-control" name="adultos" ng-model="tour.adultos"
+                        ng-change="calcularPrecioTour()" required>
                         <option value="">
                           Adults
                         </option>
@@ -494,10 +509,12 @@
                     </h3>
                   </div>
                   <div class="col-12 text-center" ng-show="tour.precio>0">
-                    <button class="btn btn-primary tour" ng-click="opcion='agregar'" name="tour" type="submit" value="tour">
+                    <button class="btn btn-primary tour" ng-click="opcion='agregar'" name="tour" type="submit"
+                      value="tour">
                       Add to <i class="ion-ios-cart"></i>
                     </button>
-                    <button class="btn btn-default tour" ng-click="opcion='reservar'" name="tour" type="submit" value="tour">Book
+                    <button class="btn btn-default tour" ng-click="opcion='reservar'" name="tour" type="submit"
+                      value="tour">Book
                       now</button>
                   </div>
                 </div>
@@ -511,15 +528,45 @@
             <div class="block-17">
 
 
-                <div class="block-17">
+              <form action="" class="col-12" id="formhotel" method="post" ng-submit="agregarHotel($event)">
+                <div class="row">
+                  <div class="col-12 col-sm-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control desde" name="fecha_inicio" placeholder="Start Date"
+                        ng-model="hotel.fecha_inicio" autocomplete="false" required>
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control hasta" name="fecha_fin" placeholder="End Date"
+                        ng-model="hotel.fecha_fin" autocomplete="false" required>
+                    </div>
+                  </div>
 
-              
-                  <form action="" class="col-12" id="formHotel" method="post" ng-submit="agregarHotel($event)">
-                    <div class="row"></div>
-                  </form>
-    
-    
+                  <div class="col-12 col-sm-4">
+                      <div class="form-group">
+                        <select name="hotel" class="form-control" ng-model="hotel.hotel" ng-options="aux.descripcion for aux in hoteles">
+                          <option value="">Hotel</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  <div class="col-12" ng-show="hotel.precio>0">
+                    <h3 class="text-center">
+                      @{{hotel.precio | currency:"$ "}}
+                    </h3>
+                  </div>
+                  <div class="col-12 text-center" ng-show="hotel.precio>0">
+                    <button class="btn btn-primary hotel" ng-click="opcion='agregar'" name="hotel" type="submit"
+                      value="hotel">
+                      Add to <i class="ion-ios-cart"></i>
+                    </button>
+                    <button class="btn btn-default hotel" ng-click="opcion='reservar'" name="hotel" type="submit"
+                      value="hotel">Book
+                      now</button>
+                  </div>
                 </div>
+              </form>
 
 
             </div>

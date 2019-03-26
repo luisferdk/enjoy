@@ -6626,13 +6626,12 @@ h5,
   border-radius: 0;
   margin-bottom: 0;
   background: #1576c8;
-  color: white; }
+  color: white;
+  min-width: 150px;
+  text-align: center; }
   .tabulation-search .nav-pills .nav-link.active {
     background: white;
     color: #1576c8; }
-    @media (min-width: 768px) {
-      .tabulation-search .nav-pills .nav-link.active {
-        margin-top: -10px; } }
   @media (max-width: 767.98px) {
     .tabulation-search .nav-pills .nav-link {
       display: block;
