@@ -31,7 +31,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/reservas', 'AdminController@reservas');
 Route::get('/admin/traslados', 'AdminController@traslados');
 Route::get('/admin/excursiones', 'AdminController@tours');
-Route::get('/admin/vuelos', 'AdminController@vuelos');
+Route::get('/admin/hoteles', 'AdminController@hoteles');
 //Route::get('/admin/vip', 'AdminController@vip');
 //Route::get('/admin/wifi', 'AdminController@wifi');
 

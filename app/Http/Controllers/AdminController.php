@@ -39,9 +39,9 @@ class AdminController extends Controller
         return view('admin.vip',compact('reservas'));
     }
 
-    public function vuelos(){
-        $reservas = Flight::with('reservation')->get();
-        return view('admin.vuelos',compact('reservas'));
+    public function hoteles(){
+        $reservas = Hotel::with('reservation')->get();
+        return view('admin.hotel',compact('reservas'));
     }
 
     public function wifi(){
