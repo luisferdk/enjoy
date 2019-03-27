@@ -2996,7 +2996,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         $scope.hotel = {};
         $timeout(function () {
             $("html, body").animate({ scrollTop: 0 }, 500);
-            $('select').select2();
+            $('#formHotel select').select2();
         }, 500);
         $scope.actualizar();
 

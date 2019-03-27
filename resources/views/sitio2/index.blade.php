@@ -390,7 +390,7 @@
             <div class="block-17">
 
 
-              <form action="" class="col-12" id="formhotel" method="post" ng-submit="agregarHotel($event)">
+              <form action="" class="col-12" id="formHotel" method="post" ng-submit="agregarHotel($event)">
                 <div class="row">
                     <div class="col-12 col-sm-4">
                       <div class="row">

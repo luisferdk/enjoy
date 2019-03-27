@@ -6331,6 +6331,9 @@ h5,
         padding-bottom: 10px;
         padding-left: 30px;
         padding-right: 0px; } }
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover > .badge {
+      background-color: white !important;
+      color: #1576c8 !important; }
   .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
     position: relative;
     margin-left: 20px;

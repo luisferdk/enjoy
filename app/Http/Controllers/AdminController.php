@@ -10,7 +10,7 @@ use App\Transfer;
 use App\Tour;
 use App\Vip;
 use App\Wifi;
-use App\Flight;
+use App\Hotel;
 
 class AdminController extends Controller
 {
