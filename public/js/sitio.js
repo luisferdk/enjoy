@@ -6,7 +6,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.carrito = {
         traslados: [],
         tours: [],
-        vuelos:[]
+        hoteles:[]
     };
     $scope.opcion = 'agregar';
     $scope.vector = function (n) {
@@ -418,7 +418,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             title: 'Transfers',
             text: 'added successfully',
             type: 'success',
-            confirmButtonColor: '#2ca7b0',
+            confirmButtonColor: '#1576c8',
         });
     }
 
@@ -435,7 +435,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 title: 'Error',
                 text: 'existing tour',
                 type: 'error',
-                confirmButtonColor: '#2ca7b0',
+                confirmButtonColor: '#1576c8',
             });
             return false;
         }
@@ -476,7 +476,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             title: 'Tour',
             text: 'added successfully',
             type: 'success',
-            confirmButtonColor: '#2ca7b0',
+            confirmButtonColor: '#1576c8',
         });
     }
 
@@ -2601,7 +2601,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             title: 'VIP',
             text: 'added successfully',
             type: 'success',
-            confirmButtonColor: '#2ca7b0',
+            confirmButtonColor: '#1576c8',
         });
     }
 
@@ -2642,8 +2642,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         for (var i = 0; i < $scope.carrito.tours.length; i++) {
             precio += parseFloat($scope.carrito.tours[i].precio);
         }
-        for (var i = 0; i < $scope.carrito.vuelos.length; i++) {
-            precio += parseFloat($scope.carrito.vuelos[i].precio);
+        for (var i = 0; i < $scope.carrito.hoteles.length; i++) {
+            precio += parseFloat($scope.carrito.hoteles[i].precio);
         }
         return precio;
     }
@@ -2679,7 +2679,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             title: 'Wifi',
             text: 'added successfully',
             type: 'success',
-            confirmButtonColor: '#2ca7b0',
+            confirmButtonColor: '#1576c8',
         });
         $("#wifiModal").modal('hide');
         $scope.wifi = {};
@@ -2692,7 +2692,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     }
 
     $scope.nro_carrito = function(){
-        $scope.nro =  $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.vuelos.length;
+        $scope.nro =  $scope.carrito.tours.length + $scope.carrito.traslados.length + $scope.carrito.hoteles.length;
     }
 
 
@@ -2870,12 +2870,146 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             title: 'Flight',
             text: 'added successfully',
             type: 'success',
-            confirmButtonColor: '#2ca7b0',
+            confirmButtonColor: '#1576c8',
         });
     }
 
     $scope.eliminarVuelo = function (index) {
         $scope.carrito.vuelos.splice(index, 1);
+        $scope.actualizar();
+    }
+
+
+    /* Hoteles */
+    $scope.hotelesReservar = [
+        {id:0,descripcion: 'Four Point by Sheraton Punta Cana',precio:40},
+        {id:1,descripcion: "Casa de Campo Resort & Villas",precio:40},
+        {id:2,descripcion: "Grand Bahia Principe La Romana",precio:40},
+        {id:3,descripcion: "La Romana Luxury Bahia Principe Bouganville - Adults Only",precio:40},
+        {id:4,descripcion: "Be Live Collection Canoa - All Inclusive",precio:40},
+        {id:5,descripcion: "Dreams La Romana Resort and Spa",precio:40},
+        {id:6,descripcion: "Catalonia La Romana - All Inclusive",precio:40},
+        {id:7,descripcion: "Tracadero Beach Resort",precio:40},
+        {id:8,descripcion: "Hotel Bayahibe",precio:40},
+        {id:9,descripcion: "Dreams Dominicus La Romana",precio:40},
+        {id:10,descripcion: "Viva Wyndham Dominicus Beach - All Inclusive",precio:40},
+        {id:11,descripcion: "Catalonia Royal La Romana Adults Only - All Inclusive",precio:40},
+        {id:12,descripcion: "Viva Wyndham Dominicus Palace - All Inclusive",precio:40},
+        {id:13,descripcion: "Iberostar Hacienda Dominicus",precio:40},
+        {id:14,descripcion: "whala! Bayahibe",precio:40},
+        {id:15,descripcion: 'Santo Domingo',precio:40},
+    
+        {id:16,descripcion: "Majestic Colonial ",precio:40},
+        {id:17,descripcion: "Majestic Elegance ",precio:40},
+        {id:18,descripcion: "Majestic Mirage",precio:40},
+        {id:19,descripcion: 'Iberostar Punta Cana',precio:40},
+        {id:20,descripcion: 'Iberostar Bavaro',precio:40},
+        {id:21,descripcion: 'Iberostar Grand',precio:40},
+        {id:22,descripcion: 'Iberostar Dominicana',precio:40},
+        {id:23,descripcion: 'Royalton Bavaro',precio:40},
+        {id:24,descripcion: 'Dreams Palm Beach',precio:40},
+        {id:25,descripcion: 'Ocean Blue & Sand Beach Resort',precio:40},
+        {id:26,descripcion: 'Vik Arena Blanca',precio:40},
+        {id:27,descripcion: 'Westin Punta Cana',precio:40},
+        {id:28,descripcion: 'Alsol Luxury Village',precio:40},
+        {id:29,descripcion: 'Alsol del Mar (Soto Grande)',precio:40},
+        {id:30,descripcion: 'Sanctuary Cap Cana',precio:40},
+        {id:31,descripcion: 'Club Med',precio:40},
+        {id:32,descripcion: 'Natura Park Resort (Blau)',precio:40},
+        {id:33,descripcion: 'Catalonia Punta Cana',precio:40},
+        {id:34,descripcion: 'Be Live Collection Punta Cana',precio:40},
+        {id:35,descripcion: 'Alsol Tiara Cap Cana',precio:40},
+        {id:36,descripcion: 'The Villas at Cap Cana by Alsol',precio:40},
+        {id:37,descripcion: 'Luxury Beach Front Apartment in Punta Palmera',precio:40},
+        {id:38,descripcion: 'Eden Roc At Cap Cana',precio:40},
+        {id:39,descripcion: 'Fishing Lodge CapCana Diamond Resort',precio:40},
+        {id:40,descripcion: 'Grand Bahia Principe Bavaro',precio:40},
+        {id:41,descripcion: 'Bavaro Princess All Suites Resort, Spa & Casino',precio:40},
+        {id:42,descripcion: 'Melia Caribe Tropical',precio:40},
+        {id:43,descripcion: 'Tropical Princess Beach Resort & Spa',precio:40},
+        {id:44,descripcion: 'Barcelo Bavaro Palace',precio:40},
+        {id:45,descripcion: 'Barcelo Bavaro Beach',precio:40},
+        {id:46,descripcion: 'Blue Beach Punta Cana Luxury Resort',precio:40},
+        {id:47,descripcion: 'Catalonia Royal Bavaro - All Inclusive - Adults Only',precio:40},
+        {id:48,descripcion: 'Grand Bahia Principe Turquesa',precio:40},
+        {id:49,descripcion: 'Caribe Club Princess Beach Resort and Spa',precio:40},
+        {id:50,descripcion: 'Vista Sol Punta Cana Beach Resort & Spa',precio:40},
+        {id:51,descripcion: 'Punta Cana Princess All Suites Resort and Spa',precio:40},
+        {id:52,descripcion: 'Luxury Bahia Principe Esmeralda',precio:40},
+        {id:53,descripcion: 'The Level at Melia Caribe Tropical',precio:40},
+        {id:54,descripcion: 'Luxury Bahia Principe Ambar Blue - Adults Only',precio:40},
+        {id:55,descripcion: 'whala!bávaro',precio:40},
+        {id:56,descripcion: 'Sanctuary Cap Cana - All Inclusive by Playa Hotels & Resorts',precio:40},
+        {id:57,descripcion: 'Luxury Bahia Principe Ambar Green - Adults Only',precio:40},
+        {id:58,descripcion: 'Hotel Cortecito Inn Bavaro',precio:40},
+        {id:59,descripcion: 'Punta Palmera Cap Cana by Essenza Retreats',precio:40},
+        {id:60,descripcion: 'Residencial Las Buganvillas Bavaro',precio:40},
+        {id:61,descripcion: 'Royalton Punta Cana Resort & Casino',precio:40},
+        {id:62,descripcion: 'Riu Palace Punta Cana',precio:40},
+        {id:63,descripcion: 'Riu Naiboa',precio:40},
+        {id:64,descripcion: 'Riu Bavaro',precio:40},
+        {id:65,descripcion: 'Riu Palace Macao',precio:40},
+    
+        {id:66,descripcion: "Occidental Caribe",precio:40},
+        {id:67,descripcion: "Occidental Punta Cana",precio:40},
+        {id:68,descripcion: "Secret Cap Cana",precio:40},
+        {id:69,descripcion: "Secret Royal Beach",precio:40},
+        {id:70,descripcion: "Now Onix",precio:40},
+        {id:71,descripcion: "Riu República",precio:40},
+        {id:72,descripcion: "Bahia Principe Ambar",precio:40},
+        {id:73,descripcion: "Bahia Principe Fantasy",precio:40},
+    
+        {id:74,descripcion: "Hard Rock Hotel & Casino",precio:40},
+    
+        {id:75,descripcion: "Zoetry Aqua",precio:40},
+        {id:76,descripcion: "The Palms Punta Cana",precio:40},
+        {id:77,descripcion: "Las Dunas Condo",precio:40},
+        {id:78,descripcion: "Breathless Punta  Cana Resort & Spa",precio:40},
+        {id:79,descripcion: "CHIC by Royalton Resorts ",precio:40},
+        {id:80,descripcion: "Dreams Punta Cana Resort & Spa",precio:40},
+        {id:81,descripcion: "Excellence Punta Cana",precio:40},
+        {id:82,descripcion: "Excellence El Carmen",precio:40},
+        {id:83,descripcion: "Sensatori Resort Punta Cana",precio:40},
+        {id:84,descripcion: "Sirenis Punta Cana Resort Casino & Aguagames",precio:40},
+        {id:85,descripcion: "Sirenis Cocotal Beach Resort Punta Cana ",precio:40},
+        {id:86,descripcion: "Sirenis Tropical Suites Punta Cana ",precio:40},
+        {id:87,descripcion: "Sivory Punta Cana Boutique Hotel",precio:40},
+        {id:88,descripcion: "Nickelodeon Hotels & Resorts Punta Cana ",precio:40},
+    ];    
+
+    $scope.hotel = {};
+
+    $scope.calcularPrecioHotel = function(){
+        $scope.hotel.precio = $scope.hotel.hotel.precio;
+    }
+
+    $scope.agregarHotel = function (event) {
+        event.preventDefault();
+        $scope.carrito.hoteles.push({
+            fecha_inicio:$scope.hotel.fecha_inicio,
+            fecha_fin:$scope.hotel.fecha_fin,
+            hotel:$scope.hotel.hotel.descripcion,
+            adultos:$scope.hotel.adultos,
+            ninos:$scope.hotel.ninos,
+            precio:$scope.hotel.precio,
+        });
+        $scope.hotel = {};
+        $timeout(function () {
+            $("html, body").animate({ scrollTop: 0 }, 500);
+            $('select').select2();
+        }, 500);
+        $scope.actualizar();
+
+        swal({
+            title: 'Hotel',
+            text: 'added successfully',
+            type: 'success',
+            confirmButtonColor: '#1576c8',
+        });
+    }
+
+    $scope.eliminarHotel = function (index) {
+        $scope.carrito.hoteles.splice(index, 1);
         $scope.actualizar();
     }
 });

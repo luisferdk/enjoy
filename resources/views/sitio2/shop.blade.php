@@ -6,32 +6,34 @@
 		@csrf
 		<h1 class="col-12 text-center text-primary">Reservation</h1>
 
-		<div class="col-10 offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.vuelos.length==0">
+		<div class="col-10 offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.hoteles.length==0">
 			<div class="alert alert-primary text-center">Add item to <i class="ion-ios-cart"></i></div>
 		</div>
 
-		<div class="col-10 offset-1" ng-if="carrito.vuelos.length>0">
-			<h2 class="col-12 text-center text-primary">Flights</h2>
+		<div class="col-10 offset-1" ng-if="carrito.hoteles.length>0">
+			<h2 class="col-12 text-center text-primary">Hotels</h2>
 			<table class="table table-bordered text-center">
 				<thead>
 					<tr>
-						<th class="text-center">Date</th>
-						<th class="text-center">Origin</th>
-						<th class="text-center">Destination</th>
-						<th class="text-center">Passengers</th>
+						<th class="text-center">Start</th>
+						<th class="text-center">End</th>
+						<th class="text-center">Hotel</th>
+						<th class="text-center">Adults</th>
+						<th class="text-center">Children</th>
 						<th class="text-center">Price</th>
 						<th></th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="(index,aux) in carrito.vuelos">
-						<td>@{{ aux.fecha }}</td>
-						<td>@{{ aux.origen }}</td>
-						<td>@{{ aux.destino }}</td>
-						<td>@{{ aux.pasajeros }}</td>
+					<tr ng-repeat="(index,aux) in carrito.hoteles">
+						<td>@{{ aux.fecha_inicio }}</td>
+						<td>@{{ aux.fecha_fin }}</td>
+						<td>@{{ aux.hotel }}</td>
+						<td>@{{ aux.adultos }}</td>
+						<td>@{{ aux.ninos }}</td>
 						<td>@{{ aux.precio | currency:"$ " }}</td>
 						<td>
-							<a ng-click="eliminarVuelo(index)"><i class="ion-md-trash text-danger"></i></a>
+							<a ng-click="eliminarHotel(index)"><i class="ion-md-trash text-danger"></i></a>
 						</td>
 					</tr>
 				</tbody>

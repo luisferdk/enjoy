@@ -22,22 +22,22 @@ $(function(){
         });
 
 
-        $(".hasta").datepicker({
+        $("#hotelFin").datepicker({
             dateFormat: "yy-mm-dd",
-            minDate: "0"
+            minDate: +2
         });
         
-        $(".desde").datepicker({
+        $("#hotelInicio").datepicker({
             dateFormat: "yy-mm-dd",
-            minDate: 0,
+            minDate: +2,
             onSelect: function(date) {
-                var date1 = $('.desde').datepicker('getDate');
+                var date1 = $('#hotelInicio').datepicker('getDate');
                 var date = new Date(Date.parse(date1));
                 date.setDate(date.getDate() + 1);
                 var newDate = date.toDateString();
                 newDate = new Date(Date.parse(newDate));
-                $('.hasta').datepicker("option", "minDate", newDate);
-                $('.desde').trigger("change");
+                $('#hotelFin').datepicker("option", "minDate", newDate);
+                $('#hotelInicio').trigger("change");
             }
         });
 

@@ -165,7 +165,7 @@ class SiteController extends Controller
                         "carrito" => array(
                             "traslados" => array(),
                             "tours" => array(),
-                            "vuelos" => array()
+                            "hoteles" => array()
                         )
                     ]);
                     return redirect('/')->with('status', 'Reservation Completed');
@@ -215,7 +215,7 @@ class SiteController extends Controller
                 "carrito" => array(
                     "traslados" => array(),
                     "tours" => array(),
-                    "vuelos" => array()
+                    "hoteles" => array()
                 )
             ]);
             return redirect('/')->with('status', 'Reservation Completed');
@@ -229,17 +229,7 @@ class SiteController extends Controller
                 (
                     "traslados" => array(),
                     "tours" => array(),
-                    "vuelos" => array()
-                )
-            ]);
-        }
-        elseif(isset(session('carrito')['wifi'])){
-            session([
-                "carrito"=> array
-                (
-                    "traslados" => array(),
-                    "tours" => array(),
-                    "vuelos" => array()
+                    "hoteles" => array()
                 )
             ]);
         }
@@ -258,7 +248,7 @@ class SiteController extends Controller
             (
                 "traslados" => array(),
                 "tours" => array(),
-                "vuelos" => array()
+                "hoteles" => array()
             )
         ]);
     }
