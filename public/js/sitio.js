@@ -2980,7 +2980,12 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     $scope.hotel = {};
 
     $scope.calcularPrecioHotel = function(){
-        $scope.hotel.precio = $scope.hotel.hotel.precio;
+        var start = $('#hotelInicio').datepicker('getDate');
+        var end   = $('#hotelFin').datepicker('getDate');
+        if(start && end){
+            var days   = (end - start)/1000/60/60/24;
+            $scope.hotel.precio = $scope.hotel.hotel.precio * days;
+        }
     }
 
     $scope.agregarHotel = function (event) {

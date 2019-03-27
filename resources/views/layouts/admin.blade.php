@@ -13,7 +13,7 @@
         
         <!-- Styles -->
         <link rel="shortcut icon" href="{{ asset('img/logo.png') }}" type="image/png">
-        <link type="text/css" rel="stylesheet" href="{{ asset('administrador') }}/plugins/materialize/css/materialize.min.css"/>
+        <link type="text/css" rel="stylesheet" href="{{ asset('administrador') }}/plugins/materialize/css/materialize.min.css?v=2"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="{{ asset('administrador') }}/plugins/material-preloader/css/materialPreloader.min.css" rel="stylesheet">
         <link href="{{ asset('administrador') }}/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>

@@ -32,8 +32,8 @@ class ConfirmRegis extends Mailable
      */
     public function build()
     {
-        $de = "Renny Travel";
-        return $this->from("info@rennytours.com", $de)
+        $de = "Enjoy";
+        return $this->from("info@enjoyment.com", $de)
             ->subject("Confirming agency")
             //->cc($cc)
             // ->bcc($bcc)

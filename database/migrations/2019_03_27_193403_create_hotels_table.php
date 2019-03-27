@@ -21,6 +21,7 @@ class CreateHotelsTable extends Migration
             $table->integer("adultos")->unsigned();
             $table->integer("ninos")->unsigned()->nullable();
             $table->float("precio");
+            $table->integer("reservation_id")->unsigned();
             $table->timestamps();
         });
     }
