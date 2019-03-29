@@ -65,9 +65,9 @@
             <li class="nav-item {{ Request::is('/')?'active':'' }}">
               <a href="{{ url('/') }}" class="nav-link">Home</a>
             </li>
-<!--             <li class="nav-item {{ Request::is('flights')?'active':'' }}">
-              <a href="{{ url('/flights') }}" class="nav-link">Flights</a>
-            </li> -->
+            <li class="nav-item {{ Request::is('aboutUs')?'active':'' }}">
+              <a href="{{ url('/aboutUs') }}" class="nav-link">About Us</a>
+            </li>
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
             </li>
@@ -120,9 +120,9 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Contact Information</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Punta Cana, Dominican Republic</a></li>
-                <li><a href="#" class="py-2 d-block">+1 (809)123-45678</a></li>
-                <li><a href="#" class="py-2 d-block">info@enjoyment.com</a></li>
+                <li><a href="#" class="py-2 d-block">Av.España ,Plaza Mayoral ,Local No.203,Bavaro,P.C.</a></li>
+                <li><a href="tel:+1 (809) 872-6403" class="py-2 d-block">+1 (809) 872-6403</a></li>
+                <li><a href="mailto:info@puntacanaenjoyment.com" class="py-2 d-block">info@puntacanaenjoyment.com</a></li>
               </ul>
             </div>
           </div>

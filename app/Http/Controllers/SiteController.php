@@ -46,6 +46,10 @@ class SiteController extends Controller
     	return view('sitio2.excursion',compact('id'));
     }
 
+    public function aboutUs(){
+    	return view('sitio2.aboutUs');
+    }
+
     public function contact(){
     	return view('sitio2.contact');
     }

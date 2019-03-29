@@ -15,22 +15,17 @@
         <div class="row d-block flex-row">
           <div class="col mb-3 d-flex py-4 border" style="background: white;">
             <div class="align-self-center">
-              <p class="mb-0"><span>Address:</span> Bavaro, Punta Cana</p>
+              <p class="mb-0"><span>Address:</span> Av.España ,Plaza Mayoral ,Local No.203,Bavaro,P.C.</p>
             </div>
           </div>
           <div class="col mb-3 d-flex py-4 border" style="background: white;">
             <div class="align-self-center">
-              <p class="mb-0"><span>Phone:</span> <a href="tel://1234567920">+1 (809) 284-2817</a></p>
+              <p class="mb-0"><span>Phone:</span> <a href="tel:+1(809)872-6403">+1 (809) 872-6403</a></p>
             </div>
           </div>
           <div class="col mb-3 d-flex py-4 border" style="background: white;">
             <div class="align-self-center">
-              <p class="mb-0"><span>Email:</span> <a href="mailto:info@enjoyment.com">info@enjoyment.com</a></p>
-            </div>
-          </div>
-          <div class="col mb-3 d-flex py-4 border" style="background: white;">
-            <div class="align-self-center">
-              <p class="mb-0"><span>Website</span> <a href="#">yoursite.com</a></p>
+              <p class="mb-0"><span>Email:</span> <a href="mailto:info@puntacanaenjoyment.com">info@puntacanaenjoyment.com</a></p>
             </div>
           </div>
         </div>
