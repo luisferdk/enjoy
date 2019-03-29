@@ -55,8 +55,8 @@
         <a class="navbar-brand" href="{{ url('/') }}">
           <img style="height:80px;" class="img-fluid" src='{{ asset("/") }}img/logo.png' alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
-          aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="oi oi-menu"></span> Menu
         </button>
 
@@ -65,20 +65,20 @@
             <li class="nav-item {{ Request::is('/')?'active':'' }}">
               <a href="{{ url('/') }}" class="nav-link">Home</a>
             </li>
+            <li class="nav-item {{ Request::is('shop')?'active':'' }}">
+              <a href="{{ url('/shop') }}" class="nav-link"> <i class="ion-ios-cart"></i>
+                @if(!Request::is('shop'))
+                <span class="badge badge-primary text-white">@{{ nro }}</span>
+                @else
+                <span class="badge badge-light text-primary">@{{ nro }}</span>
+                @endif
+                Cart</a>
+            </li>
             <li class="nav-item {{ Request::is('aboutUs')?'active':'' }}">
               <a href="{{ url('/aboutUs') }}" class="nav-link">About Us</a>
             </li>
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
-            </li>
-            <li class="nav-item {{ Request::is('shop')?'active':'' }}">
-              <a href="{{ url('/shop') }}" class="nav-link"> <i class="ion-ios-cart"></i> 
-                @if(!Request::is('shop'))
-                  <span class="badge badge-primary text-white">@{{ nro }}</span>
-                @else
-                  <span class="badge badge-light text-primary">@{{ nro }}</span>
-                @endif
-                Cart</a>
             </li>
           </ul>
         </div>
@@ -122,7 +122,8 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Av.España ,Plaza Mayoral ,Local No.203,Bavaro,P.C.</a></li>
                 <li><a href="tel:+1 (809) 872-6403" class="py-2 d-block">+1 (809) 872-6403</a></li>
-                <li><a href="mailto:info@puntacanaenjoyment.com" class="py-2 d-block">info@puntacanaenjoyment.com</a></li>
+                <li><a href="mailto:info@puntacanaenjoyment.com" class="py-2 d-block">info@puntacanaenjoyment.com</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -151,7 +152,8 @@
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
         <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+          stroke="#F96D00" /></svg></div>
 
   </div>
   <script src="{{ asset('voyage') }}/js/jquery.min.js"></script>
@@ -186,6 +188,21 @@
 
   <script src="{{ asset("/") }}js/sitio.js?v=32"></script>
   <script src="{{ asset("/") }}js/main.js?v=32"></script>
+  <script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "+1 (809) 872-6403", // WhatsApp number
+            call_to_action: "Hello, how may we help you?", // Call to action
+            button_color: "#A8CE50", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
 </body>
 
 </html>
