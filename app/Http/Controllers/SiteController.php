@@ -149,7 +149,7 @@ class SiteController extends Controller
                         $tour["reservation_id"] = $reservation->id;
                         Tour::create($tour);
                     }
-                    foreach (session('carrito')['vuelos'] as $flight) {
+                    /* foreach (session('carrito')['vuelos'] as $flight) {
                         $flight["reservation_id"] = $reservation->id;
                         $flightNew = Flight::create($flight);
                         $passengers = $flight['listaPasajeros'];
@@ -157,7 +157,7 @@ class SiteController extends Controller
                             $passenger['flight_id'] = $flightNew->id;
                             Passenger::create($passenger);
                         }
-                    }
+                    } */
                     $reservation->id_pago = $charge["id"];
                     $reservation->estado = 1;
                     $reservation->save();
@@ -204,10 +204,10 @@ class SiteController extends Controller
                 $tour["reservation_id"] = $reservation->id;
                 Tour::create($tour);
             }
-            foreach (session('carrito')['vuelos'] as $vuelo) {
+            /* foreach (session('carrito')['vuelos'] as $vuelo) {
                 $vuelo["reservation_id"] = $reservation->id;
                 Flight::create($vuelo);
-            }
+            } */
 
             $reservation->id_pago = $datos["id"];
             $reservation->estado = 1;
