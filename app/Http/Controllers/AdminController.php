@@ -20,7 +20,7 @@ class AdminController extends Controller
     }
 
     public function reservas(){
-        $reservas = Reservation::with('tours','transfers','vips','wifis')->where("estado",1);
+        $reservas = Reservation::with('tours','transfers','vips','wifis')->where("estado",1)->get();
         return view('admin.reservas',compact('reservas'));
     }
 
