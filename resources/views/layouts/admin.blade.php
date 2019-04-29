@@ -129,38 +129,38 @@
                 <ul class="sidebar-menu collapsible collapsible-accordion" data-collapsible="accordion">
                     <li class="no-padding {{ Request::is('admin/reservas')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/reservas') }}">
-                            <!-- <i class="material-icons">assignment</i> -->Reservas
+                            <i class="material-icons">assignment</i>Reservas
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/traslados')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/traslados') }}">
-                            <!-- <i class="material-icons">directions_car</i> -->Traslados
+                            <i class="material-icons">directions_car</i>Traslados
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/excursiones')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/excursiones') }}">
-                            <!-- <i class="material-icons">directions_boat</i> -->Excursiones
+                            <i class="material-icons">directions_boat</i>Excursiones
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/hoteles')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/hoteles') }}">
-                            <!-- <i class="material-icons">airplanemode_active</i> -->Hoteles
+                            <i class="material-icons">airplanemode_active</i>Hoteles
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/coupon')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/coupon') }}">
-                            <!-- <i class="material-icons">bookmark_border</i> -->Cupones
+                            <i class="material-icons">bookmark_border</i>Cupones
                         </a>
                     </li>
                     <li class="no-padding {{ Request::is('admin/agency')?'active':'' }}">
                         <a class="waves-effect waves-grey" href="{{ url('/admin/agency') }}">
-                            <!-- <i class="material-icons">business_center</i> -->Agencias
+                            <i class="material-icons">business_center</i>Agencias
                         </a>
                     </li>
                     @if(Auth::user()->id == 1)
                         <li class="no-padding {{ Request::is('admin/users')?'active':'' }}">
                             <a class="waves-effect waves-grey" href="{{ url('/admin/users') }}">
-                                <!-- <i class="material-icons">person</i> -->Usuarios
+                                <i class="material-icons">person</i>Usuarios
                             </a>
                         </li>
                     @endif
