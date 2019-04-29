@@ -42,7 +42,7 @@
     <div class="section"></div>
     <main>
         <center>
-            <a href="{{ url("/") }}"><img class="responsive-img" style="width: 250px;" src="{{ asset("/") }}img/logoLogin.png" /></a>
+            <a href="{{ url("/") }}"><img class="responsive-img" style="width: 250px;" src="{{ asset("/") }}img/logo.png" /></a>
 
             <h5 class="indigo-text">Please, login into your account</h5>
 
