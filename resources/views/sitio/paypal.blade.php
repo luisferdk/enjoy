@@ -24,7 +24,7 @@
 	<input type="hidden" name="currency_code" value="USD">
 	<input type="hidden" name="cancel_return" value="{{ url('/ipn') }}">
 	<input type="hidden" name="notify_url" value="{{ url('/ipn') }}">
-	<input type="hidden" name="return" value="{{ url('/ipn?id=') }}">
+	<input type="hidden" name="return" value="{{ url('/completed') }}">
 </form>
 <script>
 	document.getElementById('form').submit();
