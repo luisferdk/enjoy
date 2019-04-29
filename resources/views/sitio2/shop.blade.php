@@ -6,11 +6,11 @@
 		@csrf
 		<h1 class="col-12 text-center text-primary">Reservation</h1>
 
-		<div class="col-10 offset-1" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.hoteles.length==0">
+		<div class="col-12" ng-if="carrito.traslados.length==0 && carrito.tours.length==0 && carrito.hoteles.length==0">
 			<div class="alert alert-primary text-center">Add item to <i class="ion-ios-cart"></i></div>
 		</div>
 
-		<div class="col-10 offset-1" ng-if="carrito.hoteles.length>0">
+		<div class="col-12" ng-if="carrito.hoteles.length>0">
 			<h2 class="col-12 text-center text-primary">Hotels</h2>
 			<table class="table table-bordered text-center">
 				<thead>
@@ -39,7 +39,7 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="col-10 offset-1" ng-if="carrito.traslados.length>0">
+		<div class="col-12" ng-if="carrito.traslados.length>0">
 			<h2 class="col-12 text-center text-primary">Transfers</h2>
 			<table class="table table-bordered text-center">
 				<thead>
@@ -69,7 +69,7 @@
 			</table>
 		</div>
 
-		<div class="col-10 offset-1" ng-if="carrito.tours.length>0">
+		<div class="col-12" ng-if="carrito.tours.length>0">
 			<h2 class="col-12 text-center text-primary">Excursions</h2>
 			<table class="table table-bordered text-center">
 				<thead>
@@ -99,7 +99,7 @@
 			</table>
 		</div>
 
-		<div class="col-10 offset-1" ng-if="precioTotal()>0">
+		<div class="col-12" ng-if="precioTotal()>0">
 			<div class="row">
 				<h2 class="col-12 text-center text-primary">Client Info</h2>
 				<div class="col-12 col-sm-6">
@@ -163,12 +163,12 @@
 		</div>
 
 		<input type="hidden" id="finalPrice" name="finalPrice">
-		<h2 id="priceText" class="col-10 offset-1 text-primary text-center" ng-show="precioTotal()>0">
+		<h2 id="priceText" class="col-12 text-primary text-center" ng-show="precioTotal()>0">
 			@{{ precioTotal() | currency:"$ "}}
 			<input type="hidden" id="price" name="precio" value="@{{ precioTotal() }}">
 		</h2>
 
-		<div class="col-10 offset-1 card mt-2 mb-2" ng-show="precioTotal()>0">
+<!-- 		<div class="col-12 card mt-2 mb-2" ng-show="precioTotal()>0">
 			<div class="row card-body">
 				<div class="col-6 offset-3 mb-2 col-sm-4 offset-sm-4">
 					<img class="img-fluid" src="{{ asset('img/tarjetas.png') }}" alt="">
@@ -197,9 +197,9 @@
 					 required>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
-		<div class="col-10 offset-1 mt-2 mb-4" ng-show="precioTotal()>0">
+		<div class="col-12 mt-2 mb-4" ng-show="precioTotal()>0">
 			<input 
 				data-toggle="tooltip" 
 				title="Accept terms and conditions"

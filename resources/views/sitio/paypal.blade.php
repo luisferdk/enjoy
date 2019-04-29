@@ -14,13 +14,13 @@
 	<input type="hidden" name="business" value="enjoymenttours@gmail.com">
 @endif
 	<input type="hidden" name="cmd" value="_xclick">
-	<input type="hidden" name="item_name" value="Reservation Renny Travel">
+	<input type="hidden" name="item_name" value="Reservation Enjoyment">
 	<input type="hidden" name="item_number" value="1">
-	<input type="hidden" name="amount" value="{{ session('reservation')['precio'] }}">
-	<input type="hidden" name="first_name" value="{{ session('reservation')['nombre'] }}">
-	<input type="hidden" name="last_name" value="{{ session('reservation')['apellido'] }}">
-	<input type="hidden" name="night_phone_a" value="{{ session('reservation')['telefono'] }}">
-	<input type="hidden" name="email" value="{{ session('reservation')['correo'] }}">
+	<input type="hidden" name="amount" value="{{ $reservation->precio }}">
+	<input type="hidden" name="first_name" value="{{ $reservation->nombre }}">
+	<input type="hidden" name="last_name" value="{{ $reservation->apellido }}">
+	<input type="hidden" name="night_phone_a" value="{{ $reservation->telefono }}">
+	<input type="hidden" name="email" value="{{ $reservation->correo }}">
 	<input type="hidden" name="currency_code" value="USD">
 	<input type="hidden" name="cancel_return" value="{{ url('/ipn') }}">
 	<input type="hidden" name="notify_url" value="{{ url('/ipn') }}">

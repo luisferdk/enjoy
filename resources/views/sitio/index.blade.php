@@ -11,7 +11,7 @@
         <link href="{{ asset('/') }}bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="{{ asset('/') }}bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
         <link href="{{ asset('/') }}bower_components/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet">
-        <link href="{{ asset('/') }}bower_components/jt.timepicker/jquery.timepicker.css" rel="stylesheet">
+        <link href="{{ asset('/') }}bower_components/jt.timepicker/jquery.timepicker.css?v=2" rel="stylesheet">
         <link href="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.css" rel="stylesheet">
         <link href="{{ asset('/') }}css/main.css?11" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">

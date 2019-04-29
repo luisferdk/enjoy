@@ -26,234 +26,181 @@ use Cartalyst\Stripe\Stripe;
 
 class SiteController extends Controller
 {
-    public function index2(){
-    	return view('sitio2.index');
+  public function index2()
+  {
+    return view('sitio2.index');
+  }
+
+  public function flights()
+  {
+    return view('sitio2.flights');
+  }
+
+  public function transfers()
+  {
+    return view('sitio2.transfers');
+  }
+
+  public function excursions()
+  {
+    return view('sitio2.excursions');
+  }
+
+  public function excursion($id)
+  {
+    return view('sitio2.excursion', compact('id'));
+  }
+
+  public function aboutUs()
+  {
+    return view('sitio2.aboutUs');
+  }
+
+  public function contact()
+  {
+    return view('sitio2.contact');
+  }
+
+  public function shop()
+  {
+    return view('sitio2.shop');
+  }
+
+  public function index()
+  {
+    return view('sitio.index');
+  }
+
+  public function partyBoats()
+  {
+    return view('sitio.partyBoats');
+  }
+
+  public function tours()
+  {
+    return view('sitio.tours');
+  }
+
+  public function tour($id)
+  {
+    return view('sitio.tour', compact('id'));
+  }
+
+  public function packages()
+  {
+    return view('sitio.packages');
+  }
+
+  public function packagesPOST(Request $request)
+  {
+    //Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
+    return redirect('/packages')->with('status', 'Reservation Completed');
+  }
+
+  public function wifiServices()
+  {
+    return view('sitio.wifiServices');
+  }
+
+  public function puntacana()
+  {
+    return view('sitio.puntacana');
+  }
+
+  public function shopGet()
+  {
+    return view('sitio.shop');
+  }
+  public function shopPost(Request $request)
+  {
+    $data = $request->all();
+    if (!isset($data['precio']))
+      $data['precio'] = $request->input('finalPrice');
+
+    session(
+      ["reservation" => $data]
+    );
+
+    $datos = $request->all();
+    $reservation = Reservation::create(session("reservation"));
+    foreach (session('carrito')['traslados'] as $traslado) {
+      $traslado["reservation_id"] = $reservation->id;
+      Transfer::create($traslado);
     }
-
-    public function flights(){
-    	return view('sitio2.flights');
+    foreach (session('carrito')['tours'] as $tour) {
+      $tour["reservation_id"] = $reservation->id;
+      Tour::create($tour);
     }
+    session([
+      "reservation" => array(),
+      "carrito" => array(
+        "traslados" => array(),
+        "tours" => array(),
+        "hoteles" => array()
+      )
+    ]);
+    return view('sitio.paypal',compact('reservation'));
+  }
 
-    public function transfers(){
-    	return view('sitio2.transfers');
+  /* public function ipn(Request $request)
+  {
+    $datos = $request->all();
+    if ($datos['credit_card_processed'] == "Y") {
+      $reservation = Reservation::create(session("reservation"));
+      foreach (session('carrito')['traslados'] as $traslado) {
+        $traslado["reservation_id"] = $reservation->id;
+        Transfer::create($traslado);
+      }
+      foreach (session('carrito')['tours'] as $tour) {
+        $tour["reservation_id"] = $reservation->id;
+        Tour::create($tour);
+      }
+      $reservation->id_pago = $datos["id"];
+      $reservation->estado = 1;
+      $reservation->save();
+      $reservation = $reservation::with('transfers', 'tours', 'vips', 'wifis', 'flights')->where("id", $reservation->id)->first();
+      Mail::to($reservation->correo, "$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+      session([
+        "reservation" => array(),
+        "carrito" => array(
+          "traslados" => array(),
+          "tours" => array(),
+          "hoteles" => array()
+        )
+      ]);
+      return redirect('/')->with('status', 'Reservation Completed');
     }
+  } */
 
-    public function excursions(){
-    	return view('sitio2.excursions');
+  public function sessionGet()
+  {
+    if (!session('carrito')) {
+      session([
+        "carrito" => array(
+          "traslados" => array(),
+          "tours" => array(),
+          "hoteles" => array()
+        )
+      ]);
     }
+    return session('carrito');
+  }
 
-    public function excursion($id){
-    	return view('sitio2.excursion',compact('id'));
-    }
+  public function sessionPost(Request $request)
+  {
+    session([
+      "carrito" => $request->all()
+    ]);
+  }
 
-    public function aboutUs(){
-    	return view('sitio2.aboutUs');
-    }
-
-    public function contact(){
-    	return view('sitio2.contact');
-    }
-
-    public function shop(){
-    	return view('sitio2.shop');
-    }
-
-    public function index(){
-    	return view('sitio.index');
-    }
-
-    public function partyBoats(){
-    	return view('sitio.partyBoats');
-    }
-
-    public function tours(){
-    	return view('sitio.tours');
-    }
-
-    public function tour($id){
-        return view('sitio.tour',compact('id'));
-    }
-
-    public function packages(){
-    	return view('sitio.packages');
-    }
-
-    public function packagesPOST(Request $request){
-        //Mail::to($request->correo,"$request->nombre")->send(new Package($request->all()));
-        return redirect('/packages')->with('status', 'Reservation Completed');
-    }
-
-    public function wifiServices(){
-    	return view('sitio.wifiServices');
-    }
-
-    public function puntacana(){
-    	return view('sitio.puntacana');
-    }
-
-    public function shopGet(){
-        return view('sitio.shop');
-    }
-    public function shopPost(Request $request){
-        $data = $request->all();
-        if(!isset($data['precio']))
-            $data['precio'] = $request->input('finalPrice');
-
-        session(
-            ["reservation"=>$data]
-        );
-
-        $validator = Validator::make($request->all(), [
-            "card_no" => "required",
-            "ccExpiryMonth" => "required",
-            "ccExpiryYear" => "required",
-            "cvvNumber" => "required",
-            //"amount" => "required",
-        ]);
-        
-        $datos = $request->all();
-        if ($validator->passes()) {
-            $datos = array_except($datos, array("_token"));
-            $stripe = Stripe::make(ENV('STRIPE_SECRET'));
-            try {
-                $token = $stripe->tokens()->create([
-                    "card" => [
-                        "number" => $request->get("card_no"),
-                        "exp_month" => $request->get("ccExpiryMonth"),
-                        "exp_year" => $request->get("ccExpiryYear"),
-                        "cvc" => $request->get("cvvNumber"),
-                    ],
-                ]);
-                if (!isset($token["id"])) {
-                    return redirect("/");
-                }
-                $charge = $stripe->charges()->create([
-                    "card" => $token["id"],
-                    "currency" => "USD",
-                    "amount" => session('reservation')['precio'],
-                    "description" => "Reservation Renny Travel",
-                ]);
-
-                $customer = $stripe->customers()->create([
-                    'description' => session('reservation')['nombre']." ".session('reservation')['apellido'],
-                    'email' => session('reservation')['correo'],
-                ]);
-
-                if ($charge["status"] == "succeeded") {
-                    $reservation = Reservation::create(session("reservation"));
-                    foreach (session('carrito')['traslados'] as $traslado) {
-                        $traslado["reservation_id"] = $reservation->id;
-                        Transfer::create($traslado);
-                    }
-                    foreach (session('carrito')['tours'] as $tour) {
-                        $tour["reservation_id"] = $reservation->id;
-                        Tour::create($tour);
-                    }
-                    /* foreach (session('carrito')['vuelos'] as $flight) {
-                        $flight["reservation_id"] = $reservation->id;
-                        $flightNew = Flight::create($flight);
-                        $passengers = $flight['listaPasajeros'];
-                        foreach ($passengers as $passenger) {
-                            $passenger['flight_id'] = $flightNew->id;
-                            Passenger::create($passenger);
-                        }
-                    } */
-                    $reservation->id_pago = $charge["id"];
-                    $reservation->estado = 1;
-                    $reservation->save();
-                    $reservation = $reservation::with('transfers','tours','vips','wifis','flights')->where("id",$reservation->id)->first();
-                    Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation,1));
-                    Mail::to('luisjosedeveloper@gmail.com','Luis')->send(new Notification($reservation,0));
-                    session([
-                        "reservation" => array(),
-                        "carrito" => array(
-                            "traslados" => array(),
-                            "tours" => array(),
-                            "hoteles" => array()
-                        )
-                    ]);
-                    return redirect('/')->with('status', 'Reservation Completed');
-                } else {
-                    \Session::put("error", "Money not add in wallet !!");
-                    return redirect('/shop');
-                }
-            } catch (Exception $e) {
-                \Session::put("error", $e->getMessage());
-                return redirect('/shop');
-            } catch (\Cartalyst\Stripe\Exception\CardErrorException $e) {
-                \Session::put("error", $e->getMessage());
-                return redirect('/shop');
-            } catch (\Cartalyst\Stripe\Exception\MissingParameterException $e) {
-                \Session::put("error", $e->getMessage());
-                return redirect('/shop');
-            }
-        }
-
-        //return view('sitio.paypal',compact('reservation'));
-    }
-
-    public function ipn(Request $request){
-        $datos = $request->all();
-        if ($datos['credit_card_processed'] == "Y") {
-            $reservation = Reservation::create(session("reservation"));
-            foreach (session('carrito')['traslados'] as $traslado) {
-                $traslado["reservation_id"] = $reservation->id;
-                Transfer::create($traslado);
-            }
-            foreach (session('carrito')['tours'] as $tour) {
-                $tour["reservation_id"] = $reservation->id;
-                Tour::create($tour);
-            }
-            /* foreach (session('carrito')['vuelos'] as $vuelo) {
-                $vuelo["reservation_id"] = $reservation->id;
-                Flight::create($vuelo);
-            } */
-
-            $reservation->id_pago = $datos["id"];
-            $reservation->estado = 1;
-            $reservation->save();
-            $reservation = $reservation::with('transfers','tours','vips','wifis','flights')->where("id",$reservation->id)->first();
-            Mail::to($reservation->correo,"$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
-            session([
-                "reservation" => array(),
-                "carrito" => array(
-                    "traslados" => array(),
-                    "tours" => array(),
-                    "hoteles" => array()
-                )
-            ]);
-            return redirect('/')->with('status', 'Reservation Completed');
-        }
-    }
-
-    public function sessionGet(){
-        if(!session('carrito')){
-            session([
-                "carrito"=> array
-                (
-                    "traslados" => array(),
-                    "tours" => array(),
-                    "hoteles" => array()
-                )
-            ]);
-        }
-        return session('carrito');
-    }
-
-    public function sessionPost(Request $request){
-        session([
-            "carrito" => $request->all()
-        ]);
-    }
-
-    public function borrar(){
-        session([
-            "carrito"=> array
-            (
-                "traslados" => array(),
-                "tours" => array(),
-                "hoteles" => array()
-            )
-        ]);
-    }
+  public function borrar()
+  {
+    session([
+      "carrito" => array(
+        "traslados" => array(),
+        "tours" => array(),
+        "hoteles" => array()
+      )
+    ]);
+  }
 }
