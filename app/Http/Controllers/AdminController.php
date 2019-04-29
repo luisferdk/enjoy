@@ -20,12 +20,12 @@ class AdminController extends Controller
     }
 
     public function reservas(){
-        $reservas = Reservation::with('tours','transfers','vips','wifis')->get();
+        $reservas = Reservation::with('tours','transfers','vips','wifis')->where("estado",1);
         return view('admin.reservas',compact('reservas'));
     }
 
     public function traslados(){
-        $reservas = Transfer::with('reservation')->get();
+        $reservas = Transfer::with('reservation')->where('reservation.estado',1)->get();
         return view('admin.traslados',compact('reservas'));
     }
 
