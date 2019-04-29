@@ -25,27 +25,17 @@ class AdminController extends Controller
     }
 
     public function traslados(){
-        $reservas = Transfer::with('reservation')->where('reservation.estado',1)->get();
+        $reservas = Transfer::with('reservation')->whereHas('reservation', function ($query) {$query->where('estado', '=', 1);})->get();
         return view('admin.traslados',compact('reservas'));
     }
 
     public function tours(){
-        $reservas = Tour::with('reservation')->get();
+        $reservas = Tour::with('reservation')->whereHas('reservation', function ($query) {$query->where('estado', '=', 1);})->get();
         return view('admin.excursiones',compact('reservas'));
     }
 
-    public function vip(){
-        $reservas = Vip::with('reservation')->get();
-        return view('admin.vip',compact('reservas'));
-    }
-
     public function hoteles(){
-        $reservas = Hotel::with('reservation')->get();
+        $reservas = Hotel::with('reservation')->whereHas('reservation', function ($query) {$query->where('estado', '=', 1);})->get();
         return view('admin.hotel',compact('reservas'));
-    }
-
-    public function wifi(){
-        $reservas = Wifi::with('reservation')->get();
-        return view('admin.wifi',compact('reservas'));
     }
 }
