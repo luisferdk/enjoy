@@ -20,11 +20,7 @@ class Notification extends Mailable
     public function build()
     {
         $de = "Punta Cana Enjoyment";
-        $cc = "";
-
         $bcc = "luisdk.03@gmail.com,latinosconganas@gmail.com";
-
-        $cc = explode(',', $cc);
         $bcc = explode(',', $bcc);
 
         return $this->from("info@puntacanaenjoyment.com", $de)
