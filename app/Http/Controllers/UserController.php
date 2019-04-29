@@ -21,7 +21,7 @@ class UserController extends Controller
         $user->token = $token;
 
         if($user){
-            Mail::to("info@rennytours.com","Renny Travel")->send(new UserRegister($user));
+            Mail::to("info@puntacanaenjoyment.com","Punta Cana Enjoyment")->send(new UserRegister($user));
             Mail::to($user->email,$user->name)->send(new ConfirmRegis($user,$token));
         }
 

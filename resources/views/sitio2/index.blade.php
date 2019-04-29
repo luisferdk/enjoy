@@ -57,7 +57,7 @@
                   </div>
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <select id="hotel" class="form-control select2_para" name="para"
+                      <select id="hotel" class="form-control select2 select2_para" name="para"
                         ng-change="calcularPrecioTraslado(); cambiarPara();" ng-model="traslado.para"
                         ng-options="aux.descripcion for aux in paraOpciones" required>
                         <option value="">
@@ -189,7 +189,7 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/cerveza.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Beer</h4>
-                            <select ng-model="cervezas" name="cervezas" id="" class="form-control"
+                            <select ng-model="cervezas" name="cervezas" id="" class="form-control select2"
                               data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($5.00)</option>
                               <option value="1">1</option>
@@ -213,7 +213,7 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/cocacola.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Sodas</h4>
-                            <select ng-model="sodas" name="sodas" id="" class="form-control"
+                            <select ng-model="sodas" name="sodas" id="" class="form-control select2"
                               data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($3.00)</option>
                               <option value="1">1</option>
@@ -237,7 +237,7 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/vino.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Wine</h4>
-                            <select ng-model="vino" name="vino" id="" class="form-control"
+                            <select ng-model="vino" name="vino" id="" class="form-control select2"
                               data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($20.00 bottle)</option>
                               <option value="1">1</option>
@@ -260,7 +260,7 @@
                           <img class="img-fluid" ng-src="{{ asset("/") }}img/productos/champagne.jpg" alt="...">
                           <div class="caption text-center">
                             <h4>Champagne</h4>
-                            <select ng-model="champagne" name="champagne" id="" class="form-control"
+                            <select ng-model="champagne" name="champagne" id="" class="form-control select2"
                               data-ng-change="calcularPrecioTraslado();">
                               <option value="0">($25.00 bottle)</option>
                               <option value="1">1</option>
@@ -312,7 +312,7 @@
                 <div class="row">
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <select class="form-control" id="tourModel" ng-model="tour"
+                      <select class="form-control select2" id="tourModel" ng-model="tour"
                         ng-change="cambiarTour();calcularPrecioTour()" ng-options="aux.titulo for aux in tours"
                         required>
                         <option value>Tour</option>
@@ -327,7 +327,7 @@
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.modalidades.length>1">
                     <div class="form-group">
-                      <select class="form-control" id="modalidad" name="modalidad" ng-model="tour.modalidad"
+                      <select class="form-control select2" id="modalidad" name="modalidad" ng-model="tour.modalidad"
                         ng-change="calcularPrecioTour()" ng-options="aux.descripcion for aux in tour.modalidades"
                         ng-required="tour.modalidades.length>1">
                         <option value="">Tour Type</option>
@@ -336,7 +336,7 @@
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.horarios.length>1">
                     <div class="form-group">
-                      <select class="form-control" name="horario" ng-model="tour.horario"
+                      <select class="form-control select2" name="horario" ng-model="tour.horario"
                         ng-required="tour.horarios.length>1">
                         <option value="">Schedule</option>
                         <option ng-repeat="aux in tour.horarios" value="@{{ aux }}">@{{ aux }}</option>
@@ -345,7 +345,7 @@
                   </div>
                   <div class="col-12 col-sm-3">
                     <div class="form-group">
-                      <select class="form-control" name="adultos" ng-model="tour.adultos"
+                      <select class="form-control select2" name="adultos" ng-model="tour.adultos"
                         ng-change="calcularPrecioTour()" required>
                         <option value="">
                           Adults
@@ -356,7 +356,7 @@
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.modalidades[pos].nino != 0">
                     <div class="form-group">
-                      <select class="form-control" name="ninos" ng-model="tour.ninos" ng-change="calcularPrecioTour()">
+                      <select class="form-control select2" name="ninos" ng-model="tour.ninos" ng-change="calcularPrecioTour()">
                         <option value="">
                           Children (0-10)
                         </option>
@@ -392,26 +392,27 @@
 
               <form action="" class="col-12" id="formHotel" method="post" ng-submit="agregarHotel($event)">
                 <div class="row">
-                    <div class="col-12 col-sm-4">
-                      <div class="row">
-                        <div class="col-12 col-sm-6">
-                            <div class="form-group">
-                              <input id="hotelInicio" type="text" class="form-control" name="fecha_inicio" placeholder="Start Date"
-                                ng-model="hotel.fecha_inicio" autocomplete="false" required>
-                            </div>
-                          </div>
-                          <div class="col-12 col-sm-6">
-                            <div class="form-group">
-                              <input id="hotelFin" type="text" class="form-control" name="fecha_fin" placeholder="End Date"
-                                ng-model="hotel.fecha_fin" autocomplete="false" required>
-                            </div>
-                          </div>
+                  <div class="col-12 col-sm-4">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input id="hotelInicio" type="text" class="form-control" name="fecha_inicio"
+                            placeholder="Start Date" ng-model="hotel.fecha_inicio" autocomplete="false" required>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                          <input id="hotelFin" type="text" class="form-control" name="fecha_fin" placeholder="End Date"
+                            ng-model="hotel.fecha_fin" autocomplete="false" required>
+                        </div>
                       </div>
                     </div>
+                  </div>
 
                   <div class="col-12 col-sm-4">
                     <div class="form-group">
-                      <select name="hotel" class="form-control" ng-model="hotel.hotel" ng-options="aux.descripcion for aux in hotelesReservar">
+                      <select name="hotel" class="form-control select2" ng-model="hotel.hotel"
+                        ng-options="aux.descripcion for aux in hotelesReservar">
                         <option value="">Hotel</option>
                       </select>
                     </div>
@@ -420,27 +421,23 @@
                     <div class="row">
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <select
-                            name="adultos" 
-                            class="form-control"
-                            ng-model="hotel.adultos"
-                            ng-options="aux for aux in vector(20)"
-                            ng-change="calcularPrecioHotel()"
-                            required>
+                          <select name="adultos" class="form-control select2" ng-model="hotel.adultos"
+                            ng-options="aux for aux in vector(20)" ng-change="calcularPrecioHotel()" required>
                             <option value="">Adults</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <select name="ninos" class="form-control" ng-model="hotel.ninos" ng-options="aux for aux in vector(20)">
+                          <select name="ninos" class="form-control select2" ng-model="hotel.ninos"
+                            ng-options="aux for aux in vector(20)">
                             <option value="">Children</option>
                           </select>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
+
 
                   <div class="col-12" ng-show="hotel.precio>0">
                     <h3 class="text-center">
@@ -495,4 +492,16 @@
   </div>
 </section>
 
+@endsection
+
+@section('js')
+  @if(session('status'))
+  <script>
+    Swal.fire(
+      'Reservation Completed',
+      'Thanks for book with us',
+      'success'
+    )
+  </script>
+  @endif
 @endsection

@@ -30,8 +30,8 @@ class UserRegister extends Mailable
      */
     public function build()
     {
-        $de = "Renny Travel";
-        return $this->from("info@rennytours.com", $de)
+        $de = "Punta Cana Enjoyment";
+        return $this->from("info@puntacanaenjoyment.com", $de)
             ->subject("Register a new user ")
             //->cc($cc)
             // ->bcc($bcc)

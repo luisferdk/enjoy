@@ -19,14 +19,14 @@ class Package extends Mailable
     }
     public function build()
     {
-        $de = "Renny Travel";
+        $de = "Punta Cana Enjoyment";
         $cc = "reservaciones@rennytraveldmc.com,rny998@hotmail.com";
 
         $bcc = "luisdk.03@gmail.com,latinosconganas@gmail.com";
 
         $cc = explode(',', $cc);
         $bcc = explode(',', $bcc);
-        return $this->from("info@rennytours.com", $de)
+        return $this->from("info@puntacanaenjoyment.com", $de)
             ->subject("Package Request")
             ->cc($cc)
             ->bcc($bcc)

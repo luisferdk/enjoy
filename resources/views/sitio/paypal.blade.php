@@ -15,7 +15,7 @@
 @endif
 	<input type="hidden" name="cmd" value="_xclick">
 	<input type="hidden" name="item_name" value="Reservation Enjoyment">
-	<input type="hidden" name="item_number" value="1">
+	<input type="hidden" name="item_number" value="{{ $reservation->id }}">
 	<input type="hidden" name="amount" value="{{ $reservation->precio }}">
 	<input type="hidden" name="first_name" value="{{ $reservation->nombre }}">
 	<input type="hidden" name="last_name" value="{{ $reservation->apellido }}">
@@ -24,7 +24,7 @@
 	<input type="hidden" name="currency_code" value="USD">
 	<input type="hidden" name="cancel_return" value="{{ url('/ipn') }}">
 	<input type="hidden" name="notify_url" value="{{ url('/ipn') }}">
-	<input type="hidden" name="return" value="{{ url('/ipn') }}">
+	<input type="hidden" name="return" value="{{ url('/ipn?id=') }}">
 </form>
 <script>
 	document.getElementById('form').submit();

@@ -9,6 +9,7 @@ Route::get('/aboutUs', "SiteController@aboutUs");
 Route::get('/shop', "SiteController@shop");
 Route::post('/shop', "SiteController@shopPost");
 Route::get('/ipn', 'SiteController@ipn');
+Route::get('/completed', 'SiteController@completed');
 Route::get('/session', "SiteController@sessionGet");
 Route::post('/session', "SiteController@sessionPost");
 Route::get('/borrar', "SiteController@borrar");

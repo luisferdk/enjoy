@@ -5,7 +5,7 @@
 <!-- view port meta tag -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>Renny Travel</title>
+<title>Punta Cana Enjoyment</title>
 <style type="text/css">
 /* hacks */
 * { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; max-height:1000000px;}

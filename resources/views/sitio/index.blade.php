@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-        <title>Renny Travel</title>
+        <title>Punta Cana Enjoyment</title>
         <meta content="" name="description">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <link href="apple-touch-icon.png" rel="apple-touch-icon">
@@ -634,7 +634,7 @@
                                             <h3 style="color: #8dc740" class="modal-title text-center">TERMS AND CONDITIONS</h3>
                                         </div>
                                         <div class="modal-body">
-                                            <p>The information data and material contained in this website has been prepared solely for the purpose of providing information about Renny Travel DMC, its subsidiaries and partners and the services that they offer. <br><br>
+                                            <p>The information data and material contained in this website has been prepared solely for the purpose of providing information about Punta Cana Enjoyment DMC, its subsidiaries and partners and the services that they offer. <br><br>
                                             Your access to the website is subject to the following terms and conditions. By using the website you agree to be bound by the Terms and Conditions and we therefore encourage you to click through to read the Terms and Conditions in full. If you do not agree to these Terms and Conditions please do not use the website. Please also see our Privacy page, which explains how we treat your information.
                                             </p>
                                             <br>
@@ -642,7 +642,7 @@
                                                 <h4>1. YOUR USE OF THE WEBSITE</h4>
                                                 <ul>
                                                     <li>1.1 You agreex to abide by all applicable laws, regulations and codes of conduct when using the website and to be solely responsible for all things arising from your use of the website;</li>
-                                                    <li>1.2 not to use the website in any way which might infringe any rights of any third party or give rise to a legal claim against Renny Travel DMC by any third party;</li>
+                                                    <li>1.2 not to use the website in any way which might infringe any rights of any third party or give rise to a legal claim against Punta Cana Enjoyment DMC by any third party;</li>
                                                     <li>1.3 not to damage, interfere with or disrupt access to the website or do anything that may interrupt or impair its functionality;</li>
                                                     <li>1.4 not to obtain or attempt to obtain unauthorized access, through whatever means, to the website or other services or computer systems or areas of our, or any of our partners’,networks which are identified as restricted;</li>
                                                     <li>1.5 not to collect or store personal data about other users for commercial purposes;</li>
@@ -656,7 +656,7 @@
                                                 <ul>
                                                     <li>2.1 The material and content provided to you on the website is solely for your personal non-commercial use and you agree not for yourself or through any third party to distribute or commercially exploit all or any part of the Content.</li>
 
-                                                    <li>2.2 All Content (including, but not limited to articles, features, photographs, images, brands, logos, illustrations, audio clips and video clips, as well as all products, software, technology or processes described in this website are protected by copyright, trade marks, service marks and/or other intellectual property rights and laws and all Rights in relation to the website are and shall remain owned or controlled by Renny Travel DMC, or as appropriate, the third party Rights owner. You shall abide by all additional copyright notices, information, or restrictions contained in any Content accessed through this website.</li>
+                                                    <li>2.2 All Content (including, but not limited to articles, features, photographs, images, brands, logos, illustrations, audio clips and video clips, as well as all products, software, technology or processes described in this website are protected by copyright, trade marks, service marks and/or other intellectual property rights and laws and all Rights in relation to the website are and shall remain owned or controlled by Punta Cana Enjoyment DMC, or as appropriate, the third party Rights owner. You shall abide by all additional copyright notices, information, or restrictions contained in any Content accessed through this website.</li>
 
                                                     <li>2.3 Nothing contained on the website should be construed as granting, by implication or otherwise, any license or right to use, deal with or copy in any way in party or in whole any Rights without our written permission or, as appropriate, the permission of the third party Rights owner. Your misuse of the Rights, except as expressly provided in these Terms and Conditions, is strictly prohibited.</li>
                                                 </ul>
@@ -664,17 +664,17 @@
                                             <br>
                                             <div>
                                                 <h4>3. ACCESSES AND AVAILABILITY OF SERVICE AND LINKS</h4>
-                                                <p>This website from time to time contains links to other related World Wide Web Internet sites, resources and sponsors of this website. Since Renny Travel DMC does not approve, check, edit, vet or endorse such sites, you agree that Renny Travel DMC is not responsible or liable in any way for the content, advertising or products available from such sites or any dealings that you may have, or the consequences of such dealings, with the operators of such sites. You agree that any dealings you have with such third party site operators shall be on the terms and conditions (if any) of the third party site operator and should direct any concerns regarding any external link to the site administrator or Webmaster of such site. Renny Travel DMC makes no representations nor does it take any responsibility in relation to the content of any sites accessed through these links.</p>
+                                                <p>This website from time to time contains links to other related World Wide Web Internet sites, resources and sponsors of this website. Since Punta Cana Enjoyment DMC does not approve, check, edit, vet or endorse such sites, you agree that Punta Cana Enjoyment DMC is not responsible or liable in any way for the content, advertising or products available from such sites or any dealings that you may have, or the consequences of such dealings, with the operators of such sites. You agree that any dealings you have with such third party site operators shall be on the terms and conditions (if any) of the third party site operator and should direct any concerns regarding any external link to the site administrator or Webmaster of such site. Punta Cana Enjoyment DMC makes no representations nor does it take any responsibility in relation to the content of any sites accessed through these links.</p>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>4. CHANGES TO TERMS AND CONDITIONS</h4>
-                                                <p>Renny Travel DMC may from time to time change, alter, adapt, add or remove portions of these Terms and Conditions and, if it does so, will post any such changes on this website. Your continued use of the website after such changes constitutes your acceptance of those changes.</p>
+                                                <p>Punta Cana Enjoyment DMC may from time to time change, alter, adapt, add or remove portions of these Terms and Conditions and, if it does so, will post any such changes on this website. Your continued use of the website after such changes constitutes your acceptance of those changes.</p>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>5. CHANGES TO WEBSITE</h4>
-                                                <p>Renny Travel DMC may also change, suspend or discontinue any aspect of the website, including the availability of any features, information, database or content or restrict your access to parts or all of the website at its discretion without notice or liability.</p>
+                                                <p>Punta Cana Enjoyment DMC may also change, suspend or discontinue any aspect of the website, including the availability of any features, information, database or content or restrict your access to parts or all of the website at its discretion without notice or liability.</p>
                                             </div>
                                             <br>
                                             <div>
@@ -682,18 +682,18 @@
                                                 <ul>
                                                     <li>6.1 The website is provided "as is" without any representations or warranties (either express or implied), including but not limited to any implied warranties or implied terms of reliability, quality, functionality, absence of contaminants (including viruses, worms, trojan horses or similar), availability, satisfactory quality, fitness for a particular purpose or non-infringement. All such implied terms and warranties are hereby excluded. Please note that some jurisdictions may not allow the exclusion of implied warranties, so some of the above exclusions may not apply to you. Check your local laws for any restrictions of limitations regarding the exclusion of implied warranties.</li>
 
-                                                    <li>6.2 While Renny Travel DMC uses reasonable efforts to include accurate and up to date information on the website, it makes no warranties or representations as to its accuracy or completeness. Renny Travel DMC is not responsible for any errors or omissions or for the results obtained from the use of such information. The information does not constitute any form of advice, recommendation or arrangement by Renny Travel DMC or its affiliates or any other party involved in the website and is not intended to be relied upon by users in making (or refraining from making) any decisions based on such information. You must make your own decisions on whether or not to rely on any information posted on the website.</li>
+                                                    <li>6.2 While Punta Cana Enjoyment DMC uses reasonable efforts to include accurate and up to date information on the website, it makes no warranties or representations as to its accuracy or completeness. Punta Cana Enjoyment DMC is not responsible for any errors or omissions or for the results obtained from the use of such information. The information does not constitute any form of advice, recommendation or arrangement by Punta Cana Enjoyment DMC or its affiliates or any other party involved in the website and is not intended to be relied upon by users in making (or refraining from making) any decisions based on such information. You must make your own decisions on whether or not to rely on any information posted on the website.</li>
 
-                                                    <li>6.3 While Renny Travel DMC takes all reasonable steps to ensure a fast and reliable service it will not be held responsible for the security of the website or for any disruption of the website however caused, loss of or corruption of any material in transit, or loss of or corruption of material or data when downloaded onto any computer system. You will remain responsible and liable for material you upload on to or access from the website and you will indemnify Renny Travel DMC in the manner set out in paragraph 9.2 below in the Terms and Conditions in relation to your accessing or uploading.</li>
+                                                    <li>6.3 While Punta Cana Enjoyment DMC takes all reasonable steps to ensure a fast and reliable service it will not be held responsible for the security of the website or for any disruption of the website however caused, loss of or corruption of any material in transit, or loss of or corruption of material or data when downloaded onto any computer system. You will remain responsible and liable for material you upload on to or access from the website and you will indemnify Punta Cana Enjoyment DMC in the manner set out in paragraph 9.2 below in the Terms and Conditions in relation to your accessing or uploading.</li>
                                                 </ul>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>7. LIABILITY FOR LOSSES/INDEMNITY</h4>
                                                 <ul>
-                                                    <li>7.1 By accessing this website you agree that Renny Travel DMC will not be held liable to you or any third party for any direct, indirect, special, consequential or any other loss or damage arising from the use of or inability to use the website or from your access of other material on the internet via web links from this website.</li>
+                                                    <li>7.1 By accessing this website you agree that Punta Cana Enjoyment DMC will not be held liable to you or any third party for any direct, indirect, special, consequential or any other loss or damage arising from the use of or inability to use the website or from your access of other material on the internet via web links from this website.</li>
 
-                                                    <li>7.2 You agree to indemnify, keep indemnified, defend and hold harmless Renny Travel DMC and its parent companies, subsidiaries, affiliates and their respective officers, directors, employees, owners, agents, information providers and licensors from and against any and all claims, damages, liability, losses, costs and expenses (including legal fees) (whether or not foreseeable or avoidable) incurred or suffered by any Indemnified Party and any claims or legal proceedings which are brought or threatened arising from your use of, connection with or conduct on the website or any breach by you of these Terms and Conditions. Renny Travel DMC reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to co-operate with out defense of such claim.</li>                           
+                                                    <li>7.2 You agree to indemnify, keep indemnified, defend and hold harmless Punta Cana Enjoyment DMC and its parent companies, subsidiaries, affiliates and their respective officers, directors, employees, owners, agents, information providers and licensors from and against any and all claims, damages, liability, losses, costs and expenses (including legal fees) (whether or not foreseeable or avoidable) incurred or suffered by any Indemnified Party and any claims or legal proceedings which are brought or threatened arising from your use of, connection with or conduct on the website or any breach by you of these Terms and Conditions. Punta Cana Enjoyment DMC reserves the right, at its own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, and in such case, you agree to co-operate with out defense of such claim.</li>                           
                                                 </ul>
                                             </div>
                                             <br>
@@ -704,21 +704,21 @@
                                             <br>
                                             <div>
                                                 <h4>9. LEGAL JURISDICTIONS AND APPLICABLE LAW</h4>
-                                                <p>Renny’s Management, S.R.L is a Dominican company and Renny Travel DMC is a Dominican Republican company. The terms and conditions of the use of this website shall be governed in accordance with the laws of the Dominican Republic. The user is deemed to hereby submit and agree to the exclusive jurisdiction of the courts of the Dominican Republic in respect of any disputes arising out of or in connection with this Web Site, so the user expressly waives any jurisdiction that may correspond by reason of his domicile. These terms and conditions or any further terms and conditions referenced on this Web Site or any matter related to or in connection herewith.</p>
+                                                <p>Renny’s Management, S.R.L is a Dominican company and Punta Cana Enjoyment DMC is a Dominican Republican company. The terms and conditions of the use of this website shall be governed in accordance with the laws of the Dominican Republic. The user is deemed to hereby submit and agree to the exclusive jurisdiction of the courts of the Dominican Republic in respect of any disputes arising out of or in connection with this Web Site, so the user expressly waives any jurisdiction that may correspond by reason of his domicile. These terms and conditions or any further terms and conditions referenced on this Web Site or any matter related to or in connection herewith.</p>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>10. LIABILITY</h4>
                                                 <ul>
-                                                    <li>10.1 Online Booking of Independent Third Party Suppliers: Booking services provided for excursions on this site involve services offered by independent third party suppliers. RENNY TRAVEL is not liable nor does it accept liability for actions or omissions of the independent contractors supplying the excursions for which booking services are provided; and the purchaser of the excursions here provided shall be deemed to have waived any claims against RENNY TRAVEL in connection with the excursions purchased.</li>
+                                                    <li>10.1 Online Booking of Independent Third Party Suppliers: Booking services provided for excursions on this site involve services offered by independent third party suppliers. Punta Cana Enjoyment is not liable nor does it accept liability for actions or omissions of the independent contractors supplying the excursions for which booking services are provided; and the purchaser of the excursions here provided shall be deemed to have waived any claims against Punta Cana Enjoyment in connection with the excursions purchased.</li>
 
-                                                    <li>10.2 Products, services or excursions on this site for which booking services may be requested involve activities that may involve risk. The consumer of this service assumes the risk inherent in all such activities. By accepting these services, the purchaser thereof agrees that RENNY TRAVEL is not responsible for losses or damages including bodily injury, property damage, or economic loss incurred while participating in the activity for which booking services are provided.</li>                          
+                                                    <li>10.2 Products, services or excursions on this site for which booking services may be requested involve activities that may involve risk. The consumer of this service assumes the risk inherent in all such activities. By accepting these services, the purchaser thereof agrees that Punta Cana Enjoyment is not responsible for losses or damages including bodily injury, property damage, or economic loss incurred while participating in the activity for which booking services are provided.</li>                          
                                                 </ul>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>11. PROTECTION PLUS</h4>
-                                                <p>Protection Plus is an insurance supplement to your personal travel insurance. Protection Plus provides basic personal coverage in case of an accident which may occur during an excursion booked through Renny Travel. The policy includes limited financial reimbursement for ambulance, medical coverage, accidental death and repatriation. Protection Plus is contacted through established insurance companies in destination. The coverage includes: <br>
+                                                <p>Protection Plus is an insurance supplement to your personal travel insurance. Protection Plus provides basic personal coverage in case of an accident which may occur during an excursion booked through Punta Cana Enjoyment. The policy includes limited financial reimbursement for ambulance, medical coverage, accidental death and repatriation. Protection Plus is contacted through established insurance companies in destination. The coverage includes: <br>
                                                 <h5>Dominican Republic: Seguros Banreservas</h5>
                                                 <ul>
                                                     <li>Accident Medical Expense - $15,000 USD</li>
@@ -730,7 +730,7 @@
                                             <br>
                                             <div>
                                                 <h4>12. CONDITIONS OF CONTRACT OF ONLINE BOOKINGS</h4>
-                                                <p>The service supplier reserves the right to cancel, shorten or alter the excursion due to circumstances outside of their control. In the event of such an occurrence, a full or partial refund may be given, however, the consumer hereby waives any claim against Renny Travel DMC, or the service supplier for any consequential damages arising as a result thereof.</p>
+                                                <p>The service supplier reserves the right to cancel, shorten or alter the excursion due to circumstances outside of their control. In the event of such an occurrence, a full or partial refund may be given, however, the consumer hereby waives any claim against Punta Cana Enjoyment DMC, or the service supplier for any consequential damages arising as a result thereof.</p>
                                             </div>
                                             <br>
                                             <div>
@@ -752,12 +752,12 @@
                                             <br>
                                             <div>
                                                 <h4>14. TERMINATIONS AND SUSPENSION</h4>
-                                                <p>Renny Travel DMC (and any persons authorized by it), may at its sole discretion immediately suspend or terminate your right to use the website without any warning if it considers that you have contravened any of these Terms and Conditions. This is without prejudice to any other rights or remedies that Renny Travel DMC may have.</p>
+                                                <p>Punta Cana Enjoyment DMC (and any persons authorized by it), may at its sole discretion immediately suspend or terminate your right to use the website without any warning if it considers that you have contravened any of these Terms and Conditions. This is without prejudice to any other rights or remedies that Punta Cana Enjoyment DMC may have.</p>
                                             </div>
                                             <br>
                                             <div>
                                                 <h4>15. ASSIGNMENT</h4>
-                                                <p>Renny Travel DMC may assign its rights and obligations under these Terms and Conditions and upon any such assignment it shall be relieved of any further obligation hereunder.</p>
+                                                <p>Punta Cana Enjoyment DMC may assign its rights and obligations under these Terms and Conditions and upon any such assignment it shall be relieved of any further obligation hereunder.</p>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
@@ -841,7 +841,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h1 class="modal-title text-center azul" id="myModalLabel">Renny Travel</h1>
+                <h1 class="modal-title text-center azul" id="myModalLabel">Punta Cana Enjoyment</h1>
               </div>
               <div class="modal-body">
                 <div class="row">
@@ -869,7 +869,7 @@
     <footer class="row rojo">
         <div class="col-xs-6 col-sm-4">
             <h4>About Us</h4>   
-            <p>Renny Travel International is a tour operator in the Dominican Republic, as your local experts that
+            <p>Punta Cana Enjoyment International is a tour operator in the Dominican Republic, as your local experts that
                 have been providing high quality destination travel services for over 4 years operating in Dominican
                 Republic. <br><br>
                 We are a team dedicated to offering tailored and exclusive tourism products and services to individuals,
@@ -886,7 +886,7 @@
         </div>
         <div class="col-xs-6 col-sm-4 hidden-xs">
             <img class="img-responsive mt" src="{{ asset("/img/logo-footer.png") }}" alt="">    
-            <script src='//www.weddingwire.com/assets/vendor/widgets/ww-rated-2013.js' type='application/javascript'></script><div id='ww-widget-wwrated-2013'><a class="ww-top" target="_blank" title="Weddings, Wedding, Wedding Venues" href="https://www.weddingwire.com"></a><a class="ww-bottom" target="_blank" title="Renny Travel Reviews, Dominican Republic Transportation" href="https://www.weddingwire.com/reviews/renny-travel-punta-cana/0099b5164be06de7.html"></a></div><script>  WeddingWire.ensureInit(function() {WeddingWire.createWWRated2013({"vendorId":"0099b5164be06de7" }); });</script>
+            <script src='//www.weddingwire.com/assets/vendor/widgets/ww-rated-2013.js' type='application/javascript'></script><div id='ww-widget-wwrated-2013'><a class="ww-top" target="_blank" title="Weddings, Wedding, Wedding Venues" href="https://www.weddingwire.com"></a><a class="ww-bottom" target="_blank" title="Punta Cana Enjoyment Reviews, Dominican Republic Transportation" href="https://www.weddingwire.com/reviews/renny-travel-punta-cana/0099b5164be06de7.html"></a></div><script>  WeddingWire.ensureInit(function() {WeddingWire.createWWRated2013({"vendorId":"0099b5164be06de7" }); });</script>
         </div>
         <div class="col-xs-6 col-sm-4">
             <h4>Contact Us</h4>
@@ -900,7 +900,7 @@
         </div>
         <div class="col-xs-12 text-center">
             <p></p>Developed by <a href="http://domtecno.com" class="verde">Domtecno.com</a>
-            <p>&copy Copyright Renny Travel 2018</p>
+            <p>&copy Copyright Punta Cana Enjoyment 2018</p>
         </div>
     </footer>
     <script src="{{ asset("/") }}bower_components/jquery/dist/jquery.min.js"></script>

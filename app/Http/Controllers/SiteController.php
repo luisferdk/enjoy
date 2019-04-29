@@ -142,24 +142,18 @@ class SiteController extends Controller
     return view('sitio.paypal',compact('reservation'));
   }
 
-  /* public function ipn(Request $request)
+  public function completed(){
+    return redirect('/')->with('status',"Completed");
+  }
+  public function ipn(Request $request)
   {
     $datos = $request->all();
-    if ($datos['credit_card_processed'] == "Y") {
-      $reservation = Reservation::create(session("reservation"));
-      foreach (session('carrito')['traslados'] as $traslado) {
-        $traslado["reservation_id"] = $reservation->id;
-        Transfer::create($traslado);
-      }
-      foreach (session('carrito')['tours'] as $tour) {
-        $tour["reservation_id"] = $reservation->id;
-        Tour::create($tour);
-      }
-      $reservation->id_pago = $datos["id"];
+    $reservation = Reservation::with('transfers', 'tours', 'vips', 'wifis', 'flights')->find($datos["item_number"]);
+    if ($datos['payment_status'] == "Completed") {
+      $reservation->id_pago = $datos["txn_id"];
       $reservation->estado = 1;
       $reservation->save();
-      $reservation = $reservation::with('transfers', 'tours', 'vips', 'wifis', 'flights')->where("id", $reservation->id)->first();
-      Mail::to($reservation->correo, "$reservation->nombre $reservation->apellido")->send(new Notification($reservation));
+      Mail::to($reservation->correo, "$reservation->nombre $reservation->apellido")->send($reservation);
       session([
         "reservation" => array(),
         "carrito" => array(
@@ -168,9 +162,8 @@ class SiteController extends Controller
           "hoteles" => array()
         )
       ]);
-      return redirect('/')->with('status', 'Reservation Completed');
     }
-  } */
+  }
 
   public function sessionGet()
   {

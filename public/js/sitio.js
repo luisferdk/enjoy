@@ -506,7 +506,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 <br>While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
                 
                 <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. 
-                <br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                <br>Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
             </p>
             
             <h2 class="col-12">Know More about this tour</h2>
@@ -515,7 +515,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 <br>While onboard youll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
             
                 <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers.
-                <br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                <br>Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
             </p>
             
             <div class="col-12 col-md-4">
@@ -849,7 +849,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             mostrar: true,
             titulo: "Party Boat and Jet Boat",
             descripcion: `
-                  You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                  You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
                   440 HP of power at more than 90 km/h on the sea 360 turns, fly over the waves, incredible pirouettes  The Jet Boat is an aquatic attraction and a maritime excursion that allows you to download pure adrenaline. It is an incredible boat with a powerful brake, which is capable of performing and braking at high speeds, skidding over the Caribbean Sea and flying over the waves. Jet Boat is a fun in the sea and an unforgettable experience, besides being the only Jet Boat in Punta Cana, but throughout the Dominican Repub—lic. Are you going to miss it?
           `,
             descripcion_completa: `
@@ -858,7 +858,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area.
                     <br><br>While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean.
                     <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers.
-                    <br><br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                    <br><br>Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
                 </p>
 
                 <h2 class="col-12 text-center">Jet Boat</h2>
@@ -878,7 +878,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             titulo: "Party Boat and Buggy",
             mostrar: true,
             descripcion: `
-                You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
                 From our ranch in Macao, we go tearing through the remote farmland of northern Punta Cana, passing palm trees and tobacco plantations with the Ori—ental Mountain Range deep in the background. These narrow, secluded country roads offer a safe haven but be ready to get dirty!
             `,
             descripcion_completa: `
@@ -887,7 +887,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     You’ll have a spectacular view of the entire caribbean coast while getting to know the hotels of the area. 
                     <br><br>While onboard you’ll enjoy different activities like; snorkel (all equipment are supplied), choreographic dancing and the warming waters of the natural pool in the middle of the ocean. 
                     <br><br>A bar will be at disposal for you and your friends where you can drink all national beverages and enjoy tropical fruits and appetizers. 
-                    <br><br>Enjoy this excursion with the Renny Travel crew and make your vacations an unforgettable adventure.
+                    <br><br>Enjoy this excursion with the Punta Cana Enjoyment crew and make your vacations an unforgettable adventure.
                 </p>
 
                 <h2 class="col-12 text-center">Jet Boat</h2>

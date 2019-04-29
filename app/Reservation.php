@@ -43,6 +43,7 @@ use Illuminate\Database\Eloquent\Model;
 class Reservation extends Model
 {
     protected $fillable=[
+		"reservation_id",
 		"nombre",
 		"apellido",
 		"correo",
