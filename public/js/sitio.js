@@ -1219,11 +1219,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Wrap up your Sabina del Mar VIP private tour with more excitement — an unforgettable swim in a natural pool! Relax in these calm, waist-high pristine waters out in the ocean, while you enjoy drinks from a floating bar. Listen to the tropical music and let the rhythms invite you to move your hips and dance the afternoon away inside the pool.
                 </p>
 
-                <h2 class="col-xs-4 text-center">Good to Know</h2>
-                <h2 class="col-xs-4 text-center">Included in the Excursion</h2>
-                <h2 class="col-xs-4 text-center">Excursion Options</h2>
+                <h2 class="col-4 text-center">Good to Know</h2>
+                <h2 class="col-4 text-center">Included in the Excursion</h2>
+                <h2 class="col-4 text-center">Excursion Options</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour language: English | Spanish | French</li>
                     <li>Location(s): Punta Cana</li>
                     <li>Season: All year long</li>
@@ -1236,14 +1236,14 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Pregnant women allowed: No</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Round-trip, air-conditioned transportation</li>
                     <li>English-speaking host and crew</li>
                     <li>Snorkel gear</li>
                     <li>Floating bar</li>
                 </ul>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li><strong>Morning Sailing Private (up to 15 pax)</strong><br>Take your private party of up to 15 people to an incredible sailing adventure in the morning</li>
                     <li><strong>SunDowner Private (up to 25 pax)</strong><br>Board your VIP catamaran with your private party of up to 25 people to see the sun setting over Punta Cana</li>
                 </ul>
@@ -1341,11 +1341,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br>After snorkeling, experience the thrill of Snuba, a fairly new technology that gives explorers the ability to effortlessly breathe underwater without needing to repeatedly return to the surface. Consisting of a floating raft, mouthpiece and an air hose measuring 20 feet, you have the freedom to choose the level of depth you’re comfortable with as you walk on the sea floor admiring the coral reef and its colorful inhabitants face-to-face!
                 </p>
 
-                <h2 class="col-xs-4 text-center">Good to Know</h2>
-                <h2 class="col-xs-4 text-center">Included in the Excursion</h2>
-                <h2 class="col-xs-4 text-center">Excursion Options</h2>
+                <h2 class="col-4 text-center">Good to Know</h2>
+                <h2 class="col-4 text-center">Included in the Excursion</h2>
+                <h2 class="col-4 text-center">Excursion Options</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour language: English, Location(s): Punta Cana</li>
                     <li>Season: All year long</li>
                     <li>Duration: 3 hours (approx.)</li>
@@ -1356,7 +1356,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Pregnant women allowed: No</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>English-speaking guides</li>
                     <li>Round-trip transportation</li>
                     <li>Snorkeling and Snuba gear</li>
@@ -1364,7 +1364,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Children are not allowed to drive the boat, they can only accompany paying adults</li>
                 </ul>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li><strong>Adult/Single:</strong> One boat for a single adult driver</li>
                     <li><strong>Adult/Double:</strong> Driver and passenger in two-person boat</li>
                     <li><strong>Child/double:</strong> Child passenger in two-person boat</li>
@@ -1822,11 +1822,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Wind down your Jungle Rally private tour with a walk to the nearby river, where you can take a refreshing dip, relax on hammocks and enjoy more drinks from the bar. At the end of the day, head back to your Punta Cana resort in the same vehicle that took you through the Dominican outback.
                 </p>
 
-                <h2 class="col-xs-4 text-center">Good to Know</h2>
-                <h2 class="col-xs-4 text-center">Included in the Excursion</h2>
-                <h2 class="col-xs-4 text-center">Excursion Options</h2>
+                <h2 class="col-4 text-center">Good to Know</h2>
+                <h2 class="col-4 text-center">Included in the Excursion</h2>
+                <h2 class="col-4 text-center">Excursion Options</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour language: English / Spanish</li>
                     <li>Location(s): Punta Cana</li>
                     <li>Season: All year long</li>
@@ -1839,7 +1839,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Pregnant women allowed: No</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Round-trip, air-conditioned transportation aboard a 4x4 rally truck</li>
                     <li>Private guide and driver</li>
                     <li>A la carte lunch that includes wine</li>
@@ -1847,7 +1847,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Tasting of natural products (coffee, cocoa, fruits)</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     This price of the tour is for 4 passengers, but the rally truck fits 6 people. Each additional passenger is $145 USD.
                 </p>
 
@@ -2104,11 +2104,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br>So, what are you waiting for? Get down to Punta Cana’s Imagine Club to revel in music and fire shows with an Imagine signature cocktail in hand. You’ll feel like you have your very own fairy godmother; but in this fantastic setting, midnight will come and go in a flash. Dancing shoes on, leave the pumpkin behind.
                 </p>
 
-                <h2 class="col-xs-4 text-center">Good to Know</h2>
-                <h2 class="col-xs-4 text-center">Included in the Excursion</h2>
-                <h2 class="col-xs-4 text-center">Excursion Options</h2>
+                <h2 class="col-4 text-center">Good to Know</h2>
+                <h2 class="col-4 text-center">Included in the Excursion</h2>
+                <h2 class="col-4 text-center">Excursion Options</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour language: English</li>
                     <li>Location(s): Punta Cana</li>
                     <li>Season: All year long</li>
@@ -2121,15 +2121,15 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Pregnant women allowed: No</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Resort pick-up and drop-off</li>
                     <li>Cover charge at Imagine Night Club</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     Open Bar Package: Price vary depends on the day of your entrance.
-                    <p class="col-xs-4"></p>
-                    <ul class="col-xs-4">
+                    <p class="col-4"></p>
+                    <ul class="col-4">
                         <li>Thursday and Sunday $50 USD.</li>
                         <li>Friday and Saturday $60 USD.</li>
                     </ul>
@@ -2164,11 +2164,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <br><br>Wrap up your Happy Hour private tour with more excitement — an unforgettable swim in a natural pool! Relax in these calm, waist-high pristine waters out in the ocean, while you enjoy drinks from a floating bar. Listen to the tropical music and let the rhythms invite you to move your hips and dance the afternoon away inside the pool.
                 </p>
 
-                <h2 class="col-xs-4 text-center">Good to Know</h2>
-                <h2 class="col-xs-4 text-center">Included in the Excursion</h2>
-                <h2 class="col-xs-4 text-center">Excursion Options</h2>
+                <h2 class="col-4 text-center">Good to Know</h2>
+                <h2 class="col-4 text-center">Included in the Excursion</h2>
+                <h2 class="col-4 text-center">Excursion Options</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour language: English | Spanish | French</li>
                     <li>Location(s): Punta Cana</li>
                     <li>Season: All year long</li>
@@ -2181,14 +2181,14 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Pregnant women allowed: No</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Round-trip, air-conditioned transportation</li>
                     <li>English-speaking host and crew</li>
                     <li>Snorkel gear</li>
                     <li>Floating bar</li>
                 </ul>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li><strong>Morning Sailing Private (up to 15 pax):</strong> Take your private party of up to 15 people to an incredible sailing adventure in the morning.</li>
                     <li><strong>SunDowner Private (up to 25 pax):</strong> Board your VIP catamaran with your private party of up to 25 people to see the sun setting over Punta Cana.</li>
                 </ul>
@@ -2288,22 +2288,22 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     During school season, you can also visit a rural elementary school which is sponsored by this unique tour.
                 </p>
 
-                <h2 class="col-xs-4 text-center">Includes</h2>
-                <h2 class="col-xs-4 text-center">Not Included</h2>
-                <h2 class="col-xs-4 text-center">Recommendations</h2>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Not Included</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Multilingual Tour Guides.</li>
                     <li>Helmet (mandatory).</li>
                     <li>Bottled water.</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tour video, photos, souvenirs, coffee, cacao, cigars, and other local produces.</li>
                     <li>At the after tour bar: soft drinks, sports beverages, and beers, rum.</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     Wear comfortable clothes, swimsuit, closed shoes, sunglasses, and sunscreen. Don’t forget to bring your camera and extra cash for souvenirs or additional expenses.
                 </p>
 
@@ -2340,19 +2340,19 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     </ul>
                 </p>
 
-                <h2 class="col-xs-4 text-center">Includes</h2>
-                <h2 class="col-xs-4 text-center">Not Included</h2>
-                <h2 class="col-xs-4 text-center">Recommendations</h2>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Not Included</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Transportation and open bar.</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tips, photos and souvenirs.</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     Photos with professional camaras are not allowed, let your camera at home. Don't forget to bring money for tips and souvenirs.
                 </p>
 
@@ -2396,11 +2396,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     </ul>
                 </p>
 
-                <h2 class="col-xs-4 text-center">Includes</h2>
-                <h2 class="col-xs-4 text-center">Not Included</h2>
-                <h2 class="col-xs-4 text-center">Recommendations</h2>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Not Included</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Transportation, a sampling of coffee, hot chocolate, fruits, honey.</li>
                     <li>Helmet, boots, guide, refreshments.</li>
                     <li>Access to National Park El Limon and waterfalls.</li>
@@ -2408,11 +2408,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>Drinks in Cayo Levantado; official guides.</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Photos, videos.</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     Wear comfortable clothing, closed shoes, swimsuit, sunscreen, insect repellent, and sunglasses. Don't forget to bring your camera and extra money.
                 </p>
 
@@ -2451,11 +2451,11 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     </ul>
                 </p>
 
-                <h2 class="col-xs-4 text-center">Includes</h2>
-                <h2 class="col-xs-4 text-center">Not Included</h2>
-                <h2 class="col-xs-4 text-center">Recommendations</h2>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Not Included</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Round trip transportation</li>
                     <li>Professional guide</li>
                     <li>Snorkeling gear</li>
@@ -2465,13 +2465,13 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     <li>And drinks.</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tips</li>
                     <li>Photos</li>
                     <li>and souvenirs.</li>
                 </ul>
 
-                <p class="col-xs-4">
+                <p class="col-4">
                     Wear comfortable clothes, swimsuit, sunscreen and sun glasses. Don’t forget to bring your camera and extra money.
                 </p>
 
@@ -2510,24 +2510,24 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                     </ul>
                 </p>
 
-                <h2 class="col-xs-4 text-center">Includes</h2>
-                <h2 class="col-xs-4 text-center">Not Included</h2>
-                <h2 class="col-xs-4 text-center">Recommendations</h2>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Not Included</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Segway.</li>
                     <li>Refreshments.</li>
                     <li>Safety equipment.</li>
                 </ul>
                 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Tips.</li>
                     <li>Photos.</li>
                     <li>Videos.</li>
                     <li>and souvenirs.</li>
                 </ul>
 
-                <ul class="col-xs-4">
+                <ul class="col-4">
                     <li>Bring towel.</li>
                     <li>Swimsuits.</li>
                     <li>Comfortable and closed shoes.</li>
@@ -2548,6 +2548,108 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             horarios: ['Everyday'],
             modalidades: [
                 { id: 0, precio: 79, nino: 0, descripcion: 'Segway Tour' }
+            ]
+        },
+        {
+            id: 55,
+            titulo: "Scape Park",
+            partyBoat: false,
+            mostrar: true,
+            descripcion: `Ride a Segway. Visit Ojos Indigenas Natural Reserve, Two separate beaches, La Cana golf course and a variety of interesting areas.`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">
+                    Scape Park is without a doubt an amusement park without waste. For those who love nature, for those seeking relaxation, for those who seek adrenaline, culture, discover, for young and old, for the whole family: this is an exceptional place.
+                    <br><br>Combine feelings of suspense with relaxation, meet incredible aspects of nature through the exploration of unimaginable corners, dare to make our Zip Line or swim the underwater bottom of our caves, finish exhausted to have fun and enjoy, or end up being delighted by the relaxing peace offered by our facilities.
+                </p>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Important</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
+
+                <ul class="col-4">
+                    <li>Transportation from most hotels in the area.</li>
+                    <li>Blue Hole Eco Tour.</li>
+                    <li>Zip line Eco Splash.</li>
+                    <li>Blue Jumps.</li>
+                    <li>Cultural Route.</li>
+                    <li>Cave Swim.</li>
+                    <li>Iguabonita Cave.</li>
+                    <li>Iguanaland.</li>
+                    <li>The ranch.</li>
+                    <li>Playground (Eco Kids Village: From 2 to 12 years old).</li>
+                    <li>Beach Getaway (drinks not included).</li>
+                    <li>Dominican Buffet.</li>
+                </ul>
+                
+                <ul class="col-4">
+                    <li>This is an all day stay at Scape Park.</li>
+                    <li>Depending on your hotel location bus ride may be 10 to 45 minutes long.</li>
+                    <li>The departure from the park is at 4:00pm.</li>
+                    <li>Some of the atractions are not included.</li>
+                    <li>Kids´ages may determine access to some areas.</li>
+                    <li>Any picture equipment will be put away until the end of your stay.</li>
+                    <li>The realization of activities may be subject to a program or sequence.</li>
+                </ul>
+
+                <ul class="col-4">
+                    <li>Bring towel.</li>
+                    <li>Swimsuits.</li>
+                    <li>Comfortable and closed shoes.</li>
+                </ul>
+            `,
+            horarios: ['Everyday'],
+            modalidades: [
+                { id: 0, precio: 149, nino: 0, descripcion: 'Scape Park Full Admision' }
+            ]
+        },
+        {
+            id: 56,
+            titulo: "Bavaro Splash",
+            partyBoat: false,
+            mostrar: true,
+            descripcion: `Ride a Segway. Visit Ojos Indigenas Natural Reserve, Two separate beaches, La Cana golf course and a variety of interesting areas.`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">
+                    Combine the experience of driving a high-performance boat and explore the underwater world through Snuba! Spend three hours exploring the crystal blue waters of this destination. Board a single- or double-occupancy speedboat and cruise at high speed across the Caribbean Sea with your local guide. 
+                    <br><br>You’ll navigate the Bavaro-Punta Cana coastline, where white sands and towering palm trees stretch into sunny skies. 
+                    <br><br>Do SNUBA after a brief orientation, which is an underwater activity that combines the best of SCUBA DIVING and SNORKELING. A certified SNUBA guide will accompany your group and take you to the depths of the ocean where you can have your photo taken as tropical fish swim by! Once you hop back on the boat you’ll have time to relax and enjoy some complimentary soft drinks and bottled water as you make your way to the Bavaro reef.
+                </p>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Timing</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
+
+                <ul class="col-4">
+                    <li>Transportation</li>
+                    <li>Snorkelling</li>
+                    <li>Snuba</li>
+                    <li>Speed Boat</li>
+                    <li>Equipment</li>
+                    <li>Soft drinks</li>
+                    <li>Beer and rum</li>
+                    <li>Transfer back to hotel</li>
+                </ul>
+                
+                <ul class="col-4">
+                    <li>07:00 AM – Departure from hotels</li>
+                    <li>09:15  AM – Welcome at base and briefing on speedboats</li>
+                    <li>09:30 AM – Set sail to reef</li>
+                    <li>09:50 AM – Speedboats</li>
+                    <li>10:35  AM – Snuba</li>
+                    <li>11:20  AM – Reef snorkeling</li>
+                    <li>12:10  PM – Sail back to base, alcoholic drinks</li>
+                    <li>12:30  PM – Transfer back to hotels</li>
+                </ul>
+
+                <ul class="col-4">
+                    <li>Bring towel.</li>
+                    <li>Swimsuits.</li>
+                    <li>Comfortable and closed shoes.</li>
+                </ul>
+            `,
+            horarios: ['Everyday'],
+            modalidades: [
+                { id: 0, precio: 129, nino: 0, descripcion: 'One Seater' }
             ]
         }
     ];
