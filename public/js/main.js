@@ -1,4 +1,22 @@
 $(function(){
+    $('#Transfers').click(function(){
+        $('#v-pills-transfers-tab').trigger('click');
+        console.log('v-pills-transfers-tab');
+        $('html, body').animate({scrollTop : 0},500);
+        
+    });
+    $('#Excursions').click(function(){
+        $('#v-pills-excursions-tab').trigger('click');
+        console.log('v-pills-excursions-tab');
+        $('html, body').animate({scrollTop : 0},500);
+        
+    });
+    $('#Hotels').click(function(){
+        $('#v-pills-hotels-tab').trigger('click');
+        console.log('v-pills-hotels-tab');
+        $('html, body').animate({scrollTop : 0},500);
+        
+    });
     $('[data-toggle="tooltip"]').tooltip(); 
     /*------------------Transfer------------------*/
 

@@ -6969,6 +6969,8 @@ textarea.form-control {
     color: #fff; }
   .ftco-footer p {
     color: rgba(255, 255, 255, 0.5); }
+  .ftco-footer button {
+    color: rgba(255, 255, 255, 0.5); }
   .ftco-footer a {
     color: rgba(255, 255, 255, 0.5); }
     .ftco-footer a:hover {

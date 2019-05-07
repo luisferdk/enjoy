@@ -103,9 +103,15 @@
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Book Now</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Transfers</a></li>
-                <li><a href="#" class="py-2 d-block">Excursions</a></li>
-                <li><a href="#" class="py-2 d-block">Hotels</a></li>
+                @if(Request::is('/'))
+                  <li><button id="Transfers" class="btn btn-link pl-0 py-2 d-block">Transfers</button></li>
+                  <li><button id="Excursions" class="btn btn-link pl-0 py-2 d-block">Excursions</button></li>
+                  <li><button id="Hotels" class="btn btn-link pl-0 py-2 d-block">Hotels</button></li>
+                @else
+                  <li><a href="{{ url('/') }}" class="pl-0 py-2 d-block">Transfers</a></li>
+                  <li><a href="{{ url('/') }}" class="pl-0 py-2 d-block">Excursions</a></li>
+                  <li><a href="{{ url('/') }}" class="pl-0 py-2 d-block">Hotels</a></li>
+                @endif
               </ul>
             </div>
           </div>
