@@ -3908,16 +3908,16 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
       descripcion:'Sirenis Punta Cana',
       precios:[
         {tipo:'STD',sencilla:198, doble:146, triple:134, fechas:'04 ENE AL 31 ENE'},
-        {tipo:'Jr Suite/Family',sencilla:206, doble:153, triple:141, fechas:'04 ENE AL 31 ENE'},
         {tipo:'STD',sencilla:204, doble:151, triple:139, fechas:'01 FEB AL 21 ABR'},
-        {tipo:'Jr Suite/Family',sencilla:214, doble:162, triple:148, fechas:'01 FEB AL 21 ABR'},
         {tipo:'STD',sencilla:148, doble:106, triple:97, fechas:'22 ABR AL 30 ABR'},
-        {tipo:'Jr Suite/Family',sencilla:160, doble:118, triple:108, fechas:'22 ABR AL 30 ABR'},
         {tipo:'STD',sencilla:119, doble:77, triple:70, fechas:'01 MAY AL 30 JUN'},
-        {tipo:'Jr Suite/Family',sencilla:129, doble:87, triple:80, fechas:'01 MAY AL 30 JUN'},
         {tipo:'STD',sencilla:144, doble:91, triple:84, fechas:'01 JUL AL 24 AGO'},
-        {tipo:'Jr Suite/Family',sencilla:159, doble:106, triple:97, fechas:'01 JUL AL 24 AGO'},
         {tipo:'STD',sencilla:119, doble:77, triple:70, fechas:'25 AGO AL 31 OCT'},
+        {tipo:'Jr Suite/Family',sencilla:206, doble:153, triple:141, fechas:'04 ENE AL 31 ENE'},
+        {tipo:'Jr Suite/Family',sencilla:214, doble:162, triple:148, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Jr Suite/Family',sencilla:160, doble:118, triple:108, fechas:'22 ABR AL 30 ABR'},
+        {tipo:'Jr Suite/Family',sencilla:129, doble:87, triple:80, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Jr Suite/Family',sencilla:159, doble:106, triple:97, fechas:'01 JUL AL 24 AGO'},
         {tipo:'Jr Suite/Family',sencilla:129, doble:87, triple:80, fechas:'25 AGO AL 31 OCT'},
       ]
     },
@@ -3989,7 +3989,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         var end   = $('#hotelFin').datepicker('getDate');
         if(start && end){
             var days   = (end - start)/1000/60/60/24;
-            $scope.hotel.precio = $scope.hotel.hotel.precio * days;
+            $scope.hotel.precio = $scope.hotel.hotel.precios[0].sencilla * days;
         }
     }
 
