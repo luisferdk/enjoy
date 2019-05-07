@@ -67,6 +67,9 @@ h5,
 
 .navbar {
 	padding: 0;
+	img{
+		max-height: 80px;
+	}
 }
 
 .ftco-navbar-light {
@@ -90,10 +93,10 @@ h5,
 		>.nav-item {
 			>.nav-link {
 				font-size: 20px;
-				padding-top: 30px;
-				padding-bottom: 30px;
-				padding-left: 20px;
-				padding-right: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 30px;
+				padding-right: 30px;
 				color: $primary;
 
 				&:hover {
@@ -349,7 +352,7 @@ h5,
 			background-position: center !important;
 			background-repeat: no-repeat;
 			background-position: center center;
-			height: calc(100vh - 285px);
+			height: calc(100vh - 130px);
 			overflow: hidden;
 			position: relative;
 			background-size: cover;
@@ -572,6 +575,7 @@ h5,
 			color: white;
 			min-width: 150px;
 			text-align: center;
+			border: 2px solid white;
 
 			&.active {
 				background: white;

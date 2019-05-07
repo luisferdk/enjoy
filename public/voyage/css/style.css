@@ -6301,6 +6301,8 @@ h5,
 
 .navbar {
   padding: 0; }
+  .navbar img {
+    max-height: 80px; }
 
 .ftco-navbar-light {
   background: white;
@@ -6317,10 +6319,10 @@ h5,
       position: relative; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 20px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     color: #1576c8;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
@@ -6479,7 +6481,7 @@ h5,
       background-position: center !important;
       background-repeat: no-repeat;
       background-position: center center;
-      height: calc(100vh - 285px);
+      height: calc(100vh - 130px);
       overflow: hidden;
       position: relative;
       background-size: cover; }
@@ -6631,7 +6633,8 @@ h5,
   background: #1576c8;
   color: white;
   min-width: 150px;
-  text-align: center; }
+  text-align: center;
+  border: 2px solid white; }
   .tabulation-search .nav-pills .nav-link.active {
     background: white;
     color: #1576c8; }

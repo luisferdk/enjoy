@@ -1,6 +1,6 @@
 @extends('layouts.sitio')
 @section('content')
-<section class="home-slider owl-carousel">
+<section class="home-slider owl-carousel d-none d-xl-block">
   <div class="slider-item" style="background-image: url('{{asset('voyage')}}/images/bg_4.jpg');">
     <div class="overlay"></div>
   </div>
@@ -21,15 +21,15 @@
       <div class="col-md-12 tabulation-search">
         <div class="element-animate">
           <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-            <a class="nav-link col-sm-4 col-12 p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers"
+            <a class="nav-link col-4 p-3 active" id="v-pills-transfers-tab" data-toggle="pill" href="#v-pills-transfers"
               role="tab" aria-controls="v-pills-transfers" aria-selected="false">
               <i class="icon-car"></i> Transfers
             </a>
-            <a class="nav-link col-sm-4 col-12 p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
+            <a class="nav-link col-4 p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
               aria-controls="v-pills-excursions" aria-selected="false">
               <i class="icon-sun-o"></i> Excursions
             </a>
-            <a class="nav-link col-sm-4 col-12 p-3" id="v-pills-hotels-tab" data-toggle="pill" href="#v-pills-hotels" role="tab"
+            <a class="nav-link col-4 p-3" id="v-pills-hotels-tab" data-toggle="pill" href="#v-pills-hotels" role="tab"
               aria-controls="v-pills-hotels" aria-selected="false">
               <i class="icon-hotel"></i> Hotels
             </a>
