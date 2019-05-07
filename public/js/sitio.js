@@ -2983,102 +2983,1005 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
 
     /* Hoteles */
-    $scope.hotelesReservar = [
-        {id:0,descripcion: 'Four Point by Sheraton Punta Cana',precio:40},
-        {id:1,descripcion: "Casa de Campo Resort & Villas",precio:40},
-        {id:2,descripcion: "Grand Bahia Principe La Romana",precio:40},
-        {id:3,descripcion: "La Romana Luxury Bahia Principe Bouganville - Adults Only",precio:40},
-        {id:4,descripcion: "Be Live Collection Canoa - All Inclusive",precio:40},
-        {id:5,descripcion: "Dreams La Romana Resort and Spa",precio:40},
-        {id:6,descripcion: "Catalonia La Romana - All Inclusive",precio:40},
-        {id:7,descripcion: "Tracadero Beach Resort",precio:40},
-        {id:8,descripcion: "Hotel Bayahibe",precio:40},
-        {id:9,descripcion: "Dreams Dominicus La Romana",precio:40},
-        {id:10,descripcion: "Viva Wyndham Dominicus Beach - All Inclusive",precio:40},
-        {id:11,descripcion: "Catalonia Royal La Romana Adults Only - All Inclusive",precio:40},
-        {id:12,descripcion: "Viva Wyndham Dominicus Palace - All Inclusive",precio:40},
-        {id:13,descripcion: "Iberostar Hacienda Dominicus",precio:40},
-        {id:14,descripcion: "whala! Bayahibe",precio:40},
-        {id:15,descripcion: 'Santo Domingo',precio:40},
-    
-        {id:16,descripcion: "Majestic Colonial ",precio:40},
-        {id:17,descripcion: "Majestic Elegance ",precio:40},
-        {id:18,descripcion: "Majestic Mirage",precio:40},
-        {id:19,descripcion: 'Iberostar Punta Cana',precio:40},
-        {id:20,descripcion: 'Iberostar Bavaro',precio:40},
-        {id:21,descripcion: 'Iberostar Grand',precio:40},
-        {id:22,descripcion: 'Iberostar Dominicana',precio:40},
-        {id:23,descripcion: 'Royalton Bavaro',precio:40},
-        {id:24,descripcion: 'Dreams Palm Beach',precio:40},
-        {id:25,descripcion: 'Ocean Blue & Sand Beach Resort',precio:40},
-        {id:26,descripcion: 'Vik Arena Blanca',precio:40},
-        {id:27,descripcion: 'Westin Punta Cana',precio:40},
-        {id:28,descripcion: 'Alsol Luxury Village',precio:40},
-        {id:29,descripcion: 'Alsol del Mar (Soto Grande)',precio:40},
-        {id:30,descripcion: 'Sanctuary Cap Cana',precio:40},
-        {id:31,descripcion: 'Club Med',precio:40},
-        {id:32,descripcion: 'Natura Park Resort (Blau)',precio:40},
-        {id:33,descripcion: 'Catalonia Punta Cana',precio:40},
-        {id:34,descripcion: 'Be Live Collection Punta Cana',precio:40},
-        {id:35,descripcion: 'Alsol Tiara Cap Cana',precio:40},
-        {id:36,descripcion: 'The Villas at Cap Cana by Alsol',precio:40},
-        {id:37,descripcion: 'Luxury Beach Front Apartment in Punta Palmera',precio:40},
-        {id:38,descripcion: 'Eden Roc At Cap Cana',precio:40},
-        {id:39,descripcion: 'Fishing Lodge CapCana Diamond Resort',precio:40},
-        {id:40,descripcion: 'Grand Bahia Principe Bavaro',precio:40},
-        {id:41,descripcion: 'Bavaro Princess All Suites Resort, Spa & Casino',precio:40},
-        {id:42,descripcion: 'Melia Caribe Tropical',precio:40},
-        {id:43,descripcion: 'Tropical Princess Beach Resort & Spa',precio:40},
-        {id:44,descripcion: 'Barcelo Bavaro Palace',precio:40},
-        {id:45,descripcion: 'Barcelo Bavaro Beach',precio:40},
-        {id:46,descripcion: 'Blue Beach Punta Cana Luxury Resort',precio:40},
-        {id:47,descripcion: 'Catalonia Royal Bavaro - All Inclusive - Adults Only',precio:40},
-        {id:48,descripcion: 'Grand Bahia Principe Turquesa',precio:40},
-        {id:49,descripcion: 'Caribe Club Princess Beach Resort and Spa',precio:40},
-        {id:50,descripcion: 'Vista Sol Punta Cana Beach Resort & Spa',precio:40},
-        {id:51,descripcion: 'Punta Cana Princess All Suites Resort and Spa',precio:40},
-        {id:52,descripcion: 'Luxury Bahia Principe Esmeralda',precio:40},
-        {id:53,descripcion: 'The Level at Melia Caribe Tropical',precio:40},
-        {id:54,descripcion: 'Luxury Bahia Principe Ambar Blue - Adults Only',precio:40},
-        {id:55,descripcion: 'whala!bávaro',precio:40},
-        {id:56,descripcion: 'Sanctuary Cap Cana - All Inclusive by Playa Hotels & Resorts',precio:40},
-        {id:57,descripcion: 'Luxury Bahia Principe Ambar Green - Adults Only',precio:40},
-        {id:58,descripcion: 'Hotel Cortecito Inn Bavaro',precio:40},
-        {id:59,descripcion: 'Punta Palmera Cap Cana by Essenza Retreats',precio:40},
-        {id:60,descripcion: 'Residencial Las Buganvillas Bavaro',precio:40},
-        {id:61,descripcion: 'Royalton Punta Cana Resort & Casino',precio:40},
-        {id:62,descripcion: 'Riu Palace Punta Cana',precio:40},
-        {id:63,descripcion: 'Riu Naiboa',precio:40},
-        {id:64,descripcion: 'Riu Bavaro',precio:40},
-        {id:65,descripcion: 'Riu Palace Macao',precio:40},
-    
-        {id:66,descripcion: "Occidental Caribe",precio:40},
-        {id:67,descripcion: "Occidental Punta Cana",precio:40},
-        {id:68,descripcion: "Secret Cap Cana",precio:40},
-        {id:69,descripcion: "Secret Royal Beach",precio:40},
-        {id:70,descripcion: "Now Onix",precio:40},
-        {id:71,descripcion: "Riu República",precio:40},
-        {id:72,descripcion: "Bahia Principe Ambar",precio:40},
-        {id:73,descripcion: "Bahia Principe Fantasy",precio:40},
-    
-        {id:74,descripcion: "Hard Rock Hotel & Casino",precio:40},
-    
-        {id:75,descripcion: "Zoetry Aqua",precio:40},
-        {id:76,descripcion: "The Palms Punta Cana",precio:40},
-        {id:77,descripcion: "Las Dunas Condo",precio:40},
-        {id:78,descripcion: "Breathless Punta  Cana Resort & Spa",precio:40},
-        {id:79,descripcion: "CHIC by Royalton Resorts ",precio:40},
-        {id:80,descripcion: "Dreams Punta Cana Resort & Spa",precio:40},
-        {id:81,descripcion: "Excellence Punta Cana",precio:40},
-        {id:82,descripcion: "Excellence El Carmen",precio:40},
-        {id:83,descripcion: "Sensatori Resort Punta Cana",precio:40},
-        {id:84,descripcion: "Sirenis Punta Cana Resort Casino & Aguagames",precio:40},
-        {id:85,descripcion: "Sirenis Cocotal Beach Resort Punta Cana ",precio:40},
-        {id:86,descripcion: "Sirenis Tropical Suites Punta Cana ",precio:40},
-        {id:87,descripcion: "Sivory Punta Cana Boutique Hotel",precio:40},
-        {id:88,descripcion: "Nickelodeon Hotels & Resorts Punta Cana ",precio:40},
-    ];    
+   $scope.hotelesReservar = $scope.hotelesReservar = [
+    {
+        descripcion:'Bahia Principe Ambar',
+        precios:[
+            {tipo:'JS Dlx',sencilla:376, doble:251, triple:238, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'JS Dlx',sencilla:332, doble:222, triple:210, fechas:'01 AL 30 ABRIL'},
+            {tipo:'JS Dlx',sencilla:366, doble:245, triple:232, fechas:'17 AL 21 ABRIL'},
+            {tipo:'JS Dlx',sencilla:247, doble:165, triple:156, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'JS Dlx',sencilla:274, doble:183, triple:173, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'JS Dlx',sencilla:290, doble:194, triple:184, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'JS Dlx',sencilla:247, doble:165, triple:156, fechas:'19 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Bahia Principe AQUAMARINE',
+        precios:[
+            {tipo:'JS Dlx',sencilla:328, doble:218, triple:207, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'JS Dlx',sencilla:281, doble:188, triple:179, fechas:'01 AL 30 ABRIL'},
+            {tipo:'JS Dlx',sencilla:318, doble:212, triple:202, fechas:'17 AL 21 ABRIL'},
+            {tipo:'JS Dlx',sencilla:205, doble:137, triple:129, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'JS Dlx',sencilla:231, doble:154, triple:147, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'JS Dlx',sencilla:247, doble:165, triple:156, fechas:'01 AL 17 AGOSTO'},
+            {tipo:'JS Dlx',sencilla:205, doble:137, triple:129, fechas:'18 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Bahia Principe Bavaro / Punta Cana',
+        precios:[
+            {tipo:'Junior Suite',sencilla:280, doble:187, triple:177, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'Junior Suite',sencilla:240, doble:161, triple:152, fechas:'01 AL 16 ABRIL'},
+            {tipo:'Junior Suite',sencilla:271, doble:181, triple:171, fechas:'17 AL 21 ABRIL'},
+            {tipo:'Junior Suite',sencilla:240, doble:161, triple:152, fechas:'22 AL 30 ABRIL'},
+            {tipo:'Junior Suite',sencilla:187, doble:125, triple:119, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'Junior Suite',sencilla:192, doble:128, triple:122, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'Junior Suite',sencilla:208, doble:139, triple:131, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'Junior Suite',sencilla:187, doble:125, triple:119, fechas:'19 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Bahia Principe Esmeralda',
+        precios:[
+            {tipo:'JS Dlx',sencilla:357, doble:238, triple:226, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'JS Dlx',sencilla:313, doble:209, triple:198, fechas:'01 AL 30 ABRIL'},
+            {tipo:'JS Dlx',sencilla:350, doble:233, triple:222, fechas:'17 AL 21 ABRIL'},
+            {tipo:'JS Dlx',sencilla:234, doble:156, triple:148, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'JS Dlx',sencilla:263, doble:175, triple:166, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'JS Dlx',sencilla:277, doble:185, triple:175, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'JS Dlx',sencilla:234, doble:156, triple:148, fechas:'19 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Bahia Principe Fantasia',
+        precios:[
+            {tipo:'JS Dlx',sencilla:392, doble:261, triple:248, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'JS Dlx',sencilla:350, doble:233, triple:221, fechas:'01 AL 30 ABRIL'},
+            {tipo:'JS Dlx',sencilla:384, doble:256, triple:243, fechas:'17 AL 21 ABRIL'},
+            {tipo:'JS Dlx',sencilla:269, doble:180, triple:171, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'JS Dlx',sencilla:296, doble:197, triple:188, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'JS Dlx',sencilla:312, doble:208, triple:198, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'JS Dlx',sencilla:269, doble:180, triple:171, fechas:'19 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Bahia Principe Turquesa',
+        precios:[
+            {tipo:'JS Dlx',sencilla:280, doble:187, triple:178, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'JS Dlx',sencilla:236, doble:158, triple:150, fechas:'01 AL 30 ABRIL'},
+            {tipo:'JS Dlx',sencilla:271, doble:181, triple:172, fechas:'17 AL 21 ABRIL'},
+            {tipo:'JS Dlx',sencilla:173, doble:116, triple:110, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'JS Dlx',sencilla:200, doble:133, triple:127, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'JS Dlx',sencilla:216, doble:144, triple:137, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'JS Dlx',sencilla:173, doble:116, triple:110, fechas:'19 AGO AL 23 DIC'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:308, triple:293, fechas:'02 ENE AL 31 MAR'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:260, triple:247, fechas:'01 AL 30 ABRIL'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:298, triple:283, fechas:'17 AL 21 ABRIL'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:191, triple:181, fechas:'01 MAY AL 15 JUN'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:220, triple:209, fechas:'16 JUN AL 31 JUL'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:237, triple:225, fechas:'01 AL 18 AGOSTO'},
+            {tipo:'FAMILY M/S',sencilla:0, doble:191, triple:181, fechas:'19 AGO AL 23 DIC'},
+        ]
+    },
+    {
+        descripcion:'Barcelo Bavaro Beach',
+        precios:[
+            {tipo:'SUP',sencilla:512, doble:285, triple:256, fechas:'06 ENE AL 31 ENE'},
+            {tipo:'SUP',sencilla:550, doble:306, triple:275, fechas:'01 FEB AL 28 FEB'},
+            {tipo:'SUP',sencilla:538, doble:299, triple:270, fechas:'01  MAR AL 12 ABR'},
+            {tipo:'SUP',sencilla:459, doble:306, triple:275, fechas:'13 ABR AL 20 ABR'},
+            {tipo:'SUP',sencilla:358, doble:238, triple:215, fechas:'21 ABR AL 30 ABR'},
+            {tipo:'SUP',sencilla:299, doble:200, triple:180, fechas:'01 MAY AL 14 JUN'},
+            {tipo:'SUP',sencilla:358, doble:238, triple:215, fechas:'15 JUN AL 17 AGO'},
+            {tipo:'SUP',sencilla:268, doble:179, triple:161, fechas:'18 AGO AL 31 OCT'},
+            {tipo:'SUP',sencilla:318, doble:212, triple:191, fechas:'18 AGO AL 31 OCT'},
+        ]
+    },
 
+    {
+        descripcion:'Barcelo Bavaro Palace Deluxe',
+        precios:[
+            {tipo:'Family',sencilla:0, doble:173, triple:156, fechas:'01 AL 31 ENERO'},
+            {tipo:'JR SUITE',sencilla:268, doble:158, triple:142, fechas:'01 AL 31 ENERO'},
+            {tipo:'JR SUITE',sencilla:510, doble:300, triple:271, fechas:'06 ENE AL 31 ENE'},
+            {tipo:'JR SUITE',sencilla:546, doble:321, triple:290, fechas:'01 FEB AL 28 FEB'},
+            {tipo:'JR SUITE',sencilla:534, doble:314, triple:282, fechas:'01  MAR AL 12 ABR'},
+            {tipo:'JR SUITE',sencilla:546, doble:321, triple:290, fechas:'13 ABR AL 20 ABR'},
+            {tipo:'JR SUITE',sencilla:427, doble:251, triple:224, fechas:'21 ABR AL 30 ABR'},
+            {tipo:'JR SUITE',sencilla:356, doble:210, triple:189, fechas:'01 MAY AL 14 JUN'},
+            {tipo:'JR SUITE',sencilla:427, doble:251, triple:227, fechas:'15 JUN AL 17 AGO'},
+            {tipo:'JR SUITE',sencilla:320, doble:189, triple:170, fechas:'18 AGO AL 31 OCT'},
+            {tipo:'Sup',sencilla:460, doble:270, triple:244, fechas:'06 ENE AL 31 ENE'},
+            {tipo:'Sup',sencilla:491, doble:289, triple:260, fechas:'01 FEB AL 28 FEB'},
+            {tipo:'Sup',sencilla:481, doble:282, triple:255, fechas:'01  MAR AL 12 ABR'},
+            {tipo:'Sup',sencilla:491, doble:289, triple:260, fechas:'13 ABR AL 20 ABR'},
+            {tipo:'Sup',sencilla:384, doble:226, triple:204, fechas:'21 ABR AL 30 ABR'},
+            {tipo:'Sup',sencilla:320, doble:189, triple:170, fechas:'01 MAY AL 14 JUN'},
+            {tipo:'Sup',sencilla:384, doble:226, triple:204, fechas:'15 JUN AL 17 AGO'},
+            {tipo:'Sup',sencilla:289, doble:170, triple:153, fechas:'18 AGO AL 31 OCT'},
+        ]
+    },
+    {
+        descripcion:'Bavaro Princess',
+        precios:[
+            {tipo:'Junior Suite',sencilla:208, doble:179, triple:164, fechas:'02 ENE AL 16 ABR'},
+            {tipo:'Junior Suite',sencilla:217, doble:188, triple:172, fechas:'17 AL 20 ABRIL'},
+            {tipo:'Junior Suite',sencilla:186, doble:156, triple:143, fechas:'21  AL 30 ABRIL'},
+            {tipo:'Junior Suite',sencilla:166, doble:137, triple:125, fechas:'01 MAY AL 30 JUN'},
+            {tipo:'Junior Suite',sencilla:176, doble:147, triple:134, fechas:'01 JUL AL 31 AGO'},
+            {tipo:'Junior Suite',sencilla:166, doble:137, triple:125, fechas:'01 SEPT AL 21 DIC'},
+        ]
+    },
+
+    {
+        descripcion:'Be Live Colletion Punta Cana',
+        precios:[
+            {tipo:'Std',sencilla:175, doble:144, triple:132, fechas:'07 ENE AL 31 MAR'},
+            {tipo:'Std',sencilla:160, doble:128, triple:118, fechas:'01 AL 17 ABRIL'},
+            {tipo:'Std',sencilla:186, doble:154, triple:141, fechas:'18 AL 21 ABRIL'},
+            {tipo:'Std',sencilla:160, doble:128, triple:118, fechas:'21 AL 26 ABRIL'},
+            {tipo:'Std',sencilla:186, doble:154, triple:141, fechas:'27 AL 29 ABRIL'},
+            {tipo:'Std',sencilla:149, doble:118, triple:108, fechas:'30 ABR AL 30 JUN'},
+            {tipo:'Std',sencilla:160, doble:128, triple:118, fechas:'01 JUL AL 22 AGO'},
+            {tipo:'Std',sencilla:149, doble:118, triple:108, fechas:'23 AGO AL 01 NOV'},
+            {tipo:'Std',sencilla:186, doble:154, triple:141, fechas:'02 AL 04 NOV'},
+            {tipo:'Std',sencilla:149, doble:118, triple:108, fechas:'05 NOV AL 21 DIC'},
+            {tipo:'Std',sencilla:207, doble:175, triple:161, fechas:'22 DIC AL 07 ENE - 2020'},
+        ]
+    },
+
+    {
+        descripcion:'Be Live Colletion Punta Cana',
+        adultos:true,
+        precios:[
+            {tipo:'Std',sencilla:196, doble:165, triple:151, fechas:'07 ENE AL 31 MAR'},
+            {tipo:'Std',sencilla:181, doble:149, triple:137, fechas:'01 AL 17 ABRIL'},
+            {tipo:'Std',sencilla:207, doble:175, triple:161, fechas:'18 AL 21 ABRIL'},
+            {tipo:'Std',sencilla:181, doble:149, triple:137, fechas:'21 AL 26 ABRIL'},
+            {tipo:'Std',sencilla:207, doble:175, triple:161, fechas:'27 AL 29 ABRIL'},
+            {tipo:'Std',sencilla:170, doble:139, triple:127, fechas:'30 ABR AL 30 JUN'},
+            {tipo:'Std',sencilla:181, doble:149, triple:137, fechas:'01 JUL AL 22 AGO'},
+            {tipo:'Std',sencilla:170, doble:139, triple:127, fechas:'23 AGO AL 01 NOV'},
+            {tipo:'Std',sencilla:207, doble:175, triple:161, fechas:'02 AL 04 NOV'},
+            {tipo:'Std',sencilla:170, doble:139, triple:127, fechas:'05 NOV AL 21 DIC'},
+            {tipo:'Std',sencilla:228, doble:196, triple:180, fechas:'22 DIC AL 07 ENE - 2020'},
+        ]
+    },
+
+    {
+      descripcion:'Breathless Punta Cana',
+      precios:[
+        {tipo:'JS T/V',sencilla:349, doble:232, triple:231, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'JS T/V',sencilla:326, doble:209, triple:208, fechas:'18 AL 31 ENERO '},
+        {tipo:'JS T/V',sencilla:359, doble:239, triple:238, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'JS T/V',sencilla:314, doble:209, triple:208, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'JS T/V',sencilla:302, doble:202, triple:201, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'JS T/V',sencilla:268, doble:179, triple:177, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'JS T/V',sencilla:276, doble:184, triple:183, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'JS T/V',sencilla:268, doble:179, triple:177, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Blue Bay Hotels Gran Punta Cana',
+      precios: [
+        {tipo:'Jr Suites',sencilla:198, doble:152, triple:141, fechas:'07 AL 31 ENERO'},
+        {tipo:'Jr Suites',sencilla:226, doble:173, triple:160, fechas:'01 FEB AL 16 ABR'},
+        {tipo:'Jr Suites',sencilla:259, doble:200, triple:184, fechas:'17 AL 20 ABRIL'},
+        {tipo:'Jr Suites',sencilla:295, doble:227, triple:209, fechas:'03 AL 31 ENERO'},
+        {tipo:'Jr Suites',sencilla:305, doble:234, triple:216, fechas:'01 FEB AL 13 ABR'},
+        {tipo:'Jr Suites',sencilla:322, doble:248, triple:229, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Jr Suites',sencilla:270, doble:208, triple:192, fechas:'21 ABR AL 30 JUN'},
+        {tipo:'Jr Suites',sencilla:278, doble:214, triple:198, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Jr Suites',sencilla:254, doble:195, triple:180, fechas:'01 SEPT AL 31 OCT'},
+        {tipo:'Jr Suites',sencilla:295, doble:227, triple:209, fechas:'01 NOV AL 21 DIC'},
+      ]
+    },
+    {
+      descripcion:'Caribe Club Princess',
+      precios: [
+        {tipo:'Superior',sencilla:166, doble:137, triple:125, fechas:'02 ENE AL 16 ABR'},
+        {tipo:'Superior',sencilla:185, doble:155, triple:142, fechas:'17 AL 20 ABRIL'},
+        {tipo:'Superior',sencilla:144, doble:114, triple:105, fechas:'21  AL 30 ABRIL'},
+        {tipo:'Superior',sencilla:132, doble:103, triple:94, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Superior',sencilla:141, doble:112, triple:103, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Superior',sencilla:132, doble:103, triple:94, fechas:'01 SEPT AL 21 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Catalonia Bávaro Beach',
+      precios:[
+        {tipo:'J/S',sencilla:221, doble:147, triple:140, fechas:'03 ENE AL 17 ENE'},
+        {tipo:'J/S',sencilla:241, doble:161, triple:153, fechas:'03 ENE AL 31 ENE'},
+        {tipo:'J/S',sencilla:271, doble:181, triple:172, fechas:'01 FEB AL 31 MAR'},
+        {tipo:'J/S',sencilla:230, doble:153, triple:146, fechas:'01 AL 21 ABRIL'},
+        {tipo:'J/S',sencilla:198, doble:132, triple:126, fechas:'22 AL 30 ABRIL'},
+        {tipo:'J/S',sencilla:161, doble:107, triple:102, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'J/S',sencilla:202, doble:134, triple:128, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'J/S',sencilla:151, doble:101, triple:96, fechas:'01 SEP AL 31 OCT'},
+        {tipo:'J/S',sencilla:167, doble:111, triple:106, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Catalonia Royal Bávaro',
+      precios: [
+        {tipo:'J/S',sencilla:299, doble:200, triple:190, fechas:'03 ENE AL 31 ENE'},
+        {tipo:'J/S',sencilla:331, doble:221, triple:209, fechas:'01 FEB AL 31 MAR'},
+        {tipo:'J/S',sencilla:287, doble:191, triple:182, fechas:'01 AL 21 ABRIL'},
+        {tipo:'J/S',sencilla:252, doble:168, triple:160, fechas:'22 AL 30 ABRIL'},
+        {tipo:'J/S',sencilla:214, doble:143, triple:136, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'J/S',sencilla:257, doble:171, triple:163, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'J/S',sencilla:203, doble:135, triple:129, fechas:'01 SEP AL 31 OCT'},
+        {tipo:'J/S',sencilla:219, doble:146, triple:139, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Chic Punta Cana By Royalton',
+      precios:[
+        {tipo:'Luxury',sencilla:239, doble:160, triple:0, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury',sencilla:258, doble:172, triple:0, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury',sencilla:268, doble:179, triple:0, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'Luxury',sencilla:205, doble:137, triple:0, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury',sencilla:189, doble:126, triple:0, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury',sencilla:282, doble:188, triple:0, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury',sencilla:304, doble:203, triple:0, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury',sencilla:227, doble:151, triple:0, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury',sencilla:200, doble:133, triple:0, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury',sencilla:209, doble:140, triple:0, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury',sencilla:183, doble:122, triple:0, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Chic Punta Cana By Royalton',
+      precios:[
+        {tipo:'Luxury Jr Suite',sencilla:266, doble:177, triple:163, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury Jr Suite',sencilla:285, doble:190, triple:174, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury Jr Suite',sencilla:296, doble:197, triple:181, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'Luxury Jr Suite',sencilla:233, doble:155, triple:142, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury Jr Suite',sencilla:217, doble:145, triple:133, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury Jr Suite',sencilla:313, doble:209, triple:192, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury Jr Suite',sencilla:335, doble:224, triple:205, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury Jr Suite',sencilla:258, doble:172, triple:158, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury Jr Suite',sencilla:232, doble:154, triple:141, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury Jr Suite',sencilla:241, doble:161, triple:147, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury Jr Suite',sencilla:214, doble:143, triple:131, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Dreams Palm Beach',
+      precios:[
+        {tipo:'Dlx T/V',sencilla:252, doble:163, triple:162, fechas:'18 AL 31 ENERO 2019'},
+        {tipo:'Dlx T/V',sencilla:268, doble:179, triple:177, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Dlx T/V',sencilla:287, doble:191, triple:190, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Dlx T/V',sencilla:251, doble:167, triple:166, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Dlx T/V',sencilla:265, doble:176, triple:175, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Dlx T/V',sencilla:213, doble:142, triple:141, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Dlx T/V',sencilla:229, doble:152, triple:151, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Dlx T/V',sencilla:213, doble:142, triple:141, fechas:'15 DIC AL 22 DIC'},
+        {tipo:'Preferred T/V',sencilla:335, doble:224, triple:223, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Preferred T/V',sencilla:358, doble:239, triple:238, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Preferred T/V',sencilla:313, doble:209, triple:208, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Preferred T/V',sencilla:331, doble:221, triple:219, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Preferred T/V',sencilla:266, doble:177, triple:176, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Preferred T/V',sencilla:254, doble:190, triple:189, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Preferred T/V',sencilla:266, doble:177, triple:176, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Dreams Punta Cana',
+      precios:[
+        {tipo:'Dlx T/V',sencilla:252, doble:163, triple:162, fechas:'18 AL 31 ENERO 2019'},
+        {tipo:'Dlx T/V',sencilla:268, doble:179, triple:177, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Dlx T/V',sencilla:287, doble:191, triple:190, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Dlx T/V',sencilla:229, doble:152, triple:151, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Dlx T/V',sencilla:251, doble:167, triple:166, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Dlx T/V',sencilla:213, doble:142, triple:141, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Dlx T/V',sencilla:229, doble:152, triple:151, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Dlx T/V',sencilla:211, doble:141, triple:140, fechas:'15 DIC AL 22 DIC'},
+        {tipo:'Preferred T/V',sencilla:335, doble:224, triple:223, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Preferred T/V',sencilla:358, doble:239, triple:238, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Preferred T/V',sencilla:286, doble:190, triple:189, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Preferred T/V',sencilla:313, doble:209, triple:208, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Preferred T/V',sencilla:266, doble:177, triple:176, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Preferred T/V',sencilla:254, doble:190, triple:189, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Preferred T/V',sencilla:264, doble:176, triple:175, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Gran Palladium Punta Cana',
+      precios:[
+        {tipo:'Dlx',sencilla:272, doble:170, triple:169, fechas:'02 ENE AL 02 FEB'},
+        {tipo:'Dlx',sencilla:314, doble:196, triple:195, fechas:'03 FEB AL 21 ABR'},
+        {tipo:'Dlx',sencilla:198, doble:124, triple:123, fechas:'22 ABR AL 28 JUN'},
+        {tipo:'Dlx',sencilla:215, doble:134, triple:133, fechas:'29 JUN AL 17 AGO'},
+        {tipo:'Dlx',sencilla:185, doble:116, triple:114, fechas:'18 AGO AL 01 NOV'},
+        {tipo:'Dlx',sencilla:210, doble:131, triple:130, fechas:'02 NOV AL 23 DIC'},
+      ]
+    },
+  
+    {
+      descripcion:'Gran Palladium Bavaro',
+      precios:[
+        {tipo:'Sup Jr Suite',sencilla:316, doble:197, triple:196, fechas:'02 ENE AL 02 FEB'},
+        {tipo:'Sup Jr Suite',sencilla:356, doble:223, triple:222, fechas:'03 FEB AL 21 ABR'},
+        {tipo:'Sup Jr Suite',sencilla:222, doble:139, triple:138, fechas:'22 ABR AL 28 JUN'},
+        {tipo:'Sup Jr Suite',sencilla:235, doble:147, triple:146, fechas:'29 JUN AL 17 AGO'},
+        {tipo:'Sup Jr Suite',sencilla:212, doble:132, triple:131, fechas:'18 AGO AL 01 NOV'},
+        {tipo:'Sup Jr Suite',sencilla:235, doble:147, triple:146, fechas:'02 NOV AL 23 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Gran Palladium Palace',
+      precios:[
+        {tipo:'Dlx',sencilla:289, doble:181, triple:180, fechas:'02 ENE AL 02 FEB'},
+        {tipo:'Dlx',sencilla:329, doble:206, triple:205, fechas:'03 FEB AL 21 ABR'},
+        {tipo:'Dlx',sencilla:207, doble:129, triple:128, fechas:'22 ABR AL 28 JUN'},
+        {tipo:'Dlx',sencilla:218, doble:137, triple:135, fechas:'29 JUN AL 17 AGO'},
+        {tipo:'Dlx',sencilla:198, doble:124, triple:123, fechas:'18 AGO AL 01 NOV'},
+        {tipo:'Dlx',sencilla:217, doble:135, triple:134, fechas:'02 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Gran Palladium Royal Turqueza',
+      precios:[
+        {tipo:'Jr Suite TRS',sencilla:368, doble:230, triple:229, fechas:'02 ENE AL 02 FEB'},
+        {tipo:'Jr Suite TRS',sencilla:400, doble:250, triple:249, fechas:'03 FEB AL 21 ABR'},
+        {tipo:'Jr Suite TRS',sencilla:265, doble:166, triple:165, fechas:'22 ABR AL 28 JUN'},
+        {tipo:'Jr Suite TRS',sencilla:277, doble:173, triple:172, fechas:'29 JUN AL 17 AGO'},
+        {tipo:'Jr Suite TRS',sencilla:259, doble:162, triple:161, fechas:'18 AGO AL 01 NOV'},
+        {tipo:'Jr Suite TRS',sencilla:277, doble:173, triple:172, fechas:'02 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Hard Rock Hotel',
+      precios:[
+        {tipo:'C.Suite',sencilla:597, doble:338, triple:311, fechas:'03 ENE AL 20 ABR'},
+        {tipo:'C.Suite',sencilla:482, doble:281, triple:273, fechas:'21 ABR AL 21 JUN'},
+        {tipo:'C.Suite',sencilla:517, doble:299, triple:284, fechas:'22 JUN AL 18 AGO'},
+        {tipo:'C.Suite',sencilla:437, doble:259, triple:258, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'C.Suite',sencilla:465, doble:272, triple:267, fechas:'01 NOV AL 20 DIC'},
+        {tipo:'I/ JS',sencilla:610, doble:345, triple:316, fechas:'03 ENE AL 20 ABR'},
+        {tipo:'I/ JS',sencilla:496, doble:288, triple:277, fechas:'21 ABR AL 21 JUN'},
+        {tipo:'I/ JS',sencilla:530, doble:305, triple:289, fechas:'22 JUN AL 18 AGO'},
+        {tipo:'I/ JS',sencilla:450, doble:265, triple:262, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'I/ JS',sencilla:479, doble:279, triple:271, fechas:'01 NOV AL 20 DIC'},
+        {tipo:'C.SAN Suite',sencilla:641, doble:360, triple:326, fechas:'03 ENE AL 20 ABR'},
+        {tipo:'C.SAN Suite',sencilla:508, doble:295, triple:282, fechas:'21 ABR AL 21 JUN'},
+        {tipo:'C.SAN Suite',sencilla:560, doble:320, triple:299, fechas:'22 JUN AL 18 AGO'},
+        {tipo:'C.SAN Suite',sencilla:463, doble:271, triple:266, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'C.SAN Suite',sencilla:491, doble:285, triple:276, fechas:'01 NOV AL 20 DIC'},
+        {tipo:'SIG FAMILY',sencilla:1218, doble:609, triple:491, fechas:'03 ENE AL 20 ABR'},
+        {tipo:'SIG FAMILY',sencilla:1013, doble:507, triple:423, fechas:'21 ABR AL 21 JUN'},
+        {tipo:'SIG FAMILY',sencilla:1075, doble:537, triple:444, fechas:'22 JUN AL 18 AGO'},
+        {tipo:'SIG FAMILY',sencilla:931, doble:465, triple:396, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'SIG FAMILY',sencilla:980, doble:490, triple:412, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Hideaway Royalton Punta Cana',
+      precios: [
+        {tipo:'Luxury Room',sencilla:299, doble:200, triple:183, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury Room',sencilla:331, doble:221, triple:202, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury Room',sencilla:353, doble:235, triple:216, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'Luxury Room',sencilla:227, doble:151, triple:139, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury Room',sencilla:227, doble:151, triple:139, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury Room',sencilla:373, doble:249, triple:228, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury Room',sencilla:441, doble:294, triple:270, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury Room',sencilla:301, doble:201, triple:184, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury Room',sencilla:331, doble:221, triple:202, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury Room',sencilla:282, doble:188, triple:172, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury Room',sencilla:299, doble:200, triple:183, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Hotel Nickelodeon Punta Cana',
+      precios:[
+        {tipo:'Pad Suite',sencilla:419, doble:317, triple:317, fechas:'03 ENE AL 22 ABR'},
+        {tipo:'Pad Suite',sencilla:365, doble:262, triple:262, fechas:'23 ABR AL 20 AGO'},
+        {tipo:'Pad Suite',sencilla:333, doble:234, triple:234, fechas:'21 AGO AL 31 OCT'},
+        {tipo:'Pad Suite',sencilla:346, doble:247, triple:247, fechas:'01 NOV AL 22 DIC'},
+        {tipo:'Pad Suite',sencilla:908, doble:738, triple:738, fechas:'23 DIC AL 02 ENE 2019'},
+        {tipo:'Pad Suite',sencilla:698, doble:528, triple:423, fechas:'03 ENE AL 22 ABR'},
+        {tipo:'Pad Suite',sencilla:608, doble:437, triple:437, fechas:'23 ABR AL 20 AGO'},
+        {tipo:'Pad Suite',sencilla:573, doble:403, triple:403, fechas:'21 AGO AL 31 OCT'},
+        {tipo:'Pad Suite',sencilla:596, doble:426, triple:426, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Hotel Nickelodeon Punta Cana',
+      precios:[
+        {tipo:'Flat Suite',sencilla:453, doble:351, triple:351, fechas:'03 ENE AL 22 ABR'},
+        {tipo:'Flat Suite',sencilla:398, doble:297, triple:297, fechas:'23 ABR AL 20 AGO'},
+        {tipo:'Flat Suite',sencilla:365, doble:267, triple:267, fechas:'21 AGO AL 31 OCT'},
+        {tipo:'Flat Suite',sencilla:379, doble:280, triple:280, fechas:'01 NOV AL 22 DIC'},
+        {tipo:'Flat Suite',sencilla:966, doble:795, triple:795, fechas:'23 DIC AL 02 ENE 2019'},
+        {tipo:'Flat Suite',sencilla:755, doble:585, triple:585, fechas:'03 ENE AL 22 ABR'},
+        {tipo:'Flat Suite',sencilla:664, doble:495, triple:495, fechas:'23 ABR AL 20 AGO'},
+        {tipo:'Flat Suite',sencilla:630, doble:460, triple:460, fechas:'21 AGO AL 31 OCT'},
+        {tipo:'Flat Suite',sencilla:653, doble:482, triple:482, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Iberostar Bavaro',
+      precios:[
+        {tipo:'Jr Suite',sencilla:249, doble:191, triple:175, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Jr Suite',sencilla:231, doble:178, triple:163, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Jr Suite',sencilla:249, doble:194, triple:178, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Jr Suite',sencilla:168, doble:130, triple:120, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Jr Suite',sencilla:202, doble:157, triple:144, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Jr Suite',sencilla:163, doble:126, triple:115, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Jr Suite Family',sencilla:264, doble:203, triple:186, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Jr Suite Family',sencilla:246, doble:189, triple:173, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Jr Suite Family',sencilla:263, doble:205, triple:188, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Jr Suite Family',sencilla:184, doble:142, triple:130, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Jr Suite Family',sencilla:217, doble:167, triple:153, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Jr Suite Family',sencilla:176, doble:136, triple:125, fechas:'22 AGO AL 31 OCT'},
+      ]
+    },
+    {
+      descripcion:'Iberostar Punta Cana / Dominicana',
+      precios: [
+        {tipo:'Std',sencilla:205, doble:158, triple:145, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'STD V/JAR',sencilla:211, doble:162, triple:149, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Std',sencilla:192, doble:148, triple:135, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'STD V/JAR',sencilla:199, doble:153, triple:140, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Std',sencilla:211, doble:162, triple:149, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'STD V/JAR',sencilla:216, doble:166, triple:152, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Std',sencilla:138, doble:106, triple:97, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'STD V/JAR',sencilla:143, doble:110, triple:101, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Std',sencilla:169, doble:130, triple:119, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'STD V/JAR',sencilla:174, doble:134, triple:123, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Std',sencilla:137, doble:105, triple:96, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'STD V/JAR',sencilla:142, doble:109, triple:100, fechas:'22 AGO AL 31 OCT'},
+      ]
+    },
+
+    {
+      descripcion:'Iberostar Dominicana',
+      precios:[
+        {tipo:'Jr Suite',sencilla:232, doble:179, triple:164, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Jr Suite',sencilla:219, doble:168, triple:154, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Jr Suite',sencilla:238, doble:183, triple:168, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Jr Suite',sencilla:165, doble:127, triple:116, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Jr Suite',sencilla:196, doble:151, triple:138, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Jr Suite',sencilla:164, doble:126, triple:115, fechas:'22 AGO AL 31 OCT'},
+      ]
+    },
+
+    {
+      descripcion:'Iberostar Grand Bavaro',
+      precios: [
+        {tipo:'Suite',sencilla:490, doble:350, triple:0, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Suite',sencilla:458, doble:327, triple:0, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Suite',sencilla:501, doble:358, triple:0, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Suite',sencilla:336, doble:240, triple:0, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Suite',sencilla:403, doble:288, triple:0, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Suite',sencilla:323, doble:231, triple:0, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Suite V/ Lago',sencilla:508, doble:363, triple:0, fechas:'06 ENE AL 28 FEB'},
+        {tipo:'Suite V/ Lago',sencilla:473, doble:338, triple:0, fechas:'01 MAR AL 13 ABR'},
+        {tipo:'Suite V/ Lago',sencilla:515, doble:368, triple:0, fechas:'14 ABR AL 21 ABR'},
+        {tipo:'Suite V/ Lago',sencilla:351, doble:251, triple:0, fechas:'22 ABR AL 30 JUN'},
+        {tipo:'Suite V/ Lago',sencilla:418, doble:298, triple:0, fechas:'01 JUL AL 21 AGO'},
+        {tipo:'Suite V/ Lago',sencilla:338, doble:241, triple:0, fechas:'22 AGO AL 31 OCT'},
+      ]
+    },
+
+    {
+      descripcion:'Impressive Resort & Spa PUJ (ant. Sunscape)',
+      precios: [
+        {tipo:'Deluxe T/V',sencilla:176, doble:104, triple:93, fechas:'11 AL 17 ENERO 2019'},
+        {tipo:'Deluxe T/V',sencilla:292, doble:172, triple:155, fechas:'11 AL 31 ENERO 2019'},
+        {tipo:'Deluxe T/V',sencilla:318, doble:187, triple:168, fechas:'01 AL 28 FEBRERO'},
+        {tipo:'Deluxe T/V',sencilla:311, doble:183, triple:165, fechas:'01 MAR AL 12 ABR'},
+        {tipo:'Deluxe T/V',sencilla:318, doble:187, triple:168, fechas:'13 AL 20 ABRIL'},
+        {tipo:'Deluxe T/V',sencilla:218, doble:128, triple:116, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Deluxe T/V',sencilla:211, doble:124, triple:112, fechas:'01 MAY AL 14 JUN'},
+        {tipo:'Deluxe T/V',sencilla:254, doble:149, triple:134, fechas:'15 JUN AL 17 AGO'},
+        {tipo:'Deluxe T/V',sencilla:211, doble:124, triple:112, fechas:'18 AGO AL 31 OCT'},
+        {tipo:'Deluxe T/V',sencilla:230, doble:135, triple:122, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Lopesan Costa Bavaro (ant. Ifa Villas Bavaro)',
+      precios:[
+        {tipo:'Jr Suite',sencilla:217, doble:145, triple:130, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Jr Suite',sencilla:264, doble:176, triple:159, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Jr Suite',sencilla:217, doble:145, triple:130, fechas:'01 SEP AL 31 OCT'},
+      ]
+    },
+    {
+      descripcion:'Majestic Colonial',
+      precios:[
+        {tipo:'Jr. Suite c/J',sencilla:365, doble:267, triple:253, fechas:'05 AL 31 ENERO 19'},
+        {tipo:'Jr. Suite c/J',sencilla:393, doble:285, triple:272, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Jr. Suite c/J',sencilla:278, doble:201, triple:190, fechas:'01 MAY AL 16 AGO'},
+        {tipo:'Jr. Suite c/J',sencilla:255, doble:174, triple:162, fechas:'17 AGO AL 31 OCT'},
+        {tipo:'Jr. Suite c/J',sencilla:266, doble:193, triple:181, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Majestic Elegance',
+      precios: [
+        {tipo:'Jr. Suite c/J',sencilla:395, doble:294, triple:277, fechas:'05 AL 31 ENERO 19'},
+        {tipo:'Jr. Suite c/J',sencilla:423, doble:313, triple:296, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Jr. Suite c/J',sencilla:309, doble:229, triple:212, fechas:'01 MAY AL 16 AGO'},
+        {tipo:'Jr. Suite c/J',sencilla:272, doble:193, triple:182, fechas:'17 AGO AL 31 OCT'},
+        {tipo:'Jr. Suite c/J',sencilla:289, doble:213, triple:197, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Majestic Mirage',
+      precios: [
+        {tipo:'One Bedroom',sencilla:467, doble:335, triple:322, fechas:'05 AL 31 ENERO 19'},
+        {tipo:'One Bedroom',sencilla:500, doble:355, triple:340, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'One Bedroom',sencilla:384, doble:284, triple:262, fechas:'01 MAY AL 16 AGO'},
+        {tipo:'One Bedroom',sencilla:351, doble:252, triple:234, fechas:'17 AGO AL 31 OCT'},
+        {tipo:'One Bedroom',sencilla:378, doble:277, triple:258, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+    {
+      descripcion:'Meliá Caribe Beach',
+      precios: [
+        {tipo:'Dlx Room',sencilla:311, doble:194, triple:178, fechas:'02 AL 19 ENERO 2019'},
+        {tipo:'Dlx Room',sencilla:286, doble:179, triple:164, fechas:'20 ENE AL 2 FEB'},
+        {tipo:'Dlx Room',sencilla:311, doble:194, triple:178, fechas:'03 FEB AL 31 MAR'},
+        {tipo:'Dlx Room',sencilla:236, doble:148, triple:136, fechas:'01 AL 12 ABRIL'},
+        {tipo:'Dlx Room',sencilla:311, doble:194, triple:179, fechas:'13 AL 21 ABRIL'},
+        {tipo:'Dlx Room',sencilla:222, doble:139, triple:127, fechas:'22 ABR AL 14 JUN'},
+        {tipo:'Dlx Room',sencilla:261, doble:163, triple:149, fechas:'15 JUN AL 17 AGO'},
+        {tipo:'Dlx Room',sencilla:196, doble:123, triple:113, fechas:'18 AGO AL 31 OCT'},
+        {tipo:'Dlx Room',sencilla:222, doble:139, triple:127, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+    {
+      descripcion:'Meliá Punta Cana Beach',
+      precios:[
+        {tipo:'Dlx Room',sencilla:390, doble:244, triple:201, fechas:'02 AL 19 ENERO 2019'},
+        {tipo:'Dlx Room',sencilla:363, doble:227, triple:187, fechas:'20 ENE AL 2 FEB'},
+        {tipo:'Dlx Room',sencilla:390, doble:244, triple:201, fechas:'03 FEB AL 31 MAR'},
+        {tipo:'Dlx Room',sencilla:309, doble:193, triple:159, fechas:'01 AL 12 ABRIL'},
+        {tipo:'Dlx Room',sencilla:377, doble:235, triple:195, fechas:'13 AL 21 ABRIL'},
+        {tipo:'Dlx Room',sencilla:269, doble:168, triple:141, fechas:'22 ABR AL 14 JUN'},
+        {tipo:'Dlx Room',sencilla:307, doble:191, triple:160, fechas:'15 JUN AL 17 AGO'},
+        {tipo:'Dlx Room',sencilla:245, doble:153, triple:128, fechas:'18 AGO AL 31 OCT'},
+        {tipo:'Dlx Room',sencilla:269, doble:168, triple:141, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Memories Splash',
+      precios:[
+        {tipo:'DLX',sencilla:214, doble:143, triple:131, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'DLX',sencilla:233, doble:155, triple:142, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'DLX',sencilla:249, doble:166, triple:152, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'DLX',sencilla:178, doble:119, triple:109, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'DLX',sencilla:172, doble:114, triple:105, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'DLX',sencilla:252, doble:168, triple:154, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'DLX',sencilla:291, doble:194, triple:178, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'DLX',sencilla:208, doble:139, triple:127, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'DLX',sencilla:233, doble:155, triple:142, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'DLX',sencilla:202, doble:134, triple:123, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'DLX',sencilla:221, doble:147, triple:135, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Now Larimar',
+      precios:[
+        {tipo:'Dlx G/V',sencilla:243, doble:154, triple:153, fechas:'18 AL 31 ENERO 2019'},
+        {tipo:'Dlx G/V',sencilla:264, doble:175, triple:174, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Dlx T/V',sencilla:276, doble:184, triple:183, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'Dlx G/V',sencilla:280, doble:187, triple:186, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Dlx T/V',sencilla:294, doble:196, triple:195, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Dlx G/V',sencilla:224, doble:149, triple:148, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Dlx T/V',sencilla:235, doble:156, triple:155, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Dlx G/V',sencilla:246, doble:164, triple:163, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Dlx T/V',sencilla:258, doble:172, triple:171, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Dlx G/V',sencilla:208, doble:139, triple:138, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Dlx T/V',sencilla:218, doble:146, triple:145, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Dlx G/V',sencilla:224, doble:149, triple:148, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Dlx T/V',sencilla:235, doble:156, triple:155, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Dlx G/V',sencilla:208, doble:139, triple:138, fechas:'15 DIC AL 22 DIC'},
+        {tipo:'Dlx T/V',sencilla:218, doble:146, triple:145, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Now Onyx Punta Cana',
+      precios:[
+        {tipo:'JS/VJ',sencilla:314, doble:198, triple:197, fechas:'DEL 18 AL 31 ENERO'},
+        {tipo:'JS/VJ',sencilla:331, doble:221, triple:219, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'JS/VJ',sencilla:342, doble:228, triple:227, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'JS/VJ',sencilla:298, doble:198, triple:197, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'JS/VJ',sencilla:287, doble:191, triple:190, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'JS/VJ',sencilla:255, doble:170, triple:169, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'JS/VJ',sencilla:261, doble:174, triple:173, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'JS/VJ',sencilla:255, doble:170, triple:169, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Occidental Caribe',
+      precios:[
+        {tipo:'Estandar',sencilla:208, doble:116, triple:104, fechas:'01 AL 31 ENERO'},
+        {tipo:'Estandar',sencilla:348, doble:193, triple:174, fechas:'04 ENE AL 31 MAR'},
+        {tipo:'Estandar',sencilla:250, doble:139, triple:125, fechas:'01 ABR AL 12 ABR 2019'},
+        {tipo:'Estandar',sencilla:348, doble:193, triple:174, fechas:'13 ABR AL 20 ABR 2019'},
+        {tipo:'Estandar',sencilla:182, doble:121, triple:109, fechas:'21 ABR AL 31 MAY'},
+        {tipo:'Estandar',sencilla:198, doble:132, triple:119, fechas:'01 JUN AL 30 JUN 2019'},
+        {tipo:'Estandar',sencilla:207, doble:138, triple:124, fechas:'01 JUL AL 17 AGO 2019'},
+        {tipo:'Estandar',sencilla:172, doble:114, triple:103, fechas:'18 AGO AL 31 OCT 2019'},
+        {tipo:'Estandar',sencilla:194, doble:129, triple:116, fechas:'01 NOV AL 20 DIC 2019'},
+      ]
+    },
+
+    {
+      descripcion:'Occidental Punta Cana',
+      precios:[
+        { tipo:'Superior',sencilla:198, doble:110, triple:99, fechas:'04 AL 31 ENER'},
+        { tipo:'Superior',sencilla:284, doble:158, triple:142, fechas:'01 FEB AL 31 MAR'},
+        { tipo:'Superior',sencilla:255, doble:142, triple:128, fechas:'01 AL 12 ABRIL'},
+        { tipo:'Superior',sencilla:284, doble:158, triple:142, fechas:'13 AL 20 ABRIL'},
+        { tipo:'Superior',sencilla:182, doble:121, triple:109, fechas:'21 AL 30 ABRIL'},
+      ]
+    },
+
+    {
+      descripcion:'Occidental Punta Cana',
+      precios: [
+        {tipo:'Family Jr Suite',sencilla:499, doble:277, triple:250, fechas:'04 ENE AL 31 MAR 2019'},
+        {tipo:'Family Jr Suite',sencilla:383, doble:213, triple:192, fechas:'01 ABR AL 12 ABR 2019'},
+        {tipo:'Family Jr Suite',sencilla:499, doble:277, triple:250, fechas:'13 ABR AL 20 ABR 2019'},
+        {tipo:'Family Jr Suite',sencilla:244, doble:163, triple:147, fechas:'21 ABR AL 30 ABR 2019'},
+        {tipo:'Family Jr Suite',sencilla:244, doble:163, triple:147, fechas:'01 MAY AL 31 MAY 2019'},
+        {tipo:'Family Jr Suite',sencilla:263, doble:175, triple:158, fechas:'01 JUN AL 30 JUN 2019'},
+        {tipo:'Family Jr Suite',sencilla:274, doble:183, triple:165, fechas:'01 JUL AL 17 AGO 2019'},
+        {tipo:'Family Jr Suite',sencilla:238, doble:159, triple:143, fechas:'18 AGO AL 31 OCT 2019'},
+        {tipo:'Family Jr Suite',sencilla:263, doble:175, triple:158, fechas:'01 NOV AL 20 DIC 2019'},
+      ]
+    },
+
+    {
+      descripcion:'Ocean Blue & Sand',
+      precios:[
+        {tipo:'Junior Suite',sencilla:234, doble:192, triple:180, fechas:'02 ENE AL 31 MAR'},
+        {tipo:'Junior Suite',sencilla:195, doble:153, triple:144, fechas:'01 ABR AL 30 ABR'},
+        {tipo:'Junior Suite',sencilla:173, doble:131, triple:123, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Junior Suite',sencilla:195, doble:153, triple:144, fechas:'01 JUL AL 20 AGO'},
+        {tipo:'Junior Suite',sencilla:173, doble:131, triple:123, fechas:'21 AGO AL 31 OCT'},
+        {tipo:'Junior Suite',sencilla:195, doble:153, triple:144, fechas:'01 NOV AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Ocean El Faro',
+      precios:[
+        {tipo:'Junior Suite',sencilla:208, doble:166, triple:155, fechas:'02 AL 14 ENERO '},
+        {tipo:'Junior Suite',sencilla:218, doble:176, triple:165, fechas:'15 AL 31 ENERO'},
+      ]
+    },
+
+    {
+      descripcion:'Paradisus Palma Real',
+      precios:[
+        {tipo:'P.JR SUITE',sencilla:455, doble:285, triple:261, fechas:'02 AL 19 ENERO 2019'},
+        {tipo:'P.JR SUITE',sencilla:428, doble:268, triple:246, fechas:'20 ENE AL 2 FEB'},
+        {tipo:'P.JR SUITE',sencilla:455, doble:285, triple:261, fechas:'03 FEB AL 31 MAR'},
+        {tipo:'P.JR SUITE',sencilla:352, doble:219, triple:201, fechas:'01 AL 12 ABRIL'},
+        {tipo:'P.JR SUITE',sencilla:467, doble:293, triple:268, fechas:'13 AL 21 ABRIL'},
+        {tipo:'P.JR SUITE',sencilla:321, doble:201, triple:184, fechas:'22 ABR AL 14 JUN'},
+        {tipo:'P.JR SUITE',sencilla:371, doble:232, triple:213, fechas:'15 JUN AL 17 AGO'},
+        {tipo:'P.JR SUITE',sencilla:309, doble:193, triple:177, fechas:'18 AGO AL 31 OCT'},
+        {tipo:'P.JR SUITE',sencilla:334, doble:208, triple:191, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Paradisus Punta Cana',
+      precios:[
+        {tipo:'P.JR SUITE',sencilla:370, doble:231, triple:212, fechas:'02 AL 19 ENERO 2019'},
+        {tipo:'P.JR SUITE',sencilla:334, doble:209, triple:191, fechas:'20 ENE AL 2 FEB'},
+        {tipo:'P.JR SUITE',sencilla:370, doble:231, triple:212, fechas:'03 FEB AL 31 MAR'},
+        {tipo:'P.JR SUITE',sencilla:284, doble:177, triple:163, fechas:'01 AL 12 ABRIL'},
+        {tipo:'P.JR SUITE',sencilla:370, doble:231, triple:212, fechas:'13 AL 21 ABRIL'},
+        {tipo:'P.JR SUITE',sencilla:248, doble:154, triple:141, fechas:'22 ABR AL 14 JUN'},
+        {tipo:'P.JR SUITE',sencilla:309, doble:193, triple:177, fechas:'15 JUN AL 17 AGO'},
+        {tipo:'P.JR SUITE',sencilla:248, doble:154, triple:141, fechas:'18 AGO AL 31 OCT'},
+        {tipo:'P.JR SUITE',sencilla:248, doble:154, triple:141, fechas:'01 NOV AL 20 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Presidential Suites PUJ by LifeStyle',
+      precios:[
+        {tipo:'Apto 1 Y 2 Hb',sencilla:144, doble:126, triple:105, fechas:'03 ENE AL 16 ABR'},
+        {tipo:'Apto 1 Y 2 Hb',sencilla:158, doble:143, triple:121, fechas:'17-21 ABR '},
+        {tipo:'Apto 1 Hb',sencilla:107, doble:95, triple:0, fechas:'22 ABR AL 20 DIC'},
+        {tipo:'Apto 2 Hb',sencilla:125, doble:107, triple:103, fechas:'22 ABR AL 20 DIC'},
+      ]
+    },
+
+    {
+        descripcion:'Punta Cana Princess',
+        precios:[
+          {tipo:'Junior Suite',sencilla:208, doble:179, triple:164, fechas:'02 ENE AL 16 ABR'},
+          {tipo:'Junior Suite',sencilla:217, doble:188, triple:172, fechas:'17 AL 20 ABRIL'},
+          {tipo:'Junior Suite',sencilla:186, doble:156, triple:143, fechas:'21  AL 30 ABRIL'},
+          {tipo:'Junior Suite',sencilla:166, doble:137, triple:125, fechas:'01 MAY AL 30 JUN'},
+          {tipo:'Junior Suite',sencilla:176, doble:147, triple:134, fechas:'01 JUL AL 31 AGO'},
+          {tipo:'Junior Suite',sencilla:166, doble:137, triple:125, fechas:'01 SEPT AL 21 DIC'},
+        ]
+    },
+
+    {
+      descripcion:'Riu Bambu',
+      precios:[
+        {tipo:'Std',sencilla:194, doble:134, triple:127, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Std',sencilla:206, doble:142, triple:135, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Std',sencilla:163, doble:112, triple:107, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Std',sencilla:206, doble:142, triple:135, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Std',sencilla:163, doble:112, triple:107, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Std',sencilla:136, doble:94, triple:89, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Std',sencilla:158, doble:109, triple:104, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Std',sencilla:130, doble:90, triple:85, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Std',sencilla:142, doble:98, triple:93, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Riu Naiboa',
+      precios:[
+        {tipo:'Std',sencilla:148, doble:102, triple:97, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Std',sencilla:160, doble:110, triple:105, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Std',sencilla:131, doble:91, triple:86, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Std',sencilla:160, doble:110, triple:105, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Std',sencilla:131, doble:91, triple:86, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Std',sencilla:106, doble:73, triple:69, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Std',sencilla:133, doble:92, triple:87, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Std',sencilla:100, doble:69, triple:65, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Std',sencilla:118, doble:81, triple:77, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Riu Palace Bavaro',
+      precios:[
+        {tipo:'Jr Suite - V/J',sencilla:248, doble:171, triple:162, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Jr Suite - V/J',sencilla:261, doble:180, triple:171, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Jr Suite - V/J',sencilla:204, doble:141, triple:134, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:261, doble:180, triple:171, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:204, doble:141, triple:134, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:200, doble:138, triple:131, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Jr Suite - V/J',sencilla:228, doble:157, triple:150, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Jr Suite - V/J',sencilla:192, doble:133, triple:126, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Jr Suite - V/J',sencilla:224, doble:154, triple:147, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Riu Palace Macao',
+      precios:[
+        {tipo:'Jr Suite - V/J',sencilla:246, doble:170, triple:161, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Jr Suite - V/J',sencilla:257, doble:177, triple:168, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Jr Suite - V/J',sencilla:178, doble:122, triple:116, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:257, doble:177, triple:168, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:178, doble:122, triple:116, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:172, doble:118, triple:112, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Jr Suite - V/J',sencilla:200, doble:138, triple:131, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Jr Suite - V/J',sencilla:166, doble:114, triple:109, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Jr Suite - V/J',sencilla:195, doble:135, triple:128, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Riu Palace Punta Cana',
+      precios:[
+        {tipo:'Jr Suite - V/J',sencilla:239, doble:165, triple:156, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Jr Suite - V/J',sencilla:251, doble:173, triple:164, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Jr Suite - V/J',sencilla:191, doble:132, triple:125, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:251, doble:173, triple:164, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:191, doble:132, triple:125, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Jr Suite - V/J',sencilla:192, doble:133, triple:126, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Jr Suite - V/J',sencilla:216, doble:149, triple:142, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Jr Suite - V/J',sencilla:181, doble:125, triple:118, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Jr Suite - V/J',sencilla:212, doble:146, triple:139, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Riu Republica',
+      precios:[
+        {tipo:'Std - V/J',sencilla:204, doble:141, triple:141, fechas:'02 AL 20 ENE 2019'},
+        {tipo:'Std - V/J',sencilla:215, doble:148, triple:148, fechas:'21 ENE AL 31 MAR'},
+        {tipo:'Std - V/J',sencilla:173, doble:119, triple:119, fechas:'01 AL 13 ABRIL'},
+        {tipo:'Std - V/J',sencilla:215, doble:148, triple:148, fechas:'14 AL 20 ABRIL'},
+        {tipo:'Std - V/J',sencilla:173, doble:119, triple:119, fechas:'21 AL 30 ABRIL'},
+        {tipo:'Std - V/J',sencilla:155, doble:107, triple:107, fechas:'01 MAY AL 22 JUN'},
+        {tipo:'Std - V/J',sencilla:169, doble:116, triple:116, fechas:'23 JUN AL 17 AGO'},
+        {tipo:'Std - V/J',sencilla:139, doble:96, triple:96, fechas:'18 AGO AL 26 OCT'},
+        {tipo:'Std - V/J',sencilla:154, doble:106, triple:106, fechas:'27 OCT AL 23 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Royalton Bavaro',
+      precios:[
+        {tipo:'Luxury JS',sencilla:312, doble:208, triple:191, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury JS',sencilla:365, doble:244, triple:223, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury JS',sencilla:389, doble:259, triple:238, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'Luxury JS',sencilla:247, doble:165, triple:151, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury JS',sencilla:235, doble:156, triple:143, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury JS',sencilla:389, doble:259, triple:238, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury Family',sencilla:424, doble:282, triple:259, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury JS',sencilla:457, doble:305, triple:279, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury Family',sencilla:491, doble:328, triple:300, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury JS',sencilla:309, doble:206, triple:189, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury Family',sencilla:343, doble:229, triple:210, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury JS',sencilla:339, doble:226, triple:207, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury Family',sencilla:373, doble:249, triple:228, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury JS',sencilla:293, doble:195, triple:179, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury Family',sencilla:328, doble:218, triple:200, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury JS',sencilla:315, doble:210, triple:193, fechas:'01 NOV AL 22 DIC'},
+        {tipo:'Luxury Family',sencilla:350, doble:233, triple:214, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Royalton Punta Cana',
+      precios:[
+        {tipo:'Luxury',sencilla:304, doble:203, triple:186, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury',sencilla:362, doble:242, triple:221, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury',sencilla:383, doble:255, triple:234, fechas:'DEL 27 AL 29 ABRIL'},
+        {tipo:'Luxury',sencilla:236, doble:158, triple:144, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury',sencilla:222, doble:148, triple:136, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury',sencilla:358, doble:238, triple:218, fechas:'07 ENE AL 31 ENE'},
+        {tipo:'Luxury',sencilla:425, doble:284, triple:260, fechas:'01 FEB AL 30 ABR'},
+        {tipo:'Luxury',sencilla:277, doble:185, triple:169, fechas:'01 MAY AL 23 JUN'},
+        {tipo:'Luxury',sencilla:307, doble:205, triple:188, fechas:'24 JUN AL 18 AGO'},
+        {tipo:'Luxury',sencilla:261, doble:174, triple:160, fechas:'19 AGO AL 31 OCT'},
+        {tipo:'Luxury',sencilla:284, doble:189, triple:173, fechas:'01 NOV AL 22 DIC'},
+      ]
+    },
+
+    {
+      descripcion:'Santuary Cap Cana',
+      precios:[
+        {tipo:'Jr S O/V',sencilla:351, doble:218, triple:205, fechas:'03 AL 31 ENE 19'}
+      ]
+    },
+
+    {
+      descripcion:'Secrets Cap Cana',
+      precios:[
+        {tipo:'JS T/V',sencilla:423, doble:260, triple:259, fechas:'18 AL 31 ENERO 2019'},
+        {tipo:'JS T/V',sencilla:488, doble:326, triple:324, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'JS T/V',sencilla:488, doble:326, triple:324, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'JS T/V',sencilla:418, doble:278, triple:277, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'JS T/V',sencilla:418, doble:278, triple:277, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'JS T/V',sencilla:371, doble:247, triple:246, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'JS T/V',sencilla:418, doble:278, triple:277, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'JS T/V',sencilla:371, doble:247, triple:246, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Secrets Royal Beach',
+      precios:[
+        {tipo:'JS T/V',sencilla:311, doble:207, triple:206, fechas:'18 AL 31 ENERO 2019'},
+        {tipo:'JS T/V',sencilla:353, doble:235, triple:234, fechas:'02 AL 31 ENERO 2019'},
+        {tipo:'JS T/V',sencilla:371, doble:247, triple:246, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'JS T/V',sencilla:318, doble:212, triple:211, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'JS T/V',sencilla:308, doble:205, triple:204, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'JS T/V',sencilla:284, doble:189, triple:188, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'JS T/V',sencilla:284, doble:189, triple:188, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'JS T/V',sencilla:292, doble:194, triple:193, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Sirenis Punta Cana',
+      precios:[
+        {tipo:'STD',sencilla:198, doble:146, triple:134, fechas:'04 ENE AL 31 ENE'},
+        {tipo:'Jr Suite/Family',sencilla:206, doble:153, triple:141, fechas:'04 ENE AL 31 ENE'},
+        {tipo:'STD',sencilla:204, doble:151, triple:139, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Jr Suite/Family',sencilla:214, doble:162, triple:148, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'STD',sencilla:148, doble:106, triple:97, fechas:'22 ABR AL 30 ABR'},
+        {tipo:'Jr Suite/Family',sencilla:160, doble:118, triple:108, fechas:'22 ABR AL 30 ABR'},
+        {tipo:'STD',sencilla:119, doble:77, triple:70, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Jr Suite/Family',sencilla:129, doble:87, triple:80, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'STD',sencilla:144, doble:91, triple:84, fechas:'01 JUL AL 24 AGO'},
+        {tipo:'Jr Suite/Family',sencilla:159, doble:106, triple:97, fechas:'01 JUL AL 24 AGO'},
+        {tipo:'STD',sencilla:119, doble:77, triple:70, fechas:'25 AGO AL 31 OCT'},
+        {tipo:'Jr Suite/Family',sencilla:129, doble:87, triple:80, fechas:'25 AGO AL 31 OCT'},
+      ]
+    },
+
+
+    {
+      descripcion:'Tropical Princess',
+      precios:[
+        {tipo:'Std',sencilla:153, doble:123, triple:113, fechas:'02 ENE AL 16 ABR'},
+        {tipo:'Std',sencilla:170, doble:140, triple:129, fechas:'17 AL 20 ABRIL'},
+        {tipo:'Std',sencilla:131, doble:101, triple:93, fechas:'21  AL 30 ABRIL'},
+        {tipo:'Std',sencilla:123, doble:94, triple:86, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Std',sencilla:131, doble:102, triple:93, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Std',sencilla:123, doble:94, triple:86, fechas:'01 SEPT AL 21 DIC'},
+      ]
+    },
+
+
+    {
+      descripcion:'Whala Bavaro',
+      precios:[
+        {tipo:'Std',sencilla:211, doble:111, triple:103, fechas:'02 ENE AL 15 ENE'},
+        {tipo:'Superior',sencilla:227, doble:120, triple:111, fechas:'02 ENE AL 15 ENE'},
+        {tipo:'Std',sencilla:231, doble:122, triple:112, fechas:'16 ENE AL 31 MAR'},
+        {tipo:'Superior',sencilla:249, doble:131, triple:121, fechas:'16 ENE AL 31 MAR'},
+        {tipo:'Std',sencilla:136, doble:71, triple:66, fechas:'01 ABR AL 30 ABR'},
+        {tipo:'Superior',sencilla:148, doble:78, triple:72, fechas:'01 ABR AL 30 ABR'},
+        {tipo:'Std',sencilla:124, doble:65, triple:60, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Superior',sencilla:136, doble:71, triple:66, fechas:'01 MAY AL 30 JUN'},
+        {tipo:'Std',sencilla:144, doble:76, triple:70, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Superior',sencilla:154, doble:81, triple:75, fechas:'01 JUL AL 31 AGO'},
+        {tipo:'Std',sencilla:124, doble:65, triple:60, fechas:'01 SEP AL 31 OCT'},
+        {tipo:'Superior',sencilla:136, doble:71, triple:66, fechas:'01 SEP AL 31 OCT'},
+      ]
+    },
+
+
+    {
+      descripcion:'Vista Sol Punta Cana',
+      precios:[
+        {tipo:'Confort',sencilla:205, doble:137, triple:123, fechas:'03 AL 31 ENERO 19'},
+        {tipo:'Confort',sencilla:229, doble:152, triple:137, fechas:'01 FEB AL 31 MAR'},
+        {tipo:'Confort',sencilla:173, doble:116, triple:104, fechas:'01 AL 30 ABRIL'},
+        {tipo:'Confort',sencilla:142, doble:95, triple:85, fechas:'01 MAY AL 13 JUL'},
+        {tipo:'Confort',sencilla:150, doble:100, triple:90, fechas:'14 JUL AL 24 AGO'},
+        {tipo:'Confort',sencilla:142, doble:95, triple:85, fechas:'25 AGO AL 31 OCT'},
+      ]
+    },
+
+
+    {
+      descripcion:'Zoetry Agua Punta Cana',
+      precios:[
+        {tipo:'ROMANTIC',sencilla:491, doble:298, triple:0, fechas:'01 AL 31 ENERO 2019'},
+        {tipo:'Jr suite T / V',sencilla:545, doble:340, triple:339, fechas:'01 AL 31 ENERO 2019'},
+        {tipo:'Jr suite T / V',sencilla:590, doble:369, triple:368, fechas:'01 FEB AL 21 ABR'},
+        {tipo:'Jr suite T / V',sencilla:494, doble:309, triple:308, fechas:'22 ABR AL 05 JUN'},
+        {tipo:'Jr suite T / V',sencilla:465, doble:291, triple:290, fechas:'06 JUN AL 21 AGO'},
+        {tipo:'Jr suite T / V',sencilla:414, doble:258, triple:257, fechas:'22 AGO AL 31 OCT'},
+        {tipo:'Jr suite T / V',sencilla:465, doble:291, triple:290, fechas:'01 NOV AL 14 DIC'},
+        {tipo:'Jr suite T / V',sencilla:414, doble:258, triple:257, fechas:'15 DIC AL 22 DIC'},
+      ]
+    },
+];
     $scope.hotel = {};
 
     $scope.calcularPrecioHotel = function(){
