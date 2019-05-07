@@ -94,7 +94,9 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Enjoyment</h2>
-              <p>Description ...</p>
+              <p>We are a work team made up of more than 20 people willing to always offer our
+                customers a good service, quality products and the best travel alternatives to make reality
+                Your Travel dreams.</p>
             </div>
           </div>
           <div class="col-md">
@@ -103,16 +105,18 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Transfers</a></li>
                 <li><a href="#" class="py-2 d-block">Excursions</a></li>
+                <li><a href="#" class="py-2 d-block">Hotels</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Top Deals</h2>
+              <h2 class="ftco-heading-2">Policies</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Flight: PUJ to STO</a></li>
-                <li><a href="#" class="py-2 d-block">Transfers: PUJ to Hotel</a></li>
-                <li><a href="#" class="py-2 d-block">Excursions: Saona Island</a></li>
+                <li><a href="{{ url('cancellation-and-refund') }}" class="py-2 d-block">Cancellation and Refund</a></li>
+                <li><a href="{{ url('payment-methods') }}" class="py-2 d-block">Payment Methods</a></li>
+                <li><a href="{{ url('use-and-privacy') }}" class="py-2 d-block">Use and Privacy</a></li>
+                <li><a href="{{ url('exhortation') }}" class="py-2 d-block">Exhortation when Traveling</a></li>
               </ul>
             </div>
           </div>

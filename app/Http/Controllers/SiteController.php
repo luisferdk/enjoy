@@ -61,6 +61,22 @@ class SiteController extends Controller
     return view('sitio2.contact');
   }
 
+  public function CancellationAndRefund()
+  {
+    return view('sitio2.CancellationAndRefund');
+  }
+  public function paymentMethods()
+  {
+    return view('sitio2.paymentMethods');
+  }
+  public function useAndPrivacy()
+  {
+    return view('sitio2.useAndPrivacy');
+  }
+  public function exhortation()
+  {
+    return view('sitio2.exhortation');
+  }
   public function shop()
   {
     return view('sitio2.shop');
