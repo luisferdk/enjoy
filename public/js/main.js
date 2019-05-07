@@ -120,33 +120,7 @@ $(function(){
             onSelect:function(){
                 $('#dateTour').trigger("change");
             }
-        });
-        /*$("#formTour").validate({
-            rules: {
-                "tour":{required:true},
-                "fecha":{required:true},
-                "adultos":{required:true},
-                "ninos":{required:false},
-                "nombre":{required:true},
-                "apellido":{required:true},
-                "correo":{required:true,email:true},
-                "telefono":{required:true},
-                "comentarios":{required:false},
-                "terminos2":{required:true}
-            },
-            messages: {
-                "tour":{required:"This field is required"},
-                "fecha":{required:"This field is required"},
-                "adultos":{required:"This field is required"},
-                "ninos":{},
-                "nombre":{required:"This field is required"},
-                "apellido":{required:"This field is required"},
-                "correo":{required:"This field is required",email:"Email not valid"},
-                "telefono":{required:"This field is required"},
-                "comentarios":{},
-                "terminos":{}
-            }
-        });*/
+        });        
 
         $('#terminos2').change(function(event) {
             if($(this).is(":checked")){
@@ -158,25 +132,6 @@ $(function(){
                 $('.tour').prop('disabled',true);
             }
         });
-
-        $('.tour').click(function() {
-            $('.tour').addClass('active');
-            $('.transfer').removeClass('active');
-            $('#transfer').removeClass('in');
-            $('#transfer').removeClass('active');
-            $('#tours').addClass('in');
-            $('#tours').addClass('active');
-        });
-
-        $('.transfer').click(function() {
-            $('.transfer').addClass('active');
-            $('.tour').removeClass('active');
-            $('#tours').removeClass('in');
-            $('#tours').removeClass('active');
-            $('#transfer').addClass('in');
-            $('#transfer').addClass('active');
-        });
-
 
         /** Flighs */
         $('.fecha').datepicker({
@@ -252,6 +207,7 @@ AOS.init({
        nav:true,
        autoplayHoverPause: false,
        items: 1,
+       dots:false,
        navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
        responsive:{
          0:{
