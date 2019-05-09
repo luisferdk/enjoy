@@ -3994,19 +3994,38 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         //console.log($scope.hotel.ninos);
 
         var temporalPrice = 0;
-        if(start && end){
-            var days   = (end - start)/1000/60/60/24;
-            $scope.hotel.hotel.precios.forEach(function (element) {
-                var date1 = (element.fechas[0]+'-'+currentYear).split('-');
-                var date2 = (element.fechas[1]+'-'+currentYear).split('-');
-                date1 = new Date(date1[2], date1[1]-1, date1[0]);
-                date2 = new Date(date2[2], date2[1]-1, date2[0]);
-                if(start >= date1 && end <= date2) {
-                    temporalPrice = element.sencilla;
-                }
 
-            }); 
-            $scope.hotel.precio = $scope.hotel.adultos * temporalPrice * days;
+        if(start && end && $scope.hotel.hotel && $scope.hotel.adultos){
+            var datePerDay = start;
+            var days  = (end - start)/1000/60/60/24;
+            for(i=1;i<=days;i++) {
+                $scope.hotel.hotel.precios.forEach(function (element) {
+                    var date1 = (element.fechas[0]+'-'+currentYear).split('-');
+                    var date2 = (element.fechas[1]+'-'+currentYear).split('-');
+                    date1 = new Date(date1[2], date1[1]-1, date1[0]);
+                    date2 = new Date(date2[2], date2[1]-1, date2[0]);
+    
+                    if(datePerDay >= date1 && datePerDay <= date2) {
+                        var people = $scope.hotel.adultos + (($scope.hotel.ninos==undefined) ? 0 : $scope.hotel.ninos);
+                        if(people == 1) {
+                            temporalPrice = temporalPrice + (element.sencilla*people);
+                        } else if (people % 2 == 0) {
+                            temporalPrice = temporalPrice + (element.doble*people);
+                        } else if (people % 3 == 0) {
+                            temporalPrice = temporalPrice + (element.triple*people);
+                        } else if (people % 3 == 2) {
+                            temporalPrice = temporalPrice + (element.triple*(people-2)) + (element.doble*2);
+                        } else if (people % 2 == 1) {
+                            temporalPrice = temporalPrice + (element.doble*(people-1)) + (element.sencilla*1);
+                        } else if (people % 3 == 1) {
+                            temporalPrice = temporalPrice + (element.triple*(people-1)) + (element.sencilla*1);
+                        }
+                    }
+                }); 
+                datePerDay.setDate(datePerDay.getDate() + 1);
+            } 
+            
+            $scope.hotel.precio = temporalPrice;
         }
     }
 

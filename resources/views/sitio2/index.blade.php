@@ -421,7 +421,7 @@
                         <div class="form-group">
                           <select name="adultos" class="form-control select2" ng-model="hotel.adultos"
                             ng-options="aux for aux in vector(20)" ng-change="calcularPrecioHotel()" required>
-                            <option value="">Adults</option>
+                            <option value disabled>Adults</option>
                           </select>
                         </div>
                       </div>
@@ -429,7 +429,8 @@
                         <div class="form-group">
                           <select name="ninos" class="form-control select2" ng-model="hotel.ninos" ng-change="calcularPrecioHotel()"
                             ng-options="aux for aux in vector(20)">
-                            <option value="">Children</option>
+                            <option value disabled>Children</option>
+                            <option value="0">0</option>
                           </select>
                         </div>
                       </div>
