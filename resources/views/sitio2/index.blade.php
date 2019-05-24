@@ -475,7 +475,7 @@
       </div>
     </div>
     <div class="row no-gutters">
-      <div class="col-md-6 col-lg-3" ng-repeat="aux in tours" ng-if="aux.mostrar==true && aux.id<=4">
+      <div class="col-md-6 col-lg-3" ng-repeat="aux in tours" ng-if="aux.mostrar==true && aux.id>1 && aux.id<=5">
         <a href="#" class="block-5" style="background-image: url({{ asset('/') }}img/tours/@{{aux.id}}.jpg);">
           <div class="text">
             <h3 class="heading">@{{ aux.titulo }}</h3>
