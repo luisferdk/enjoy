@@ -2665,8 +2665,8 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
     }
 
     if (window.pos != null) {
-        $scope.tour = $scope.tours[window.pos];
-        $scope.tour.precio = $scope.tours[window.pos].modalidades[0].precio;
+        $scope.tour = $scope.tours.find(tour => {return window.pos == tour.id});
+        $scope.tour.precio = $scope.tour.modalidades[0].precio;
         $timeout(function () { $('#tourModel').select2(); }, 500);
     }
 
