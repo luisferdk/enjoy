@@ -395,13 +395,13 @@
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
                           <input id="hotelInicio" type="text" class="form-control" name="fecha_inicio"
-                            placeholder="Start Date" ng-model="hotel.fecha_inicio" autocomplete="false" required>
+                            placeholder="Start Date" ng-model="hotel.fecha_inicio" autocomplete="false" required ng-change="calcularPrecioHotel()">
                         </div>
                       </div>
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
                           <input id="hotelFin" type="text" class="form-control" name="fecha_fin" placeholder="End Date"
-                            ng-model="hotel.fecha_fin" autocomplete="false" required>
+                            ng-model="hotel.fecha_fin" autocomplete="false" required ng-change="calcularPrecioHotel()">
                         </div>
                       </div>
                     </div>
@@ -409,7 +409,7 @@
 
                   <div class="col-12 col-sm-4">
                     <div class="form-group">
-                      <select name="hotel" class="form-control select2" ng-model="hotel.hotel"
+                      <select name="hotel" class="form-control select2" ng-model="hotel.hotel" ng-change="calcularPrecioHotel()"
                         ng-options="aux.descripcion for aux in hotelesReservar">
                         <option value="">Hotel</option>
                       </select>
@@ -421,15 +421,16 @@
                         <div class="form-group">
                           <select name="adultos" class="form-control select2" ng-model="hotel.adultos"
                             ng-options="aux for aux in vector(20)" ng-change="calcularPrecioHotel()" required>
-                            <option value="">Adults</option>
+                            <option value disabled>Adults</option>
                           </select>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <select name="ninos" class="form-control select2" ng-model="hotel.ninos"
+                          <select name="ninos" class="form-control select2" ng-model="hotel.ninos" ng-change="calcularPrecioHotel()"
                             ng-options="aux for aux in vector(20)">
-                            <option value="">Children</option>
+                            <option value disabled>Children</option>
+                            <option value="0">0</option>
                           </select>
                         </div>
                       </div>
