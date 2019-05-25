@@ -49,6 +49,13 @@
           </div>
         </form>
       </div>
+      <div class="col-12 alert alert-warning mt-4">
+        If you are a travel agent and a wholesale company and want more information please. <br>
+        <strong>Contact:
+          <br><a style="color:#856404;" href="mailto:joel.encarnacion@puntacanaenjoyment.com">joel.encarnacion@puntacanaenjoyment.com</a>
+          <br><a style="color:#856404;" href="mailto:ingridalvarez@puntacanaenjoyment.com">ingridalvarez@puntacanaenjoyment.com</a>
+        </strong>
+      </div>
     </div>
     <div class="row mt-5">
       <div class="col-md-12" id="map"></div>
