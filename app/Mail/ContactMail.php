@@ -18,11 +18,11 @@ class ContactMail extends Mailable
     }
     public function build()
     {
-        $de = 'Contact Us';
+        $de = $this->data['name'];
         $bcc = "luisjosedeveloper@gmail.com";
 
         return $this->from("info@puntacanaenjoyment.com", $de)
-            ->subject('Contact Us - '.$this->data['name'])
+            ->subject('Contact Us '.$this->data['name'])
             //->cc($cc)
             ->bcc($bcc)
             ->view("emails.contactUs")
