@@ -35,8 +35,8 @@
                         <a href="tel:+1(809)949-0519" class="col-xs-12">
                             <strong>+1 (809) 949-0519</strong>
                         </a>
-                        <a href="mailto:info@rennytravel.com" class="col-xs-12">
-                            <strong>info@rennytravel.com</strong>
+                        <a href="mailto:info@puntacanaenjoyment.com" class="col-xs-12">
+                            <strong>info@puntacanaenjoyment.com</strong>
                         </a>
                         <a href="#" class="col-xs-12 hidden-xs">
                             <strong>08:00 AM - 05:00 PM</strong>
@@ -131,7 +131,7 @@
 		<div class="col-xs-6 col-sm-4">
 			<h4>Contact Us</h4>
 			<p><i class="fa fa-home" aria-hidden="true"></i> Avenida Barcelo Plaza Meeting Point Local B-05</p>
-			<p><i class="fa fa-envelope" aria-hidden="true"></i> info@rennytravel.com</p>
+			<p><i class="fa fa-envelope" aria-hidden="true"></i> info@puntacanaenjoyment.com</p>
 			<p><i class="fa fa-phone" aria-hidden="true"></i> +1 829 850 7005</p>
 			<p><i class="fa fa-phone" aria-hidden="true"></i> Emergency +1 (809) 949-0519</p>
 			<p><i class="fa fa-phone" aria-hidden="true"></i> Cell +1 (829) 850-7005</p>
