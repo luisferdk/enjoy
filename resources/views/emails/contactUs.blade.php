@@ -55,7 +55,7 @@ tr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td align="center" valign="top">
-			<img height="150" src="{{ asset('img/logo.png') }}" alt="" />
+			<img height="100px" src="{{ asset('img/logo.png') }}" alt="" />
 				<table>
 					<tr>
 						<td colspan="2" style="color:#0086ca;text-align: center;">
