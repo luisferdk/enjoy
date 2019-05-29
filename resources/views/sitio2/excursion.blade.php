@@ -15,15 +15,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-12">
-					<div class="row">
-						<div class="col-12" id="slider">
-							<div class="row">
-                <div class="col-12">
-                    <img class="img-fluid" ng-src="{{ asset("/") }}img/tours/@{{ tour.id }}/1.jpg">
-                </div>
-							</div>
-						</div>
-					</div>
+					<img class="img-fluid" ng-src="{{ asset("/") }}img/tours/@{{ tour.id }}/1.jpg">
 				</div>
 
 
