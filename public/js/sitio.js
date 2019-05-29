@@ -1137,7 +1137,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 0, precio: 169, nino: 0, descripcion: "Exclusive VIP Catamaran" }
             ]
         },
-        {
+        /* {
             id: 31,
             titulo: "Sabina del Mar VIP Catamaran with Slide",
             partyBoat: false,
@@ -2585,7 +2585,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 129, nino: 0, descripcion: 'One Seater' }
             ]
-        }
+        } */
     ];
     $scope.tours = tours;
     $scope.cambiarTour = function () {
