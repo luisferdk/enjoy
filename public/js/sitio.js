@@ -494,32 +494,52 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
 
     var tours = [
         {
-            id: 1,
-            mostrar: false,
-            titulo: "Mini Coopers",
-            descripcion: '',
-            modalidades: [
-                { id: 0, precio: 159, nino: 70, descripcion: 'Básico' }
-            ]
-        },
-        {
-            id: 2,
+            id: 15,
             mostrar: true,
-            titulo: "Buggys Adventure Terracross",
-            descripcion: `After we pick you up from your Resort, you'll receive on the spot a brief safety instructions from our professional guide. Then, jump inside your dune buggy and get ready to start the adventure of a lifetime. Starts as you head out into the Dominican countryside, passing colorful Caribbean houses along the way. Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations. The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!`,
+            partyBoat: true,
+            titulo: "Discover Saona Island",
+            descripcion: `The tour starts taking the bus to Bayahibe beach, where the boats or catamaran will address to start the sea path that will lead to Saona Island. A beautiful beach, virtually untouched, where you can enjoy the sun, swim and have fun with recreational activities carried out there: Volleyball, music to dance merengue, salsa, bachata, among others. At noon Lunch will offer a delicious buffet. National drinks (soft drinks, rum, Free Cuba, water) during the time on the island. Back to Bayahibe aboard speedboats or catamaran, with a stop at the natural pool and then transfer by bus back to the hotels.`,
             descripcion_completa: `
                 <h2 class="col-12 text-center">Description</h2>
                 <p class="col-12">
-                    After we pick you up from your Resort, you'll receive on the spot a brief safety instructions from our professional guide.
-                    <br><br>Then, jump inside your dune buggy and get ready to start the adventure of a lifetime.
-                    <br><br>Starts as you head out into the Dominican countryside, passing colorful Caribbean houses along the way.
-                    <br><br>Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations.
-                    <br><br>The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!
+                    The tour starts taking the bus to Bayahibe beach, where the boats or catamaran will address to start the sea path that will lead to Saona Island.
+                    <br><br>A beautiful beach, virtually untouched, where you can enjoy the sun, swim and have fun with recreational activities carried out there: Volleyball, music to dance merengue, salsa, bachata, among others.
+                    <br><br>At noon Lunch will offer a delicious buffet. National drinks (soft drinks, rum, Free Cuba, water) during the time on the island. Back to Bayahibe aboard speedboats or catamaran, with a stop at the natural pool and then transfer by bus back to the hotels.
                 </p
             `,
             modalidades: [
-                { id: 0, precio: 80, nino: 45, descripcion: 'Doble' },
-                { id: 1, precio: 120, nino: 70, descripcion: 'Individual' },
+                { id: 0, precio: 75, nino: 45, descripcion: 'Basic' },
+                { id: 1, precio: 129, nino: 129, descripcion: 'Saona VIP Lobster & premium drinks' },
+                { id: 2, precio: 179, nino: 179, descripcion: 'Saona VIP Lobster & premium drinks and private VIP area' },
+            ]
+        },
+        {
+            id: 27,
+            titulo: "Santo Domingo",
+            mostrar: true,
+            descripcion: `
+              Come and discover the first city of the new world. An expert tourist guide will take you through the first city of the Americas, learning historically relevant facts of this modem-day metropolitan city. Stroll down through the Colonial Zone and observe monuments and museums. Pay homage to the ﬁrst cathedral of the Americas, known as the Catedral Metropolitana Santa Maria de la Encarnacion. Stroll down Las Damas Street, the oldest back street not only in the Dominican Republic, in all of the Americas, where you can see the largest amount of monuments. Pass by the Museo de las Casa Reales, formerly the government palace. A walk across the Alcazar de Colon, will transport you back to the era of the ﬁrst Spanish Con-quistadors. 
+              Lunch will be a typical Dominican meal in an authentic Dominican restaurant.
+              This tour may be privatized. Please ask us how.
+            `,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">
+                Come and discover the first city of the new world.
+                <br><br>An expert tourist guide will take you through the first city of the Americas, learning historically relevant facts of this modem-day metropolitan city.
+                <br><br>Stroll down through the Colonial Zone and observe monuments and museums.
+                <br><br>Pay homage to the ﬁrst cathedral of the Americas, known as the Catedral Metropolitana Santa Maria de la Encarnacion.
+                <br><br>Stroll down Las Damas Street, the oldest back street not only in the Dominican Republic, in all of the Americas, where you can see the largest amount of monuments.
+                <br><br>Pass by the Museo de las Casa Reales, formerly the government palace.
+                <br><br>A walk across the Alcazar de Colon, will transport you back to the era of the ﬁrst Spanish Con-quistadors.
+
+                <br><br>Lunch will be a typical Dominican meal in an authentic Dominican restaurant.
+                <br><br>This tour may be privatized.
+                <br><br>Please ask us how.
+                </p
+            `,
+            modalidades: [
+                { id: 0, precio: 95, nino: 50, descripcion: "City Tour" }
             ]
         },
         {
@@ -539,6 +559,19 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 65, nino: 35, descripcion: 'Doble' },
                 { id: 1, precio: 90, nino: 45, descripcion: 'Individual' },
+            ]
+        },
+        {
+            id: 7,
+            mostrar: true,
+            titulo: "Bavaro Runners",
+            descripcion: `Thop on the back of one of our safari-style trucks, other eager pioneers at your side. A zealous tourist guide eagerly waits to sweep you through the most hidden space of this mystical destination.`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">Thop on the back of one of our safari-style trucks, other eager pioneers at your side. A zealous tourist guide eagerly waits to sweep you through the most hidden space of this mystical destination.</p>
+            `,
+            modalidades: [
+                { id: 0, precio: 89, nino: 60, descripcion: 'Básico' }
             ]
         },
         {
@@ -564,7 +597,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         {
             id: 5,
             mostrar: true,
-            titulo: "Zip Line Adventure",
+            titulo: "Canopy Adventure",
             descripcion: `Visit the first of the Dominican Republic’s Zip-Line Tour. The exhilarating adventure takes you flying across the magnificent Anamuya pond. Your naturalist guides will show you the way, helping you make the most of the adventure. Your tour consists of 15 towers and 11 Zip Lines stretched across the length of the mountain range more than 1 mile. The final line at 900 meters is the longest in the Dominican Republic as well as the entire Caribbean. Requirements: Min age 6 years old, max weight 250lbs (46’ waist), no pregnant women or guests with heart conditions can participate.`,
             descripcion_completa: `
                 <h2 class="col-12 text-center">Description</h2>
@@ -579,6 +612,26 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 90, nino: 75, descripcion: 'Day' },
                 { id: 1, precio: 99, nino: 60, descripcion: 'Night' }
+            ]
+        },
+        {
+            id: 2,
+            mostrar: true,
+            titulo: "Buggys Adventure Terracross",
+            descripcion: `After we pick you up from your Resort, you'll receive on the spot a brief safety instructions from our professional guide. Then, jump inside your dune buggy and get ready to start the adventure of a lifetime. Starts as you head out into the Dominican countryside, passing colorful Caribbean houses along the way. Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations. The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">
+                    After we pick you up from your Resort, you'll receive on the spot a brief safety instructions from our professional guide.
+                    <br><br>Then, jump inside your dune buggy and get ready to start the adventure of a lifetime.
+                    <br><br>Starts as you head out into the Dominican countryside, passing colorful Caribbean houses along the way.
+                    <br><br>Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations.
+                    <br><br>The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!
+                </p
+            `,
+            modalidades: [
+                { id: 0, precio: 80, nino: 45, descripcion: 'Doble' },
+                { id: 1, precio: 120, nino: 70, descripcion: 'Individual' },
             ]
         },
         {
@@ -603,19 +656,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             `,
             modalidades: [
                 { id: 0, precio: 75, nino: 55, descripcion: 'Básico' }
-            ]
-        },
-        {
-            id: 7,
-            mostrar: true,
-            titulo: "Caribbean VIP Safari",
-            descripcion: `Thop on the back of one of our safari-style trucks, other eager pioneers at your side. A zealous tourist guide eagerly waits to sweep you through the most hidden space of this mystical destination.`,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12">Thop on the back of one of our safari-style trucks, other eager pioneers at your side. A zealous tourist guide eagerly waits to sweep you through the most hidden space of this mystical destination.</p>
-            `,
-            modalidades: [
-                { id: 0, precio: 89, nino: 60, descripcion: 'Básico' }
             ]
         },
         {
@@ -644,48 +684,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 110, nino: 110, descripcion: "Invidual" },
                 { id: 1, precio: 800, nino: 0, descripcion: "Charter Boat (Max 6 people Fishing Boat and Max 2 Companions Watching)" }
-            ]
-        },
-        {
-
-            id: 10,
-            mostrar: false,
-            titulo: "Marina Caribe Party Boat",
-            descripcion: ``,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12"><p>
-            `,
-            modalidades: [
-                { id: 0, precio: 59, nino: 35, descripcion: 'Marina Caribe' },
-                { id: 1, precio: 75, nino: 50, descripcion: 'Caribbean Paradise' },
-                { id: 2, precio: 99, nino: 60, descripcion: 'Platinum VIP' },
-            ]
-        },
-        {
-            id: 11,
-            mostrar: false,
-            titulo: "Panchanga Party Boat",
-            descripcion: ``,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12"><p>
-            `,
-            modalidades: [
-                { id: 0, precio: 40, nino: 25, descripcion: 'Básico' }
-            ]
-        },
-        {
-            id: 12,
-            mostrar: false,
-            titulo: "Party Boat Bebe",
-            descripcion: ``,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12"></p>
-            `,
-            modalidades: [
-                { id: 0, precio: 59, nino: 30, descripcion: 'Básico' }
             ]
         },
         {
@@ -726,26 +724,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 110, nino: 55, descripcion: 'Basic' },
                 { id: 1, precio: 135, nino: 70, descripcion: 'With lobster' }
-            ]
-        },
-        {
-            id: 15,
-            mostrar: true,
-            partyBoat: true,
-            titulo: "Discover Saona Island",
-            descripcion: `The tour starts taking the bus to Bayahibe beach, where the boats or catamaran will address to start the sea path that will lead to Saona Island. A beautiful beach, virtually untouched, where you can enjoy the sun, swim and have fun with recreational activities carried out there: Volleyball, music to dance merengue, salsa, bachata, among others. At noon Lunch will offer a delicious buffet. National drinks (soft drinks, rum, Free Cuba, water) during the time on the island. Back to Bayahibe aboard speedboats or catamaran, with a stop at the natural pool and then transfer by bus back to the hotels.`,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12">
-                    The tour starts taking the bus to Bayahibe beach, where the boats or catamaran will address to start the sea path that will lead to Saona Island.
-                    <br><br>A beautiful beach, virtually untouched, where you can enjoy the sun, swim and have fun with recreational activities carried out there: Volleyball, music to dance merengue, salsa, bachata, among others.
-                    <br><br>At noon Lunch will offer a delicious buffet. National drinks (soft drinks, rum, Free Cuba, water) during the time on the island. Back to Bayahibe aboard speedboats or catamaran, with a stop at the natural pool and then transfer by bus back to the hotels.
-                </p
-            `,
-            modalidades: [
-                { id: 0, precio: 75, nino: 45, descripcion: 'Basic' },
-                { id: 1, precio: 129, nino: 129, descripcion: 'Saona VIP Lobster & premium drinks' },
-                { id: 2, precio: 179, nino: 179, descripcion: 'Saona VIP Lobster & premium drinks and private VIP area' },
             ]
         },
         {
@@ -1038,35 +1016,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             `,
             modalidades: [
                 { id: 0, precio: 177, nino: 90, descripcion: "Cayo levantado & Cascada Limón" }
-            ]
-        },
-        {
-            id: 27,
-            titulo: "Santo Domingo",
-            mostrar: true,
-            descripcion: `
-              Come and discover the first city of the new world. An expert tourist guide will take you through the first city of the Americas, learning historically relevant facts of this modem-day metropolitan city. Stroll down through the Colonial Zone and observe monuments and museums. Pay homage to the ﬁrst cathedral of the Americas, known as the Catedral Metropolitana Santa Maria de la Encarnacion. Stroll down Las Damas Street, the oldest back street not only in the Dominican Republic, in all of the Americas, where you can see the largest amount of monuments. Pass by the Museo de las Casa Reales, formerly the government palace. A walk across the Alcazar de Colon, will transport you back to the era of the ﬁrst Spanish Con-quistadors. 
-              Lunch will be a typical Dominican meal in an authentic Dominican restaurant.
-              This tour may be privatized. Please ask us how.
-            `,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12">
-                Come and discover the first city of the new world.
-                <br><br>An expert tourist guide will take you through the first city of the Americas, learning historically relevant facts of this modem-day metropolitan city.
-                <br><br>Stroll down through the Colonial Zone and observe monuments and museums.
-                <br><br>Pay homage to the ﬁrst cathedral of the Americas, known as the Catedral Metropolitana Santa Maria de la Encarnacion.
-                <br><br>Stroll down Las Damas Street, the oldest back street not only in the Dominican Republic, in all of the Americas, where you can see the largest amount of monuments.
-                <br><br>Pass by the Museo de las Casa Reales, formerly the government palace.
-                <br><br>A walk across the Alcazar de Colon, will transport you back to the era of the ﬁrst Spanish Con-quistadors.
-
-                <br><br>Lunch will be a typical Dominican meal in an authentic Dominican restaurant.
-                <br><br>This tour may be privatized.
-                <br><br>Please ask us how.
-                </p
-            `,
-            modalidades: [
-                { id: 0, precio: 95, nino: 50, descripcion: "City Tour" }
             ]
         },
         {
@@ -2144,63 +2093,6 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             horarios: ['9-12 pm','12-3 pm','3-6 pm'],
             modalidades: [
                 { id: 0, precio: 50, nino: 0, descripcion: 'Happy Hour Private Experience' }
-            ]
-        },
-        {
-            id: 49,
-            titulo: "Bavaro Runners",
-            partyBoat: false,
-            mostrar: true,
-            descripcion: `Experience rural life in the Dominican Republic, including tobacco and coffee plantations. Ride horses through the countryside – no experience necessary!. Relax at a private Macao Beach club and take a dip in the sea. Activity duration: 9 hours (not including transportation to and from activity). Hotel pick-up and drop-off included.`,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12">
-                    What's the best way to experience the Dominican Republic's wild-side? By taking an adventure aboard a safari truck and on horseback, of course! Bavaro Runners near Punta Cana takes you on an immersive journey to get off the beaten track. Experience plantations, rural life, cigar and rum making, a homemade lunch, and even a swim in the waters of Macao Beach.
-                    <br><br>Explore the beating heart of the Dominican Republic.
-                    <br>Adventure and culture await on this impressive Bavaro Runners trip near Punta Cana. Take yourself away from your resort with a transfer to the Dominican countryside. There, you’ll soon discover the most incredible sights, sounds and smells of the remote corners of the island.
-                    <br><br>A safari-style truck will take you to the backroads, where everything is laid out right before you. Take in the rich vastness of sugar cane fields, coffee trees and cocoa plantations.
-                    <br><br>Get on your high horse and ride!
-                    <br>From there, it’s onward to lush tropical forests and jungle-mountains for a slice of authentic life in the Dominican Republic. Visit a rural school, see a typical Dominican home, and eat fruit right off the trees!.
-                    <br><br>And get ready to take a short horseback ride to really experience a different way of life. Whether you’re a newbie or an advanced rider, you’ll enjoy going through the island’s countryside atop your friendly steed.
-                    <br><br>Find out how cigars and rum are made.
-                    <br>Afterward, enjoy a traditional homemade lunch, followed by lessons about traditional Dominican culture and customs from local farmers. Learn everything from how the crops have been ploughed through the decades, to how tobacco leaves are harvested for the world-famous cigars that are made here, to the processes behind transforming cane juice into the warm notes and aromatic flavors of the region’s finest rum.
-                    <br><br>Wrap it up on the beach.
-                    <br>As the sun lowers, your magical day draws to a close, but not before visiting the private club at the famous Macao Beach for a little swimming, bathing and R&R. A great way to conclude a perfect blend of culture and adventure in this Bavaro Runners experience before being transported back to your resort.
-                </p>
-
-                <h2 class="col-xs-6 text-center">Good to Know</h2>
-                <h2 class="col-xs-6 text-center">Included in the Excursion</h2>
-
-                <ul class="col-xs-6">
-                    <li>Tour language: English</li>
-                    <li>Location(s): Punta Cana</li>
-                    <li>Season: All year long</li>
-                    <li>Duration: 9 hours (approx.)</li>
-                    <li>Hotel pick-up available: Yes</li>
-                    <li>Good physical condition required: No</li>
-                    <li>Minimum age requirement: Suitable for all ages</li>
-                    <li>Suitable for children: Yes</li>
-                    <li>Suitable for the elderly: No</li>
-                    <li>Pregnant women allowed: No</li>
-                </ul>
-                
-                <ul class="col-xs-6">
-                    <li>Transportation on a safari truck</li>
-                    <li>Horseback ride</li>
-                    <li>Lunch and drinks (bottled water, rum, beer, sodas)</li>
-                    <li>English-speaking guides</li>
-                </ul>
-
-                <h2 class="col-12 text-center">Practical Information</h2>
-                <p class="col-12">
-                    Wear comfortable clothing and footwear.
-                    <br>Bring swimsuit, beach towel, hat, biodegradable sunscreen, mosquito repellent, sunglasses and money for local goodies, tips and souvenirs (tipping is optional).
-                    <br>Pick-up and drop-off times will vary according to resort location.
-                </p>
-            `,
-            horarios: ['Everyday'],
-            modalidades: [
-                { id: 0, precio: 90, nino: 0, descripcion: 'Bavaro Runners' }
             ]
         },
         {

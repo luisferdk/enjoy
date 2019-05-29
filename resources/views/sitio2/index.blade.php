@@ -541,7 +541,7 @@
       </div>
     </div>
     <div class="row no-gutters">
-      <div class="col-md-6 col-lg-3" ng-repeat="aux in tours" ng-if="aux.mostrar==true && aux.id>1 && aux.id<=5">
+      <div class="col-md-6 col-lg-3" ng-repeat="(key,aux) in tours" ng-if="key < 4">
         <a href="{{ url('/') }}/excursion/@{{ aux.id }}" class="block-5"
           style="background-image: url({{ asset('/') }}img/tours/@{{aux.id}}.jpg);">
           <div class="text">
