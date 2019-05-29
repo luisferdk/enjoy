@@ -25,8 +25,8 @@
               role="tab" aria-controls="v-pills-transfers" aria-selected="false">
               <i class="icon-car"></i> Transfers
             </a>
-            <a class="nav-link col-4 p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions" role="tab"
-              aria-controls="v-pills-excursions" aria-selected="false">
+            <a class="nav-link col-4 p-3" id="v-pills-excursions-tab" data-toggle="pill" href="#v-pills-excursions"
+              role="tab" aria-controls="v-pills-excursions" aria-selected="false">
               <i class="icon-sun-o"></i> Excursions
             </a>
             <a class="nav-link col-4 p-3" id="v-pills-hotels-tab" data-toggle="pill" href="#v-pills-hotels" role="tab"
@@ -354,7 +354,8 @@
                   </div>
                   <div class="col-12 col-sm-3" ng-show="tour.modalidades[pos].nino != 0">
                     <div class="form-group">
-                      <select class="form-control select2" name="ninos" ng-model="tour.ninos" ng-change="calcularPrecioTour()">
+                      <select class="form-control select2" name="ninos" ng-model="tour.ninos"
+                        ng-change="calcularPrecioTour()">
                         <option value="">
                           Children (0-10)
                         </option>
@@ -395,7 +396,8 @@
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
                           <input id="hotelInicio" type="text" class="form-control" name="fecha_inicio"
-                            placeholder="Start Date" ng-model="hotel.fecha_inicio" autocomplete="false" required ng-change="calcularPrecioHotel()">
+                            placeholder="Start Date" ng-model="hotel.fecha_inicio" autocomplete="false" required
+                            ng-change="calcularPrecioHotel()">
                         </div>
                       </div>
                       <div class="col-12 col-sm-6">
@@ -409,8 +411,8 @@
 
                   <div class="col-12 col-sm-4">
                     <div class="form-group">
-                      <select name="hotel" class="form-control select2" ng-model="hotel.hotel" ng-change="calcularPrecioHotel()"
-                        ng-options="aux.descripcion for aux in hotelesReservar">
+                      <select name="hotel" class="form-control select2" ng-model="hotel.hotel"
+                        ng-change="calcularPrecioHotel()" ng-options="aux.descripcion for aux in hotelesReservar">
                         <option value="">Hotel</option>
                       </select>
                     </div>
@@ -427,8 +429,8 @@
                       </div>
                       <div class="col-12 col-sm-6">
                         <div class="form-group">
-                          <select name="ninos" class="form-control select2" ng-model="hotel.ninos" ng-change="calcularPrecioHotel()"
-                            ng-options="aux for aux in vector(20)">
+                          <select name="ninos" class="form-control select2" ng-model="hotel.ninos"
+                            ng-change="calcularPrecioHotel()" ng-options="aux for aux in vector(20)">
                             <option value disabled>Children</option>
                             <option value="0">0</option>
                           </select>
@@ -468,54 +470,68 @@
 </div>
 
 
-<section class="ftco-section bg-light mt-5">
-    <div class="container">
-      <div class="row justify-content-center mb-3">
-        <div class="col-md-7 text-center heading-section ftco-animate">
-          <h2>Our Services</h2>
+<!-- <section class="ftco-section bg-light mt-5">
+  <div class="container">
+    <div class="row justify-content-center mb-3">
+      <div class="col-md-7 text-center heading-section ftco-animate">
+        <h2>Our Services</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-sailboat"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <h3 class="heading">Transfers</h3>
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
-            <div class="media-body p-2">
-              <h3 class="heading">Transfers</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span>
             </div>
-          </div>      
+          </div>
+          <div class="media-body p-2">
+            <h3 class="heading">Excursions</h3>
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
-            <div class="media-body p-2">
-              <h3 class="heading">Excursions</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-            </div>
-          </div>      
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-compass"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <h3 class="heading">Weddings</h3>
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+          </div>
         </div>
-        <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
-            <div class="media-body p-2">
-              <h3 class="heading">Weddings</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-            </div>
-          </div>    
-        </div>
+      </div>
 
-        <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-map-of-roads"></span></div></div>
-            <div class="media-body p-2">
-              <h3 class="heading">Bithday</h3>
-              <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-            </div>
-          </div>      
+      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-map-of-roads"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <h3 class="heading">Bithday</h3>
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section> -->
+
+
 
 <section class="ftco-section mt-5">
   <div class="container-fluid">
@@ -526,7 +542,8 @@
     </div>
     <div class="row no-gutters">
       <div class="col-md-6 col-lg-3" ng-repeat="aux in tours" ng-if="aux.mostrar==true && aux.id>1 && aux.id<=5">
-        <a href="{{ url('/') }}/excursion/@{{ aux.id }}" class="block-5" style="background-image: url({{ asset('/') }}img/tours/@{{aux.id}}.jpg);">
+        <a href="{{ url('/') }}/excursion/@{{ aux.id }}" class="block-5"
+          style="background-image: url({{ asset('/') }}img/tours/@{{aux.id}}.jpg);">
           <div class="text">
             <h3 class="heading">@{{ aux.titulo }}</h3>
             <h4 class="price">@{{ aux.modalidades[0].precio | currency:"$ " }}</h4>
@@ -543,13 +560,13 @@
 @endsection
 
 @section('js')
-  @if(session('status'))
-  <script>
-    Swal.fire(
-      'Reservation Completed',
-      'Thanks for book with us',
-      'success'
-    )
-  </script>
-  @endif
+@if(session('status'))
+<script>
+  Swal.fire(
+    'Reservation Completed',
+    'Thanks for book with us',
+    'success'
+  )
+</script>
+@endif
 @endsection
