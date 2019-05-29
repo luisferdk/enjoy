@@ -50,7 +50,7 @@ class SiteController extends Controller
 
   public function contactPOST(Request $request)
   {
-    Mail::to("Contact Us","luisdk.03@gmail.com")->send(new ContactMail($request->all()));
+    Mail::to("luisdk.03@gmail.com","Contact Us")->send(new ContactMail($request->all()));
     return redirect('contact')->with('status','Send');
   }
 
