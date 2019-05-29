@@ -2,9 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Enjoyment</title>
+  <title>Punta cana Enjoyment- The Best web to buy tours and transfers</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="The BEST Tours in Punta Cana!  Best Selection, Best Prices, Best Guarantee, Best Reviews! Dont take our word for it, listen to our Customers! CLICK HERE" />
+  <meta name="keywords" content="excursions, tours, punta cana, dominican, vacation, resort, bavaro, caribbean" />
 
   <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700" rel="stylesheet">
