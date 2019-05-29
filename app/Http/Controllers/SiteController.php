@@ -5,24 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-use App\Mail\Notification;
-use App\Mail\Package;
-
 use App\Reservation;
 use App\Transfer;
 use App\Tour;
-use App\Vip;
-use App\Wifi;
-use App\Flight;
-use App\Passenger;
 
-use Validator;
-use URL;
-use Session;
-use Redirect;
-use Input;
-use Stripe\Error\Card;
-use Cartalyst\Stripe\Stripe;
+use App\Mail\ContactMail;
 
 class SiteController extends Controller
 {
@@ -59,6 +46,12 @@ class SiteController extends Controller
   public function contact()
   {
     return view('sitio2.contact');
+  }
+
+  public function contactPOST(Request $request)
+  {
+    Mail::to("Contact Us","luisdk.03@gmail.com")->send(new ContactMail($request->all()));
+    return redirect('contact')->with('status','Send');
   }
 
   public function CancellationAndRefund()

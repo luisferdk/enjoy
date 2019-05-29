@@ -5,6 +5,7 @@ Route::get('/transfers', "SiteController@transfers");
 Route::get('/excursions', "SiteController@excursions");
 Route::get('/excursion/{id}', "SiteController@excursion");
 Route::get('/contact', "SiteController@contact");
+Route::post('/contact', "SiteController@contactPOST");
 Route::get('/cancellation-and-refund', "SiteController@CancellationAndRefund");
 Route::get('/payment-methods', "SiteController@paymentMethods");
 Route::get('/use-and-privacy', "SiteController@useAndPrivacy");

@@ -31,21 +31,22 @@
         </div>
       </div>
       <div class="col-md-6">
-        <form action="#">
+        <form action="" method="POST">
+          @csrf
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <input name="name" type="text" class="form-control" placeholder="Your Name" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Email">
+            <input name="email" type="email" class="form-control" placeholder="Your Email" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Subject">
+            <input name="subject" type="text" class="form-control" placeholder="Subject" required>
           </div>
           <div class="form-group">
-            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+            <textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message" required></textarea>
           </div>
           <div class="form-group">
-            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+            <input name="send" type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
           </div>
         </form>
       </div>
@@ -63,3 +64,11 @@
   </div>
 </section>
 @endsection
+
+@if(session('status'))
+@section('js')
+<script>
+  swal('Message sent successfully','','success');
+</script>
+@endsection
+@endif
