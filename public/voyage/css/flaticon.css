@@ -35,10 +35,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.flaticon-car:before { content: "\f100"; }
-.flaticon-resort:before { content: "\f101"; }
-.flaticon-yatch:before { content: "\f102"; }
-.flaticon-map-of-roads:before { content: "\f103"; }
-.flaticon-compass:before { content: "\f104"; }
-.flaticon-around:before { content: "\f105"; }
-.flaticon-sailboat:before { content: "\f106"; }
+.flaticon-plane-ticket:before { content: "\f100"; }
+.flaticon-hotel:before { content: "\f101"; }
+.flaticon-travel:before { content: "\f102"; }
+.flaticon-rent:before { content: "\f103"; }
+.flaticon-travel-insurance:before { content: "\f104"; }
+.flaticon-employee:before { content: "\f105"; }
+.flaticon-24-7:before { content: "\f106"; }
+.flaticon-yatch:before { content: "\f107"; }

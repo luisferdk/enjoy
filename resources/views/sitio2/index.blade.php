@@ -470,66 +470,105 @@
 </div>
 
 
-<!-- <section class="ftco-section bg-light mt-5">
+<section class="ftco-section bg-light mt-5">
   <div class="container">
-    <div class="row justify-content-center mb-3">
+    <div class="row justify-content-center pt-4 pb-3">
       <div class="col-md-7 text-center heading-section ftco-animate">
-        <h2>Our Services</h2>
+        <h2 class="text-primary">Our Services</h2>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services d-block text-center">
+    <div class="row align-items-start">
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
           <div class="d-flex justify-content-center">
             <div class="icon d-flex justify-content-center mb-3"><span
-                class="align-self-center flaticon-sailboat"></span></div>
+                class="align-self-center flaticon-plane-ticket"></span></div>
           </div>
           <div class="media-body p-2">
-            <h3 class="heading">Transfers</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            <p>Sales of Air Tickets to all parts of the world</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services d-block text-center">
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
           <div class="d-flex justify-content-center">
-            <div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span>
-            </div>
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-hotel"></span></div>
           </div>
           <div class="media-body p-2">
-            <h3 class="heading">Excursions</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            <p>Reservations of national and international hotels.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services d-block text-center">
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
           <div class="d-flex justify-content-center">
             <div class="icon d-flex justify-content-center mb-3"><span
-                class="align-self-center flaticon-compass"></span></div>
+                class="align-self-center flaticon-travel"></span></div>
           </div>
           <div class="media-body p-2">
-            <h3 class="heading">Weddings</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            <p>VIP, Private and Collective Transfers.</p>
           </div>
         </div>
       </div>
-
-      <div class="col-md-6 col-lg-3 d-flex align-self-stretch ftco-animate">
-        <div class="media block-6 services d-block text-center">
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
           <div class="d-flex justify-content-center">
             <div class="icon d-flex justify-content-center mb-3"><span
-                class="align-self-center flaticon-map-of-roads"></span></div>
+                class="align-self-center flaticon-rent"></span></div>
           </div>
           <div class="media-body p-2">
-            <h3 class="heading">Bithday</h3>
-            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+            <p>Vehicle Rental</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-travel-insurance"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <p>Travel Insurance</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-yatch"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <p>Water, Land and Air Excursions</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-employee"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <p>Professional representatives (Identified) for assistance in all destination hotels.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center ml-auto mr-auto">
+          <div class="d-flex justify-content-center">
+            <div class="icon d-flex justify-content-center mb-3"><span
+                class="align-self-center flaticon-24-7"></span></div>
+          </div>
+          <div class="media-body p-2">
+            <p>Enjoyment 24 hours, in case of emergency with our customers.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section> -->
+</section>
 
 
 
