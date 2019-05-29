@@ -296,8 +296,8 @@
     <script src="{{ asset("/") }}js/angular.min.js"></script>
     <script src="{{ asset("/") }}js/angular-sanitize.min.js"></script>
     @yield('js')
-	<script src="{{ asset("/") }}js/sitio.js?v=30"></script>
-    <script src="{{ asset("/") }}js/main.js?v=30"></script>
+	<script src="{{ asset("/") }}js/sitio.js?v=31"></script>
+    <script src="{{ asset("/") }}js/main.js?v=31"></script>
 
 	<script>
         window.url = '{{ url("/") }}';
