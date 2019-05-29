@@ -480,7 +480,7 @@
           <div class="media block-6 services d-block text-center">
             <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-sailboat"></span></div></div>
             <div class="media-body p-2">
-              <h3 class="heading">Special Activities</h3>
+              <h3 class="heading">Transfers</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
             </div>
           </div>      
@@ -489,7 +489,7 @@
           <div class="media block-6 services d-block text-center">
             <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-around"></span></div></div>
             <div class="media-body p-2">
-              <h3 class="heading">Travel Arrangements</h3>
+              <h3 class="heading">Excursions</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
             </div>
           </div>      
@@ -498,7 +498,7 @@
           <div class="media block-6 services d-block text-center">
             <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-compass"></span></div></div>
             <div class="media-body p-2">
-              <h3 class="heading">Private Guide</h3>
+              <h3 class="heading">Weddings</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
             </div>
           </div>    
@@ -508,7 +508,7 @@
           <div class="media block-6 services d-block text-center">
             <div class="d-flex justify-content-center"><div class="icon d-flex justify-content-center mb-3"><span class="align-self-center flaticon-map-of-roads"></span></div></div>
             <div class="media-body p-2">
-              <h3 class="heading">Location Manager</h3>
+              <h3 class="heading">Bithday</h3>
               <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
             </div>
           </div>      
