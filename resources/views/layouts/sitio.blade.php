@@ -42,9 +42,8 @@
       <div class="container">
         <div class="row">
           <div class="col-12 iconos">
-            <a href="#"><i class="ion-logo-instagram"></i></a>
-            <a href="#"><i class="ion-logo-facebook"></i></a>
-            <a href="#"><i class="ion-logo-twitter"></i></a>
+              <a href="https://web.facebook.com/puntacanaenjoyment/?modal=admin_todo_tour&_rdc=1&_rdr"><i class="ion-logo-facebook"></i></a>
+            <a href="https://www.instagram.com/enjoymentpuntacana/?hl=es-la"><i class="ion-logo-instagram"></i></a>
             <a href="{{ url('login') }}"><i class="ion-ios-log-in"></i></a>
           </div>
         </div>
@@ -144,9 +143,8 @@
           <div class="col-md-12">
             <div class="">
               <ul class="ftco-footer-social list-unstyled text-center mt-0">
-                <li class="><a href=" #"><span class="icon-twitter"></span></a></li>
-                <li class="><a href=" #"><span class="icon-facebook"></span></a></li>
-                <li class="><a href=" #"><span class="icon-instagram"></span></a></li>
+                <li><a href="https://web.facebook.com/puntacanaenjoyment/?modal=admin_todo_tour&_rdc=1&_rdr"><span class="icon-facebook"></span></a></li>
+                <li><a href="https://www.instagram.com/enjoymentpuntacana/?hl=es-la"><span class="icon-instagram"></span></a></li>
               </ul>
             </div>
           </div>
