@@ -37,20 +37,6 @@
 
   <div ng-app="app" ng-controller="ctrl">
 
-
-    <div class="container-fluid header-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 iconos">
-              <a href="https://web.facebook.com/puntacanaenjoyment/?modal=admin_todo_tour&_rdc=1&_rdr"><i class="ion-logo-facebook"></i></a>
-            <a href="https://www.instagram.com/enjoymentpuntacana/?hl=es-la"><i class="ion-logo-instagram"></i></a>
-            <a href="{{ url('login') }}"><i class="ion-ios-log-in"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
@@ -80,6 +66,15 @@
             </li>
             <li class="nav-item {{ Request::is('contact')?'active':'' }}">
               <a href="{{ url('/contact') }}" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <div class="nav-link">
+                <div class="iconos">
+                    <a href="https://web.facebook.com/puntacanaenjoyment/?modal=admin_todo_tour&_rdc=1&_rdr"><i class="ion-logo-facebook"></i></a>
+                    <a href="https://www.instagram.com/enjoymentpuntacana/?hl=es-la"><i class="ion-logo-instagram"></i></a>
+                    <a href="{{ url('login') }}"><i class="ion-ios-log-in"></i></a>
+                  </div>
+                </div>
             </li>
           </ul>
         </div>

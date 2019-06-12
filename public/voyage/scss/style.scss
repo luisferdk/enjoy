@@ -68,18 +68,26 @@ h5,
 .navbar {
 	padding: 0;
 	img{
-		max-height: 80px;
+		max-height: 70px;
+		position: absolute;
+		top:3px;
+		@include media-breakpoint-down(md) {
+			//background: $black!important;
+			position: relative;
+			top: initial;
+		}
 	}
 }
 
 .ftco-navbar-light {
 	//background: transparent!important;
 	background: white;
-	position: relative;
-	left: 0;
-	right: 0;
+	position: fixed;
+	top: 55px;
+	left: 10%;
+	width: 80%;
+	margin:auto;
 	z-index: 3;
-	top: 0;
 	border-bottom: 1px solid $primary;
 
 	@include media-breakpoint-down(md) {
@@ -87,20 +95,28 @@ h5,
 		color: $primary;
 		top: 0;
 		position: relative;
+		width: 100%;
+		left: initial;
 	}
 
 	.navbar-nav {
 		>.nav-item {
 			>.nav-link {
-				font-size: 20px;
-				padding-top: 10px;
-				padding-bottom: 10px;
+				font-size: 16px;
+				padding-top: 25px;
+				padding-bottom: 25px;
 				padding-left: 30px;
 				padding-right: 30px;
-				color: $primary;
-
+				color: #484848;
+				.iconos{
+					font-size: 20px
+				}
 				&:hover {
 					color: $primary;
+				}
+				.badge-primary{
+					background: #484848;
+					color:white;
 				}
 				opacity: 1 !important;
 
@@ -111,8 +127,8 @@ h5,
 					padding-right: 0px;
 				}
 				&:hover >.badge{
-					background-color:white !important;
-					color:$primary !important;
+					background-color:$primary !important;
+					color:white !important;
 				}
 			}
 
@@ -166,9 +182,9 @@ h5,
 			&.active {
 				>a {
 					//color: rgba(255,255,255,.5);
-					color: white !important;
+					color: $primary !important;
 					font-weight: bold;
-					background: $primary;
+					border-bottom: 3px solid $primary;
 				}
 			}
 		}
@@ -352,7 +368,7 @@ h5,
 			background-position: center !important;
 			background-repeat: no-repeat;
 			background-position: center center;
-			height: calc(100vh - 130px);
+			height: 100vh;
 			overflow: hidden;
 			position: relative;
 			background-size: cover;

@@ -6302,31 +6302,45 @@ h5,
 .navbar {
   padding: 0; }
   .navbar img {
-    max-height: 80px; }
+    max-height: 70px;
+    position: absolute;
+    top: 3px; }
+    @media (max-width: 991.98px) {
+      .navbar img {
+        position: relative;
+        top: initial; } }
 
 .ftco-navbar-light {
   background: white;
-  position: relative;
-  left: 0;
-  right: 0;
+  position: fixed;
+  top: 55px;
+  left: 10%;
+  width: 80%;
+  margin: auto;
   z-index: 3;
-  top: 0;
   border-bottom: 1px solid #1576c8; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       color: #1576c8;
       top: 0;
-      position: relative; } }
+      position: relative;
+      width: 100%;
+      left: initial; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 16px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     padding-left: 30px;
     padding-right: 30px;
-    color: #1576c8;
+    color: #484848;
     opacity: 1 !important; }
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link .iconos {
+      font-size: 20px; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
       color: #1576c8; }
+    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link .badge-primary {
+      background: #484848;
+      color: white; }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-top: 10px;
@@ -6334,8 +6348,8 @@ h5,
         padding-left: 30px;
         padding-right: 0px; } }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover > .badge {
-      background-color: white !important;
-      color: #1576c8 !important; }
+      background-color: #1576c8 !important;
+      color: white !important; }
   .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
     position: relative;
     margin-left: 20px;
@@ -6366,9 +6380,9 @@ h5,
   .ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored span {
     border-color: #1576c8; }
   .ftco-navbar-light .navbar-nav > .nav-item:hover > a, .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: white !important;
+    color: #1576c8 !important;
     font-weight: bold;
-    background: #1576c8; }
+    border-bottom: 3px solid #1576c8; }
   .ftco-navbar-light .navbar-toggler {
     border: none;
     color: #1576c8 !important;
@@ -6481,7 +6495,7 @@ h5,
       background-position: center !important;
       background-repeat: no-repeat;
       background-position: center center;
-      height: calc(100vh - 130px);
+      height: 100vh;
       overflow: hidden;
       position: relative;
       background-size: cover; }
