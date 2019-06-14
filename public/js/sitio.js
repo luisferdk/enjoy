@@ -545,7 +545,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         {
             id: 3,
             mostrar: true,
-            titulo: "Buggys Adventure",
+            titulo: "Boogies Adventure",
             descripcion: `Prepare to begin a new experience, get on a buggy with us for an adventure in Dominican Republic. Get to know a Tobacco Plantation, a Wild Ranch, the Nature Cave and finally the beautiful Macao Beach.This adventure includes profesional guides that will be with you the entire road trip to help you find the beauty Dominican Republic has to offer. Book with us this amazing adventure a live an unforgettable experience`,
             descripcion_completa: `
                 <h2 class="col-12 text-center">Description</h2>
@@ -597,7 +597,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         {
             id: 5,
             mostrar: true,
-            titulo: "Canopy Adventure",
+            titulo: "Zip Line (Canopy)",
             descripcion: `Visit the first of the Dominican Republic’s Zip-Line Tour. The exhilarating adventure takes you flying across the magnificent Anamuya pond. Your naturalist guides will show you the way, helping you make the most of the adventure. Your tour consists of 15 towers and 11 Zip Lines stretched across the length of the mountain range more than 1 mile. The final line at 900 meters is the longest in the Dominican Republic as well as the entire Caribbean. Requirements: Min age 6 years old, max weight 250lbs (46’ waist), no pregnant women or guests with heart conditions can participate.`,
             descripcion_completa: `
                 <h2 class="col-12 text-center">Description</h2>
@@ -617,7 +617,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
         {
             id: 2,
             mostrar: true,
-            titulo: "Buggys Adventure Terracross",
+            titulo: "Boogies Adventure Terracross",
             descripcion: `After we pick you up from your Resort, you'll receive on the spot a brief safety instructions from our professional guide. Then, jump inside your dune buggy and get ready to start the adventure of a lifetime. Starts as you head out into the Dominican countryside, passing colorful Caribbean houses along the way. Your first stop will be for a real Dominican coffee and chocolate taste. We’ll follow the natural path, passing by palm trees, tobacco and banana plantations. The excursion takes a Half Day, and you can be 2 people by BUGGY. Enthusiasts for big thrills, come and join us!`,
             descripcion_completa: `
                 <h2 class="col-12 text-center">Description</h2>
@@ -917,9 +917,12 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 </p
             `,
             modalidades: [
-                { id: 0, precio: 99, nino: 0, descripcion: "Encounter" },
-                { id: 1, precio: 149, nino: 99, descripcion: "Swim Adventure" },
-                { id: 2, precio: 199, nino: 99, descripcion: "Royal Swim" },
+                {id:0,precio:149,ninos:149,descripcion:'Dolphin Explorer'},
+                {id:1,precio:99,ninos:99,descripcion:'Dolphin Funtastic'},
+                {id:2,precio:195,ninos:195,descripcion:'Dolphin Excellence'},
+                {id:3,precio:259,ninos:259,descripcion:'Dolphin Extreme'},
+                {id:4,precio:35,ninos:35,descripcion:'Ticket General'},
+                {id:5,precio:45,ninos:45,descripcion:'Ticket Lions'},
             ]
         },
         {
@@ -1086,6 +1089,97 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
                 { id: 0, precio: 169, nino: 0, descripcion: "Exclusive VIP Catamaran" }
             ]
         },
+        {
+            id: 56,
+            titulo: "Bavaro Splash",
+            partyBoat: false,
+            mostrar: true,
+            descripcion: `Ride a Segway. Visit Ojos Indigenas Natural Reserve, Two separate beaches, La Cana golf course and a variety of interesting areas.`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12">
+                    Combine the experience of driving a high-performance boat and explore the underwater world through Snuba! Spend three hours exploring the crystal blue waters of this destination. Board a single- or double-occupancy speedboat and cruise at high speed across the Caribbean Sea with your local guide. 
+                    <br><br>You’ll navigate the Bavaro-Punta Cana coastline, where white sands and towering palm trees stretch into sunny skies. 
+                    <br><br>Do SNUBA after a brief orientation, which is an underwater activity that combines the best of SCUBA DIVING and SNORKELING. A certified SNUBA guide will accompany your group and take you to the depths of the ocean where you can have your photo taken as tropical fish swim by! Once you hop back on the boat you’ll have time to relax and enjoy some complimentary soft drinks and bottled water as you make your way to the Bavaro reef.
+                </p>
+                <h2 class="col-4 text-center">Includes</h2>
+                <h2 class="col-4 text-center">Timing</h2>
+                <h2 class="col-4 text-center">Recommendations</h2>
+
+                <ul class="col-4">
+                    <li>Transportation</li>
+                    <li>Snorkelling</li>
+                    <li>Snuba</li>
+                    <li>Speed Boat</li>
+                    <li>Equipment</li>
+                    <li>Soft drinks</li>
+                    <li>Beer and rum</li>
+                    <li>Transfer back to hotel</li>
+                </ul>
+                
+                <ul class="col-4">
+                    <li>07:00 AM – Departure from hotels</li>
+                    <li>09:15  AM – Welcome at base and briefing on speedboats</li>
+                    <li>09:30 AM – Set sail to reef</li>
+                    <li>09:50 AM – Speedboats</li>
+                    <li>10:35  AM – Snuba</li>
+                    <li>11:20  AM – Reef snorkeling</li>
+                    <li>12:10  PM – Sail back to base, alcoholic drinks</li>
+                    <li>12:30  PM – Transfer back to hotels</li>
+                </ul>
+
+                <ul class="col-4">
+                    <li>Bring towel.</li>
+                    <li>Swimsuits.</li>
+                    <li>Comfortable and closed shoes.</li>
+                </ul>
+            `,
+            horarios: ['Everyday'],
+            modalidades: [
+                { id: 0, precio: 129, nino: 0, descripcion: 'One Seater' }
+            ]
+        },
+        {
+            id: 57,
+            titulo: "Manati Park",
+            partyBoat: false,
+            mostrar: true,
+            descripcion: `Manatí Park is the most fun Punta Cana theme park. You will be able to live incredible experiences with the native animals and you will get to know one of the most fascinating cultures of the Caribbean: the Tainos.`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12 mt-3">
+                    <br>Punta Cana is one of the most visited places in the Dominican Republic.
+                    <br>Travelers from all over the world come to Bávaro to enjoy the sun, the white sand and the incredible beaches of the Caribbean.
+                    <br>Get to know the fauna, nature and ancient local culture of the area in Manatí Park, located in the heart of Bávaro.
+                </p>
+                
+            `,
+            horarios: ['Tuesday - Sunday'],
+            modalidades: [
+                { id: 0, precio: 35, nino: 20, descripcion: 'Animals Show' },
+                { id: 1, precio: 125, nino: 20, descripcion: 'Swimming with Dolphins' },
+            ]
+        },
+        {
+            id: 58,
+            titulo: "La Hacienda (Manati Park)",
+            partyBoat: false,
+            mostrar: true,
+            descripcion: `We invite you to know the Dominican Republic thanks to La Hacienda! Our adventure will begin at the La Hacienda headquarters in Bávaro. We will pick you up at your hotel and take a tour where you will visit the beautiful areas of Bávaro, Uvero Alto and Anamuya. Our visit will take you through the Dominican towns and incredible landscapes before arriving at La Hacienda, where you will enjoy an incredible experience!`,
+            descripcion_completa: `
+                <h2 class="col-12 text-center">Description</h2>
+                <p class="col-12 mt-3">
+                    We invite you to know the Dominican Republic thanks to La Hacienda! Our adventure will begin at the La Hacienda headquarters in Bávaro.
+                    <br>We will pick you up at your hotel and take a tour where you will visit the beautiful areas of Bávaro, Uvero Alto and Anamuya.
+                    <br>Our visit will take you through the Dominican towns and incredible landscapes before arriving at La Hacienda, where you will enjoy an incredible experience!
+                </p>
+                
+            `,
+            horarios: ['Tuesday - Sunday'],
+            modalidades: [
+                { id: 0, precio: 99, nino: 99, descripcion: '7 Adventures' },
+            ]
+        }
         /* {
             id: 31,
             titulo: "Sabina del Mar VIP Catamaran with Slide",
@@ -2427,57 +2521,7 @@ app.controller("ctrl", function ($scope, $http, $timeout, $window) {
             modalidades: [
                 { id: 0, precio: 149, nino: 0, descripcion: 'Scape Park Full Admision' }
             ]
-        },
-        {
-            id: 56,
-            titulo: "Bavaro Splash",
-            partyBoat: false,
-            mostrar: true,
-            descripcion: `Ride a Segway. Visit Ojos Indigenas Natural Reserve, Two separate beaches, La Cana golf course and a variety of interesting areas.`,
-            descripcion_completa: `
-                <h2 class="col-12 text-center">Description</h2>
-                <p class="col-12">
-                    Combine the experience of driving a high-performance boat and explore the underwater world through Snuba! Spend three hours exploring the crystal blue waters of this destination. Board a single- or double-occupancy speedboat and cruise at high speed across the Caribbean Sea with your local guide. 
-                    <br><br>You’ll navigate the Bavaro-Punta Cana coastline, where white sands and towering palm trees stretch into sunny skies. 
-                    <br><br>Do SNUBA after a brief orientation, which is an underwater activity that combines the best of SCUBA DIVING and SNORKELING. A certified SNUBA guide will accompany your group and take you to the depths of the ocean where you can have your photo taken as tropical fish swim by! Once you hop back on the boat you’ll have time to relax and enjoy some complimentary soft drinks and bottled water as you make your way to the Bavaro reef.
-                </p>
-                <h2 class="col-4 text-center">Includes</h2>
-                <h2 class="col-4 text-center">Timing</h2>
-                <h2 class="col-4 text-center">Recommendations</h2>
-
-                <ul class="col-4">
-                    <li>Transportation</li>
-                    <li>Snorkelling</li>
-                    <li>Snuba</li>
-                    <li>Speed Boat</li>
-                    <li>Equipment</li>
-                    <li>Soft drinks</li>
-                    <li>Beer and rum</li>
-                    <li>Transfer back to hotel</li>
-                </ul>
-                
-                <ul class="col-4">
-                    <li>07:00 AM – Departure from hotels</li>
-                    <li>09:15  AM – Welcome at base and briefing on speedboats</li>
-                    <li>09:30 AM – Set sail to reef</li>
-                    <li>09:50 AM – Speedboats</li>
-                    <li>10:35  AM – Snuba</li>
-                    <li>11:20  AM – Reef snorkeling</li>
-                    <li>12:10  PM – Sail back to base, alcoholic drinks</li>
-                    <li>12:30  PM – Transfer back to hotels</li>
-                </ul>
-
-                <ul class="col-4">
-                    <li>Bring towel.</li>
-                    <li>Swimsuits.</li>
-                    <li>Comfortable and closed shoes.</li>
-                </ul>
-            `,
-            horarios: ['Everyday'],
-            modalidades: [
-                { id: 0, precio: 129, nino: 0, descripcion: 'One Seater' }
-            ]
-        } */
+        },*/
     ];
     $scope.tours = tours;
     $scope.cambiarTour = function () {
