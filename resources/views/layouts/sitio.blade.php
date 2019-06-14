@@ -28,7 +28,7 @@
   <link href="{{ asset('/') }}bower_components/sweetalert2/sweetalert2.min.css" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="{{ asset('voyage') }}/css/style.css">
+  <link rel="stylesheet" href="{{ asset('voyage') }}/css/style.css?v=1">
 
   @yield('css')
 </head>
