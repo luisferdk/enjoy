@@ -6500,7 +6500,11 @@ h5,
       height: 100vh;
       overflow: hidden;
       position: relative;
-      background-size: cover; }
+      background-size: cover;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center; }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
         top: 0;
@@ -6508,8 +6512,16 @@ h5,
         right: 0;
         bottom: 0;
         content: '';
-        background: #000;
-        opacity: .05; }
+        background: white;
+        opacity: .2; }
+      .owl-carousel.home-slider .slider-item h1 {
+        font-size: 70px;
+        color: white;
+        line-height: 1.2;
+        font-weight: 400;
+        position: relative;
+        z-index: 3;
+        text-shadow: 4px 4px 3px #1576c8; }
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
         height: calc(100vh - 117px);

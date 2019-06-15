@@ -3,14 +3,17 @@
 <section class="home-slider owl-carousel d-none d-xl-block">
   <div class="slider-item" style="background-image: url('{{asset('img/slider')}}/1.jpg');">
     <div class="overlay"></div>
+    <h1 class="ftco-animate">The Best Hotels</h1>
   </div>
 
   <div class="slider-item" style="background-image: url('{{asset('img/slider')}}/2.jpg');">
     <div class="overlay"></div>
+    <h1 class="ftco-animate">The Best Excursions</h1>
   </div>
 
   <div class="slider-item" style="background-image: url('{{asset('img/slider')}}/3.jpg');">
     <div class="overlay"></div>
+    <h1 class="ftco-animate">Dominican Republic has it all</h1>
   </div>
 </section>
 
