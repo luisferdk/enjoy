@@ -37,7 +37,7 @@
 
   <div ng-app="app" ng-controller="ctrl">
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light" style="position:{{ Request::is('/')?'fixed':'relative' }}" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
           <img class="img-fluid" src='{{ asset("/") }}img/logo2.png' alt="">
