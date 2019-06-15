@@ -48,7 +48,7 @@
 
               <form action="" class="fields" id="formTraslado" method="post" ng-submit="agregarTraslado($event)">
                 <div class="row">
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select class="form-control select2" ng-change="cambiarDe();calcularPrecioTraslado();" name="de"
                         ng-model="traslado.de" ng-options="aux.descripcion for aux in deOpciones" required>
@@ -56,7 +56,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select id="hotel" class="form-control select2 select2_para" name="para"
                         ng-change="calcularPrecioTraslado(); cambiarPara();" ng-model="traslado.para"
@@ -67,7 +67,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select class="form-control select2" name="pasajeros[]"
                         ng-change="calcularPrecioTraslado();cambiarPasajeros()" ng-model="traslado.pasajeros" required>
@@ -78,7 +78,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select class="form-control select2" name="tipo" ng-change="calcularPrecioTraslado()"
                         ng-model="traslado.tipo" required>
@@ -98,7 +98,7 @@
                     <div class="row">
                       <h5 class="col-12 titulo" ng-show="traslado.de.id==-1">ARRIVAL</h5>
                       <h5 class="col-12 titulo" ng-show="traslado.de.id!=-1">DEPARTURE</h5>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Date
@@ -107,7 +107,7 @@
                             type="text" placeholder="Select Date" ng-required="traslado.tipo">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Time
@@ -116,7 +116,7 @@
                             type="text" placeholder="Select Time" ng-required="traslado.tipo">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Airline Name
@@ -126,7 +126,7 @@
                             ng-required="traslado.tipo">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Flight Number
@@ -141,7 +141,7 @@
                     <div class="row">
                       <h5 class="col-12 titulo" ng-show="traslado.de.id==-1">DEPARTURE</h5>
                       <h5 class="col-12 titulo" ng-show="traslado.de.id!=-1">ARRIVAL</h5>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Date
@@ -150,7 +150,7 @@
                             type="text" placeholder="Select Date" ng-required="traslado.tipo==2">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Time
@@ -159,7 +159,7 @@
                             type="text" placeholder="Select Time" ng-required="traslado.tipo==2">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Airline Name
@@ -168,7 +168,7 @@
                             type="text" placeholder="Enter airline name" ng-required="traslado.tipo==2">
                         </div>
                       </div>
-                      <div class="col-6 col-sm-3">
+                      <div class="col-6 col-sm-6 col-md-3">
                         <div class="form-group">
                           <label for="">
                             *Flight Number
@@ -311,7 +311,7 @@
 
               <form action="" class="col-12" id="formTour" method="post" ng-submit="agregarTour($event)">
                 <div class="row">
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select class="form-control select2" id="tourModel" ng-model="tour"
                         ng-change="cambiarTour();calcularPrecioTour()" ng-options="aux.titulo for aux in tours"
@@ -320,13 +320,13 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <input type="text" class="form-control" id="dateTour" name="fecha" placeholder="Date"
                         ng-model="tour.fecha" required>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3" ng-show="tour.modalidades.length>1">
+                  <div class="col-12 col-sm-6 col-md-3" ng-show="tour.modalidades.length>1">
                     <div class="form-group">
                       <select class="form-control select2" id="modalidad" name="modalidad" ng-model="tour.modalidad"
                         ng-change="calcularPrecioTour()" ng-options="aux.descripcion for aux in tour.modalidades"
@@ -335,7 +335,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3" ng-show="tour.horarios.length>1">
+                  <div class="col-12 col-sm-6 col-md-3" ng-show="tour.horarios.length>1">
                     <div class="form-group">
                       <select class="form-control select2" name="horario" ng-model="tour.horario"
                         ng-required="tour.horarios.length>1">
@@ -344,7 +344,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3">
+                  <div class="col-12 col-sm-6 col-md-3">
                     <div class="form-group">
                       <select class="form-control select2" name="adultos" ng-model="tour.adultos"
                         ng-change="calcularPrecioTour()" required>
@@ -355,7 +355,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="col-12 col-sm-3" ng-show="tour.modalidades[pos].nino != 0">
+                  <div class="col-12 col-sm-6 col-md-3" ng-show="tour.modalidades[pos].nino != 0">
                     <div class="form-group">
                       <select class="form-control select2" name="ninos" ng-model="tour.ninos"
                         ng-change="calcularPrecioTour()">
