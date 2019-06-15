@@ -6507,7 +6507,7 @@ h5,
         bottom: 0;
         content: '';
         background: #000;
-        opacity: .2; }
+        opacity: .05; }
       .owl-carousel.home-slider .slider-item .slider-text {
         color: #fff;
         height: calc(100vh - 117px);
