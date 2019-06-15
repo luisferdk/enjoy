@@ -191,8 +191,8 @@
     window._token = '{{ csrf_token() }}';
   </script>
 
-  <script src="{{ asset("/") }}js/sitio.js?v=32"></script>
-  <script src="{{ asset("/") }}js/main.js?v=32"></script>
+  <script src="{{ asset("/") }}js/sitio.js?v=33"></script>
+  <script src="{{ asset("/") }}js/main.js?v=33"></script>
   <script type="text/javascript">
     (function () {
         var options = {
