@@ -296,12 +296,12 @@ AOS.init({
                    navbar = $('.ftco_navbar'),
                    sd = $('.js-scroll-wrap');
 
-           if (st > 150) {
+           if (st > 30) {
                if ( !navbar.hasClass('scrolled') ) {
                    navbar.addClass('scrolled');	
                }
            } 
-           if (st < 150) {
+           if (st < 30) {
                if ( navbar.hasClass('scrolled') ) {
                    navbar.removeClass('scrolled sleep');
                }

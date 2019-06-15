@@ -68,9 +68,9 @@ h5,
 .navbar {
 	padding: 0;
 	img{
-		max-height: 70px;
+		max-height: 100px;
 		position: absolute;
-		top:3px;
+		top:0;
 		@include media-breakpoint-down(md) {
 			//background: $black!important;
 			position: relative;
@@ -83,12 +83,12 @@ h5,
 	//background: transparent!important;
 	background: white;
 	position: fixed;
-	top: 55px;
-	left: 10%;
-	width: 80%;
+	top: 0;
+	left: 5%;
+	width: 90%;
 	margin:auto;
 	z-index: 3;
-	border-bottom: 1px solid $primary;
+	border-radius: 0 0 15px 15px;
 
 	@include media-breakpoint-down(md) {
 		//background: $black!important;
@@ -102,14 +102,17 @@ h5,
 	.navbar-nav {
 		>.nav-item {
 			>.nav-link {
-				font-size: 16px;
-				padding-top: 25px;
-				padding-bottom: 25px;
+				font-size: 20px;
+				padding-top: 12px;
+				padding-bottom: 12px;
 				padding-left: 30px;
 				padding-right: 30px;
 				color: #484848;
 				.iconos{
-					font-size: 20px
+					font-size: 20px;
+					i{
+						margin-right: 8px;
+					}
 				}
 				&:hover {
 					color: $primary;
@@ -269,7 +272,7 @@ h5,
 			color: $black;
 
 			img {
-				height: 55px !important;
+				height: 70px !important;
 			}
 		}
 

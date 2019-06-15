@@ -6302,9 +6302,9 @@ h5,
 .navbar {
   padding: 0; }
   .navbar img {
-    max-height: 70px;
+    max-height: 100px;
     position: absolute;
-    top: 3px; }
+    top: 0; }
     @media (max-width: 991.98px) {
       .navbar img {
         position: relative;
@@ -6313,12 +6313,12 @@ h5,
 .ftco-navbar-light {
   background: white;
   position: fixed;
-  top: 55px;
-  left: 10%;
-  width: 80%;
+  top: 0;
+  left: 5%;
+  width: 90%;
   margin: auto;
   z-index: 3;
-  border-bottom: 1px solid #1576c8; }
+  border-radius: 0 0 15px 15px; }
   @media (max-width: 991.98px) {
     .ftco-navbar-light {
       color: #1576c8;
@@ -6327,15 +6327,17 @@ h5,
       width: 100%;
       left: initial; } }
   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-    font-size: 16px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    font-size: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     padding-left: 30px;
     padding-right: 30px;
     color: #484848;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link .iconos {
       font-size: 20px; }
+      .ftco-navbar-light .navbar-nav > .nav-item > .nav-link .iconos i {
+        margin-right: 8px; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
       color: #1576c8; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link .badge-primary {
@@ -6435,7 +6437,7 @@ h5,
     .ftco-navbar-light.scrolled .navbar-brand {
       color: #000; }
       .ftco-navbar-light.scrolled .navbar-brand img {
-        height: 55px !important; }
+        height: 70px !important; }
 
 .navbar-brand {
   font-weight: 400; }
