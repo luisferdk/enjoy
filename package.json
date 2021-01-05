@@ -12,7 +12,7 @@
         "server":"php artisan serve & yarn run estilos"
     },
     "devDependencies": {
-        "axios": "^0.18",
+        "axios": "^0.21",
         "bootstrap": "^4.0.0",
         "popper.js": "^1.12",
         "cross-env": "^5.1",
